@@ -6,7 +6,7 @@ This repository contains instructions for Lambda iOS project assignments.
 
 ### Modules
 
-1. [UINavigationController and MVC - Collect](Sprint 1/Module 1 - MVC and UINavigationController/README.md)
+1. [UINavigationController and MVC - Collect](https://github.com/LambdaSchool/ios-projects/tree/master/Sprint%201/Module%201%20-%20MVC%20and%20UINavigationController/)
 2. Git
 3. Intermediate UITableView, Protocols, and Delegates
 4. View Controller Containment and UITabBarController
