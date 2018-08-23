@@ -4,6 +4,8 @@ Your project creates a new custom control that allows users to rate items by swi
 
 After completing the lesson material and ht is project, you'll be able to subclass UIControl to develop custom interactions.
 
+Preview your project: https://youtu.be/kWtJLhX8-gw
+
 ## Set up the Project
 
 Follow these steps to set up your project skeleton:
