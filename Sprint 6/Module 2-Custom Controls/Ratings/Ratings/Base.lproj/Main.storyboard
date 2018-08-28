@@ -29,7 +29,7 @@
         <!--View Controller-->
         <scene sceneID="n4d-VK-kv2">
             <objects>
-                <viewController id="dhA-Ip-Q8R" sceneMemberID="viewController">
+                <viewController id="dhA-Ip-Q8R" customClass="ViewController" customModule="Ratings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KWK-BT-QrN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zm-ES-XZK" customClass="CustomControl" customModule="Ratings" customModuleProvider="target">
                                 <rect key="frame" x="40" y="269" width="295" height="128"/>
                                 <connections>
-                                    <action selector="updateRating:" destination="do2-Pa-cT0" eventType="valueChanged" id="byb-Qz-EUL"/>
+                                    <action selector="updateRating:" destination="dhA-Ip-Q8R" eventType="valueChanged" id="Nyf-wA-6UG"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -51,7 +51,6 @@
                     <navigationItem key="navigationItem" id="lGe-qW-B7r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZY-Ga-ToP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="do2-Pa-cT0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="257" y="116"/>
         </scene>
