@@ -12,13 +12,14 @@ class CustomControl: UIControl {
     
     // MARK: - Properties
     
+    var previousValue: Int = 1
     var value: Int = 1
     private let componentDimension: CGFloat = 40.0
     private let componentCount: Int = 5
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
     
-    var stars: [UILabel] = []
+    var starLabels: [UILabel] = []
     
     override var intrinsicContentSize: CGSize {
         let componentsWidth = CGFloat(componentCount) * componentDimension
@@ -61,7 +62,7 @@ class CustomControl: UIControl {
         four.textAlignment = .center
         five.textAlignment = .center
         
-        stars = [one, two, three, four, five]
+        starLabels = [one, two, three, four, five]
         
         self.addSubview(one)
         self.addSubview(two)
@@ -72,7 +73,19 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
-        
+        for label in starLabels {
+            let touchPoint = touch.location(in: label)
+            if label.bounds.contains(touchPoint) {
+                value = label.tag
+                label.textColor = componentActiveColor
+                label.performFlare()
+                
+                if value != previousValue {
+                    sendActions(for: .valueChanged)
+                    previousValue = value
+                }
+            }
+        }
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -107,4 +120,16 @@ class CustomControl: UIControl {
         sendActions(for: [.touchCancel])
     }
     
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
 }

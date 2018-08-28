@@ -12,12 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Set User Rating"
     }
-
+   
     @IBAction func updateRating(_ ratingControl: CustomControl) {
-        title = "User Rating: \(ratingControl.value) "
-                + (ratingControl.value > 1 ? "stars" : "star")
+        print("hi")
+        self.title = "User Rating: \(ratingControl.value) "
+            + (ratingControl.value > 1 ? "stars" : "star")
     }
-    
 }
 
