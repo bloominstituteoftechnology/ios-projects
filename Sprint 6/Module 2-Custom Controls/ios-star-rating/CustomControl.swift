@@ -14,10 +14,11 @@ class CustomControl: UIControl {
     
     var previousValue: Int = 1
     var value: Int = 1
-    private let componentDimension: CGFloat = 40.0
+    private let componentDimension: CGFloat = 70
     private let componentCount: Int = 5
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
+    private let componentFontSize: CGFloat = 70
     
     var starLabels: [UILabel] = []
     
@@ -48,13 +49,13 @@ class CustomControl: UIControl {
         four.frame = CGRect(x: componentDimension * 3 + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
         five.frame = CGRect(x: componentDimension * 4 + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
         
-        one.font = UIFont.boldSystemFont(ofSize: 32.0)
-        two.font = UIFont.boldSystemFont(ofSize: 32.0)
-        three.font = UIFont.boldSystemFont(ofSize: 32.0)
-        four.font = UIFont.boldSystemFont(ofSize: 32.0)
-        five.font = UIFont.boldSystemFont(ofSize: 32.0)
+        one.font = UIFont.boldSystemFont(ofSize: componentFontSize)
+        two.font = UIFont.boldSystemFont(ofSize: componentFontSize)
+        three.font = UIFont.boldSystemFont(ofSize: componentFontSize)
+        four.font = UIFont.boldSystemFont(ofSize: componentFontSize)
+        five.font = UIFont.boldSystemFont(ofSize: componentFontSize)
         
-        one.text = "🤩"; two.text = "🤩"; three.text = "🤩"; four.text = "🤩"; five.text = "🤩"
+        one.text = "✮"; two.text = "✮"; three.text = "✮"; four.text = "✮"; five.text = "✮"
         
         one.textAlignment = .center
         two.textAlignment = .center
@@ -75,6 +76,8 @@ class CustomControl: UIControl {
     func updateValue(at touch: UITouch) {
         for label in starLabels {
             let touchPoint = touch.location(in: label)
+            label.textColor = previousValue >= label.tag ? componentActiveColor : componentInactiveColor
+            
             if label.bounds.contains(touchPoint) {
                 value = label.tag
                 label.textColor = componentActiveColor

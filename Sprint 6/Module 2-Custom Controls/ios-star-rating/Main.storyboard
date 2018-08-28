@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-OR-aB5" customClass="CustomControl" customModule="ios_star_rating" customModuleProvider="target">
+                            <view verifyAmbiguity="ignoreSizes" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-OR-aB5" customClass="CustomControl" customModule="ios_star_rating" customModuleProvider="target">
                                 <rect key="frame" x="20" y="269.5" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
