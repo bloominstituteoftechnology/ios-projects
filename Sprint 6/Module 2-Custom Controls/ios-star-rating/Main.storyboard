@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o7K-YW-kd6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2aJ-7o-YYn">
+            <objects>
+                <navigationController id="o7K-YW-kd6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Mwg-9V-smh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lmx-qD-EyQ" kind="relationship" relationship="rootViewController" id="4RJ-XC-qCl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2x-a4-MJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="69"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n1x-3D-gQ7">
+            <objects>
+                <viewController id="lmx-qD-EyQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcK-2S-ppX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-OR-aB5" customClass="CustomControl" customModule="ios_star_rating" customModuleProvider="target">
+                                <rect key="frame" x="20" y="269.5" width="335" height="128"/>
+                                <color key="backgroundColor" red="0.84603707900000003" green="0.84603707900000003" blue="0.84603707900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="CsX-hH-k0f"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateRating:" destination="YWd-lM-1AW" eventType="valueChanged" id="RWz-i5-NSa"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cMi-mS-L78" firstAttribute="trailing" secondItem="Ge0-OR-aB5" secondAttribute="trailing" constant="20" id="Rph-1R-Shf"/>
+                            <constraint firstItem="Ge0-OR-aB5" firstAttribute="leading" secondItem="cMi-mS-L78" secondAttribute="leading" constant="20" id="X0m-Ov-bxv"/>
+                            <constraint firstItem="Ge0-OR-aB5" firstAttribute="centerY" secondItem="lcK-2S-ppX" secondAttribute="centerY" id="wE1-0K-TY7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cMi-mS-L78"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D43-5f-rjB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5D-cn-ink" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YWd-lM-1AW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="69"/>
+        </scene>
+    </scenes>
+</document>

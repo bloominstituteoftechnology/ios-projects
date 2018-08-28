@@ -1,0 +1,110 @@
+//
+//  CustomControl.swift
+//  ios-star-rating
+//
+//  Created by De MicheliStefano on 28.08.18.
+//  Copyright © 2018 De MicheliStefano. All rights reserved.
+//
+
+import UIKit
+
+class CustomControl: UIControl {
+    
+    // MARK: - Properties
+    
+    var value: Int = 1
+    private let componentDimension: CGFloat = 40.0
+    private let componentCount: Int = 5
+    private let componentActiveColor = UIColor.black
+    private let componentInactiveColor = UIColor.gray
+    
+    var stars: [UILabel] = []
+    
+    override var intrinsicContentSize: CGSize {
+        let componentsWidth = CGFloat(componentCount) * componentDimension
+        let componentsSpacing = CGFloat(componentCount + 1) * 8.0
+        let width = componentsWidth + componentsSpacing
+        return CGSize(width: width, height: componentDimension)
+    }
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+        setup()
+    }
+    
+    func setup() {
+        let one = UILabel()
+        let two = UILabel()
+        let three = UILabel()
+        let four = UILabel()
+        let five = UILabel()
+        
+        one.tag = 1; two.tag = 2; three.tag = 3; four.tag = 4; five.tag = 5
+        
+        one.frame = CGRect(x: 8, y: 0, width: componentDimension, height: componentDimension)
+        two.frame = CGRect(x: componentDimension + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
+        three.frame = CGRect(x: componentDimension * 2 + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
+        four.frame = CGRect(x: componentDimension * 3 + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
+        five.frame = CGRect(x: componentDimension * 4 + 8.0, y: 0.0, width: componentDimension, height: componentDimension)
+        
+        one.font = UIFont.boldSystemFont(ofSize: 32.0)
+        two.font = UIFont.boldSystemFont(ofSize: 32.0)
+        three.font = UIFont.boldSystemFont(ofSize: 32.0)
+        four.font = UIFont.boldSystemFont(ofSize: 32.0)
+        five.font = UIFont.boldSystemFont(ofSize: 32.0)
+        
+        one.text = "🤩"; two.text = "🤩"; three.text = "🤩"; four.text = "🤩"; five.text = "🤩"
+        
+        one.textAlignment = .center
+        two.textAlignment = .center
+        three.textAlignment = .center
+        four.textAlignment = .center
+        five.textAlignment = .center
+        
+        stars = [one, two, three, four, five]
+        
+        self.addSubview(one)
+        self.addSubview(two)
+        self.addSubview(three)
+        self.addSubview(four)
+        self.addSubview(five)
+        
+    }
+    
+    func updateValue(at touch: UITouch) {
+        
+    }
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        updateValue(at: touch)
+        return true
+    }
+    
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchDragInside])
+        } else {
+            sendActions(for: [.touchDragOutside])
+        }
+        updateValue(at: touch)
+        return true
+    }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        guard let touch = touch else { return }
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchUpInside])
+        } else {
+            sendActions(for: [.touchUpOutside])
+        }
+    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: [.touchCancel])
+    }
+    
+}
