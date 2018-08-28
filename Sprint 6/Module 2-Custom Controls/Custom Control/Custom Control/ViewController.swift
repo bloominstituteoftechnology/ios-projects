@@ -22,9 +22,9 @@ class ViewController: UIViewController {
 
     @IBAction func updateRating(_ sender: CustomControl) {
         if sender.value == 1 {
-            navigationController?.title = "User Rating: 1 star"
+            self.title = "User Rating: 1 star"
         } else {
-            navigationController?.title = "User Rating: \(sender.value) stars"
+            self.title = "User Rating: \(sender.value) stars"
         }
     }
     

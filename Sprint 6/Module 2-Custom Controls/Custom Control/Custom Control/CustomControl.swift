@@ -1,20 +1,12 @@
-//
-//  CustomControl.swift
-//  Custom Control
-//
-//  Created by Jeremy Taylor on 8/28/18.
-//  Copyright © 2018 Bytes-Random L.L.C. All rights reserved.
-//
-
-import UIKit
-
-class CustomControl: UIControl {
-    var value = 1
+ import UIKit
+ class CustomControl: UIControl {
     private let componentDimension: CGFloat = 40.0
     private let componentCount = 5
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
     
+    var value: Int = 1
+    var oldValue: Int = 0
     var starLabels: [UILabel] = []
     
     
@@ -22,6 +14,13 @@ class CustomControl: UIControl {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        let componentsWidth = CGFloat(componentCount) * componentDimension
+        let componentsSpacing = CGFloat(componentCount + 1) * 8.0
+        let width = componentsWidth + componentsSpacing
+        return CGSize(width: width, height: componentDimension)
     }
     
     func setup() {
@@ -73,18 +72,20 @@ class CustomControl: UIControl {
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         updateValue(at: touch)
+        sendActions(for: .touchDown)
         return true
     }
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
+            updateValue(at: touch)
             sendActions(for: .touchDragInside)
         } else {
             sendActions(for: .touchDragOutside)
         }
         
-        updateValue(at: touch)
+        
         return true
     }
     
@@ -92,6 +93,7 @@ class CustomControl: UIControl {
         guard let touch = touch else { return }
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
+            updateValue(at: touch)
             sendActions(for: .touchUpInside)
         } else {
             sendActions(for: .touchUpOutside)
@@ -103,13 +105,40 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
+        let touchPoint = touch.location(in: self)
+        
         for label in starLabels {
-            let touchPoint = touch.location(in: label)
-            if label.bounds.contains(touchPoint) {
+            
+            if label.frame.contains(touchPoint) {
                 value = label.tag
-                label.textColor = componentActiveColor
-                sendActions(for: .valueChanged)
+                
+                for index in 1...starLabels.count {
+                    switch index <= value {
+                    case true:
+                        starLabels[index - 1].textColor = componentActiveColor
+                    case false:
+                        starLabels[index - 1].textColor = componentInactiveColor
+                    }
+                }
+                if value != oldValue {
+                    label.textColor = componentActiveColor
+                    performFlare()
+                    sendActions(for: .valueChanged)
+                }
+                    oldValue = value
             }
         }
+    }
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
