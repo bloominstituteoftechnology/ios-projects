@@ -15,12 +15,13 @@ class CustomControl: UIControl {
     private let componentDimension = CGFloat(40.0)
     private let componentCount = 5
     private let componentActiveColor = UIColor.black
-    private let componentInactivColor = UIColor.gray
+    private let componentInactiveColor = UIColor.gray
     
     required init?(coder aCoder: NSCoder){
         super.init(coder: aCoder)
         setUp()
     }
+    var components: [UILabel] = []
     
     func setUp(){
         let star1Label = UILabel(frame: CGRect(x: 0, y: 0, width: componentDimension, height: componentDimension))
@@ -37,6 +38,7 @@ class CustomControl: UIControl {
             label.text = "☆"
             label.textAlignment = .center
             label.textColor = componentActiveColor
+            components.append(label)
         }
     }
     
@@ -47,4 +49,70 @@ class CustomControl: UIControl {
         let width = componentsWidth + componentsSpacing
         return CGSize(width: width, height: componentDimension)
     }
+    
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        _ = updateValue(at: touch)
+        return true
+    }
+    
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint){
+            sendActions(for: [.touchDragInside])
+            updateValue(at: touch)
+        }else{
+            sendActions(for: [.touchDragOutside])
+        }
+        return true
 }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        guard let touch = touch else {return}
+        let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint){
+            sendActions(for: [.touchUpInside])
+            updateValue(at: touch)
+        }else{
+            sendActions(for: [.touchUpOutside])
+        }
+    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: [.touchCancel])
+    }
+    
+    
+    
+    func updateValue(at touch: UITouch){
+        
+        for label in components {
+            let touchPoint = touch.location(in: label)
+            if bounds.contains(touchPoint) {
+                value = label.tag
+                label.textColor = componentActiveColor
+                label.performFlare()
+                sendActions(for: [.valueChanged])
+            } else {
+                label.textColor = componentInactiveColor
+                sendActions(for: [.valueChanged])
+            }
+        }
+    }
+    
+}
+
+
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
+}
+
