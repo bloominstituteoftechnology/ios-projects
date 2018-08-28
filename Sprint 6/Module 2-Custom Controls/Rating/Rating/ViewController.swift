@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let customControl = CustomControl()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     @IBAction func updateRating(_ ratingControl: CustomControl) {
-        var N = customControl.value
-            while N <= 5 {
+        let N = ratingControl.value
                 if N == 1{
                     self.title = "User Rating: \(N) star"
                 }else{
                     self.title = "User Rating: \(N) stars"
                 }
-                N += 1
-            }
     }
 }
