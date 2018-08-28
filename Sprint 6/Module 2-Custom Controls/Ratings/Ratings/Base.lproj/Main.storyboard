@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMo-R5-fFo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hEw-6H-m1i">
+            <objects>
+                <navigationController id="cMo-R5-fFo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Un3-tf-e3c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dhA-Ip-Q8R" kind="relationship" relationship="rootViewController" id="o3C-3H-kff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxc-vs-K04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434" y="117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n4d-VK-kv2">
+            <objects>
+                <viewController id="dhA-Ip-Q8R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KWK-BT-QrN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zm-ES-XZK" customClass="CustomControl" customModule="Ratings" customModuleProvider="target">
+                                <rect key="frame" x="40" y="269" width="295" height="128"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="do2-Pa-cT0" eventType="valueChanged" id="byb-Qz-EUL"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Zm-ES-XZK" firstAttribute="centerY" secondItem="KWK-BT-QrN" secondAttribute="centerY" id="7Rp-Jm-PGM"/>
+                            <constraint firstItem="4Zm-ES-XZK" firstAttribute="centerX" secondItem="KWK-BT-QrN" secondAttribute="centerX" id="9jC-bD-Bhh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yYI-M7-dfo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lGe-qW-B7r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZY-Ga-ToP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="do2-Pa-cT0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="116"/>
+        </scene>
+    </scenes>
+</document>
