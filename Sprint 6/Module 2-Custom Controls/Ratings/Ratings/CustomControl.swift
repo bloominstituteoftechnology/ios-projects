@@ -79,13 +79,20 @@ import UIKit
             let touchPoint = touch.location(in: self)
             if label.frame.contains(touchPoint) {
                 value = label.tag
-                label.textColor = componentActiveColor
-                label.performFlare()
                 
                 if value != previousValue {
                     previousValue = value
+                    label.performFlare()
                     sendActions(for: [.valueChanged])
                 }
+            }
+        }
+        
+        for label in labels {
+            if label.tag <= value {
+                label.textColor = componentActiveColor
+            } else {
+                label.textColor = componentInactiveColor
             }
         }
     }

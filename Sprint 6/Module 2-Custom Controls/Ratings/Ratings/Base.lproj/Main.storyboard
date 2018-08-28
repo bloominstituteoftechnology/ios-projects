@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-434" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--User Rating-->
         <scene sceneID="n4d-VK-kv2">
             <objects>
                 <viewController id="dhA-Ip-Q8R" customClass="ViewController" customModule="Ratings" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yYI-M7-dfo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lGe-qW-B7r"/>
+                    <navigationItem key="navigationItem" title="User Rating" id="lGe-qW-B7r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZY-Ga-ToP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
