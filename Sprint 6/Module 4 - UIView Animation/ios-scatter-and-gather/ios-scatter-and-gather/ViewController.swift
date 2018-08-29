@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var lambdaLogoImageView: UIImageView!
     var lambdaCharLabels: [UILabel] = []
+    var originalLabelPositions: [CGRect] = []
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     let screenHeight: CGFloat = UIScreen.main.bounds.height
     
@@ -28,43 +29,85 @@ class ViewController: UIViewController {
     }
     
     func scatter() {
+        
+        UIView.animate(withDuration: 1) {
+            self.lambdaLogoImageView.alpha = 0
+        }
+        
         for label in lambdaCharLabels {
-            CATransaction.begin()
-            // let animation = CAKeyFrameAnimation(keyPath: "position")
-            let animation = CABasicAnimation(keyPath: "position")
-            //animation.values = [CGPoint(x: CGFloat.random(in: 0..<screenWidth), y: CGFloat.random(in: 0..<screenHeight))]
-            animation.fromValue = label.layer.position
-            let newPosition = CGPoint(x: CGFloat.random(in: 0..<screenWidth), y: CGFloat.random(in: 0..<screenHeight))
-            animation.toValue = newPosition
-            animation.duration = 2
-            animation.isRemovedOnCompletion = false
-            label.layer.add(animation, forKey: "postionAnim")
-            
-            CATransaction.setCompletionBlock {
-                label.layer.position = newPosition
+            let animBlock = {
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
+                    label.layer.position = CGPoint(x: CGFloat.random(in: 0..<self.screenWidth), y: CGFloat.random(in: 0..<self.screenHeight))
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
+                    let randomHue = CGFloat(arc4random_uniform(.max))/CGFloat(UInt32.max)
+                    label.backgroundColor = UIColor(hue: randomHue, saturation: 1, brightness: 1, alpha: 1)
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
+                    let randomAngle = CGFloat.random(in: 0.0..<360)
+                    label.transform = CGAffineTransform(rotationAngle: randomAngle)
+                }
+                
             }
-            CATransaction.commit()
+            
+            UIView.animateKeyframes(withDuration: 2,
+                                    delay: 0.0,
+                                    options: [],
+                                    animations: animBlock,
+                                    completion: nil)
+            
+            // Alternative
+//            CATransaction.begin()
+//            // let animation = CAKeyFrameAnimation(keyPath: "position")
+//            let animation = CABasicAnimation(keyPath: "position")
+//            //animation.values = [CGPoint(x: CGFloat.random(in: 0..<screenWidth), y: CGFloat.random(in: 0..<screenHeight))]
+//            animation.fromValue = label.layer.position
+//            let newPosition = CGPoint(x: CGFloat.random(in: 0..<screenWidth), y: CGFloat.random(in: 0..<screenHeight))
+//            animation.toValue = newPosition
+//            animation.duration = 1
+//            animation.isRemovedOnCompletion = false
+//            label.layer.add(animation, forKey: "scatterAnim")
+//
+//            CATransaction.setCompletionBlock {
+//                label.layer.position = newPosition
+//            }
+//            CATransaction.commit()
         }
     }
     
     func gather() {
         
+        UIView.animate(withDuration: 1) {
+            self.lambdaLogoImageView.alpha = 1
+        }
+        
+        for (index, label) in lambdaCharLabels.enumerated() {
+            
+            UIView.animate(withDuration: 2) {
+                
+                self.lambdaLogoImageView.alpha = 1
+                label.transform = .identity
+                label.frame = self.originalLabelPositions[index]
+                label.textColor = .black
+                label.backgroundColor = .white
+            }
+
+        }
     }
     
     func setupViewElements() {
+        var positionX: CGFloat = 75.0
         var widthConstraint = -65.0
-        let componentDimension = 40.0
+        let componentDimension: CGFloat = 40.0
         let fontSize: CGFloat = 30.0
         let lambdaChars = Array("Lambda")
         var constraints: [NSLayoutConstraint] = []
         
         for char in lambdaChars {
-            let label = UILabel()
-            label.frame = CGRect(x: componentDimension, y: componentDimension, width: componentDimension, height: componentDimension)
+            let label = UILabel(frame: CGRect(x: positionX, y: screenHeight / 2.0, width: componentDimension, height: componentDimension))
             label.font = UIFont.boldSystemFont(ofSize: fontSize)
             label.text = String(char)
             view.addSubview(label)
-            lambdaCharLabels.append(label)
             
             label.translatesAutoresizingMaskIntoConstraints = false
             let widthConstraints = NSLayoutConstraint(item: label,
@@ -86,6 +129,10 @@ class ViewController: UIViewController {
             constraints.append(heightConstraints)
             
             widthConstraint += 25
+            positionX += componentDimension + 8
+            
+            lambdaCharLabels.append(label)
+            originalLabelPositions.append(label.frame)
         }
     
         NSLayoutConstraint.activate(constraints)
