@@ -18,14 +18,14 @@ import UIKit
     
     func setup() {
         
-        for index in 0...4 {
-            let x = CGFloat(index)*(componentDimension + 8.0)
+        for index in 1...componentCount {
+            let x = CGFloat(index - 1)*(componentDimension + 8.0)
             let newLabel = UILabel(frame: CGRect(x: x, y: 0.0, width: componentDimension, height: componentDimension))
-            newLabel.tag = index + 1
+            newLabel.tag = index
             newLabel.font = UIFont.boldSystemFont(ofSize: 32.0)
             newLabel.text = "✰"
             newLabel.textAlignment = .center
-            newLabel.textColor = index == 0 ? componentActiveColor : componentInactiveColor
+            newLabel.textColor = index == 1 ? componentActiveColor : componentInactiveColor
             
             addSubview(newLabel)
             labels.append(newLabel)
@@ -106,7 +106,7 @@ import UIKit
     var labels = [UILabel]()
     
     private let componentDimension: CGFloat = 40.0
-    private let componentCount = 5
+    private let componentCount = 6
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
 
@@ -115,8 +115,17 @@ import UIKit
 extension UIView {
     // "Flare view" animation sequence
     func performFlare() {
-        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
-        func unflare() { transform = .identity }
+        func flare()   {
+            let scaleTransform = CGAffineTransform(scaleX: 1.6, y: 1.6)
+            transform = scaleTransform.rotated(by: CGFloat.pi / 2)
+            backgroundColor = .purple
+            alpha = 0.5
+        }
+        func unflare() {
+            transform = .identity
+            backgroundColor = .clear
+            alpha = 1.0
+        }
         
         UIView.animate(withDuration: 0.3,
                        animations: { flare() },
