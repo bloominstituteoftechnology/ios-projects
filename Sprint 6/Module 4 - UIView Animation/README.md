@@ -55,3 +55,14 @@ Here are some stretch goals to investigate:
 * Add 3-D transforms to your layers instead of a simple 2D rotation.
 * Animate shadows onto and away from your views.
 * Add keyframe sequences to perform multiple tasks when scattering your views.
+
+## References
+
+Here are some helpful resources for your project:
+
+* `UIView` reference (Xcode, also https://developer.apple.com/documentation/uikit/uiview). See the `Animations` section for a list of animatable properties.
+* `CALayer` animatable properties: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html
+* Affine Transforms in iOS: see Xcode docs for `CGAffineTransform` and `CATransform3D`, Quartz 2D: https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_affine/dq_affine.html, Wolfram: http://mathworld.wolfram.com/AffineTransformation.html, Wikipedia: https://en.wikipedia.org/wiki/Affine_transformation, University of Texas: https://www.cs.utexas.edu/users/fussell/courses/cs384g-fall2011/lectures/lecture07-Affine.pdf, 
+* Using `arc4random` and `arc4random_uniform`: https://www.freebsd.org/cgi/man.cgi?query=arc4random, SO: https://stackoverflow.com/questions/32552336/generating-random-numbers-with-swift
+* UIView spring animation: See Xcode docs on `animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:`
+* UIView key frame animation: See Xcode docs on `addKeyframeWithRelativeStartTime:relativeDuration:animations:` and `animateKeyframesWithDuration:delay:options:animations:completion:`
