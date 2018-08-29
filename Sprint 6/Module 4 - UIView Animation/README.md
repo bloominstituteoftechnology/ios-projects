@@ -62,7 +62,11 @@ Here are some helpful resources for your project:
 
 * `UIView` reference (Xcode, also https://developer.apple.com/documentation/uikit/uiview). See the `Animations` section for a list of animatable properties.
 * `CALayer` animatable properties: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html
-* Affine Transforms in iOS: see Xcode docs for `CGAffineTransform` and `CATransform3D`, Quartz 2D: https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_affine/dq_affine.html, Wolfram: http://mathworld.wolfram.com/AffineTransformation.html, Wikipedia: https://en.wikipedia.org/wiki/Affine_transformation, University of Texas: https://www.cs.utexas.edu/users/fussell/courses/cs384g-fall2011/lectures/lecture07-Affine.pdf, 
+* Core animation: https://developer.apple.com/documentation/quartzcore
+* Affine Transforms in iOS: see Xcode docs for `CGAffineTransform` and `CATransform3D`, Quartz 2D: https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_affine/dq_affine.html, Wolfram: http://mathworld.wolfram.com/AffineTransformation.html, Wikipedia: https://en.wikipedia.org/wiki/Affine_transformation, University of Texas: https://www.cs.utexas.edu/users/fussell/courses/cs384g-fall2011/lectures/lecture07-Affine.pdf
 * Using `arc4random` and `arc4random_uniform`: https://www.freebsd.org/cgi/man.cgi?query=arc4random, SO: https://stackoverflow.com/questions/32552336/generating-random-numbers-with-swift
 * UIView spring animation: See Xcode docs on `animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:`
-* UIView key frame animation: See Xcode docs on `addKeyframeWithRelativeStartTime:relativeDuration:animations:` and `animateKeyframesWithDuration:delay:options:animations:completion:`
+* UIView keyframe animation: See Xcode docs on `addKeyframeWithRelativeStartTime:relativeDuration:animations:` and `animateKeyframesWithDuration:delay:options:animations:completion:`
+* Principles of animation: https://www.youtube.com/watch?v=pDVfNf5GvPg, https://www.youtube.com/watch?v=yiGY0qiy8fY, and https://www.youtube.com/watch?v=gyGEwyWLbHk
+* Animating auto layout: search the web using these terms for lots of examples.
+* Transition coordinators: see `viewWillTransitionToSize:withTransitionCoordinator:` to apply interface adjustments when view sizes change.
