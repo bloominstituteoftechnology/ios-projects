@@ -35,7 +35,7 @@ There are a number of ways to approach this custom transition, but perhaps the m
 You'll need to provide the navigation controller with a delegate. You'll also need to set the animation up when the table view cell -> detail view segue is triggered.
 
 1. In your table view controller's `viewDidLoad()`, set the `navigationController`'s delegate to an instance of `NavigationControllerDelegate`.
-2. Implement `prepare(for segue:)`. Get the tapped row, and use it to give the navigation controller the source table view cell.
+2. Implement `prepare(for segue:)`. Get the tapped row, and use it to give the navigation controller delegate the source table view cell.
 3. In your `NavigationControllerDelegate`'s `navigationController(_ navigationController:, animationControllerFor:, from:, to:)` method, create and configure an `Animator` object, and return it. The animator will need to have its source and destination imageView and label properties set. **Note: You must keep a strong reference to the animator object in your navigation controller delegate. Use a property to hold it instead of creating a temporary instance and referencing it solely in this method.**
 
 ## Part Three - Implement the Animation
