@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1AE598213884FF0087CEAA /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AE597213884FF0087CEAA /* NavigationControllerDelegate.swift */; };
+		3D1AE59A213886570087CEAA /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1AE599213886570087CEAA /* ImageTransitionAnimator.swift */; };
 		3DDC888021387A7900CCAA37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDC887F21387A7900CCAA37 /* AppDelegate.swift */; };
 		3DDC888521387A7900CCAA37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDC888321387A7900CCAA37 /* Main.storyboard */; };
 		3DDC888721387A7A00CCAA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDC888621387A7A00CCAA37 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1AE597213884FF0087CEAA /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		3D1AE599213886570087CEAA /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		3DDC887C21387A7900CCAA37 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDC887F21387A7900CCAA37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DDC888421387A7900CCAA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1AE595213884D40087CEAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DDC888321387A7900CCAA37 /* Main.storyboard */,
+				3DDC888621387A7A00CCAA37 /* Assets.xcassets */,
+				3DDC888821387A7A00CCAA37 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D1AE596213884E90087CEAA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3D1AE597213884FF0087CEAA /* NavigationControllerDelegate.swift */,
+				3D1AE599213886570087CEAA /* ImageTransitionAnimator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		3DDC887321387A7900CCAA37 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +83,12 @@
 		3DDC887E21387A7900CCAA37 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				3DDC887F21387A7900CCAA37 /* AppDelegate.swift */,
 				3DDC889221387B7100CCAA37 /* ViewControllers */,
 				3DDC889B21387F1A00CCAA37 /* ModelControllers */,
 				3DDC889121387B5E00CCAA37 /* Models */,
-				3DDC887F21387A7900CCAA37 /* AppDelegate.swift */,
-				3DDC888321387A7900CCAA37 /* Main.storyboard */,
-				3DDC888621387A7A00CCAA37 /* Assets.xcassets */,
-				3DDC888821387A7A00CCAA37 /* LaunchScreen.storyboard */,
+				3D1AE596213884E90087CEAA /* Navigation */,
+				3D1AE595213884D40087CEAA /* Resources */,
 				3DDC888B21387A7A00CCAA37 /* Info.plist */,
 			);
 			path = Friends;
@@ -172,7 +194,9 @@
 				3DDC889821387E2900CCAA37 /* FriendCellTableViewCell.swift in Sources */,
 				3DDC889A21387EA400CCAA37 /* Friend.swift in Sources */,
 				3DDC889621387B9500CCAA37 /* FriendDetailViewController.swift in Sources */,
+				3D1AE598213884FF0087CEAA /* NavigationControllerDelegate.swift in Sources */,
 				3DDC889421387B8600CCAA37 /* FriendsTableViewController.swift in Sources */,
+				3D1AE59A213886570087CEAA /* ImageTransitionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,8 @@
 import UIKit
 
 class FriendDetailViewController: UIViewController {
-
-    @IBOutlet var profileImage: [UIImageView]!
+    
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var descript: UILabel!
     

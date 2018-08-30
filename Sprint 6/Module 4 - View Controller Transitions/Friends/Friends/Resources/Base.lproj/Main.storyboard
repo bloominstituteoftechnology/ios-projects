@@ -54,7 +54,7 @@
                                 <connections>
                                     <outlet property="name" destination="ndd-FM-77V" id="j1P-I6-Kme"/>
                                     <outlet property="profileImage" destination="j6S-cJ-YQJ" id="Sv8-Cg-mGQ"/>
-                                    <segue destination="fOt-RL-6xK" kind="show" id="X97-6X-rVX"/>
+                                    <segue destination="fOt-RL-6xK" kind="show" identifier="ShowFriendDetail" id="X97-6X-rVX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,6 +128,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W3f-Xo-lo0"/>
                     </view>
+                    <connections>
+                        <outlet property="descript" destination="JPE-Le-VIk" id="As6-G9-sqa"/>
+                        <outlet property="name" destination="Lqe-xQ-yhk" id="mxN-WR-pNW"/>
+                        <outlet property="profileImage" destination="ZWI-8Z-B8o" id="Ajv-TO-eRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzf-cf-obt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
