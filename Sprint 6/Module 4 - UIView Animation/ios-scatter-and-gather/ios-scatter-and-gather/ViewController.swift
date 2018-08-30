@@ -36,9 +36,11 @@ class ViewController: UIViewController {
         }
         
         for label in lambdaCharLabels {
+            let navBarHeight = navigationController?.navigationBar.bounds.maxY
+            
             let animBlock = {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
-                    label.layer.position = CGPoint(x: CGFloat.random(in: 0..<self.screenWidth), y: CGFloat.random(in: 0..<self.screenHeight))
+                    label.layer.position = CGPoint(x: CGFloat.random(in: 0..<self.screenWidth), y: CGFloat.random(in: (navBarHeight ?? 0)..<self.screenHeight))
                 }
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
                     let randomHue = CGFloat(arc4random_uniform(.max))/CGFloat(UInt32.max)
