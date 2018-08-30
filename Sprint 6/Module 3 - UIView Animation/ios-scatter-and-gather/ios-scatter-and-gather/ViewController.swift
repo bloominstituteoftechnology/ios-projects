@@ -100,7 +100,6 @@ class ViewController: UIViewController {
                 label.backgroundColor = .white
                 label.shadowColor = .clear
             }
-
         }
     }
     
