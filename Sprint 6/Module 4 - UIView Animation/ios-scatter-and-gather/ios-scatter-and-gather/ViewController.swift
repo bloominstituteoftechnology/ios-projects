@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 1) {
             self.lambdaLogoImageView.alpha = 0
+            self.lambdaLogoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi).concatenating(CGAffineTransform(scaleX: 0.1, y: 0.1))
         }
         
         for label in lambdaCharLabels {
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
                     let randomHue = CGFloat(arc4random_uniform(.max))/CGFloat(UInt32.max)
                     label.backgroundColor = UIColor(hue: randomHue, saturation: 1, brightness: 1, alpha: 1)
+                }
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
+                    label.shadowColor = .gray
+                    label.shadowOffset = CGSize(width: CGFloat(3), height: CGFloat(3))
                 }
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.3) {
                     let randomAngle = CGFloat.random(in: 0.0..<360)
@@ -56,7 +61,7 @@ class ViewController: UIViewController {
                                     animations: animBlock,
                                     completion: nil)
             
-            // Alternative
+            // ALTERNATIVE
 //            CATransaction.begin()
 //            // let animation = CAKeyFrameAnimation(keyPath: "position")
 //            let animation = CABasicAnimation(keyPath: "position")
@@ -77,8 +82,9 @@ class ViewController: UIViewController {
     
     func gather() {
         
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 2) {
             self.lambdaLogoImageView.alpha = 1
+            self.lambdaLogoImageView.transform = .identity
         }
         
         for (index, label) in lambdaCharLabels.enumerated() {
@@ -90,14 +96,14 @@ class ViewController: UIViewController {
                 label.frame = self.originalLabelPositions[index]
                 label.textColor = .black
                 label.backgroundColor = .white
+                label.shadowColor = .clear
             }
 
         }
     }
     
     func setupViewElements() {
-        var positionX: CGFloat = 75.0
-        var widthConstraint = -65.0
+        var positionX: CGFloat = 85.0
         let componentDimension: CGFloat = 40.0
         let fontSize: CGFloat = 30.0
         let lambdaChars = Array("Lambda")
@@ -114,9 +120,9 @@ class ViewController: UIViewController {
                                                       attribute: .centerX,
                                                       relatedBy: .equal,
                                                       toItem: view,
-                                                      attribute: .centerX,
+                                                      attribute: .left,
                                                       multiplier: 1.0,
-                                                      constant: CGFloat(widthConstraint))
+                                                      constant: CGFloat(positionX))
             constraints.append(widthConstraints)
             
             let heightConstraints = NSLayoutConstraint(item: label,
@@ -128,7 +134,6 @@ class ViewController: UIViewController {
                                                        constant: 0)
             constraints.append(heightConstraints)
             
-            widthConstraint += 25
             positionX += componentDimension + 8
             
             lambdaCharLabels.append(label)
