@@ -36,10 +36,9 @@ class ViewController: UIViewController {
                     label.textColor = self.colorArray[index]
                     let backgroundIndex = Int(arc4random_uniform(UInt32(self.colorArray.count)))
                     label.layer.backgroundColor = self.colorArray[backgroundIndex].cgColor
-                    label.flare()
+                    label.scatter()
                 }
             }
-            
             shouldScramble = true
         } else {
             
@@ -49,10 +48,9 @@ class ViewController: UIViewController {
                 for label in self.labels {
                     label.textColor = .black
                     label.layer.backgroundColor = UIColor.clear.cgColor
-                    label.unflare()
+                    label.gather()
                 }
             }
-            
             shouldScramble = false
         }
     }
@@ -74,15 +72,12 @@ class ViewController: UIViewController {
 
 extension UIView {
     
-    func flare() {
+    func scatter() {
         let translate = CGAffineTransform(translationX: CGFloat(arc4random_uniform(UInt32(superview?.bounds.width ?? 300))) - frame.minX, y: CGFloat(arc4random_uniform(UInt32(superview?.bounds.height ?? 300))) - frame.minY)
         transform = translate.rotated(by: CGFloat(arc4random_uniform(361)) / CGFloat.pi*2).scaledBy(x: 1.6, y: 1.6)
-//
-//        let rotate = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(361)) / CGFloat.pi*2)
-//        transform = rotate.translatedBy(x: CGFloat(arc4random_uniform(UInt32(superview?.bounds.width ?? 300))), y: CGFloat(arc4random_uniform(UInt32(superview?.bounds.height ?? 300))))
     }
     
-    func unflare() {
+    func gather() {
         transform = .identity
     }
     
