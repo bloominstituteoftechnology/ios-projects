@@ -52,7 +52,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="IJi-5h-XLk" id="ZY5-UY-Q7B"/>
+                                    <outlet property="cellImageView" destination="IJi-5h-XLk" id="0SX-Hq-P8N"/>
                                     <outlet property="nameLabel" destination="AoO-H6-rXc" id="ePR-Oc-oIr"/>
                                     <segue destination="Kw9-Uh-7pN" kind="show" identifier="DetailSegue" id="Ygw-kG-J6G"/>
                                 </connections>

@@ -6,10 +6,10 @@
 //  Copyright © 2018 Lisa Sampson. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Friend {
-    let name: String = "Lisa"
-    let imageData: Data
-    let job: String = "iOS Student"
+    let name: String
+    let image: UIImage
+    let job: String
 }

@@ -15,6 +15,9 @@
 		FF5A8D8421388A61000BA5F2 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8321388A61000BA5F2 /* FriendsTableViewController.swift */; };
 		FF5A8D8621388A77000BA5F2 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8521388A77000BA5F2 /* FriendsTableViewCell.swift */; };
 		FF5A8D8821388A87000BA5F2 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8721388A87000BA5F2 /* Friend.swift */; };
+		FF5A8D8B2138905C000BA5F2 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8A2138905C000BA5F2 /* NavigationControllerDelegate.swift */; };
+		FF5A8D8E21389FFF000BA5F2 /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8D21389FFF000BA5F2 /* FriendController.swift */; };
+		FF5A8D902138A54D000BA5F2 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A8D8F2138A54D000BA5F2 /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FF5A8D8321388A61000BA5F2 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		FF5A8D8521388A77000BA5F2 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		FF5A8D8721388A87000BA5F2 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		FF5A8D8A2138905C000BA5F2 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		FF5A8D8D21389FFF000BA5F2 /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
+		FF5A8D8F2138A54D000BA5F2 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,9 @@
 		FF5A8D6A213882F1000BA5F2 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				FF5A8D892138902D000BA5F2 /* Animation */,
 				FF5A8D80213888C4000BA5F2 /* Model */,
+				FF5A8D8C21389FE0000BA5F2 /* ModelController */,
 				FF5A8D7F213888BA000BA5F2 /* Views */,
 				FF5A8D7E213888AE000BA5F2 /* ViewControllers */,
 				FF5A8D6B213882F1000BA5F2 /* AppDelegate.swift */,
@@ -103,6 +111,23 @@
 				FF5A8D8721388A87000BA5F2 /* Friend.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF5A8D892138902D000BA5F2 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FF5A8D8A2138905C000BA5F2 /* NavigationControllerDelegate.swift */,
+				FF5A8D8F2138A54D000BA5F2 /* ImageTransitionAnimator.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FF5A8D8C21389FE0000BA5F2 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				FF5A8D8D21389FFF000BA5F2 /* FriendController.swift */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5A8D6C213882F1000BA5F2 /* AppDelegate.swift in Sources */,
+				FF5A8D902138A54D000BA5F2 /* ImageTransitionAnimator.swift in Sources */,
+				FF5A8D8E21389FFF000BA5F2 /* FriendController.swift in Sources */,
 				FF5A8D8221388A49000BA5F2 /* DetailViewController.swift in Sources */,
 				FF5A8D8821388A87000BA5F2 /* Friend.swift in Sources */,
 				FF5A8D8421388A61000BA5F2 /* FriendsTableViewController.swift in Sources */,
+				FF5A8D8B2138905C000BA5F2 /* NavigationControllerDelegate.swift in Sources */,
 				FF5A8D8621388A77000BA5F2 /* FriendsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

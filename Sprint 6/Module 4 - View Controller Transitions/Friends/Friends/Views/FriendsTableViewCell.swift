@@ -12,14 +12,15 @@ class FriendsTableViewCell: UITableViewCell {
 
     func updateViews() {
 
-        guard let friends = friends else { return }
-        nameLabel.text = friends.name
-
+        guard let friend = friend else { return }
+        nameLabel.text = friend.name
+        cellImageView.image = friend.image
     }
 
     @IBOutlet weak var nameLabel: UILabel!
-
-    var friends: Friend? {
+    @IBOutlet weak var cellImageView: UIImageView!
+    
+    var friend: Friend? {
         didSet {
             updateViews()
         }
