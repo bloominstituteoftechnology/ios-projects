@@ -15,12 +15,9 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        guard let sourceCell = sourceCell,
-            let toVC = toVC as? FriendDetailViewController else { return animator }
-        animator.sourceNameLabel = sourceCell.name.text
-        animator.sourceImage = sourceCell.profileImage.image
-        animator.destNameLabel = toVC.name.text
-        animator.destImage = toVC.profileImage.image
+        animator.sourceNameLabel = sourceCell?.name
+        animator.sourceImageView = sourceCell?.profileImage
+        animator.sourceDescription = sourceCell?.friend?.description
         
         return animator
     }

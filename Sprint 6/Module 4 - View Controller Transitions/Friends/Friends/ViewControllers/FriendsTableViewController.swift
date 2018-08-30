@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class FriendsTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
     
     var friends: [Friend] = []
     var navigationControllerDelegate = NavigationControllerDelegate()
@@ -41,19 +41,13 @@ class FriendsTableViewController: UITableViewController {
 
         return cell
     }
- 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
      
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowFriendDetail" {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            navigationControllerDelegate.sourceCell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCellTableViewCell
-        }
+        segue.destination.transitioningDelegate = self
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath) as! FriendCellTableViewCell
+
     }
 
 }

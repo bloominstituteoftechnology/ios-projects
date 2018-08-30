@@ -85,7 +85,6 @@
 			children = (
 				3DDC887F21387A7900CCAA37 /* AppDelegate.swift */,
 				3DDC889221387B7100CCAA37 /* ViewControllers */,
-				3DDC889B21387F1A00CCAA37 /* ModelControllers */,
 				3DDC889121387B5E00CCAA37 /* Models */,
 				3D1AE596213884E90087CEAA /* Navigation */,
 				3D1AE595213884D40087CEAA /* Resources */,
@@ -110,13 +109,6 @@
 				3DDC889721387E2900CCAA37 /* FriendCellTableViewCell.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		3DDC889B21387F1A00CCAA37 /* ModelControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
