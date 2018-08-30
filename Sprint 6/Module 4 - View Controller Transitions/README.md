@@ -7,7 +7,7 @@ After completing the lesson material and this project, you should be able to:
 - create custom transition animations using the view controller transition animation API
 - create interactive transition animations
 
-[![Demo Video](https://img.youtube.com/vi/BI_0QT_NeeI/0.jpg)](https://www.youtube.com/watch?v=BI_0QT_NeeI)
+[![Demo Video](https://img.youtube.com/vi/eSh93_D_xbE/0.jpg)](https://www.youtube.com/watch?v=eSh93_D_xbE)
 
 ## Part One - Basic App
 
