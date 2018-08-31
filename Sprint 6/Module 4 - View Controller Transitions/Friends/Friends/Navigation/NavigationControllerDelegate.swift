@@ -11,13 +11,13 @@ import UIKit
 class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     
     var sourceCell: FriendCellTableViewCell?
+    var isBackAnimation: Bool = false
     var animator = ImageTransitionAnimator()
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        animator.sourceNameLabel = sourceCell?.name
-        animator.sourceImageView = sourceCell?.profileImage
-        animator.sourceDescription = sourceCell?.friend?.description
+        animator.friendCell = sourceCell
+        animator.isBackAnimation = isBackAnimation
         
         return animator
     }

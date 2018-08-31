@@ -9,65 +9,96 @@
 import UIKit
 
 class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    
-    var sourceNameLabel: UILabel?
+    var friendCell: FriendCellTableViewCell?
     var sourceImageView: UIImageView?
-    var sourceDescription: String?
+    var isBackAnimation: Bool = false
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let toVC = transitionContext.viewController(forKey: .to) as? FriendDetailViewController,
-            let toView = transitionContext.view(forKey: .to) else { return }
+        guard let friendCell = friendCell, let nameLabel = friendCell.name, let imageView = friendCell.profileImage else { return }
         
+        var sourceNameLabel = nameLabel
+        var sourceImageView = imageView
+        let destNameLabel: UILabel
+        let destImageView: UIImageView
+        var toView: UIView
+        let toViewEndFrame: CGRect
+        
+        if isBackAnimation {
+            guard let fromFriendsDetailVC = transitionContext.viewController(forKey: .from) as? FriendDetailViewController,
+                let toFriendTVC = transitionContext.viewController(forKey: .to) as? FriendsTableViewController,
+                let toFriendTVCView = transitionContext.view(forKey: .to) else { return }
+            
+            toFriendTVC.selectedFriendCell = friendCell
+            
+            sourceNameLabel = fromFriendsDetailVC.name
+            sourceImageView = fromFriendsDetailVC.profileImage
+            destNameLabel = friendCell.name
+            destImageView = friendCell.profileImage
+            toView = toFriendTVCView
+            toViewEndFrame = transitionContext.finalFrame(for: toFriendTVC)
+            
+        } else {
+            guard let toFriendsDetailVC = transitionContext.viewController(forKey: .to) as? FriendDetailViewController,
+                let toFriendsDetailView = transitionContext.view(forKey: .to) else { return }
+            
+            toFriendsDetailVC.selectedFriendCell = friendCell
+            destNameLabel = toFriendsDetailVC.name
+            destImageView = toFriendsDetailVC.profileImage
+            toView = toFriendsDetailView
+            toViewEndFrame = transitionContext.finalFrame(for: toFriendsDetailVC)
+        }
+//
+//        destName.text = sourceName.text
+//        destImage.image = sourceImage.image
+//        //destDescription.text = sourceDescription!
+        
+        // Setup the containerView which acts as the superview during the transition from presenting to presented VC
         let containerView = transitionContext.containerView
         
-        let toViewEndFrame = transitionContext.finalFrame(for: toVC)
+        // Set the end frame but set its initial alpha to 0.0 so its initially faded out
         toView.frame = toViewEndFrame
         toView.alpha = 0.0
         containerView.addSubview(toView)
         
-        let sourceName = sourceNameLabel!
-        let sourceImage = sourceImageView!
-        let destName = toVC.name!
-        let destImage = toVC.profileImage!
-        let destDescription = toVC.descript!
-        destName.text = sourceName.text
-        destImage.image = sourceImage.image
-        destDescription.text = sourceDescription!
+        // Fade out the presenting and presented VC's labels for the transition
+        sourceNameLabel.alpha = 0.0
+        sourceImageView.alpha = 0.0
+        destNameLabel.alpha = 0.0
+        destImageView.alpha = 0.0
         
-        sourceName.alpha = 0.0
-        sourceImage.alpha = 0.0
-        destName.alpha = 0.0
-        destImage.alpha = 0.0
-        
-        let nameInitialFrame = containerView.convert(sourceName.bounds, from: sourceName)
+        // Create the name scratch that is used for the animated transition and add it to the containerView
+        let nameInitialFrame = containerView.convert(sourceNameLabel.bounds, from: sourceNameLabel)
         let animatedNameLabel = UILabel(frame: nameInitialFrame)
-        animatedNameLabel.text = sourceName.text
-        animatedNameLabel.font = sourceName.font
+        animatedNameLabel.text = sourceNameLabel.text
+        animatedNameLabel.font = sourceNameLabel.font
         containerView.addSubview(animatedNameLabel)
         
-        let imageInitialFrame = containerView.convert(sourceImage.bounds, from: sourceImage)
+        
+        // Create the image scratch that is used for the animated transition and add it to the containerView
+        let imageInitialFrame = containerView.convert(sourceImageView.bounds, from: sourceImageView)
         let animatedImage = UIImageView(frame: imageInitialFrame)
-        animatedImage.image = sourceImage.image
+        animatedImage.image = sourceImageView.image
         containerView.addSubview(animatedImage)
         
         let duration = transitionDuration(using: transitionContext)
         
+        // Force lay out of subviews
         toView.layoutIfNeeded()
         
         UIView.animate(withDuration: duration, animations: {
-            animatedNameLabel.frame = containerView.convert(destName.bounds, from: destName)
-            animatedImage.frame = containerView.convert(destImage.bounds, from: destImage)
+            animatedNameLabel.frame = containerView.convert(destNameLabel.bounds, from: destNameLabel)
+            animatedImage.frame = containerView.convert(destImageView.bounds, from: destImageView)
             
             toView.alpha = 1.0
         }) { (success) in
-            sourceName.alpha = 1.0
-            sourceImage.alpha = 1.0
-            destName.alpha = 1.0
-            destImage.alpha = 1.0
+            sourceNameLabel.alpha = 1.0
+            sourceImageView.alpha = 1.0
+            destNameLabel.alpha = 1.0
+            destImageView.alpha = 1.0
             
             animatedNameLabel.removeFromSuperview()
             animatedImage.removeFromSuperview()

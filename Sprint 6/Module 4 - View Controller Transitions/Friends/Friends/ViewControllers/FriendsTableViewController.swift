@@ -8,11 +8,17 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+class FriendsTableViewController: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     var friends: [Friend] = []
+    var selectedFriendCell: FriendCellTableViewCell?
     var navigationControllerDelegate = NavigationControllerDelegate()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.delegate = navigationControllerDelegate
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeFriends()
@@ -44,10 +50,10 @@ class FriendsTableViewController: UITableViewController, UIViewControllerTransit
      
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.transitioningDelegate = self
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath) as! FriendCellTableViewCell
-
+        let friendCell = tableView.cellForRow(at: indexPath) as? FriendCellTableViewCell
+        selectedFriendCell = friendCell
+        navigationControllerDelegate.sourceCell = friendCell
     }
 
 }

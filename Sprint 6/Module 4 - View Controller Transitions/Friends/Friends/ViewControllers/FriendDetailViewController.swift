@@ -8,9 +8,16 @@
 
 import UIKit
 
-class FriendDetailViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class FriendDetailViewController: UIViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     let animator = ImageTransitionAnimator()
+    var navigationControllerDelegate = NavigationControllerDelegate()
+    
+    var selectedFriendCell: FriendCellTableViewCell? {
+        didSet {
+            updateViews()
+        }
+    }
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -18,10 +25,27 @@ class FriendDetailViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transitioningDelegate = self
+        navigationController?.delegate = self
     }
     
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    private func updateViews() {
+        name?.text = selectedFriendCell?.name.text
+        profileImage?.image = selectedFriendCell?.profileImage.image
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        animator.friendCell = selectedFriendCell
+        animator.isBackAnimation = true
+        
         return animator
     }
+    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        let friendsTVC = subsequentVC as! FriendsTableViewController
+        friendsTVC.selectedFriendCell = selectedFriendCell
+        navigationControllerDelegate.sourceCell = selectedFriendCell
+        navigationControllerDelegate.isBackAnimation = true
+    }
+    
 }
