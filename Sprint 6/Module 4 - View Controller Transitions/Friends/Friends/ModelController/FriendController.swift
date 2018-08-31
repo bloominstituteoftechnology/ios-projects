@@ -11,9 +11,9 @@ import UIKit
 class FriendController {
     
     init() {
-        let names: [String] = ["Lisa"]
-        let images: [UIImage] = [#imageLiteral(resourceName: "lisaprof")]
-        let jobs: [String] = ["iOS Student"]
+        let names: [String] = ["Lisa", "Grant"]
+        let images: [UIImage] = [#imageLiteral(resourceName: "lisaprof"), #imageLiteral(resourceName: "grant")]
+        let jobs: [String] = ["iOS Student", "Senior iOS Engineer"]
         
         var index: Int = 0
         

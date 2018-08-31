@@ -38,7 +38,7 @@ class FriendsTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         detailVC.friend = friendController.friends[indexPath.row]
         
-        let cell = tableView.cellForRow(at: indexPath)
+        guard let cell = tableView.cellForRow(at: indexPath) as? FriendsTableViewCell else { return }
         
         navigationControllerDelegate.sourceCell = cell
     }
