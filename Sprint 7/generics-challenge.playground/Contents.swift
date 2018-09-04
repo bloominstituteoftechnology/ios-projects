@@ -35,36 +35,54 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
         return items.keys.contains(element)
     }
     
-    func union(_ newElementSet: [Element]) -> [Element : Int] {
-        var unionizedElements: [Element : Int] = items
+    func union(_ countedSet: CountedSet) -> CountedSet {
+        var unionizedElements = self
         
-        for element in newElementSet {
-            if let item = unionizedElements[element] {
-                unionizedElements[element] = item + 1
+        for element in countedSet.items.keys {
+            if let item = unionizedElements.items[element] {
+                unionizedElements.items[element] = item + 1
             } else {
-                unionizedElements[element] = 1
+                unionizedElements.items[element] = 1
             }
         }
         
         return unionizedElements
     }
     
-    mutating func mutatedUnion (_ newElementSet: [Element]) -> [Element] {
-        for element in newElementSet {
-            insert(element)
+    func intersection(_ countedSet: CountedSet) -> CountedSet {
+        var intersectedElements = self
+
+        for element in countedSet.items.keys {
+            if let item = intersectedElements.items[element] {
+                intersectedElements.items[element] = item + 1
+            } else {
+                intersectedElements.items[element] = 1
+            }
         }
-        return items
+
+        return intersectedElements
     }
     
-//    func intersection(_ newElementSet: [Element]) -> [Element : Int] {
-//        var intersectedElements: [Element : Int] = []
-//        for item in newElementSet {
-//            if items.keys.contains(item) {
-//
-//            }
-//        }
-//        return intersectedElements
-//    }
+    func substraction(_ countedSet: CountedSet) -> CountedSet {
+        var substractedElements = self
+        
+        for element in countedSet.items.keys {
+            if let item = substractedElements.items[element] {
+                substractedElements.items[element] = item - 1
+            }
+        }
+        
+        return substractedElements
+    }
+    
+    func isDisjoint(_ countedSet: CountedSet) -> Bool {
+        for element in countedSet.items.keys {
+            if let item = items[element] {
+                return false
+            }
+        }
+        return true
+    }
     
     subscript(_ member: Element) -> Int {
         if let item = items[member] {
@@ -88,3 +106,8 @@ myCountedSet[.iron] // 4
 myCountedSet.remove(.iron) // 3
 myCountedSet.remove(.dwarvish) // 0
 myCountedSet.remove(.magic) // 0
+var myCountedSet2: CountedSet<Arrow> = [.iron, .iron]
+var unionizedSet = myCountedSet.substraction(myCountedSet2)
+unionizedSet[.iron]
+myCountedSet[.iron] // 4
+myCountedSet.isDisjoint(myCountedSet2)
