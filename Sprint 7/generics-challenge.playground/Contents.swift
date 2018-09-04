@@ -1,60 +1,82 @@
 import Foundation
 
-struct CountedSet<Element> where Element: Hashable {
+struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
     
-    private var items: [Element]
-    var uniqueCount: Int
-    var isEmpty: Bool
-
-    init(_ elements: [Element]) {
-        self.items = elements
-        self.uniqueCount = 0
-        self.isEmpty = false
-        self.count()
+    private var items = [Element : Int]()
+    var count: Int {
+        return items.count
+    }
+    var isEmpty: Bool {
+        return count > 0 ? false : true
+    }
+    
+    init(arrayLiteral: Element...) {
+        for element in arrayLiteral {
+            insert(element)
+        }
     }
     
     mutating func insert(_ element: Element) {
-        items.append(element)
+        if let item = items[element] {
+            items[element] = item + 1
+        } else {
+            items[element] = 1
+        }
     }
     
     mutating func remove(_ element: Element) -> Int {
-        return items.filter { $0 == element }.count
+        if let item = items[element] {
+            items[element] = item - 1
+        }
+        return items[element] ?? 0
     }
     
-    mutating func count() -> Int {
-        if items.count == 0 { self.isEmpty = true; return 0 }
+    mutating func contains(_ element: Element) -> Bool {
+        return items.keys.contains(element)
+    }
+    
+    func union(_ newElementSet: [Element]) -> [Element : Int] {
+        var unionizedElements: [Element : Int] = items
         
-        var uniqueItems: [Element] = []
-        for item in items {
-            if uniqueItems.contains(item) {
-                uniqueItems.append(item)
+        for element in newElementSet {
+            if let item = unionizedElements[element] {
+                unionizedElements[element] = item + 1
+            } else {
+                unionizedElements[element] = 1
             }
         }
         
-        uniqueCount = uniqueItems.count
-        return uniqueCount
+        return unionizedElements
     }
+    
+    mutating func mutatedUnion (_ newElementSet: [Element]) -> [Element] {
+        for element in newElementSet {
+            insert(element)
+        }
+        return items
+    }
+    
+//    func intersection(_ newElementSet: [Element]) -> [Element : Int] {
+//        var intersectedElements: [Element : Int] = []
+//        for item in newElementSet {
+//            if items.keys.contains(item) {
+//
+//            }
+//        }
+//        return intersectedElements
+//    }
     
     subscript(_ member: Element) -> Int {
-        var count = 0
-        for item in items {
-            if item == member {
-                count += 1
-            }
+        if let item = items[member] {
+            return item
+        } else {
+            return 0
         }
-        return count
     }
     
 }
 
-extension CountedSet: ExpressibleByArrayLiteral {
-    
-    init(arrayLiteral: Element...) {
-        self.items = arrayLiteral
-        self.uniqueCount = 0
-        self.isEmpty = false
-        self.count()
-    }
+extension Sequence where Element: Hashable {
     
 }
 
@@ -66,5 +88,3 @@ myCountedSet[.iron] // 4
 myCountedSet.remove(.iron) // 3
 myCountedSet.remove(.dwarvish) // 0
 myCountedSet.remove(.magic) // 0
-
-myCountedSet.count()
