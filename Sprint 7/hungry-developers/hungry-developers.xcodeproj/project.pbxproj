@@ -13,6 +13,7 @@
 		3D2D607421405E5D007BBCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2D607321405E5D007BBCDB /* Assets.xcassets */; };
 		3D2D607721405E5D007BBCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2D607521405E5D007BBCDB /* LaunchScreen.storyboard */; };
 		3D2D607F21405E73007BBCDB /* HungryDevelopers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D607E21405E73007BBCDB /* HungryDevelopers.swift */; };
+		3D4FE37D21407EE200ACDC15 /* HungryDevs_Arbitrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FE37C21407EE200ACDC15 /* HungryDevs_Arbitrator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D2D607621405E5D007BBCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D2D607821405E5D007BBCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D2D607E21405E73007BBCDB /* HungryDevelopers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryDevelopers.swift; sourceTree = "<group>"; };
+		3D4FE37C21407EE200ACDC15 /* HungryDevs_Arbitrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryDevs_Arbitrator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3D2D606C21405E5B007BBCDB /* AppDelegate.swift */,
 				3D2D606E21405E5B007BBCDB /* ViewController.swift */,
 				3D2D607E21405E73007BBCDB /* HungryDevelopers.swift */,
+				3D4FE37C21407EE200ACDC15 /* HungryDevs_Arbitrator.swift */,
 				3D2D607021405E5B007BBCDB /* Main.storyboard */,
 				3D2D607321405E5D007BBCDB /* Assets.xcassets */,
 				3D2D607521405E5D007BBCDB /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				3D2D606F21405E5B007BBCDB /* ViewController.swift in Sources */,
 				3D2D606D21405E5B007BBCDB /* AppDelegate.swift in Sources */,
+				3D4FE37D21407EE200ACDC15 /* HungryDevs_Arbitrator.swift in Sources */,
 				3D2D607F21405E73007BBCDB /* HungryDevelopers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
