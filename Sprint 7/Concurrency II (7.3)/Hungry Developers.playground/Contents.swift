@@ -32,15 +32,21 @@ class Developer {
         print("\(developer) is thinking.")
         
         if leftSpoon.index < rightSpoon.index {
+            
+            print("\(developer) is trying to pick up left spoon.")
             leftSpoon.pickUp()
             print("\(developer) picked up left spoon.")
 
+            print("\(developer) is trying to pick up right spoon.")
             rightSpoon.pickUp()
             print("\(developer) picked up right spoon.")
         } else {
+            
+            print("\(developer) is trying to pick up right spoon.")
             rightSpoon.pickUp()
             print("\(developer) picked up right spoon.")
 
+            print("\(developer) is trying to pick up left spoon.")
             leftSpoon.pickUp()
             print("\(developer) picked up left spoon.")
         }
@@ -53,9 +59,11 @@ class Developer {
         print("\(developer) is eating.")
         usleep(arc4random_uniform(10) * 10000)
         
+        print("\(developer) is trying to put down left spoon.")
         leftSpoon.putDown()
         print("\(developer) put down left spoon.")
         
+        print("\(developer) is trying to put down right spoon.")
         rightSpoon.putDown()
         print("\(developer) put down right spoon.")
     }
