@@ -10,7 +10,7 @@ import Foundation
 
 func initHungryDevelopers() {
     var developers: [Developer] = stride(from: 0, to: 5, by: 1).map { i in Developer(with: i) }
-    var spoons: [Spoon] = stride(from: 0, to: 5, by: 1).map { _ in Spoon() }
+    var spoons: [Spoon] = stride(from: 0, to: 5, by: 1).map { i in Spoon(with: i) }
 
     developers[4].rightSpoon = spoons[0]; developers[0].leftSpoon = spoons[0]
     developers[0].rightSpoon = spoons[1]; developers[1].leftSpoon = spoons[1]
@@ -26,8 +26,13 @@ func initHungryDevelopers() {
 
 class Spoon {
     
+    var index: Int
     var isAvailable: Bool = true
     private let lock = NSLock()
+    
+    init(with index: Int) {
+        self.index = index
+    }
     
     func pickUp() {
         lock.lock()
@@ -51,13 +56,20 @@ class Developer {
     var leftSpoon: Spoon!
     var rightSpoon: Spoon!
     
-    init(with number: Int) {
-        self.number = number
+    init(with index: Int) {
+        self.number = index
     }
     
     func think() {
         // continue thinking while either leftspoon or rightspoon are not yet available
         repeat {
+            if leftSpoon.isAvailable && rightSpoon.isAvailable {
+                if leftSpoon.index < rightSpoon.index {
+                    leftSpoon.pickUp(); usingLeftSpoon = true
+                } else {
+                    rightSpoon.pickUp(); usingRightSpoon = true
+                }
+            }
             
             if leftSpoon.isAvailable { leftSpoon.pickUp(); usingLeftSpoon = true }
             if rightSpoon.isAvailable { rightSpoon.pickUp(); usingRightSpoon = true }
