@@ -6,6 +6,7 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
     var count: Int {
         return items.count
     }
+    
     var isEmpty: Bool {
         return count > 0 ? false : true
     }
@@ -40,23 +41,24 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
         
         for element in countedSet.items.keys {
             if let item = unionizedElements.items[element] {
-                unionizedElements.items[element] = item + 1
+                unionizedElements.items[element] = item + countedSet[element]
             } else {
-                unionizedElements.items[element] = 1
+                unionizedElements.items[element] = countedSet[element]
             }
         }
         
         return unionizedElements
     }
     
+    // Needs to be reworked
     func intersection(_ countedSet: CountedSet) -> CountedSet {
         var intersectedElements = self
 
         for element in countedSet.items.keys {
             if let item = intersectedElements.items[element] {
-                intersectedElements.items[element] = item + 1
+                intersectedElements.items[element] = item + countedSet[element]
             } else {
-                intersectedElements.items[element] = 1
+                intersectedElements.items[element] = countedSet[element]
             }
         }
 
@@ -68,7 +70,7 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
         
         for element in countedSet.items.keys {
             if let item = substractedElements.items[element] {
-                substractedElements.items[element] = item - 1
+                substractedElements.items[element] = item - countedSet[element]
             }
         }
         
@@ -91,7 +93,7 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable {
             return 0
         }
     }
-    
+
 }
 
 extension Sequence where Element: Hashable {
@@ -107,7 +109,7 @@ myCountedSet.remove(.iron) // 3
 myCountedSet.remove(.dwarvish) // 0
 myCountedSet.remove(.magic) // 0
 var myCountedSet2: CountedSet<Arrow> = [.iron, .iron]
-var unionizedSet = myCountedSet.substraction(myCountedSet2)
+var unionizedSet = myCountedSet.intersection(myCountedSet2)
 unionizedSet[.iron]
 myCountedSet[.iron] // 4
 myCountedSet.isDisjoint(myCountedSet2)
