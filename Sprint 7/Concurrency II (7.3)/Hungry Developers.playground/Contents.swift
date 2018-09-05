@@ -4,21 +4,20 @@ import Foundation
 
 class Spoon {
     
+    init(index: Int) {
+        self.index = index
+    }
+    
     func pickUp() {
-        while isPickedUp { continue }
         lock.lock()
-        isPickedUp = true
-        lock.unlock()
     }
     
     func putDown() {
-        lock.lock()
-        isPickedUp = false
         lock.unlock()
     }
     
     private let lock = NSLock()
-    private var isPickedUp: Bool = false
+    let index: Int
 }
 
 class Developer {
@@ -31,15 +30,23 @@ class Developer {
     
     func think() {
         print("\(developer) is thinking.")
-        usleep(arc4random_uniform(10) * 10000)
         
-        leftSpoon.pickUp()
-        print("\(developer) picked up left spoon.")
-            
-        rightSpoon.pickUp()
-        print("\(developer) picked up right spoon.")
+        if leftSpoon.index < rightSpoon.index {
+            leftSpoon.pickUp()
+            print("\(developer) picked up left spoon.")
+
+            rightSpoon.pickUp()
+            print("\(developer) picked up right spoon.")
+        } else {
+            rightSpoon.pickUp()
+            print("\(developer) picked up right spoon.")
+
+            leftSpoon.pickUp()
+            print("\(developer) picked up left spoon.")
+        }
         
-        return
+//        let spoons = [(leftSpoon, "left"), (rightSpoon, "right")].sorted(by: { $0.0.index < $1.0.index })
+//        spoons.forEach { $0.0.pickUp(); print("\(developer) picked up \($0.1) spoon.") }
     }
     
     func eat() {
@@ -67,11 +74,11 @@ class Developer {
 
 // MARK: - Testing
 
-var spoon1 = Spoon()
-var spoon2 = Spoon()
-var spoon3 = Spoon()
-var spoon4 = Spoon()
-var spoon5 = Spoon()
+var spoon1 = Spoon(index: 1)
+var spoon2 = Spoon(index: 2)
+var spoon3 = Spoon(index: 3)
+var spoon4 = Spoon(index: 4)
+var spoon5 = Spoon(index: 5)
 
 var developer1 = Developer(leftSpoon: spoon1, rightSpoon: spoon2, developer: "Grant")
 var developer2 = Developer(leftSpoon: spoon2, rightSpoon: spoon3, developer: "Lisa")
