@@ -17,16 +17,19 @@ func initHungryDevelopers() {
     developers[2].rightSpoon = spoons[3]; developers[3].leftSpoon = spoons[3]
     developers[3].rightSpoon = spoons[4]; developers[4].leftSpoon = spoons[4]
     
-    DispatchQueue.concurrentPerform(iterations: 5) {
-        developers[$0].run()
+    for dev in developers {
+        DispatchQueue.global().async {
+            dev.run()
+        }
     }
+    
+    dispatchMain()
 }
 
 
 class Spoon {
     
     var index: Int
-    var isAvailable: Bool = true
     private let lock = NSLock()
     
     init(with index: Int) {
@@ -34,15 +37,15 @@ class Spoon {
     }
     
     func pickUp() {
+        print("Spoon \(index) is being picked up")
         lock.lock()
-        isAvailable = false
-        lock.unlock()
+        print("Spoon \(index) was picked up")
     }
     
     func putDown() {
-        lock.lock()
-        isAvailable = true
+        print("Spoon \(index) is being put down")
         lock.unlock()
+        print("Spoon \(index) was put down")
     }
     
 }
@@ -50,8 +53,6 @@ class Spoon {
 class Developer {
     
     var number: Int
-    var usingLeftSpoon: Bool = false
-    var usingRightSpoon: Bool = false
     var leftSpoon: Spoon!
     var rightSpoon: Spoon!
     
@@ -60,36 +61,25 @@ class Developer {
     }
     
     func think() {
-        // continue thinking while either leftspoon or rightspoon are not yet available
-        repeat {
-            if leftSpoon.isAvailable && rightSpoon.isAvailable {
-                if leftSpoon.index < rightSpoon.index {
-                    leftSpoon.pickUp(); usingLeftSpoon = true
-                } else {
-                    rightSpoon.pickUp(); usingRightSpoon = true
-                }
-            }
-            
-            if leftSpoon.isAvailable { leftSpoon.pickUp(); usingLeftSpoon = true }
-            if rightSpoon.isAvailable { rightSpoon.pickUp(); usingRightSpoon = true }
-            
-        } while !usingLeftSpoon && !usingRightSpoon
-        
-        // when both spoons have been picked up then return to eating
+        print("Developer \(number) about to pick up spoon")
+        if leftSpoon.index < rightSpoon.index {
+            leftSpoon.pickUp(); rightSpoon.pickUp()
+        } else {
+            rightSpoon.pickUp(); leftSpoon.pickUp()
+        }
+        print("Developer \(number) picked up spoons \(leftSpoon.index) and \(rightSpoon.index)")
         return
     }
     
     func eat() {
-        print("Developer \(number) started eating")
         
-        // enjoy a quick bite for 5 microseconds
+        print("Developer \(number) started eating with spoons \(leftSpoon.index) and \(rightSpoon.index)")
         usleep(5)
         
-        // after having eaten a hearty meal, put down them spoons and return to thinking
-        usingLeftSpoon = false; usingRightSpoon = false
-        leftSpoon.putDown(); rightSpoon.putDown()
+        leftSpoon.putDown()
+        rightSpoon.putDown()
+        print("Developer \(number) finished eating with spoons \(leftSpoon.index) and \(rightSpoon.index)")
         
-        print("Developer \(number) finished eating")
         return
     }
     
