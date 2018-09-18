@@ -1,6 +1,8 @@
 # Preparing for Day 1 of Lambda School's iOS Curriculum
 
-Feel free to skip any material you've already mastered or you already covered in Lambda's "Intro to iOS" course.
+Here's an overview of material you should have mastered by day 1 of the iOS program. Feel free to skip any material you already know or you already covered in Lambda's "Intro to iOS" course.
+
+Make sure you don't skimp on the command line and version control material. You'll need all these skills right from the start but these two in particular are fundamental to working through daily challenges.
 
 ## Preparing Equipment
 
@@ -13,30 +15,6 @@ Your computer should be ready to begin development on day one:
 * Test the simulator: create a new empty project, compile, and run it.
 * Create a free GitHub account. Visit github.com. (https://www.youtube.com/watch?v=GeyDJAwTEO8)
 * Set up your git identity (https://www.youtube.com/watch?v=U5flh0sRGBU) and global ignore file on your computer (https://www.youtube.com/watch?v=0fzNSluYjNM). 
-
-## Lambda Skills
-
-Master your basic Lambda Skills. Understand how the 15-week iOS curriculum works and be able to use Zoom to communicate with PMs and Instructors:
-
-* **Understand how the 15-week iOS Curriculum works**. [https://youtu.be/P7qKjBbDkcY]
-* **Master the Zoom online meeting tool**. Watch these videos: Join a Zoom meeting: https://support.zoom.us/hc/en-us/articles/201362193-How-Do-I-Join-A-Meeting- and Zoom meeting controls: https://support.zoom.us/hc/en-us/articles/206618765-Zoom-Video-Tutorials.
-
-## iOS Tools
-
-Become familiar as possible with your base iOS tool set: Xcode, Playground, Simulator, and IB.
-
-* **Getting Started with iOS Development**: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
-* **I Have This Idea for An App**: https://developer.apple.com/videos/play/wwdc2018/203/
-* **Getting the Most out of Playgrounds in Xcode**: https://developer.apple.com/videos/play/wwdc2018/402/
-
-## Swift Language
-
-Swift is the primary iOS development language. Practice your skills and grow your language mastery with these Swift resources.
-
-* **The Swift Programming Language** (iBooks, free)
-* **Using Swift with Cocoa and Objective C** (iBooks, free)
-* **Everyone Can Code: App Development with Swift** (iBooks, free)
-* **Learn to Code** (iPad only, Swift Playgrounds for iOS, free)
 
 ## Cross Platform Skills
 
@@ -82,3 +60,28 @@ New developers often ask for help, mostly for technical issues, and often for ma
 * **Getting Answers** [http://www.mikeash.com/getting_answers.html]
 * **What Have you Tried** [http://whathaveyoutried.com/]
 * **Rubber Duck Problem Solving** [https://blog.codinghorror.com/rubber-duck-problem-solving/]
+
+## Lambda Skills
+
+Master your basic Lambda Skills. Understand how the 15-week iOS curriculum works and be able to use Zoom to communicate with PMs and Instructors:
+
+* **Understand how the 15-week iOS Curriculum works**. [https://youtu.be/P7qKjBbDkcY]
+* **Master the Zoom online meeting tool**. Watch these videos: Join a Zoom meeting: https://support.zoom.us/hc/en-us/articles/201362193-How-Do-I-Join-A-Meeting- and Zoom meeting controls: https://support.zoom.us/hc/en-us/articles/206618765-Zoom-Video-Tutorials.
+
+## iOS Tools
+
+Become familiar as possible with your base iOS tool set: Xcode, Playground, Simulator, and IB.
+
+* **Getting Started with iOS Development**: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
+* **I Have This Idea for An App**: https://developer.apple.com/videos/play/wwdc2018/203/
+* **Getting the Most out of Playgrounds in Xcode**: https://developer.apple.com/videos/play/wwdc2018/402/
+
+## Swift Language
+
+Swift is the primary iOS development language. Practice your skills and grow your language mastery with these Swift resources.
+
+* **The Swift Programming Language** (iBooks, free)
+* **Using Swift with Cocoa and Objective C** (iBooks, free)
+* **Everyone Can Code: App Development with Swift** (iBooks, free)
+* **Learn to Code** (iPad only, Swift Playgrounds for iOS, free)
+
