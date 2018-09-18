@@ -12,10 +12,6 @@ Your computer should be ready to begin development on day one:
 * Create a free GitHub account. Visit github.com. (https://www.youtube.com/watch?v=GeyDJAwTEO8)
 * Set up your git identity (https://www.youtube.com/watch?v=U5flh0sRGBU) and global ignore file on your computer (https://www.youtube.com/watch?v=0fzNSluYjNM). 
 
-## Training
-
-Train before day 1 on these topics
-
 ## Lambda Skills
 
 Master your basic Lambda Skills. Understand how the 15-week iOS curriculum works and be able to use Zoom to communicate with PMs and Instructors:
