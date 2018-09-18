@@ -14,23 +14,18 @@ Your computer should be ready to begin development on day one:
 
 ## Training
 
-Train before day 1 on these topics:
-
-* Master your basic **Lambda Skills**: Understand how the 15-week iOS curriculum works and be able to use Zoom to communicate with PMs and Instructors.
-* Become familiar as possible with your base **iOS tool set**: Xcode, Playground, Simulator, and IB
-* Work on your **Swift language competency**. 
-* Train your essential **cross-platform skills**: Command line, Version control, Markdown, Being your own expert. 
+Train before day 1 on these topics
 
 ## Lambda Skills
 
-Prepare for the curriculum and for using remote communication.
+Master your basic Lambda Skills. Understand how the 15-week iOS curriculum works and be able to use Zoom to communicate with PMs and Instructors:
 
 * **Understand how the 15-week iOS Curriculum works**. [https://youtu.be/P7qKjBbDkcY]
 * **Master the Zoom online meeting tool**. Watch these videos: Join a Zoom meeting: https://support.zoom.us/hc/en-us/articles/201362193-How-Do-I-Join-A-Meeting- and Zoom meeting controls: https://support.zoom.us/hc/en-us/articles/206618765-Zoom-Video-Tutorials.
 
 ## iOS Tools
 
-Become familiar with the core iOS development tools: Xcode, Simulator, Interface Builder, and Playgrounds.
+Become familiar as possible with your base iOS tool set: Xcode, Playground, Simulator, and IB.
 
 * **Getting Started with iOS Development**: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
 * **I Have This Idea for An App**: https://developer.apple.com/videos/play/wwdc2018/203/
@@ -46,6 +41,8 @@ Swift is the primary iOS development language. Practice your skills and grow you
 * **Learn to Code** (iPad only, Swift Playgrounds for iOS, free)
 
 ## Cross Platform Skills
+
+Train your essential cross-platform skills: Command line, Version control, Markdown, and Being your own expert. 
 
 ### Command Line
 
