@@ -1,5 +1,7 @@
 # Preparing for Day 1 of Lambda School's iOS Curriculum
 
+Feel free to skip any material you've already mastered or you already covered in Lambda's "Intro to iOS" course.
+
 ## Preparing Equipment
 
 Your computer should be ready to begin development on day one:
