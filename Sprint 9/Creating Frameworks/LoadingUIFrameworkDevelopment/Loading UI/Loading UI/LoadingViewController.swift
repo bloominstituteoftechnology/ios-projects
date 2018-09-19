@@ -21,22 +21,6 @@ public class LoadingViewController: UIViewController {
         let centerX = indeterminateLoadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         let widthConstraint = indeterminateLoadingView.widthAnchor.constraint(equalToConstant: 150)
         let heightConstraint = indeterminateLoadingView.heightAnchor.constraint(equalToConstant: 150)
-            
-//        let centerY = NSLayoutConstraint(item: indeterminateLoadingView,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: view,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 0)
-        
-//        let centerX = NSLayoutConstraint(item: indeterminateLoadingView,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: view,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: 0)
         
         NSLayoutConstraint.activate([centerY, centerX, widthConstraint, heightConstraint])
     }
