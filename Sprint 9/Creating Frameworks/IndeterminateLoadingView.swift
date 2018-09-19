@@ -59,10 +59,10 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         shouldStopAnimationOnNextCycle = false
         shapeLayer.strokeStart = 0.0
         shapeLayer.strokeEnd = 0.0
-        startAnimation(for: "strokeEnd", timing: .easeIn)
+        startAnimation(for: "strokeEnd", timing: kCAMediaTimingFunctionEaseIn)
     }
     
-    private func startAnimation(for keyPath: String, timing: CAMediaTimingFunctionName) {
+    private func startAnimation(for keyPath: String, timing: String) {
         let animation = CABasicAnimation(keyPath: keyPath)
         animation.fromValue = 0.0
         animation.toValue = 1.0
@@ -86,14 +86,14 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
             shapeLayer.strokeStart = 0.0
             shapeLayer.strokeEnd = 1.0
             shapeLayer.removeAllAnimations()
-            startAnimation(for: "strokeStart", timing: .easeOut)
+            startAnimation(for: "strokeStart", timing: kCAMediaTimingFunctionEaseOut)
         }
         
         if let anim = anim as? CABasicAnimation, anim.keyPath == "strokeStart" {
             shapeLayer.strokeStart = 0.0
             shapeLayer.strokeEnd = 0.0
             shapeLayer.removeAllAnimations()
-            startAnimation(for: "strokeEnd", timing: .easeIn)
+            startAnimation(for: "strokeEnd", timing: kCAMediaTimingFunctionEaseIn)
         }
     }
     
