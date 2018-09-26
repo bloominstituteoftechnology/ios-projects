@@ -2,7 +2,7 @@
 
 In today's challenge, you'll create a simple application that allows users to add and remove new views by touch. You'll explore some gesture recognizers and practice customizing them.
 
-Preview your project here: VIDEO URL
+Preview your project here: https://youtu.be/KxOZLtVLWU4
 
 ## Preparation
 
