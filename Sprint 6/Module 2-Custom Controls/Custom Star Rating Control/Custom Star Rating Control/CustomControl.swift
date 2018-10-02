@@ -12,9 +12,10 @@ class CustomControl: UIControl {
     var value: Int = 1
     
     private let componentDimension: CGFloat = 40.0
-    private let componentCount = 5
+    private let componentCount = 6
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
+    private var labels: [UILabel] = []
     
     required init? (coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -23,7 +24,6 @@ class CustomControl: UIControl {
     }
     
     private func setup() {
-        var labels: [UILabel] = []
         for i in 1...componentCount {
             let label = UILabel()
             self.addSubview(label)
@@ -78,6 +78,38 @@ class CustomControl: UIControl {
     }
     
     private func updateValue(at touch: UITouch) {
+        let oldValue = value
+        for label in labels {
+            let touchPoint = touch.location(in: label)
+            if label.bounds.contains(touchPoint) { value = label.tag }
+            if value != oldValue {
+                if label.tag <= value {
+                    label.textColor = componentActiveColor
+                    updateLabels()
+                    label.performFlare()
+                } else {
+                    label.textColor = componentInactiveColor
+                }
+                sendActions(for: .valueChanged)
+            }
+        }
+    }
+    
+    private func updateLabels() {
+        for label in labels {
+            if label.tag < value { label.textColor = componentActiveColor }
+        }
+    }
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
         
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
