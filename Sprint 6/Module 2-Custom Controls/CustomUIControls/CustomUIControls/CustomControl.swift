@@ -17,8 +17,6 @@ class CustomControl: UIControl {
     }
     
     private func setup() {
-        
-        var labels: [UILabel] = []
         for componentNumber in 1...componentCount {
             let label = UILabel()
             
@@ -30,7 +28,8 @@ class CustomControl: UIControl {
             label.font = UIFont.boldSystemFont(ofSize: 32)
             label.text = "✰"
             label.textAlignment = .center
-        
+            
+            //For left-right change to componentNumber == componentCount
             if componentNumber == 1 {
                 label.textColor = componentActiveColor
             } else {
@@ -52,7 +51,7 @@ class CustomControl: UIControl {
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         updateValue(at: touch)
         
-        sendActions(for: [.touchDown, .valueChanged])
+//        sendActions(for: [.touchDown, .valueChanged])
         return true
     }
     
@@ -88,7 +87,29 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
-        
+        for index in 1...componentCount {
+            let label = labels[index - 1]
+            let touchPoint = touch.location(in: self)
+            
+            if label.frame.contains(touchPoint) && label.tag != value {
+                value = label.tag
+                //how to change all the colors before nth
+                for starIndex in 1...componentCount {
+                    let newLabel = labels[starIndex - 1]
+                    
+                    //For left-right switch to >=
+                    if starIndex <= value {
+                        newLabel.textColor = componentActiveColor
+                    } else {
+                        newLabel.textColor = componentInactiveColor
+                    }
+                    
+                }
+                
+                label.performFlare()
+                sendActions(for: [.valueChanged])
+            }
+        }
     }
     
     let componentDimension: CGFloat = 40.0
@@ -98,6 +119,19 @@ class CustomControl: UIControl {
     let componentInactiveColor = UIColor.gray
     
     var value: Int = 1
+    var labels: [UILabel] = []
     
     
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
 }
