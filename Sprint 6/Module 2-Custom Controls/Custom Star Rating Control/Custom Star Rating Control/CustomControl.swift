@@ -30,7 +30,7 @@ class CustomControl: UIControl {
             labels.append(label)
             label.tag = i
             let x = componentDimension * CGFloat(i-1) + CGFloat(8 * i)
-            label.frame = CGRect(x: x, y: 0, width: componentDimension, height: componentDimension)
+            label.frame = CGRect(x: 0, y: x, width: componentDimension, height: componentDimension)
             label.font = UIFont.boldSystemFont(ofSize: 32)
             label.text = "☆"
             label.textAlignment = .center
@@ -42,7 +42,7 @@ class CustomControl: UIControl {
         let componentsWidth = CGFloat(componentCount) * componentDimension
         let componentsSpacing = CGFloat(componentCount + 1) * 8.0
         let width = componentsWidth + componentsSpacing
-        return CGSize(width: width, height: componentDimension)
+        return CGSize(width: componentDimension, height: width)
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
