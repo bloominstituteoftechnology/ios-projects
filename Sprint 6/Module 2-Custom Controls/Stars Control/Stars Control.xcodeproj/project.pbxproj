@@ -13,6 +13,7 @@
 		A137D4ED21641A9000ABF675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A137D4EC21641A9000ABF675 /* Assets.xcassets */; };
 		A137D4F021641A9000ABF675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137D4EE21641A9000ABF675 /* LaunchScreen.storyboard */; };
 		A137D4F821641B2E00ABF675 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4F721641B2E00ABF675 /* CustomControl.swift */; };
+		A137D4FA21643EBC00ABF675 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4F921643EBC00ABF675 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A137D4EF21641A9000ABF675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A137D4F121641A9000ABF675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A137D4F721641B2E00ABF675 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		A137D4F921643EBC00ABF675 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				A137D4E521641A8F00ABF675 /* AppDelegate.swift */,
 				A137D4E721641A8F00ABF675 /* ViewController.swift */,
+				A137D4F921643EBC00ABF675 /* UIView+Extension.swift */,
 				A137D4E921641A8F00ABF675 /* Main.storyboard */,
 				A137D4F721641B2E00ABF675 /* CustomControl.swift */,
 				A137D4EC21641A9000ABF675 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				A137D4E821641A8F00ABF675 /* ViewController.swift in Sources */,
 				A137D4F821641B2E00ABF675 /* CustomControl.swift in Sources */,
+				A137D4FA21643EBC00ABF675 /* UIView+Extension.swift in Sources */,
 				A137D4E621641A8F00ABF675 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
