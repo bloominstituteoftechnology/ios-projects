@@ -18,7 +18,6 @@ class StarViewController: UIViewController {
     }
     
     @IBAction func updateRating(_ rateControl: CustomControl) {
-    
         let value: Int = rateControl.value
         if value > 1{
             self.navigationController?.title = "User rating: \(value) Stars"

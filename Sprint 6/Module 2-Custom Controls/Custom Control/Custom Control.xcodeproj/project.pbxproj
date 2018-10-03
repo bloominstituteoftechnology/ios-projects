@@ -60,6 +60,7 @@
 				EBCFEB38216412E4006765AE /* View Controller */,
 				EBCFEB37216412BC006765AE /* Helper */,
 				EBCFEB2121641147006765AE /* AppDelegate.swift */,
+				EBCFEB2821641149006765AE /* Assets.xcassets */,
 				EBCFEB2521641147006765AE /* Main.storyboard */,
 				EBCFEB2D21641149006765AE /* Info.plist */,
 				EBCFEB2A21641149006765AE /* LaunchScreen.storyboard */,
@@ -86,7 +87,6 @@
 		EBCFEB3921641303006765AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EBCFEB2821641149006765AE /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
