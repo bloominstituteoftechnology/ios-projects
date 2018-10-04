@@ -9,9 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+     let componentDimension: CGFloat = 40.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createLabel()
         
         let logoView = UIImageView()
         logoView.image = UIImage(named: "lambdaLogo.png")
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
                                                   toItem: view.safeAreaLayoutGuide,
                                                   attribute: .top,
                                                   multiplier: 1,
-                                                  constant: 20)
+                                                  constant: 150)
         let viewWidthConstraint = NSLayoutConstraint(item: logoView,
                                                      attribute: .width,
                                                      relatedBy: .equal,
@@ -55,10 +59,33 @@ class ViewController: UIViewController {
                                      viewHeightConstraint])
         
         
-        
-        
     }
 
+    
+    func createLabel() {
+        
+        let letter: String = "LAMBDA"
+        var count: CGFloat = 0.0
+        
+        for char in letter {
+            
+            let space: CGFloat = (componentDimension * count) + (8.0 * count)
+            
+            
+            let label = UILabel(frame: CGRect(x: space, y: 0.0, width: componentDimension, height: componentDimension))
+            label.font = UIFont.boldSystemFont(ofSize: 32.0)
+            label.text = String(char)
+            label.textAlignment = .center
+            view.addSubview(label)
+            
+            count = count + 1.0
+            
+            
+        }
+    }
+    
+    
+    
 
     @IBAction func toggle(_ sender: Any) {
     }
