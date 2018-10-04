@@ -16,70 +16,55 @@ class ViewController: UIViewController {
     }
 
     @IBAction func shouldScramble(_ sender: Any) {
-        if animated {
-            self.reset()
-        } else {
-            self.startAnimation()
-        }
+        let labels: [UILabel] = [l, a, m, b, d, secondA]
+        animated ? resetLabels(labels: labels) : startLabelsAnimation(labels: labels)
         animated = !animated
-
     }
     
     var animated: Bool = false
     
-    func reset() {
-        UIView.animate(withDuration: 1) {
-            self.resetIdentities()
-            self.lambdaLogo.alpha = 1
-            self.resetLabelsBackgroundColor()
+    
+    func startLabelsAnimation(labels: [UILabel]){
+        for label in labels {
+            self.startAnimation(label: label)
         }
     }
     
-    func resetIdentities() {
-        self.l.transform = .identity
-        self.a.transform = .identity
-        self.m.transform = .identity
-        self.b.transform = .identity
-        self.d.transform = .identity
-        self.secondA.transform = .identity
+    
+    func resetLabels(labels: [UILabel]) {
+        for label in labels {
+            self.reset(label: label)
+        }
     }
     
-    func resetLabelsBackgroundColor() {
-        self.l.layer.backgroundColor = nil
-        self.a.layer.backgroundColor = nil
-        self.m.layer.backgroundColor = nil
-        self.b.layer.backgroundColor = nil
-        self.d.layer.backgroundColor = nil
-        self.secondA.layer.backgroundColor = nil
+    func reset(label: UILabel) {
+        UIView.animate(withDuration: 1) {
+            self.resetIdentities(label: label)
+            self.lambdaLogo.alpha = 1
+            self.resetLabelsBackgroundColor(label: label)
+        }
     }
     
-    func startAnimation() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.changeLabelsBackgroundColor()
-            self.moveLabels()
-            //self.rotateLabels()
+    func resetIdentities(label: UILabel) {
+        label.transform = .identity
+    }
+    
+    func resetLabelsBackgroundColor(label: UILabel) {
+        label.layer.backgroundColor = nil
+    }
+    
+    func startAnimation(label: UILabel) {
+        UIView.animate(withDuration: 0.8, animations: {
+            self.changeLabelsBackgroundColor(label: label)
+            self.moveLabels(label: label)
         }, completion: nil)
         UIView.animate(withDuration: 1) {
             self.lambdaLogo.alpha = 0
         }
     }
-    
-//    func rotateLabels() {
-//        l.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//        a.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//        m.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//        b.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//        d.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//        secondA.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360)) )
-//    }
-    
-    func moveLabels() {
-        setValues(label: l)
-        setValues(label: a)
-        setValues(label: m)
-        setValues(label: b)
-        setValues(label: d)
-        setValues(label: secondA)
+
+    func moveLabels(label: UILabel) {
+        setValues(label: label)
     }
     
     func setValues(label: UILabel) {
@@ -88,16 +73,10 @@ class ViewController: UIViewController {
         label.transform = CGAffineTransform.init(translationX: CGFloat(arc4random_uniform(UInt32(width/10))), y: CGFloat(arc4random_uniform(500))).rotated(by: CGFloat(arc4random_uniform(UInt32(height))))
     }
     
-    //CGFloat(arc4random_uniform(35))
-    
-    func changeLabelsBackgroundColor() {
-        self.l.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
-        self.a.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
-        self.m.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
-        self.b.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
-        self.d.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
-        self.secondA.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
+    func changeLabelsBackgroundColor(label: UILabel) {
+        label.layer.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1).cgColor
     }
+    
     
     @IBOutlet weak var l: UILabel!
     @IBOutlet weak var a: UILabel!
