@@ -38,8 +38,8 @@ You will need to create your own Xcode project and repository. Commit regularly 
     	- Inside of your `initWith...` initializer assign a `mutableCopy` of your `array` property to your internal `values` array.
 2. Create another file called `XXXCalculator`.
   - `.h` file:
-  		- Create an enum for the operations that will be calculated by using `typedef NS-ENUM([type, nameOfEnum]) {};`.  Inside the curly braces you will just need to separate each item with a comma.
-  		- Declare three methods `- (void)pushNumber:(double)value;`, `- (void)applyOperator:([yourNameOfOperatorEnum])operator;` and `- (void)clear;`.
+  		- Create an enum for the operations that will be calculated using `typedef NS_ENUM(rawType, nameOfEnum) {};`.  Inside the curly braces you will just need to separate each item with a comma.
+  		- Declare three methods `- (void)pushNumber:(double)value;`, `- (void)applyOperator:(YourEnumType)operator;` and `- (void)clear;`.
   		- Also declare a `topValue` property that will be a computed property in your `.m` file.
   - `.m` file:
     	- Every Calculator should have one `Stack` and only that calculator should know about it's `Stack`. Create a property `XXXStack *stack` in this file that we will use to implement the methods.
@@ -59,7 +59,6 @@ Implement the view controller. Use the Swift version for inspiration. The implem
 
 
 ## Go Further
-
 
 If you finish early or want to push yourself, here are a few additional features you can implement:
 
