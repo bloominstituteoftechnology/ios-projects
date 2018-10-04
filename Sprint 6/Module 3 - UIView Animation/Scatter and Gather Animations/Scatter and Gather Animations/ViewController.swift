@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        startWelcomeAnimation()
     }
 
     @IBAction func shouldScramble(_ sender: Any) {
@@ -22,6 +22,21 @@ class ViewController: UIViewController {
     }
     
     var animated: Bool = false
+    
+    func startWelcomeAnimation() {
+        var t = CGAffineTransform.identity
+        t = t.translatedBy(x: 0, y: 40)
+        t = t.rotated(by: -(CGFloat.pi / 8))
+        t = t.scaledBy(x: 1.5, y: 1.5)
+        
+        UIView.animate(withDuration: 1.75, animations: {
+            self.lambdaLogo.transform = t
+        }) { (_) in
+            UIView.animate(withDuration: 1, animations: {
+                self.lambdaLogo.transform = .identity
+            })
+        }
+    }
     
     
     func startLabelsAnimation(labels: [UILabel]){
