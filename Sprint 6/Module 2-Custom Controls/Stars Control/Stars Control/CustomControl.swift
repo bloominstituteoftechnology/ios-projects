@@ -37,7 +37,7 @@ class CustomControl: UIControl {
             label.tag = count
             label.font = UIFont.boldSystemFont(ofSize: 32)
             label.textAlignment = .center
-            label.text = "✰"
+            label.text = "☆"
             label.textColor = componentInactiveColor
         }
 //        var tempComponentDimension: CGFloat
