@@ -89,6 +89,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ad7-e6-L4e" firstAttribute="trailing" secondItem="jkJ-a3-wU7" secondAttribute="trailing" constant="16" id="Pbn-Pe-JTs"/>
                             <constraint firstItem="Ad7-e6-L4e" firstAttribute="bottom" secondItem="jkJ-a3-wU7" secondAttribute="bottom" constant="16" id="U7e-hl-gSF"/>
@@ -96,6 +97,9 @@
                             <constraint firstItem="jkJ-a3-wU7" firstAttribute="top" secondItem="Ad7-e6-L4e" secondAttribute="top" constant="16" id="uZx-dI-5ch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ad7-e6-L4e"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KCy-ra-XbY" appends="YES" id="qI4-Fj-suV"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="fWP-YX-vpH" id="nJg-xM-Z9l"/>
@@ -104,6 +108,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKn-5x-Vtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="KCy-ra-XbY">
+                    <connections>
+                        <action selector="swipeToDismiss:" destination="dfC-4i-tdf" id="zri-b2-ble"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1072.8" y="123.68815592203899"/>
         </scene>

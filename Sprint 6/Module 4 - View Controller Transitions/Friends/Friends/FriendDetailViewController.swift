@@ -11,6 +11,7 @@ import UIKit
 class FriendDetailViewController: UIViewController {
 
     var friend: Friend?
+    var delegate: NavigationControllerDelegate?
     
     @IBOutlet weak var friendImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,6 +23,27 @@ class FriendDetailViewController: UIViewController {
         updateViews()
     }
     
+    @IBAction func swipeToDismiss(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            delegate?.interactionController = UIPercentDrivenInteractiveTransition()
+            navigationController?.popViewController(animated: true)
+        case .changed:
+            let translation = sender.translation(in: view)
+            let percentage = abs(translation.x / view.bounds.width)
+            delegate?.interactionController?.update(percentage)
+        case .ended:
+            if sender.velocity(in: view).x > 1.0 {
+                delegate?.interactionController?.finish()
+            } else {
+                delegate?.interactionController?.cancel()
+            }
+            
+            delegate?.interactionController = nil
+        default:
+            break
+        }
+    }
     private func updateViews() {
         guard let friend = friend, isViewLoaded else { return }
         
@@ -31,6 +53,8 @@ class FriendDetailViewController: UIViewController {
         
         if let imageData = friend.imageData {
             friendImageView.image = UIImage(data: imageData)
+            friendImageView.layer.cornerRadius = friendImageView.bounds.height / 2
+            friendImageView.layer.masksToBounds = true
         }
     }
 

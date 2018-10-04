@@ -41,6 +41,8 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let nameLabelStartFrame = containerView.convert(fromNameLabel.bounds, from: fromNameLabel)
         
         let imageView = UIImageView(frame: imageViewStartFrame)
+        imageView.layer.cornerRadius = fromImageView.layer.cornerRadius
+        imageView.layer.masksToBounds = true
         imageView.image = fromImageView.image
         
         let label = UILabel(frame: nameLabelStartFrame)
@@ -64,6 +66,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             
             imageView.frame = imageViewEndFrame
             imageView.contentMode = self.toImageView!.contentMode
+            imageView.layer.cornerRadius = self.toImageView!.layer.cornerRadius
             label.frame = nameLabelEndFrame
             
             toView.alpha = 1.0

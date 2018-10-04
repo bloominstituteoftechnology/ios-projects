@@ -49,6 +49,7 @@ class FriendsTableViewController: UITableViewController {
             
             delegate.sourceCell = tableView.cellForRow(at: indexPath)
             destinationVC.friend = friend
+            destinationVC.delegate = delegate
         }
     }
 

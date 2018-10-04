@@ -12,6 +12,7 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     
     let animator = ImageTransitionAnimator()
     var sourceCell: UITableViewCell?
+    var interactionController: UIPercentDrivenInteractiveTransition?
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
@@ -40,6 +41,10 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
             return nil
         }
         
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactionController
     }
     
 }
