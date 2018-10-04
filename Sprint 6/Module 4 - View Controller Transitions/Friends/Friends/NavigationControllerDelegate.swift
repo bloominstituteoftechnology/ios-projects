@@ -14,14 +14,32 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     var sourceCell: UITableViewCell?
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let toVC = toVC as? FriendDetailViewController
         
-        animator.fromImageView = sourceCell?.imageView
-        animator.fromNameLabel = sourceCell?.textLabel
+        switch operation {
+        case .push:
+            if let toVC = toVC as? FriendDetailViewController {
+                animator.fromImageView = sourceCell?.imageView
+                animator.fromNameLabel = sourceCell?.textLabel
+                
+                animator.toImageView = toVC.friendImageView
+                animator.toNameLabel = toVC.nameLabel
+                animator.push = true
+            }
+            return animator
+        case .pop:
+            if let fromVC = fromVC as? FriendDetailViewController {
+                animator.toImageView = sourceCell?.imageView
+                animator.toNameLabel = sourceCell?.textLabel
+                
+                animator.fromImageView = fromVC.friendImageView
+                animator.fromNameLabel = fromVC.nameLabel
+                animator.push = false
+            }
+            return animator
+        default:
+            return nil
+        }
         
-        animator.toImageView = toVC?.friendImageView
-        animator.toNameLabel = toVC?.nameLabel
-        
-        return animator
     }
+    
 }
