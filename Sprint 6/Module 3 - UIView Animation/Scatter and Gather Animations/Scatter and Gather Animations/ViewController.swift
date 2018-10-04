@@ -54,18 +54,10 @@ class ViewController: UIViewController {
     
     func reset(label: UILabel) {
         UIView.animate(withDuration: 1) {
-            self.resetIdentities(label: label)
+            label.transform = .identity
+            label.layer.backgroundColor = nil
             self.lambdaLogo.alpha = 1
-            self.resetLabelsBackgroundColor(label: label)
         }
-    }
-    
-    func resetIdentities(label: UILabel) {
-        label.transform = .identity
-    }
-    
-    func resetLabelsBackgroundColor(label: UILabel) {
-        label.layer.backgroundColor = nil
     }
     
     func startAnimation(label: UILabel) {
@@ -79,10 +71,6 @@ class ViewController: UIViewController {
     }
 
     func moveLabels(label: UILabel) {
-        setValues(label: label)
-    }
-    
-    func setValues(label: UILabel) {
         let height: Int = Int(self.view.frame.height)
         let width: Int = Int(self.view.frame.width)
         label.transform = CGAffineTransform.init(translationX: CGFloat(arc4random_uniform(UInt32(width/10))), y: CGFloat(arc4random_uniform(500))).rotated(by: CGFloat(arc4random_uniform(UInt32(height))))
