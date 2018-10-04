@@ -73,6 +73,7 @@
                             <constraint firstItem="jFa-6a-BFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PHo-m6-44d"/>
                             <constraint firstItem="jFa-6a-BFO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37.5" id="cQZ-8T-RlQ"/>
                             <constraint firstItem="B0q-WR-bIa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="gyA-KM-aze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jFa-6a-BFO" secondAttribute="bottom" constant="226" id="i5K-mY-158"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
