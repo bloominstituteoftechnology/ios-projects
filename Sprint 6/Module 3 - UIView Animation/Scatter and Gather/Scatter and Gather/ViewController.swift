@@ -43,7 +43,6 @@ class ViewController: UIViewController {
                 self.logoImageView.alpha = 0
                 for label in self.labels {
                     label.transform = self.randomTranslation(for: label)
-//                    label.layer.backgroundColor = self.randomColor().cgColor
                 }
             }
             UIView.addKeyframe(withRelativeStartTime: 0.35, relativeDuration: 0.65) {
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
                 }
             }
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1) {
-                self.logoImageView.alpha = 0
                 for label in self.labels {
                     label.layer.backgroundColor = self.randomColor().cgColor
                 }
