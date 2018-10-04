@@ -14,6 +14,8 @@
 		346F1E412166A7F800213C02 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F1E402166A7F800213C02 /* Friend.swift */; };
 		346F1E432166A85000213C02 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F1E422166A85000213C02 /* FriendDetailViewController.swift */; };
 		346F1E452166A85C00213C02 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F1E442166A85C00213C02 /* FriendsTableViewController.swift */; };
+		346F1E472166AEC000213C02 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F1E462166AEC000213C02 /* NavigationControllerDelegate.swift */; };
+		346F1E492166AF4D00213C02 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346F1E482166AF4D00213C02 /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		346F1E402166A7F800213C02 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		346F1E422166A85000213C02 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		346F1E442166A85C00213C02 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		346F1E462166AEC000213C02 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		346F1E482166AF4D00213C02 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				346F1E2E2166A74800213C02 /* AppDelegate.swift */,
 				346F1E322166A74800213C02 /* Main.storyboard */,
+				346F1E462166AEC000213C02 /* NavigationControllerDelegate.swift */,
+				346F1E482166AF4D00213C02 /* Animator.swift */,
 				346F1E422166A85000213C02 /* FriendDetailViewController.swift */,
 				346F1E442166A85C00213C02 /* FriendsTableViewController.swift */,
 				346F1E402166A7F800213C02 /* Friend.swift */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346F1E492166AF4D00213C02 /* Animator.swift in Sources */,
+				346F1E472166AEC000213C02 /* NavigationControllerDelegate.swift in Sources */,
 				346F1E2F2166A74800213C02 /* AppDelegate.swift in Sources */,
 				346F1E412166A7F800213C02 /* Friend.swift in Sources */,
 				346F1E452166A85C00213C02 /* FriendsTableViewController.swift in Sources */,
