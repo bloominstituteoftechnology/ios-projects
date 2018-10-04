@@ -83,7 +83,9 @@ class ViewController: UIViewController {
     }
     
     func setValues(label: UILabel) {
-            label.transform = CGAffineTransform.init(translationX: CGFloat(arc4random_uniform(30)), y: CGFloat(arc4random_uniform(500))).rotated(by: CGFloat(arc4random_uniform(360)))
+        let height: Int = Int(self.view.frame.height)
+        let width: Int = Int(self.view.frame.width)
+        label.transform = CGAffineTransform.init(translationX: CGFloat(arc4random_uniform(UInt32(width/10))), y: CGFloat(arc4random_uniform(500))).rotated(by: CGFloat(arc4random_uniform(UInt32(height))))
     }
     
     //CGFloat(arc4random_uniform(35))
