@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The goal of this project is to continue to familarize yourself with the Objective-C language by recreating your RPN Calculator in ObjC. However, instead of using a custom framework and importing it into your project, you will be creating all the logic in your own project.
+The goal of this project is to continue to familarize yourself with the Objective-C language by recreating your RPN Calculator in ObjC. It will help you practice the concepts learned today, including primitives vs. classes, `NSNumber`, and mutability.
 
 After completing the lesson material and this project, you should be able to:
 
@@ -12,7 +12,7 @@ After completing the lesson material and this project, you should be able to:
 - understand and explain the difference between immutable and mutable classes
 - use copy/mutableCopy to convert from immutable to mutable and vice versa
 
-You are welcome and encouraged to use your existing Swift solution to this project as inspiration and help when implementing this project.
+You are welcome and encouraged to use your existing Swift solution to this project as inspiration and help when implementing this project. However, instead of using a custom framework and importing it into your project, you will be creating all the logic in your own project.
 
 ## Instructions
 
