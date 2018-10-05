@@ -16,6 +16,8 @@
 		A11DFE702166C4D60098EC9A /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DFE6F2166C4D60098EC9A /* FriendsTableViewController.swift */; };
 		A11DFE722166C4F00098EC9A /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DFE712166C4F00098EC9A /* FriendDetailViewController.swift */; };
 		A11DFE742166C6D50098EC9A /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DFE732166C6D50098EC9A /* FriendTableViewCell.swift */; };
+		A11DFE762166CE700098EC9A /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DFE752166CE700098EC9A /* NavigationControllerDelegate.swift */; };
+		A11DFE782166CFFB0098EC9A /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DFE772166CFFB0098EC9A /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A11DFE6F2166C4D60098EC9A /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		A11DFE712166C4F00098EC9A /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		A11DFE732166C6D50098EC9A /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		A11DFE752166CE700098EC9A /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		A11DFE772166CFFB0098EC9A /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				A11DFE712166C4F00098EC9A /* FriendDetailViewController.swift */,
 				A11DFE542166C01D0098EC9A /* AppDelegate.swift */,
 				A11DFE6F2166C4D60098EC9A /* FriendsTableViewController.swift */,
+				A11DFE752166CE700098EC9A /* NavigationControllerDelegate.swift */,
+				A11DFE772166CFFB0098EC9A /* ImageTransitionAnimator.swift */,
 				A11DFE732166C6D50098EC9A /* FriendTableViewCell.swift */,
 				A11DFE692166C2220098EC9A /* Friend.swift */,
 				A11DFE6B2166C2350098EC9A /* FriendController.swift */,
@@ -148,10 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11DFE6A2166C2220098EC9A /* Friend.swift in Sources */,
+				A11DFE782166CFFB0098EC9A /* ImageTransitionAnimator.swift in Sources */,
 				A11DFE6C2166C2350098EC9A /* FriendController.swift in Sources */,
 				A11DFE702166C4D60098EC9A /* FriendsTableViewController.swift in Sources */,
 				A11DFE742166C6D50098EC9A /* FriendTableViewCell.swift in Sources */,
 				A11DFE722166C4F00098EC9A /* FriendDetailViewController.swift in Sources */,
+				A11DFE762166CE700098EC9A /* NavigationControllerDelegate.swift in Sources */,
 				A11DFE552166C01D0098EC9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

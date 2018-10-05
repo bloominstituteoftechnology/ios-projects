@@ -21,10 +21,12 @@ class FriendDetailViewController: UIViewController {
         guard let friend = friend else { return }
         title = friend.name
         friendImageView.image = UIImage(data: friend.imageData)
+        friendNameLabel.text = friend.name
         friendOccupationLabel.text = friend.occupation
     }
     
     @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var friendNameLabel: UILabel!
     @IBOutlet weak var friendOccupationLabel: UILabel!
     
     var friend: Friend? {

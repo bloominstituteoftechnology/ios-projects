@@ -10,8 +10,11 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
 
+    let navigationControllerDelegate = NavigationControllerDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = navigationControllerDelegate
     }
 
 
@@ -40,6 +43,8 @@ class FriendsTableViewController: UITableViewController {
             guard let destVC = segue.destination as? FriendDetailViewController else { return }
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             let friend = friendController.friends[indexPath.row]
+            guard let friendTableViewCell = tableView.cellForRow(at: indexPath) as? FriendTableViewCell else { return }
+            navigationControllerDelegate.sourceCell = friendTableViewCell
             destVC.friend = friend
         }
     }

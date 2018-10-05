@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,30 +75,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w32-aS-QiO">
-                                <rect key="frame" x="85" y="147" width="199" height="164.5"/>
+                                <rect key="frame" x="78" y="133" width="199" height="178.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4m-46-z8p">
-                                <rect key="frame" x="30" y="349.5" width="115" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V1F-2v-C3p">
+                                <rect key="frame" x="40" y="336" width="135" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br4-Fv-l2h">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4m-46-z8p">
+                                        <rect key="frame" x="0.0" y="28.5" width="135" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="trailing" secondItem="q4m-46-z8p" secondAttribute="trailing" constant="230" id="5Di-Rh-9o3"/>
-                            <constraint firstItem="w32-aS-QiO" firstAttribute="leading" secondItem="Oxl-XQ-Qgs" secondAttribute="leading" constant="85" id="6Mg-9G-Sr5"/>
-                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="bottom" secondItem="q4m-46-z8p" secondAttribute="bottom" constant="297" id="9Xn-oG-ceo"/>
-                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="trailing" secondItem="w32-aS-QiO" secondAttribute="trailing" constant="91" id="Mqc-20-ITf"/>
-                            <constraint firstItem="w32-aS-QiO" firstAttribute="top" secondItem="Oxl-XQ-Qgs" secondAttribute="top" constant="31" id="lsX-rJ-IEJ"/>
-                            <constraint firstItem="q4m-46-z8p" firstAttribute="top" secondItem="w32-aS-QiO" secondAttribute="bottom" constant="38" id="pPr-OR-Udj"/>
-                            <constraint firstItem="q4m-46-z8p" firstAttribute="leading" secondItem="Oxl-XQ-Qgs" secondAttribute="leading" constant="30" id="qsW-Jd-vbf"/>
-                            <constraint firstItem="q4m-46-z8p" firstAttribute="top" secondItem="w32-aS-QiO" secondAttribute="bottom" constant="38" id="sTg-nx-SQ9"/>
+                            <constraint firstItem="V1F-2v-C3p" firstAttribute="top" secondItem="w32-aS-QiO" secondAttribute="bottom" constant="24.5" id="2uD-q0-Ndh"/>
+                            <constraint firstItem="V1F-2v-C3p" firstAttribute="top" secondItem="w32-aS-QiO" secondAttribute="bottom" constant="24.5" id="7OS-Sh-Ppl"/>
+                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="bottom" secondItem="V1F-2v-C3p" secondAttribute="bottom" constant="282" id="AfV-lV-UKW"/>
+                            <constraint firstItem="w32-aS-QiO" firstAttribute="leading" secondItem="Oxl-XQ-Qgs" secondAttribute="leading" constant="78" id="DFo-Qr-HrM"/>
+                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="trailing" secondItem="V1F-2v-C3p" secondAttribute="trailing" constant="200" id="UVr-WQ-IN4"/>
+                            <constraint firstItem="w32-aS-QiO" firstAttribute="top" secondItem="Oxl-XQ-Qgs" secondAttribute="top" constant="17" id="Y9o-4t-eD0"/>
+                            <constraint firstItem="Oxl-XQ-Qgs" firstAttribute="trailing" secondItem="w32-aS-QiO" secondAttribute="trailing" constant="98" id="ibF-94-LUx"/>
+                            <constraint firstItem="V1F-2v-C3p" firstAttribute="leading" secondItem="Oxl-XQ-Qgs" secondAttribute="leading" constant="40" id="kxZ-dQ-aJP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oxl-XQ-Qgs"/>
                     </view>
                     <connections>
                         <outlet property="friendImageView" destination="w32-aS-QiO" id="U7h-yI-WRx"/>
+                        <outlet property="friendNameLabel" destination="br4-Fv-l2h" id="b4x-VB-yik"/>
                         <outlet property="friendOccupationLabel" destination="q4m-46-z8p" id="HBE-ze-77D"/>
                     </connections>
                 </viewController>
