@@ -51,11 +51,8 @@ struct CountedSet<Element: Hashable>: ExpressibleByArrayLiteral, Sequence, Itera
     // MARK: - CRUD Methods
     /// Inserts one of the given element into the set
     mutating func insert(_ element: Element) {
-        if let item = items[element] {
-            items[element] = item + 1
-        } else {
-            items[element] = 1
-        }
+        items[element] = items[element] == nil ? 1 : items[element]! + 1
+        
     }
     
     /// Removes one of an element from the set
