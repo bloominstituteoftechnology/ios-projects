@@ -29,10 +29,11 @@ class Developer {
     
     func getPermission() {
         Waiter.shared.givePermission(to: self)
-//        print("\(name) has permission.")
+        if verbose { print("\(name) has permission.") }
     }
     
     func think() {
+        if verbose { print("\(name) is thinking.") }
         getPermission()
         if permission {
             leftSpoon.pickUp()
@@ -46,10 +47,11 @@ class Developer {
         leftSpoon.putDown()
         rightSpoon.putDown()
         Waiter.shared.releasePermission(from: self)
+        if verbose { print("\(name) released permission") }
     }
     
     func run() {
-        for _ in 0..<1000 {
+        for _ in 0..<runTimes {
             think()
             eat()
         }
@@ -79,7 +81,8 @@ let developer5 = Developer(lhs: developer1.rightSpoon, rhs: developer4.leftSpoon
 
 let developers = [developer1, developer2, developer3, developer4, developer5]
 
+let runTimes = 10
+let verbose = false
 DispatchQueue.concurrentPerform(iterations: 5) { developers[$0].run() }
-
 
 //: [Next](@next)
