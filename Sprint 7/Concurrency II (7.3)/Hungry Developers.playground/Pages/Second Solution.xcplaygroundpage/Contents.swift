@@ -49,7 +49,7 @@ class Developer {
     }
     
     func run() {
-        for _ in 0..<10000 {
+        for _ in 0..<runTimes {
             think()
             eat()
         }
@@ -64,6 +64,7 @@ let developer5 = Developer(lhs: developer1.rightSpoon, rhs: developer4.leftSpoon
 
 let developers = [developer1, developer2, developer3, developer4, developer5]
 
+let runTimes = 10
 DispatchQueue.concurrentPerform(iterations: 5) { developers[$0].run() }
 
 //: [Next](@next)

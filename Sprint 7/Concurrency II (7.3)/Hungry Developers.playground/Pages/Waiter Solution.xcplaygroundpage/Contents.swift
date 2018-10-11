@@ -63,8 +63,8 @@ class Waiter {
     let lock = NSLock()
     
     func givePermission(to developer: Developer) {
-            lock.lock()
-            developer.permission = true
+        lock.lock()
+        developer.permission = true
     }
     
     func releasePermission(from developer: Developer) {
@@ -82,7 +82,7 @@ let developer5 = Developer(lhs: developer1.rightSpoon, rhs: developer4.leftSpoon
 let developers = [developer1, developer2, developer3, developer4, developer5]
 
 let runTimes = 10
-let verbose = false
+let verbose = true
 DispatchQueue.concurrentPerform(iterations: 5) { developers[$0].run() }
 
 //: [Next](@next)
