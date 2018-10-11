@@ -1,68 +1,89 @@
 import UIKit
 
 class Spoon {
-    let lock = NSLock()
     
+    //Initialize a spoon with a index value.
+    init(_ index: Int) {
+        self.index = index
+    }
+    
+    //Pick up spoon and don't let other developer use it.
     func pickUp() {
         lock.lock()
     }
     
+    //Put down spoon and let another developer use it.
     func putDown() {
         lock.unlock()
     }
+    
+    //Properties of a spoon.
+    private let lock = NSLock()
+    var index: Int
 }
 
 class Developer {
     
+    //Initialize developer with number and 2 spoons: right and left.
+    init(_ number: Int, rightSpoon: Spoon, leftSpoon: Spoon) {
+        self.number = number
+        self.rightSpoon = rightSpoon
+        self.leftSpoon = leftSpoon
+    }
+    
+    //When developer eats, they use one spoon and then the other.
     func eat() {
-        usleep(100)
+        print("\(number) is eating")
+        usleep(UInt32.random(in: 1...100))
         rightSpoon.putDown()
+        usleep(UInt32.random(in: 1...100))
         leftSpoon.putDown()
     }
     
+    //When a developer thinks, they grab a spoon to be ready to eat.
     func think() {
-        leftSpoon.pickUp()
-        rightSpoon.pickUp()
+        print("\(number) is thinking")
+        if leftSpoon.index < rightSpoon.index {
+            leftSpoon.pickUp()
+            rightSpoon.pickUp()
+        } else {
+            rightSpoon.pickUp()
+            leftSpoon.pickUp()
+        }
     }
     
+    //Each developer will run x number of times.
     func run() {
-        while true {
+        for i in 1...1000 {
             think()
             eat()
         }
     }
-    var rightSpoon = Spoon()
-    var leftSpoon = Spoon()
+    
+    //Properties of a developer.
+    var rightSpoon: Spoon
+    var leftSpoon: Spoon
+    var number: Int
 }
 
-let spoon1 = Spoon()
-let spoon2 = Spoon()
-let spoon3 = Spoon()
-let spoon4 = Spoon()
-let spoon5 = Spoon()
+//Initialize 5 spoons
+let spoon1 = Spoon(1)
+let spoon2 = Spoon(2)
+let spoon3 = Spoon(3)
+let spoon4 = Spoon(4)
+let spoon5 = Spoon(5)
 
-let developer1 = Developer()
-let developer2 = Developer()
-let developer3 = Developer()
-let developer4 = Developer()
-let developer5 = Developer()
-
-developer1.leftSpoon = spoon1
-developer1.rightSpoon = spoon2
-developer2.leftSpoon = spoon2
-developer2.rightSpoon = spoon3
-developer3.leftSpoon = spoon3
-developer3.rightSpoon = spoon4
-developer4.leftSpoon = spoon4
-developer4.rightSpoon = spoon5
-developer5.leftSpoon = spoon5
-developer5.rightSpoon = spoon1
+//Initialize 5 developers who share 5 spoons.
+let developer1 = Developer(1, rightSpoon: spoon2, leftSpoon: spoon1)
+let developer2 = Developer(2, rightSpoon: spoon3, leftSpoon: spoon2)
+let developer3 = Developer(3, rightSpoon: spoon4, leftSpoon: spoon3)
+let developer4 = Developer(4, rightSpoon: spoon5, leftSpoon: spoon4)
+let developer5 = Developer(5, rightSpoon: spoon1, leftSpoon: spoon5)
 
 let spoons: [Spoon] = [spoon1, spoon2, spoon3, spoon4, spoon5]
 let developers: [Developer] = [developer1, developer2, developer3, developer4, developer5]
 
+//Perform task.
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
 }
-
-
