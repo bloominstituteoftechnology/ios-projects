@@ -44,6 +44,7 @@ struct CountedSet<Element>: ExpressibleByArrayLiteral where Element: Hashable{
     
 }
 
+//Test Code
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
 aCountedSet[.iron] // 0

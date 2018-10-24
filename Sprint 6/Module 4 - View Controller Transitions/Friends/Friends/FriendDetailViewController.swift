@@ -13,18 +13,34 @@ class FriendDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateViews() {
+        guard let friend = friend else { return }
+        
+        guard let imageData = friend.image else { return }
+        let image = UIImage(data: imageData)
+        
+        title = friend.name
+        
+        friendImageView.image = image
+        nameLabel.text = friend.name
+        bioLabel.text = friend.bio
+        
     }
-    */
-
+    
+    var friendController: FriendController?
+    var friend: Friend? {
+        didSet {
+            if isViewLoaded {
+                updateViews()
+            }
+        }
+    }
+    
+    @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    
 }

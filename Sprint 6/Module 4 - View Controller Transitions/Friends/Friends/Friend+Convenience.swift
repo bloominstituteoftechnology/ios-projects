@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import CoreData
+
+extension Friend {
+    convenience init(name: String, bio: String, image: Data, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+        
+        self.init(context: context)
+        self.name = name
+        self.image = image
+        self.bio = bio
+    }
+}

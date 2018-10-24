@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B93DD8021670F4D00862A1B /* IfIMessUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93DD7F21670F4D00862A1B /* IfIMessUp.swift */; };
 		7BD20A932166BA9D00B655CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20A922166BA9D00B655CD /* AppDelegate.swift */; };
-		7BD20A952166BA9D00B655CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20A942166BA9D00B655CD /* ViewController.swift */; };
 		7BD20A982166BA9D00B655CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD20A962166BA9D00B655CD /* Main.storyboard */; };
 		7BD20A9B2166BA9D00B655CD /* Friends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20A992166BA9D00B655CD /* Friends.xcdatamodeld */; };
 		7BD20A9D2166BA9F00B655CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD20A9C2166BA9F00B655CD /* Assets.xcassets */; };
 		7BD20AA02166BA9F00B655CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD20A9E2166BA9F00B655CD /* LaunchScreen.storyboard */; };
+		7BD20AA82166C2CA00B655CD /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AA72166C2CA00B655CD /* FriendController.swift */; };
+		7BD20AAA2166C4FD00B655CD /* Friend+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AA92166C4FD00B655CD /* Friend+Convenience.swift */; };
+		7BD20AAC2166C5C700B655CD /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AAB2166C5C700B655CD /* CoreData.swift */; };
+		7BD20AAE2166CA7200B655CD /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AAD2166CA7200B655CD /* FriendsTableViewController.swift */; };
+		7BD20AB02166CA8400B655CD /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AAF2166CA8400B655CD /* FriendDetailViewController.swift */; };
+		7BD20AB22166D78100B655CD /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AB12166D78100B655CD /* NavigationControllerDelegate.swift */; };
+		7BD20AB42166DAA300B655CD /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD20AB32166DAA300B655CD /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B93DD7F21670F4D00862A1B /* IfIMessUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfIMessUp.swift; sourceTree = "<group>"; };
 		7BD20A8F2166BA9D00B655CD /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD20A922166BA9D00B655CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BD20A942166BA9D00B655CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BD20A972166BA9D00B655CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BD20A9A2166BA9D00B655CD /* Friends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friends.xcdatamodel; sourceTree = "<group>"; };
 		7BD20A9C2166BA9F00B655CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD20A9F2166BA9F00B655CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD20AA12166BA9F00B655CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD20AA72166C2CA00B655CD /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
+		7BD20AA92166C4FD00B655CD /* Friend+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+Convenience.swift"; sourceTree = "<group>"; };
+		7BD20AAB2166C5C700B655CD /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		7BD20AAD2166CA7200B655CD /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		7BD20AAF2166CA8400B655CD /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		7BD20AB12166D78100B655CD /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		7BD20AB32166DAA300B655CD /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				7BD20A922166BA9D00B655CD /* AppDelegate.swift */,
-				7BD20A942166BA9D00B655CD /* ViewController.swift */,
 				7BD20A962166BA9D00B655CD /* Main.storyboard */,
 				7BD20A9C2166BA9F00B655CD /* Assets.xcassets */,
 				7BD20A9E2166BA9F00B655CD /* LaunchScreen.storyboard */,
 				7BD20AA12166BA9F00B655CD /* Info.plist */,
 				7BD20A992166BA9D00B655CD /* Friends.xcdatamodeld */,
+				7BD20AAB2166C5C700B655CD /* CoreData.swift */,
+				7BD20AA72166C2CA00B655CD /* FriendController.swift */,
+				7BD20AA92166C4FD00B655CD /* Friend+Convenience.swift */,
+				7BD20AAD2166CA7200B655CD /* FriendsTableViewController.swift */,
+				7BD20AAF2166CA8400B655CD /* FriendDetailViewController.swift */,
+				7BD20AB12166D78100B655CD /* NavigationControllerDelegate.swift */,
+				7BD20AB32166DAA300B655CD /* ImageTransitionAnimator.swift */,
+				7B93DD7F21670F4D00862A1B /* IfIMessUp.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -138,9 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD20A952166BA9D00B655CD /* ViewController.swift in Sources */,
 				7BD20A9B2166BA9D00B655CD /* Friends.xcdatamodeld in Sources */,
+				7BD20AA82166C2CA00B655CD /* FriendController.swift in Sources */,
+				7BD20AAE2166CA7200B655CD /* FriendsTableViewController.swift in Sources */,
+				7B93DD8021670F4D00862A1B /* IfIMessUp.swift in Sources */,
+				7BD20AB42166DAA300B655CD /* ImageTransitionAnimator.swift in Sources */,
 				7BD20A932166BA9D00B655CD /* AppDelegate.swift in Sources */,
+				7BD20AB22166D78100B655CD /* NavigationControllerDelegate.swift in Sources */,
+				7BD20AAA2166C4FD00B655CD /* Friend+Convenience.swift in Sources */,
+				7BD20AAC2166C5C700B655CD /* CoreData.swift in Sources */,
+				7BD20AB02166CA8400B655CD /* FriendDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,16 +10,19 @@ class Spoon {
     //Pick up spoon and don't let other developer use it.
     func pickUp() {
         lock.lock()
+        isUsed = true
     }
     
     //Put down spoon and let another developer use it.
     func putDown() {
         lock.unlock()
+        isUsed = false
     }
     
     //Properties of a spoon.
     private let lock = NSLock()
     var index: Int
+    var isUsed: Bool = false
 }
 
 class Developer {
@@ -34,9 +37,9 @@ class Developer {
     //When developer eats, they use one spoon and then the other.
     func eat() {
         print("\(number) is eating")
-        usleep(UInt32.random(in: 1...100))
+        usleep(UInt32.random(in: 1...1000))
         rightSpoon.putDown()
-        usleep(UInt32.random(in: 1...100))
+        usleep(UInt32.random(in: 1...1000))
         leftSpoon.putDown()
     }
     
@@ -64,6 +67,12 @@ class Developer {
     var rightSpoon: Spoon
     var leftSpoon: Spoon
     var number: Int
+}
+
+class Waiter {
+    func clearToUse(spoon: Spoon) -> Bool {
+        return spoon.isUsed
+    }
 }
 
 //Initialize 5 spoons
