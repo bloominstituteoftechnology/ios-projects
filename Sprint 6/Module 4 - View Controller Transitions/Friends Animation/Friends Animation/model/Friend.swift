@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
-struct Friend {
+struct Friend: Equatable {
     
     var name: String
     var image: UIImage
     var details: String
     
+    init(name: String, image: UIImage, details: String){
+        self.name = name
+        self.image = image
+        self.details = details
+    }
     
 }

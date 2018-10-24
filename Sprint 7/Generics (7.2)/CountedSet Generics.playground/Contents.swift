@@ -13,13 +13,15 @@ struct CountedSet<Element: Hashable> {
         
     }
     
-    mutating func remove(_ newElement: Element) {
+    mutating func remove(_ newElement: Element) -> Int {
         if var count = dictSet[newElement]{
-            count -= 1
+            count = count - 1
             if count == 0{
                 dictSet.removeValue(forKey: newElement)
+                return count
             }else {
                 dictSet[newElement] = count
+                return 0
             }
         }
     }
@@ -56,6 +58,7 @@ var newCountedSet = CountedSet<Arrow>()
 newCountedSet[.iron]
 
 var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
+print(myCountedSet)
 myCountedSet[.iron]
 myCountedSet.remove(.iron)
 myCountedSet.remove(.dwarvish)

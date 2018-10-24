@@ -6,13 +6,15 @@
 //  Copyright © 2018 Iyin Raphael. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let demiImage: UIImage = UIImage(named: "daughter.jpg")!
+let demiName: String = "Demilade"
+let demiDetail: String = "My Beautiful Daughter"
 
 class FriendController {
     
-    //MARK:- CRUD
     
-    
-    
-    var friends = [Friend]()
+    var friend = Friend(name: demiName, image: demiImage, details: demiDetail)
+    lazy var friends: [Friend] = [friend]
 }

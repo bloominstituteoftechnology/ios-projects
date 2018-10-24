@@ -12,22 +12,27 @@ class FriendDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateView()
     }
+    
+    
+    func updateView(){
+        guard isViewLoaded else {return}
+        
+        imageView.image = friendController.friend.image
+        nameLabel.text = friendController.friend.name
+        textView.text = friendController.friend.details
+        
+    }
+    
+    
+    let friendController = FriendController()
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var textView: UITextView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

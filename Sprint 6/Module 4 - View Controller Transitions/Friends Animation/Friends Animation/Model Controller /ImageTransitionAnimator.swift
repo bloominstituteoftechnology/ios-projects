@@ -6,4 +6,10 @@
 //  Copyright © 2018 Iyin Raphael. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class IMageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    
+}
+

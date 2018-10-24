@@ -8,10 +8,22 @@
 
 import UIKit
 
-class FriendTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var friendImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-
-}
+//class FriendTableViewCell: UITableViewCell {
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        upadate()
+//    }
+//
+//    func upadate(){
+//        friendImage.image = friendController.friend.image
+//        nameLabel.text = friendController.friend.name
+//    }
+//
+//    let friendController = FriendController()
+//
+//    @IBOutlet weak var friendImage: UIImageView!
+//    @IBOutlet weak var nameLabel: UILabel!
+//
+//}
