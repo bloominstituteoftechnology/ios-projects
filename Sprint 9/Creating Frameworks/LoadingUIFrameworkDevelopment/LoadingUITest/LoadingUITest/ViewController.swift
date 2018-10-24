@@ -15,6 +15,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "loading"{
+//            let destinationVC = segue.destination as!
+//            destinationVC.startAnimation()
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//                destinationVC.dismiss(animated: true){}
+//            }
+//        }
+//    }
 
 
 }
