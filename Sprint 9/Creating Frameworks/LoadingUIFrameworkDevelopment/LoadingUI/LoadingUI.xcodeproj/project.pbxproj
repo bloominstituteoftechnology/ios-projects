@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		EB4076A42181025C0030E077 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = EB4076A22181025C0030E077 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB4076E3218117D60030E077 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4076E2218117D60030E077 /* LoadingViewController.swift */; };
+		EB4076E721811C610030E077 /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4076E621811C610030E077 /* IndeterminateLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB40769F2181025C0030E077 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4076A22181025C0030E077 /* LoadingUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingUI.h; sourceTree = "<group>"; };
 		EB4076A32181025C0030E077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4076E2218117D60030E077 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		EB4076E621811C610030E077 /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndeterminateLoadingView.swift; path = ../../../IndeterminateLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				EB4076A22181025C0030E077 /* LoadingUI.h */,
 				EB4076A32181025C0030E077 /* Info.plist */,
+				EB4076E621811C610030E077 /* IndeterminateLoadingView.swift */,
+				EB4076E2218117D60030E077 /* LoadingViewController.swift */,
 			);
 			path = LoadingUI;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					EB40769E2181025C0030E077 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4076E3218117D60030E077 /* LoadingViewController.swift in Sources */,
+				EB4076E721811C610030E077 /* IndeterminateLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		EB4076A82181025C0030E077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +287,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iyinraphael.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +296,7 @@
 		EB4076A92181025C0030E077 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
