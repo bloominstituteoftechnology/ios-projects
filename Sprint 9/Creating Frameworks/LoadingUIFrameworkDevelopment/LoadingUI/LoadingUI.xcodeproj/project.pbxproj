@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		34CDD4172180F8EE006F72B6 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 34CDD4152180F8EE006F72B6 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34CDD4482180FA8F006F72B6 /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDD4462180FA8F006F72B6 /* PolarPoint.swift */; };
+		34CDD4492180FA8F006F72B6 /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDD4472180FA8F006F72B6 /* IndeterminateLoadingView.swift */; };
+		34CDD44B2180FAB6006F72B6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDD44A2180FAB6006F72B6 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34CDD4122180F8EE006F72B6 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34CDD4152180F8EE006F72B6 /* LoadingUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingUI.h; sourceTree = "<group>"; };
 		34CDD4162180F8EE006F72B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34CDD4462180FA8F006F72B6 /* PolarPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolarPoint.swift; path = ../../../PolarPoint.swift; sourceTree = "<group>"; };
+		34CDD4472180FA8F006F72B6 /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndeterminateLoadingView.swift; path = ../../../IndeterminateLoadingView.swift; sourceTree = "<group>"; };
+		34CDD44A2180FAB6006F72B6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				34CDD4152180F8EE006F72B6 /* LoadingUI.h */,
+				34CDD4472180FA8F006F72B6 /* IndeterminateLoadingView.swift */,
+				34CDD4462180FA8F006F72B6 /* PolarPoint.swift */,
+				34CDD44A2180FAB6006F72B6 /* LoadingViewController.swift */,
 				34CDD4162180F8EE006F72B6 /* Info.plist */,
 			);
 			path = LoadingUI;
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					34CDD4112180F8EE006F72B6 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34CDD4482180FA8F006F72B6 /* PolarPoint.swift in Sources */,
+				34CDD4492180FA8F006F72B6 /* IndeterminateLoadingView.swift in Sources */,
+				34CDD44B2180FAB6006F72B6 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +274,7 @@
 		34CDD41B2180F8EE006F72B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dillonmcelhinney.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +301,7 @@
 		34CDD41C2180F8EE006F72B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

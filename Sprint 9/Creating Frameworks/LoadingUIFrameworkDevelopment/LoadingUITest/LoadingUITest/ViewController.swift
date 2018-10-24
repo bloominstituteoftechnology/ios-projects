@@ -10,12 +10,27 @@ import UIKit
 import LoadingUI
 
 class ViewController: UIViewController {
-
+    
+    var loadingViewController = LoadingViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
-
-
+    
+    @IBAction func presentLoadingUI(_ sender: Any) {
+        loadingViewController = LoadingViewController()
+        loadingViewController.backgroundColor = .gray
+        loadingViewController.wheelColor = .blue
+        loadingViewController.wheelSize = 200
+        loadingViewController.wheelThickness = 20
+        loadingViewController.modalTransitionStyle = .crossDissolve
+        present(loadingViewController, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.loadingViewController.stop()
+        }
+    }
+    
 }
 
