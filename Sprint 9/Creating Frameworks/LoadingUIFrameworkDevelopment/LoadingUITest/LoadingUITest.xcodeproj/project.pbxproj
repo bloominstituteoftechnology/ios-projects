@@ -14,6 +14,7 @@
 		7BD6DDF021810EB70060E306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD6DDEE21810EB70060E306 /* LaunchScreen.storyboard */; };
 		7BD6DE1321810F380060E306 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD6DE1221810F2F0060E306 /* LoadingUI.framework */; };
 		7BD6DE1421810F380060E306 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD6DE1221810F2F0060E306 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7BD6DE1F218117FE0060E306 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6DE1E218117FE0060E306 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		7BD6DDEF21810EB70060E306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD6DDF121810EB70060E306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD6DE0D21810F2E0060E306 /* LoadingUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingUI.xcodeproj; path = ../../../LoadingUI/LoadingUI.xcodeproj; sourceTree = "<group>"; };
+		7BD6DE1E218117FE0060E306 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				7BD6DDE521810EAF0060E306 /* AppDelegate.swift */,
 				7BD6DDE721810EAF0060E306 /* ViewController.swift */,
 				7BD6DDE921810EAF0060E306 /* Main.storyboard */,
+				7BD6DE1E218117FE0060E306 /* TestViewController.swift */,
 				7BD6DDEC21810EB70060E306 /* Assets.xcassets */,
 				7BD6DDEE21810EB70060E306 /* LaunchScreen.storyboard */,
 				7BD6DDF121810EB70060E306 /* Info.plist */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD6DDE821810EAF0060E306 /* ViewController.swift in Sources */,
+				7BD6DE1F218117FE0060E306 /* TestViewController.swift in Sources */,
 				7BD6DDE621810EAF0060E306 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

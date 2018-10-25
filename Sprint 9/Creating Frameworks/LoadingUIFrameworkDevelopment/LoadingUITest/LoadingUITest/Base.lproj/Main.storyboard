@@ -17,27 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-gV-yI9">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-gV-yI9">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
                                 <state key="normal" title="Test"/>
                                 <connections>
-                                    <action selector="startTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlw-mc-D1W"/>
                                     <segue destination="UuA-pg-cCN" kind="presentation" id="veC-aa-u2s"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rtR-gV-yI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="St5-qG-Ny4"/>
+                            <constraint firstItem="rtR-gV-yI9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j4R-7P-EgV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="p5e-vF-6nK">
             <objects>
-                <viewController id="UuA-pg-cCN" sceneMemberID="viewController">
+                <viewController id="UuA-pg-cCN" customClass="TestViewController" customModule="LoadingUITest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4B-l2-M8F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
