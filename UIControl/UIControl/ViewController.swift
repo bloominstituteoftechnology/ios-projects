@@ -12,9 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
-
+    @IBAction func updateRating(_ ratingControl: CustomControl) {
+        
+        let rating = ratingControl.value
+        if rating == 1 {
+            title = "User Rating: \(rating) star"
+        } else {
+            title = "User Rating: \(rating) stars"
+        }
+        
+    }
+    
+    
 }
 
