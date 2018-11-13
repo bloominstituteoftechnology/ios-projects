@@ -17,6 +17,8 @@ class CustomControl: UIControl {
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
     
+    let vc = ViewController()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -50,6 +52,7 @@ class CustomControl: UIControl {
     }
     
     func changeEmoji(after selected: Int) {
+        backgroundColor(intensity: selected)
         for label in labels {
             if label.tag <= selected {
                 label.text = "🔥"
@@ -59,12 +62,30 @@ class CustomControl: UIControl {
         }
     }
     
+    func backgroundColor(intensity: Int) {
+        var bg = vc.view.backgroundColor
+        switch intensity {
+        case 1:
+            bg = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
+        case 2:
+            bg = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        case 3:
+            bg = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        case 4:
+            bg = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1)
+        case 5:
+            bg = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        default:
+            bg = .white
+        }
+    }
+    
     func updateValue(at touch: UITouch) {
         for label in labels {
             let touchPoint = touch.location(in: self)
-            let halfway = label.frame.midX
 
             // Changes after passing halfway point
+//            let halfway = label.frame.midX
 //            if touchPoint.x > halfway {
 //                // Touch is within label frame
 //                label.performFlare()
