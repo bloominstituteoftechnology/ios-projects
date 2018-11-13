@@ -16,7 +16,6 @@ class CustomControl: UIControl {
         setup()
     }
     
-    
     func setup() {
         
         var x: CGFloat = 8.0
@@ -48,7 +47,52 @@ class CustomControl: UIControl {
         return CGSize(width: width, height: componentDimension)
     }
 
+    
+    // MARK: - Touch Tracking
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        updateValue(at: touch)
+        return true
+    }
+    
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint) {
+            updateValue(at: touch)
+            
+            sendActions(for: [.touchDragInside, .valueChanged])
+        } else {
+            sendActions(for: [.touchDragOutside])
+        }
+        
+        return true
+    }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        guard let touch = touch else {return}
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            updateValue(at: touch)
+            sendActions(for: [.touchUpInside, .valueChanged])
+        } else {
+            sendActions(for: .touchUpOutside)
+        }    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: .touchCancel)
+    }
 
+    // think about extra.valueChanged events.  This may come in handy later
+    
+    func updateValue(at touch: UITouch){
+        
+        
+        
+    }
+    
+    // MARK: - Properties
+    
     var labels: [UILabel] = []
     
     var value: Int = 1
