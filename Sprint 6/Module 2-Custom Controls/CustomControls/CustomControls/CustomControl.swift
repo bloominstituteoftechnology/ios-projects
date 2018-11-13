@@ -31,13 +31,14 @@ class CustomControl: UIControl {
             let label = UILabel(frame: CGRect(x: x, y: 0, width: componentDimension, height: componentDimension))
             
             label.tag = n
-            label.font = UIFont(name: "bold system font", size: 32.0)
+            label.font = UIFont.boldSystemFont(ofSize:32.0) //UIFont(name: "bold system font", size: 32.0)
             label.text = "❔"
             label.textAlignment = .center
+            label.isUserInteractionEnabled = false
             
             self.addSubview(label)
             labels.append(label)
-            x += 48.0
+            x += componentDimension + 8.0
         }
     }
     
@@ -61,11 +62,24 @@ class CustomControl: UIControl {
     func updateValue(at touch: UITouch) {
         for label in labels {
             let touchPoint = touch.location(in: self)
+            let halfway = label.frame.midX
+
+            // Changes after passing halfway point
+//            if touchPoint.x > halfway {
+//                // Touch is within label frame
+//                label.performFlare()
+//                value = label.tag
+//                changeEmoji(after: value)
+//                sendActions(for: [.valueChanged])
+//            }
+            
+            // Changes somewhere in between the emojis
             if label.frame.contains(touchPoint) {
-                // Touch within label fram
+                // Touch is within label frame
                 value = label.tag
                 changeEmoji(after: value)
                 sendActions(for: [.valueChanged])
+                label.performFlare()
             }
         }
     }
@@ -109,4 +123,16 @@ class CustomControl: UIControl {
     }
     
     
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
 }
