@@ -12,7 +12,7 @@ class CustomControl: UIControl {
     
     required init?(coder aCoder: NSCoder){
         super.init(coder: aCoder)
-        
+       
         setup()
     }
     
@@ -23,9 +23,11 @@ class CustomControl: UIControl {
         for componentNumber in 1...componentCount {
             let label = UILabel(frame: CGRect(x: x, y: 0, width: componentDimension, height: componentDimension))
             
+           // let label2 = UILabel(frame: CGRect(x: x, y: 0, width: componentDimension, height: componentDimension))
+            
             label.tag = componentNumber
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
-            label.text = "✩"
+            label.text = "☆"
             label.textAlignment = .center
 
             if componentNumber == 1 {
@@ -85,10 +87,24 @@ class CustomControl: UIControl {
 
     // think about extra.valueChanged events.  This may come in handy later
     
-    func updateValue(at touch: UITouch){
-        
-        
-        
+    func updateValue(at touch: UITouch) {
+        for number in 1...componentCount {
+            let label = labels[number - 1]
+            let touchPoint = touch.location(in: self)
+            if label.frame.contains(touchPoint) && label.tag != value {
+                value = label.tag
+                for itemIndex in 1...componentCount {
+                    let newLabel = labels[itemIndex - 1]
+                    if itemIndex <= value {
+                        newLabel.textColor = componentActiveColor
+                    } else {
+                        newLabel.textColor = componentInactiveColor
+                    }
+                }
+                label.performFlare()
+                sendActions(for: [.valueChanged])
+            }
+        }
     }
     
     // MARK: - Properties
@@ -98,8 +114,8 @@ class CustomControl: UIControl {
     var value: Int = 1
     
     let componentDimension: CGFloat = 40
-    let componentCount = 5
-    let componentActiveColor: UIColor = .black
+    let componentCount = 6
+    let componentActiveColor: UIColor = .yellow
     let componentInactiveColor: UIColor = .gray
     
     
@@ -108,7 +124,7 @@ class CustomControl: UIControl {
 extension UIView {
     // "Flare view" animation sequence
     func performFlare() {
-        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func flare()   { transform = CGAffineTransform(scaleX: 2.8, y: -2.8) }
         func unflare() { transform = .identity }
         
         UIView.animate(withDuration: 0.3,
