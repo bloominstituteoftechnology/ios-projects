@@ -17,8 +17,6 @@ class CustomControl: UIControl {
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
     
-    let vc = ViewController()
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -63,7 +61,8 @@ class CustomControl: UIControl {
     }
     
     func backgroundColor(intensity: Int) {
-        var bg = vc.view.backgroundColor
+        var bg: UIColor
+        
         switch intensity {
         case 1:
             bg = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
@@ -78,6 +77,7 @@ class CustomControl: UIControl {
         default:
             bg = .white
         }
+        superview?.backgroundColor = bg
     }
     
     func updateValue(at touch: UITouch) {
@@ -85,23 +85,27 @@ class CustomControl: UIControl {
             let touchPoint = touch.location(in: self)
 
             // Changes after passing halfway point
-//            let halfway = label.frame.midX
-//            if touchPoint.x > halfway {
-//                // Touch is within label frame
-//                label.performFlare()
-//                value = label.tag
-//                changeEmoji(after: value)
-//                sendActions(for: [.valueChanged])
-//            }
-            
-            // Changes somewhere in between the emojis
-            if label.frame.contains(touchPoint) {
+            let halfway = label.frame.midX
+            if touchPoint.x > halfway {
                 // Touch is within label frame
+                
                 value = label.tag
                 changeEmoji(after: value)
                 sendActions(for: [.valueChanged])
-                label.performFlare()
+                
+                if label.frame.contains(touchPoint) {
+                    label.performFlare()
+                }
             }
+            
+            // Changes somewhere in between the emojis
+//            if label.frame.contains(touchPoint) {
+//                // Touch is within label frame
+//                value = label.tag
+//                changeEmoji(after: value)
+//                sendActions(for: [.valueChanged])
+//                label.performFlare()
+//            }
         }
     }
     
