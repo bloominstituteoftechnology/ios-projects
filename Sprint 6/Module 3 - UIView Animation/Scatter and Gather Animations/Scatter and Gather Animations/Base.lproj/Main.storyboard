@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scatter_and_Gather_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ih-gD-f9g">
+                                <rect key="frame" x="73" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ebu-rR-lqe"/>
+                                    <constraint firstAttribute="width" constant="50" id="p8w-7w-SWE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fag-Dq-V5n">
+                                <rect key="frame" x="131" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="O2Y-6F-ALZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="XvL-mj-hN8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bv-pZ-cRd">
+                                <rect key="frame" x="189" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bzB-do-O9p"/>
+                                    <constraint firstAttribute="width" constant="50" id="phh-lM-crw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nde-z2-dtq">
+                                <rect key="frame" x="247" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F3h-sH-Bnh"/>
+                                    <constraint firstAttribute="width" constant="50" id="eJb-Tp-hvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbo-bN-Vk6">
+                                <rect key="frame" x="15" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F8O-UH-FYW"/>
+                                    <constraint firstAttribute="width" constant="50" id="KXk-Ik-FvK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="tAc-QV-85C">
+                                <rect key="frame" x="67" y="175" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlG-4R-h69">
+                                <rect key="frame" x="305" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X0d-ws-o70"/>
+                                    <constraint firstAttribute="width" constant="50" id="yxr-DP-qlf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2R-UI-6tO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Slow" id="tE0-WZ-t0Z">
+                                        <connections>
+                                            <action selector="slowButton:" destination="BYZ-38-t0r" id="OAF-u9-1kb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Crazy" id="lCP-9u-FAe">
+                                        <connections>
+                                            <action selector="toggle:" destination="BYZ-38-t0r" id="bZy-3e-AbH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="EDC" id="gbV-vA-3D2">
+                                        <connections>
+                                            <action selector="edcButton:" destination="BYZ-38-t0r" id="VDu-7Y-Kb0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nde-z2-dtq" firstAttribute="leading" secondItem="1Bv-pZ-cRd" secondAttribute="trailing" constant="8" id="1Xk-ba-6hb"/>
+                            <constraint firstItem="Gbo-bN-Vk6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="4jG-uI-oYY"/>
+                            <constraint firstItem="NlG-4R-h69" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BAj-vR-Hrv"/>
+                            <constraint firstItem="1Ih-gD-f9g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BMc-k3-ltb"/>
+                            <constraint firstItem="Nde-z2-dtq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FFO-Kj-8cr"/>
+                            <constraint firstItem="fag-Dq-V5n" firstAttribute="leading" secondItem="1Ih-gD-f9g" secondAttribute="trailing" constant="8" id="OwC-RG-KBU"/>
+                            <constraint firstItem="fag-Dq-V5n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="VRM-lf-Nl9"/>
+                            <constraint firstItem="NlG-4R-h69" firstAttribute="leading" secondItem="Nde-z2-dtq" secondAttribute="trailing" constant="8" id="Wed-nk-f5h"/>
+                            <constraint firstItem="Gbo-bN-Vk6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="a9P-NO-xfV"/>
+                            <constraint firstItem="1Bv-pZ-cRd" firstAttribute="leading" secondItem="fag-Dq-V5n" secondAttribute="trailing" constant="8" id="aQJ-3T-Jj6"/>
+                            <constraint firstItem="1Ih-gD-f9g" firstAttribute="leading" secondItem="Gbo-bN-Vk6" secondAttribute="trailing" constant="8" id="pkJ-aq-Br3"/>
+                            <constraint firstItem="1Bv-pZ-cRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="tPf-h3-hJT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tZB-Zw-beG"/>
+                    <connections>
+                        <outlet property="letterA" destination="1Ih-gD-f9g" id="ASw-VF-QKG"/>
+                        <outlet property="letterA2" destination="NlG-4R-h69" id="dh8-PR-zVJ"/>
+                        <outlet property="letterB" destination="1Bv-pZ-cRd" id="5Lk-7y-918"/>
+                        <outlet property="letterD" destination="Nde-z2-dtq" id="e1k-jp-bCP"/>
+                        <outlet property="letterL" destination="Gbo-bN-Vk6" id="Vl3-R3-Liv"/>
+                        <outlet property="letterM" destination="fag-Dq-V5n" id="Odc-RW-Qcx"/>
+                        <outlet property="logo" destination="tAc-QV-85C" id="P3D-v2-FQ8"/>
+                        <outletCollection property="letters" destination="1Ih-gD-f9g" collectionClass="NSMutableArray" id="ZI2-bc-a3o"/>
+                        <outletCollection property="letters" destination="fag-Dq-V5n" collectionClass="NSMutableArray" id="wqF-7Q-bxY"/>
+                        <outletCollection property="letters" destination="1Bv-pZ-cRd" collectionClass="NSMutableArray" id="HiZ-JQ-2BS"/>
+                        <outletCollection property="letters" destination="Nde-z2-dtq" collectionClass="NSMutableArray" id="BYt-Rq-uH3"/>
+                        <outletCollection property="letters" destination="Gbo-bN-Vk6" collectionClass="NSMutableArray" id="vSg-jW-U5Z"/>
+                        <outletCollection property="letters" destination="NlG-4R-h69" collectionClass="NSMutableArray" id="kFU-8z-Fg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="574" height="249"/>
+    </resources>
+</document>
