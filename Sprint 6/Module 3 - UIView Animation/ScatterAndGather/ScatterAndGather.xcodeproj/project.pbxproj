@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4728DBFF219B525000BC3898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728DBFE219B525000BC3898 /* AppDelegate.swift */; };
-		4728DC01219B525000BC3898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728DC00219B525000BC3898 /* ViewController.swift */; };
-		4728DC04219B525000BC3898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC02219B525000BC3898 /* Main.storyboard */; };
-		4728DC06219B525200BC3898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC05219B525200BC3898 /* Assets.xcassets */; };
-		4728DC09219B525200BC3898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC07219B525200BC3898 /* LaunchScreen.storyboard */; };
-		4728DC11219B566E00BC3898 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728DC10219B566E00BC3898 /* CustomControl.swift */; };
+		4728DC21219CB26B00BC3898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728DC20219CB26B00BC3898 /* AppDelegate.swift */; };
+		4728DC23219CB26B00BC3898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4728DC22219CB26B00BC3898 /* ViewController.swift */; };
+		4728DC26219CB26B00BC3898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC24219CB26B00BC3898 /* Main.storyboard */; };
+		4728DC28219CB26C00BC3898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC27219CB26C00BC3898 /* Assets.xcassets */; };
+		4728DC2B219CB26C00BC3898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4728DC29219CB26C00BC3898 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4728DBFB219B525000BC3898 /* UIControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4728DBFE219B525000BC3898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4728DC00219B525000BC3898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4728DC03219B525000BC3898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4728DC05219B525200BC3898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4728DC08219B525200BC3898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4728DC0A219B525200BC3898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4728DC10219B566E00BC3898 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		4728DC1D219CB26B00BC3898 /* ScatterAndGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScatterAndGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4728DC20219CB26B00BC3898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4728DC22219CB26B00BC3898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4728DC25219CB26B00BC3898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4728DC27219CB26C00BC3898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4728DC2A219CB26C00BC3898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4728DC2C219CB26C00BC3898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4728DBF8219B525000BC3898 /* Frameworks */ = {
+		4728DC1A219CB26B00BC3898 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4728DBF2219B525000BC3898 = {
+		4728DC14219CB26B00BC3898 = {
 			isa = PBXGroup;
 			children = (
-				4728DBFD219B525000BC3898 /* UIControl */,
-				4728DBFC219B525000BC3898 /* Products */,
+				4728DC1F219CB26B00BC3898 /* ScatterAndGather */,
+				4728DC1E219CB26B00BC3898 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4728DBFC219B525000BC3898 /* Products */ = {
+		4728DC1E219CB26B00BC3898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4728DBFB219B525000BC3898 /* UIControl.app */,
+				4728DC1D219CB26B00BC3898 /* ScatterAndGather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4728DBFD219B525000BC3898 /* UIControl */ = {
+		4728DC1F219CB26B00BC3898 /* ScatterAndGather */ = {
 			isa = PBXGroup;
 			children = (
-				4728DBFE219B525000BC3898 /* AppDelegate.swift */,
-				4728DC00219B525000BC3898 /* ViewController.swift */,
-				4728DC02219B525000BC3898 /* Main.storyboard */,
-				4728DC10219B566E00BC3898 /* CustomControl.swift */,
-				4728DC05219B525200BC3898 /* Assets.xcassets */,
-				4728DC07219B525200BC3898 /* LaunchScreen.storyboard */,
-				4728DC0A219B525200BC3898 /* Info.plist */,
+				4728DC20219CB26B00BC3898 /* AppDelegate.swift */,
+				4728DC22219CB26B00BC3898 /* ViewController.swift */,
+				4728DC24219CB26B00BC3898 /* Main.storyboard */,
+				4728DC27219CB26C00BC3898 /* Assets.xcassets */,
+				4728DC29219CB26C00BC3898 /* LaunchScreen.storyboard */,
+				4728DC2C219CB26C00BC3898 /* Info.plist */,
 			);
-			path = UIControl;
+			path = ScatterAndGather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4728DBFA219B525000BC3898 /* UIControl */ = {
+		4728DC1C219CB26B00BC3898 /* ScatterAndGather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4728DC0D219B525200BC3898 /* Build configuration list for PBXNativeTarget "UIControl" */;
+			buildConfigurationList = 4728DC2F219CB26C00BC3898 /* Build configuration list for PBXNativeTarget "ScatterAndGather" */;
 			buildPhases = (
-				4728DBF7219B525000BC3898 /* Sources */,
-				4728DBF8219B525000BC3898 /* Frameworks */,
-				4728DBF9219B525000BC3898 /* Resources */,
+				4728DC19219CB26B00BC3898 /* Sources */,
+				4728DC1A219CB26B00BC3898 /* Frameworks */,
+				4728DC1B219CB26B00BC3898 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UIControl;
-			productName = UIControl;
-			productReference = 4728DBFB219B525000BC3898 /* UIControl.app */;
+			name = ScatterAndGather;
+			productName = ScatterAndGather;
+			productReference = 4728DC1D219CB26B00BC3898 /* ScatterAndGather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4728DBF3219B525000BC3898 /* Project object */ = {
+		4728DC15219CB26B00BC3898 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jerrick Warren";
 				TargetAttributes = {
-					4728DBFA219B525000BC3898 = {
+					4728DC1C219CB26B00BC3898 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 4728DBF6219B525000BC3898 /* Build configuration list for PBXProject "UIControl" */;
+			buildConfigurationList = 4728DC18219CB26B00BC3898 /* Build configuration list for PBXProject "ScatterAndGather" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 4728DBF2219B525000BC3898;
-			productRefGroup = 4728DBFC219B525000BC3898 /* Products */;
+			mainGroup = 4728DC14219CB26B00BC3898;
+			productRefGroup = 4728DC1E219CB26B00BC3898 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4728DBFA219B525000BC3898 /* UIControl */,
+				4728DC1C219CB26B00BC3898 /* ScatterAndGather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4728DBF9219B525000BC3898 /* Resources */ = {
+		4728DC1B219CB26B00BC3898 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4728DC09219B525200BC3898 /* LaunchScreen.storyboard in Resources */,
-				4728DC06219B525200BC3898 /* Assets.xcassets in Resources */,
-				4728DC04219B525000BC3898 /* Main.storyboard in Resources */,
+				4728DC2B219CB26C00BC3898 /* LaunchScreen.storyboard in Resources */,
+				4728DC28219CB26C00BC3898 /* Assets.xcassets in Resources */,
+				4728DC26219CB26B00BC3898 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4728DBF7219B525000BC3898 /* Sources */ = {
+		4728DC19219CB26B00BC3898 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4728DC01219B525000BC3898 /* ViewController.swift in Sources */,
-				4728DC11219B566E00BC3898 /* CustomControl.swift in Sources */,
-				4728DBFF219B525000BC3898 /* AppDelegate.swift in Sources */,
+				4728DC23219CB26B00BC3898 /* ViewController.swift in Sources */,
+				4728DC21219CB26B00BC3898 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4728DC02219B525000BC3898 /* Main.storyboard */ = {
+		4728DC24219CB26B00BC3898 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4728DC03219B525000BC3898 /* Base */,
+				4728DC25219CB26B00BC3898 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4728DC07219B525200BC3898 /* LaunchScreen.storyboard */ = {
+		4728DC29219CB26C00BC3898 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4728DC08219B525200BC3898 /* Base */,
+				4728DC2A219CB26C00BC3898 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4728DC0B219B525200BC3898 /* Debug */ = {
+		4728DC2D219CB26C00BC3898 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		4728DC0C219B525200BC3898 /* Release */ = {
+		4728DC2E219CB26C00BC3898 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,38 +278,36 @@
 			};
 			name = Release;
 		};
-		4728DC0E219B525200BC3898 /* Debug */ = {
+		4728DC30219CB26C00BC3898 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JG93VFG2G;
-				INFOPLIST_FILE = UIControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = ScatterAndGather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jerrickwarren.UIControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerrickwarren.ScatterAndGather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4728DC0F219B525200BC3898 /* Release */ = {
+		4728DC31219CB26C00BC3898 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JG93VFG2G;
-				INFOPLIST_FILE = UIControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = ScatterAndGather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jerrickwarren.UIControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerrickwarren.ScatterAndGather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4728DBF6219B525000BC3898 /* Build configuration list for PBXProject "UIControl" */ = {
+		4728DC18219CB26B00BC3898 /* Build configuration list for PBXProject "ScatterAndGather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4728DC0B219B525200BC3898 /* Debug */,
-				4728DC0C219B525200BC3898 /* Release */,
+				4728DC2D219CB26C00BC3898 /* Debug */,
+				4728DC2E219CB26C00BC3898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4728DC0D219B525200BC3898 /* Build configuration list for PBXNativeTarget "UIControl" */ = {
+		4728DC2F219CB26C00BC3898 /* Build configuration list for PBXNativeTarget "ScatterAndGather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4728DC0E219B525200BC3898 /* Debug */,
-				4728DC0F219B525200BC3898 /* Release */,
+				4728DC30219CB26C00BC3898 /* Debug */,
+				4728DC31219CB26C00BC3898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4728DBF3219B525000BC3898 /* Project object */;
+	rootObject = 4728DC15219CB26B00BC3898 /* Project object */;
 }
