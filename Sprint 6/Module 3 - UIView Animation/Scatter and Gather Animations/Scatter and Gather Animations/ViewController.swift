@@ -82,14 +82,18 @@ class ViewController: UIViewController {
         for letter in letters {
             let location = randomLocation()
             UIView.animate(withDuration: 2) {
-                letter.center.y = location.y
-                letter.center.x = location.x
+//                letter.center.y = location.y
+//                letter.center.x = location.x
+                var matrix = letter.transform
+                matrix.rotated(by: CGFloat.pi / 1)
+                matrix.tx = location.x
+                matrix.ty = location.y
                 
                 letter.backgroundColor = self.generateRandomColor()
                 letter.textColor = self.generateRandomColor()
                 
-                letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
-                letter.transform = .identity 
+//                letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
+                letter.transform = matrix
             }
         }
         view.backgroundColor = generateRandomColor()
@@ -103,8 +107,10 @@ class ViewController: UIViewController {
                 self.logo.alpha = 1
             })
         }
-        
+        var randX:CGFloat = 1
+        var randY: CGFloat = 1
         for letter in letters {
+            letter.transform = CGAffineTransform(scaleX: randX, y: randY)
             let location = randomLocation()
             UIView.animate(withDuration: 0.1) {
                 letter.center.y = location.y
@@ -115,15 +121,19 @@ class ViewController: UIViewController {
                 
                 letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
                 letter.transform = .identity
+                letter.transform = CGAffineTransform(scaleX: 1, y: 1)
+                randX = CGFloat.random(in: 1...2)
+                randY = CGFloat.random(in: 1...2)
             }
         }
         view.backgroundColor = generateRandomColor()
-        
     }
+    
+    
  
     
     func randomLocation() -> (x: CGFloat, y: CGFloat) {
-        return (CGFloat.random(in: 0...400), CGFloat.random(in: 100...700))
+        return (CGFloat.random(in: 0...100), CGFloat.random(in: 100...400))
     }
     
     func generateRandomColor() -> UIColor {
@@ -147,14 +157,15 @@ class ViewController: UIViewController {
     }
     
     func returnAnim() {
-        var count = 0
         for letter in letters {
             UIView.animate(withDuration: 2) {
-                letter.center.y = self.yCoordinates[count]
-                letter.center.x = self.xCoordinates[count]
-                count += 1
-    
                 self.logo.alpha = 1
+                letter.transform = .identity
+                
+                letter.backgroundColor = nil
+                letter.textColor = .black
+                
+                view.backgroundColor = .white
             }
         }
     }
