@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11091E26219E14BC004B8445 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11091E25219E14BC004B8445 /* NavigationControllerDelegate.swift */; };
+		11091E28219E1549004B8445 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11091E27219E1549004B8445 /* ImageTransitionAnimator.swift */; };
 		11BC40F0219E0D08006AB8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC40EF219E0D08006AB8D7 /* AppDelegate.swift */; };
 		11BC40F2219E0D08006AB8D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC40F1219E0D08006AB8D7 /* ViewController.swift */; };
 		11BC40F5219E0D08006AB8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BC40F3219E0D08006AB8D7 /* Main.storyboard */; };
 		11BC40F7219E0D0A006AB8D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BC40F6219E0D0A006AB8D7 /* Assets.xcassets */; };
 		11BC40FA219E0D0A006AB8D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BC40F8219E0D0A006AB8D7 /* LaunchScreen.storyboard */; };
+		11BC4102219E0F66006AB8D7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC4101219E0F66006AB8D7 /* TableViewController.swift */; };
+		11BC4104219E0FB1006AB8D7 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC4103219E0FB1006AB8D7 /* Friend.swift */; };
+		11BC4106219E1187006AB8D7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC4105219E1187006AB8D7 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11091E25219E14BC004B8445 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		11091E27219E1549004B8445 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		11BC40EC219E0D08006AB8D7 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BC40EF219E0D08006AB8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11BC40F1219E0D08006AB8D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		11BC40F6219E0D0A006AB8D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11BC40F9219E0D0A006AB8D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11BC40FB219E0D0A006AB8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11BC4101219E0F66006AB8D7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		11BC4103219E0FB1006AB8D7 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		11BC4105219E1187006AB8D7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11091E29219E177C004B8445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11BC4103219E0FB1006AB8D7 /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11091E2A219E1785004B8445 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11BC40F1219E0D08006AB8D7 /* ViewController.swift */,
+				11BC4105219E1187006AB8D7 /* TableViewCell.swift */,
+				11BC4101219E0F66006AB8D7 /* TableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		11091E2B219E179A004B8445 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				11BC40F6219E0D0A006AB8D7 /* Assets.xcassets */,
+				11BC40F8219E0D0A006AB8D7 /* LaunchScreen.storyboard */,
+				11BC40FB219E0D0A006AB8D7 /* Info.plist */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
 		11BC40E3219E0D08006AB8D7 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +93,12 @@
 			isa = PBXGroup;
 			children = (
 				11BC40EF219E0D08006AB8D7 /* AppDelegate.swift */,
-				11BC40F1219E0D08006AB8D7 /* ViewController.swift */,
+				11091E25219E14BC004B8445 /* NavigationControllerDelegate.swift */,
+				11091E27219E1549004B8445 /* ImageTransitionAnimator.swift */,
 				11BC40F3219E0D08006AB8D7 /* Main.storyboard */,
-				11BC40F6219E0D0A006AB8D7 /* Assets.xcassets */,
-				11BC40F8219E0D0A006AB8D7 /* LaunchScreen.storyboard */,
-				11BC40FB219E0D0A006AB8D7 /* Info.plist */,
+				11091E2A219E1785004B8445 /* View Controllers */,
+				11091E29219E177C004B8445 /* Model */,
+				11091E2B219E179A004B8445 /* Extras */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BC4106219E1187006AB8D7 /* TableViewCell.swift in Sources */,
 				11BC40F2219E0D08006AB8D7 /* ViewController.swift in Sources */,
+				11BC4102219E0F66006AB8D7 /* TableViewController.swift in Sources */,
 				11BC40F0219E0D08006AB8D7 /* AppDelegate.swift in Sources */,
+				11091E26219E14BC004B8445 /* NavigationControllerDelegate.swift in Sources */,
+				11091E28219E1549004B8445 /* ImageTransitionAnimator.swift in Sources */,
+				11BC4104219E0FB1006AB8D7 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FXUY9QKNNU;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Extras/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FXUY9QKNNU;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Extras/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
