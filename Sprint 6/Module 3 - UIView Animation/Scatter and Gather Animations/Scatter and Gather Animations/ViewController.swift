@@ -82,8 +82,6 @@ class ViewController: UIViewController {
         for letter in letters {
             let location = randomLocation()
             UIView.animate(withDuration: 0.7) {
-//                letter.center.y = location.y
-//                letter.center.x = location.x
                 var matrix = letter.transform
                 matrix.rotated(by: CGFloat.pi / 1)
                 matrix.tx = location.x
@@ -92,7 +90,6 @@ class ViewController: UIViewController {
                 letter.backgroundColor = self.generateRandomColor()
                 letter.textColor = self.generateRandomColor()
                 
-//                letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
                 letter.transform = matrix
             }
         }
@@ -114,7 +111,7 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.1) {
 //                letter.center.y = location.y
 //                letter.center.x = location.x
-                
+
                 var matrix = letter.transform
                 matrix.rotated(by: CGFloat.pi / 1)
                 matrix.tx = location.x
@@ -126,6 +123,7 @@ class ViewController: UIViewController {
                 //letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
                 //letter.transform = .identity
                 letter.transform = CGAffineTransform(scaleX: 1, y: 1)
+                
                 
                 letter.transform = matrix
             }
@@ -145,9 +143,9 @@ class ViewController: UIViewController {
     }
     
     func generateRandomColor() -> UIColor {
-        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
-        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
-        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
+        let hue : CGFloat = CGFloat(arc4random() % 256) / 256
+        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5
+        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5
         
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
