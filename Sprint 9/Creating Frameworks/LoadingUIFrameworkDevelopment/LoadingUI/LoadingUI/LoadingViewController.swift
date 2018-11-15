@@ -38,6 +38,8 @@ public class LoadingViewController: UIViewController {
         animatedView.stopAnimating()
     }
     
+    // MARK: - Properties
+    
     let animatedView = IndeterminateLoadingView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
     
 //    public var isAnimating: Bool = false {
