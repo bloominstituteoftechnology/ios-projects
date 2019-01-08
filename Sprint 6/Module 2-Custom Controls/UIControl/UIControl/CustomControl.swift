@@ -2,6 +2,7 @@ import UIKit
 
 class CustomControl: UIControl {
     var value: Int = 1
+    var labels: [Label] = []
     
     private static let componentDimension: CGFloat = 40.0
     private static let componentCount = 5
@@ -14,11 +15,14 @@ class CustomControl: UIControl {
     }
     
     private func setup() {
-        let rating = UILabel.init()
-        rating.frame = CGRect(x: 40.0, y: 40.0, width: 40.0, height: 40.0)
-        rating.text = ""
-        //self.view.addSubview(rating)
-        
+        for number in 1...5 {
+            //create label
+            //append label
+           
+            let label = UILabel(frame: CGRect(x:  y: 0 , width: 40.0, height: 40.0))
+            rating.text = ""
+            //self.view.addSubview(rating)
+        }
     }
     
     private func updateValue(at touch: UITouch) {
