@@ -2,7 +2,7 @@
 
 Your project creates a new custom control that allows users to rate items by swiping a finger along a row of stars. This project helps you practice the concepts learned in Lambda's iOS module 6.2.
 
-After completing the lesson material and ht is project, you'll be able to subclass UIControl to develop custom interactions.
+After completing the lesson material and this project, you'll be able to subclass UIControl to develop custom interactions.
 
 Preview your project: https://youtu.be/kWtJLhX8-gw
 
