@@ -73,7 +73,7 @@ The `sendActions(for:)` method you'll call from these handlers is what makes a c
 
 Your code will demonstrate the kinds of events that can be subscribed to and are typical for UIControls. As a rule, always produce as many sent actions as possible because you don't know how your controls will be used in the future. The more exhaustive you are, the better the shelf life of your controls. Plus it's (1) minimal code and (2) almost boilerplate. You can reuse this code between controls with little change.
 
-1. Add skeletons for `begin`, `continue`, `end`, and `cancel` tracking methods. The `begin` and `continue` methods should just return true.
+1. Add skeletons for the `begin`, `continue`, `end`, and `cancel` tracking methods. The `begin` and `continue` methods should just return true.
 2. Add a skeleton for an `updateValue(at touch: UITouch)` method.
 3. In `cancel`, send an action for `.touchCancel`
 4. In `begin`, add `updateValue()` to respond to the start of your user's touch.
@@ -82,7 +82,7 @@ Your code will demonstrate the kinds of events that can be subscribed to and are
 
 In your code, the `end` handler generates a value update. It provides a little safety net in case the lift event has moved the finger in an untracked movement. You can omit it if desired or keep it if you feel cautious.
 
-With value controls, there's no penalty for spawning extra `.valueChanged` events with `sendActions(for:)`. Be far more cautious with trigger controls. A button or other trigger should only send *one* primary action. For these, keep a "wasTriggered" Boolean variable on hand. Do not `sendActions` after the first control trigger. Otherwise, your angry customers may end up authorizing multiple payments or using up all the arrows in their quiver when they only intended to pay once or shoot once.
+With value controls, there's no penalty for spawning extra `.valueChanged` events with `sendActions(for:)`. Be far more cautious with trigger controls. A button or other trigger should only send *one* primary action. For these, keep a "wasTriggered" Boolean variable on hand. Do not `sendActions` after the first control trigger. Otherwise, your (soon-to-be) angry customers may end up authorizing multiple payments or using up all the arrows in their quiver when they only intended to pay once or shoot once.
 
 ## Respond to touches.
 
