@@ -13,18 +13,24 @@
         <!--Title-->
         <scene sceneID="CUl-cS-VCm">
             <objects>
-                <viewController id="F3A-6L-Uyv" sceneMemberID="viewController">
+                <viewController id="F3A-6L-Uyv" customClass="ViewController" customModule="UIControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EIt-i6-uK3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-Kr-yvn">
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-Kr-yvn" customClass="CustomControl" customModule="UIControl" customModuleProvider="target">
                                 <rect key="frame" x="67" y="240" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.82254692029999998" green="0.89633910240000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="F3A-6L-Uyv" eventType="valueChanged" id="L3P-ko-dri"/>
+                                </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.82254692029999998" green="0.89633910240000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MKF-Kr-yvn" firstAttribute="centerY" secondItem="EIt-i6-uK3" secondAttribute="centerY" id="181-iI-Xih"/>
+                            <constraint firstItem="MKF-Kr-yvn" firstAttribute="centerX" secondItem="EIt-i6-uK3" secondAttribute="centerX" id="bDn-aM-msf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MFt-Ta-AzN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="xwB-wj-CX4"/>
