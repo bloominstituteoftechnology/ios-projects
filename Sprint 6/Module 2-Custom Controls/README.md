@@ -21,13 +21,13 @@ Follow these steps to set up your project skeleton:
 These steps walk you through creating the new control class and adding an instance in Interface Builder:
 
 1. Create a new Swift file using File > New File. Name it CustomControl.swift.
-2. In the file, import UIKit and create a new type (called `CustomControl`) that you subclass from `UIControl`.
+2. In the file, import UIKit and create a new class (called `CustomControl`) that you subclass from `UIControl`.
 3. Add a new Int-typed variable property called `value` to your class. It's initial value should be 1. This property is API-facing, so clients will be able to see it. It establishes your control as a value-providing (and value-changing) type.
-3. In Interface builder, add a new view. Change the background color in the Attributes Inspector so it's visible. Don't worry about the color you pick. This is just to make it easier to work with.
+3. In Interface builder, on your view controller, add a new view. Change the background color in the Attributes Inspector so it's visible. Don't worry about the color you pick. This is just to make it easier to work with.
 4. Use the Identity Inspector to set the class to Custom Control.
 5. Center it with Auto Layout but don't set any rules about size. Instead, your type will use an intrinsic size to tell Auto Layout how big it will be.
 6. In the Size Inspector, select Ambiguity > Verify Position Only. This supports your "no-size" layout.
-7. Use Ctrl-drag to connect your view to ViewController.swift with an IBAction. Note the "Event" pop-up currently set to "Value Changed". Look at the other options in the pop-up (like "Touch Down" and "Touch Drag Inside") but keep the event set to "Value Changed". Name your IBAction `updateRating`.  This method allows the control's client (in this case your view controller) to receive updates about changes in the rating control. 
+7. Use `ctrl-drag` to connect your view to ViewController.swift with an IBAction. Note that the "Event" pop-up is currently set to "Value Changed". Look at the other options in the pop-up (like "Touch Down" and "Touch Drag Inside") but keep the event set to "Value Changed". Name your IBAction `updateRating`.  This method allows the control's client (in this case your view controller) to receive updates about changes in the rating control. Change the Sender to `CustomControl` or follow step 8. 
 8. Edit the new method's signature to: `@IBAction func updateRating(_ ratingControl: CustomControl)`. This keeps you from having to cast the `sender` to the right class.
 9. Implement `updateRating`. Set the view controller's title to the string `"User Rating: N stars"` where N is the number of stars. This number is the control's visible `value` property.
 10. **Stretch**: Fix the title so it's correct for 1 ("star" not "stars") as well as 2-5.

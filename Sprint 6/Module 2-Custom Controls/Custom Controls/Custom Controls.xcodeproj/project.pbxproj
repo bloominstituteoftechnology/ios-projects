@@ -12,6 +12,7 @@
 		F83BD17921E5426C006148A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17721E5426C006148A4 /* Main.storyboard */; };
 		F83BD17B21E5426D006148A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17A21E5426D006148A4 /* Assets.xcassets */; };
 		F83BD17E21E5426D006148A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17C21E5426D006148A4 /* LaunchScreen.storyboard */; };
+		F83BD18621E54645006148A4 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83BD18521E54645006148A4 /* CustomControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F83BD17A21E5426D006148A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F83BD17D21E5426D006148A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F83BD17F21E5426D006148A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83BD18521E54645006148A4 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				F83BD17321E5426C006148A4 /* AppDelegate.swift */,
 				F83BD17521E5426C006148A4 /* ViewController.swift */,
 				F83BD17721E5426C006148A4 /* Main.storyboard */,
+				F83BD18521E54645006148A4 /* CustomControl.swift */,
 				F83BD17A21E5426D006148A4 /* Assets.xcassets */,
 				F83BD17C21E5426D006148A4 /* LaunchScreen.storyboard */,
 				F83BD17F21E5426D006148A4 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F83BD17621E5426C006148A4 /* ViewController.swift in Sources */,
+				F83BD18621E54645006148A4 /* CustomControl.swift in Sources */,
 				F83BD17421E5426C006148A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
