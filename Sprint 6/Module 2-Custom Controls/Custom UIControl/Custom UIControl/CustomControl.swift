@@ -17,6 +17,8 @@ class CustomControl: UIControl {
         setup()
     }
     
+    
+    
     func setup() {
         
         var subviewArray: [UILabel] = []
@@ -39,7 +41,7 @@ class CustomControl: UIControl {
             subviewArray[0].textColor = componentActiveColor
             
             // Add a tag for each view to represent which star it is
-            var tag: Int { get }
+            label.tag = each
             
             // Add each label as a subview
             viewController.view.addSubview(label)
@@ -51,8 +53,9 @@ class CustomControl: UIControl {
             // Add padding of 8.0 between each label
             componentDimensionIncrease += 8
         }
-        
     }
+    
+    
     
     // Tells Auto Layout how big the custom control should be
     override var intrinsicContentSize: CGSize {
@@ -60,5 +63,37 @@ class CustomControl: UIControl {
         let componentsSpacing = CGFloat(componentCount + 1) * 8.0
         let width = componentsWidth + componentsSpacing
         return CGSize(width: width, height: componentDimension)
+    }
+    
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        // Respond to the start of user's touch
+        updateValue(at: touch)
+        
+        return true
+    }
+    
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchDragInside, .touchDragOutside])
+        }
+        
+        return true
+    }
+    
+    func updateValue(at touch: UITouch) {
+        
+    }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        <#code#>
+    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: .touchCancel)
     }
 }
