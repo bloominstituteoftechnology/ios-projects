@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111E651B21E69FDB009DD50C /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E651A21E69FDB009DD50C /* LoadingAnimation.swift */; };
+		111E652121E6A00E009DD50C /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E652021E6A00E009DD50C /* SignView.swift */; };
 		1156E4F221E696D500190EB8 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1156E4F021E696D500190EB8 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111E651A21E69FDB009DD50C /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
+		111E652021E6A00E009DD50C /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
 		1156E4ED21E696D500190EB8 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156E4F021E696D500190EB8 /* LoadingUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingUI.h; sourceTree = "<group>"; };
 		1156E4F121E696D500190EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 			children = (
 				1156E4F021E696D500190EB8 /* LoadingUI.h */,
 				1156E4F121E696D500190EB8 /* Info.plist */,
+				111E651A21E69FDB009DD50C /* LoadingAnimation.swift */,
+				111E652021E6A00E009DD50C /* SignView.swift */,
 			);
 			path = LoadingUI;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					1156E4EC21E696D500190EB8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111E651B21E69FDB009DD50C /* LoadingAnimation.swift in Sources */,
+				111E652121E6A00E009DD50C /* SignView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		1156E4F621E696D500190EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NikitaThomas.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +297,7 @@
 		1156E4F721E696D500190EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

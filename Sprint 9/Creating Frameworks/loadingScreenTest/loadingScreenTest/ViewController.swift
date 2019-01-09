@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import LoadingUI
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    var loading = LoadingAnimation()
+    
+    @IBAction func loadButtonTapped(_ sender: Any) {
+        
+        self.loading.startLoadingAnimation(forVC: self)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.loading.endLoadingAnimation(forVC: self)
+        }
     }
-
-
+    
 }
-
