@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBAction func loadButtonTapped(_ sender: Any) {
         
-        self.loading.startLoadingAnimation(forVC: self)
+        loading.startLoadingAnimation(forVC: self)
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
