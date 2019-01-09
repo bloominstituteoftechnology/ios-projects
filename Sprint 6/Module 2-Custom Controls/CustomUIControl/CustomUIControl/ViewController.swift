@@ -8,10 +8,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateRating(_ ratingControl: CustomControl) {
-        switch CustomControl.value {
-        case 1: title = "User Rating: \(CustomControl.value) star"
-        default: title = "User Rating: \(CustomControl.value) stars"
-        }
+        
+        title = "User Rating: \(CustomControl.starValue) stars"
+//        switch CustomControl.starValue {
+//        case 1: title = "User Rating: \(CustomControl.starValue) star"
+//        default: title = "User Rating: \(CustomControl.starValue) stars"
+//        }
         
     }
     

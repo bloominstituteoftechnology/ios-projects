@@ -13,6 +13,7 @@
 		AB69113B21E53359002F040F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB69113A21E53359002F040F /* Assets.xcassets */; };
 		AB69113E21E53359002F040F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB69113C21E53359002F040F /* LaunchScreen.storyboard */; };
 		AB69114621E546A3002F040F /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB69114521E546A3002F040F /* CustomControl.swift */; };
+		AB7A041621E56ED2000BD2E7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7A041521E56ED2000BD2E7 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB69113D21E53359002F040F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB69113F21E53359002F040F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB69114521E546A3002F040F /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		AB7A041521E56ED2000BD2E7 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AB69113321E53358002F040F /* AppDelegate.swift */,
 				AB69113521E53358002F040F /* ViewController.swift */,
 				AB69114521E546A3002F040F /* CustomControl.swift */,
+				AB7A041521E56ED2000BD2E7 /* UIViewExtension.swift */,
 				AB69113721E53358002F040F /* Main.storyboard */,
 				AB69113A21E53359002F040F /* Assets.xcassets */,
 				AB69113C21E53359002F040F /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				AB69113621E53358002F040F /* ViewController.swift in Sources */,
 				AB69114621E546A3002F040F /* CustomControl.swift in Sources */,
+				AB7A041621E56ED2000BD2E7 /* UIViewExtension.swift in Sources */,
 				AB69113421E53358002F040F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
