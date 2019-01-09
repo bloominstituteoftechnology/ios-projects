@@ -4,10 +4,10 @@ class CustomControl: UIControl {
     var value: Int = 1
     var labels: [Label] = []
     
-    private static let componentDimension: CGFloat = 40.0
-    private static let componentCount = 5
-    private static let componentActiveColor = UIColor.black
-    private static let componentInactiveColor = UIColor.gray
+    let componentDimension: CGFloat = 40.0
+    let componentCount = 5
+    let componentActiveColor = UIColor.black
+    let componentInactiveColor = UIColor.gray
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -15,11 +15,27 @@ class CustomControl: UIControl {
     }
     
     private func setup() {
+        var count: CGFloat = 0.0
         for number in 1...5 {
+            //space between labels
+            let space: CGFloat = (componentDimension * count) + (8.0 * count)
+            
             //create label
-            //append label
-            let label = UILabel(frame: CGRect(x: 0, y: 0 , width: 40.0, height: 40.0))
-            self.view.addSubview(label)
+            let label = UILabel(frame: CGRect(x: space, y: 0 , width: componentDimension, height: componentDimension))
+            self.addSubview(label)
+            
+            //tag
+            label.text = "⭐️"
+            label.tag = number
+            labels.append(label)
+            count += 1.0
+            
+            //font
+            label.font = UIFont.boldSystemFont(ofSize: 32.0)
+            
+            //color
+            label.textColor = componentInactiveColor
+            
         }
     }
     override var intrinsicContentSize: CGSize {
