@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateRating(_ ratingControl: CustomControl) {
-        
+        view.performFlare()
         switch CustomControl.starValue {
         case 1: title = "User Rating: \(CustomControl.starValue) star"
         default: title = "User Rating: \(CustomControl.starValue) stars"
