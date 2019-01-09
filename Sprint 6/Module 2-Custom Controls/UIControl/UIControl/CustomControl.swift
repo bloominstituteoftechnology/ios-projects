@@ -18,11 +18,15 @@ class CustomControl: UIControl {
         for number in 1...5 {
             //create label
             //append label
-           
-            let label = UILabel(frame: CGRect(x:  y: 0 , width: 40.0, height: 40.0))
-            rating.text = ""
-            //self.view.addSubview(rating)
+            let label = UILabel(frame: CGRect(x: 0, y: 0 , width: 40.0, height: 40.0))
+            self.view.addSubview(label)
         }
+    }
+    override var intrinsicContentSize: CGSize {
+        let componentsWidth = CGFloat(componentCount) * componentDimension
+        let componentsSpacing = CGFloat(componentCount + 1) * 8.0
+        let width = componentsWidth + componentsSpacing
+        return CGSize(width: width, height: componentDimension)
     }
     
     private func updateValue(at touch: UITouch) {
@@ -30,13 +34,17 @@ class CustomControl: UIControl {
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        let touchPoint = touch.location(in: self)
-        sendActions(for: [.touchDown, .valueChanged])
         return true
     }
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.valueChanged, .touchDragInside])
+            updateValue(at: touch)
+        } else {
+            sendActions(for: [.touchDragOutside])
+        }
         return true
     }
     
