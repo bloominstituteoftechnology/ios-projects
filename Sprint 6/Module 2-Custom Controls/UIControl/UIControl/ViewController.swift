@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func updateRating(ratingControl: CustomControl) {
+    @IBAction func updateRating(_ ratingControl: CustomControl) {
         let n = ratingControl.value
         if n > 1 {
             self.title = "User Rating: \(n) stars"

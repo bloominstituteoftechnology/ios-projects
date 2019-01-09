@@ -2,7 +2,7 @@ import UIKit
 
 class CustomControl: UIControl {
     var value: Int = 1
-    var labels: [Label] = []
+    var labels: [UILabel] = []
     
     let componentDimension: CGFloat = 40.0
     let componentCount = 5

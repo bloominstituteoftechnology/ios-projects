@@ -20,7 +20,7 @@
                         <subviews>
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-Kr-yvn" customClass="CustomControl" customModule="UIControl" customModuleProvider="target">
                                 <rect key="frame" x="67" y="240" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.82254692029999998" green="0.89633910240000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="updateRating:" destination="F3A-6L-Uyv" eventType="valueChanged" id="L3P-ko-dri"/>
                                 </connections>
