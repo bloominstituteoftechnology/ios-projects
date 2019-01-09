@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func updateRating(_ ratingControl: CustomControl) {
         
         if CustomControl.value < 2 {
-            self.navigationItem.title = "User Rating: \(CustomControl.value) stars"
+            self.navigationItem.title = "User Rating: \(CustomControl.value) star"
         } else {
         
         self.navigationItem.title = "User Rating: \(CustomControl.value) stars"
