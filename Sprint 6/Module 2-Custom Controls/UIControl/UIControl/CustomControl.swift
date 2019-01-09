@@ -53,18 +53,20 @@ class CustomControl: UIControl {
             if label.frame.contains(touchPoint) {
                 value = label.tag
                 sendActions(for: [.valueChanged])
+                label.performFlare()
             }
         }
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        sendActions(for: [.touchDown, .valueChanged])
         return true
     }
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
-            sendActions(for: [.touchDragInside])
+            sendActions(for: [.valueChanged, .touchDragInside])
             updateValue(at: touch)
         } else {
             sendActions(for: [.touchDragOutside])
@@ -77,11 +79,27 @@ class CustomControl: UIControl {
         guard let touch = touch else { return }
         
         let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchUpInside, .valueChanged])
+        } else {
+            sendActions(for: [.touchUpOutside])
+        }
         
     }
     
     override func cancelTracking(with event: UIEvent?) {
         sendActions(for: [.touchCancel])
         super.cancelTracking(with: event)
+    }
+}
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
