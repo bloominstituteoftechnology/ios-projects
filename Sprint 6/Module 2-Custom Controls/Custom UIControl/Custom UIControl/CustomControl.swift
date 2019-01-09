@@ -125,6 +125,11 @@ class CustomControl: UIControl {
     func updateValue(at touch: UITouch) {
         
         for eachLabel in subviewArray {
+            if bounds.contains(touch.location(in: self)) {
+                value = eachLabel.tag
+                eachLabel.textColor = componentActiveColor
+                sendActions(for: .valueChanged)
+            }
             
         }
         
