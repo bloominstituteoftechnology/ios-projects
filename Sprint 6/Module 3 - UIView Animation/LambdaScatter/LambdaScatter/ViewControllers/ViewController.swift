@@ -19,32 +19,52 @@ class ViewController: UIViewController {
     @IBAction func makeMagic(_ sender: Any) {
         
         if shouldScramble == 1 {
-//            CATransaction.begin()
-//            CATransaction.setCompletionBlock {
-//                self.lambdaTextView.layer.backgroundColor = UIColor.red.cgColor
-//            }
-//            let animation = CAKeyframeAnimation(keyPath: "backgroundColor")
-//            animation.values = [UIColor.black.cgColor, UIColor.blue.cgColor, UIColor.red.cgColor]
-//            animation.duration = 2.0
-//            
-//            
-//            let animation2 = CAKeyframeAnimation(keyPath: "osillate")
-//            let rectPath = CGRect(origin: greenSquare.center, size: CGSize(width: 100, height: 100))
-//            //        animation2.path = CGPath(rect: rectPath, transform: nil)
-            //        animation2.duration = 2.0
-            //        greenSquare.layer.add(animation2, forKey: "osillateAnimation")
-            //        greenSquare.layer.add(animation, forKey: "backgroundColorAnimation")
-            //        CATransaction.commit()
-            //
+            shouldScramble = 0
             
             
-            UIView.animate(withDuration: 2) {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock {
+            }
+
+            for subView in lambdaTextView.subviews{
+                
+                UIView.animate(withDuration: 1) {
+                    var frame = subView.frame
+                    frame.origin.y += 100
+                    subView.frame = frame
+                }
+                
+            }
+            
+            UIView.animate(withDuration: 1) {
                 self.lambdaLogo.alpha = 0.0
             }
+            
+            CATransaction.commit()
+            
+            
         } else {
-            UIView.animate(withDuration: 2) {
+            shouldScramble = 1
+            
+            CATransaction.begin()
+            CATransaction.setCompletionBlock {
+            }
+            
+            for subView in lambdaTextView.subviews{
+                
+                UIView.animate(withDuration: 1) {
+                    var frame = subView.frame
+                    frame.origin.y -= 100
+                    subView.frame = frame
+                }
+                
+            }
+            
+            UIView.animate(withDuration: 1) {
                 self.lambdaLogo.alpha = 1.0
             }
+            
+            CATransaction.commit()
         }
         
     }
