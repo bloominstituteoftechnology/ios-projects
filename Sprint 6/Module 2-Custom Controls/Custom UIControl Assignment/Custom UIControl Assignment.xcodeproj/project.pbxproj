@@ -12,6 +12,7 @@
 		2CCA34CC21E5347700A43AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CA21E5347700A43AB1 /* Main.storyboard */; };
 		2CCA34CE21E5348100A43AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CD21E5348100A43AB1 /* Assets.xcassets */; };
 		2CCA34D121E5348100A43AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */; };
+		2CCA34D921E5373700A43AB1 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA34D821E5373700A43AB1 /* CustomControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2CCA34CD21E5348100A43AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CCA34D021E5348100A43AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CCA34D221E5348100A43AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCA34D821E5373700A43AB1 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		2CCA34C521E5347700A43AB1 /* Custom UIControl Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				2CCA34C621E5347700A43AB1 /* AppDelegate.swift */,
-				2CCA34C821E5347700A43AB1 /* ViewController.swift */,
-				2CCA34CA21E5347700A43AB1 /* Main.storyboard */,
-				2CCA34CD21E5348100A43AB1 /* Assets.xcassets */,
-				2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */,
+				2CCA34DC21E537FC00A43AB1 /* Model */,
+				2CCA34DB21E537E800A43AB1 /* View Controllers */,
+				2CCA34DA21E537C600A43AB1 /* Views */,
+				2CCA34DD21E5381900A43AB1 /* Resources */,
 				2CCA34D221E5348100A43AB1 /* Info.plist */,
 			);
 			path = "Custom UIControl Assignment";
+			sourceTree = "<group>";
+		};
+		2CCA34DA21E537C600A43AB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CCA34CA21E5347700A43AB1 /* Main.storyboard */,
+				2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CCA34DB21E537E800A43AB1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CCA34C821E5347700A43AB1 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2CCA34DC21E537FC00A43AB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CCA34D821E5373700A43AB1 /* CustomControl.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CCA34DD21E5381900A43AB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CCA34C621E5347700A43AB1 /* AppDelegate.swift */,
+				2CCA34CD21E5348100A43AB1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCA34C921E5347700A43AB1 /* ViewController.swift in Sources */,
+				2CCA34D921E5373700A43AB1 /* CustomControl.swift in Sources */,
 				2CCA34C721E5347700A43AB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
