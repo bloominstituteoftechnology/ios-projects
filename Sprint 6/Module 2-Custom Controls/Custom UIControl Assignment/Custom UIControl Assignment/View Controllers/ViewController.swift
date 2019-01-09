@@ -10,18 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.title = "User Rating: N Stars"
-    }
-
-
     @IBAction func updateRating(_ ratingControl: CustomControl) {
         // This keeps me from having to cast the sender to the right class.
-        
+        let numberOfStars = CustomControl.value
+        if numberOfStars != 1 {
+            self.title = "User Rating: \(numberOfStars) Stars"
+        } else {
+            self.title = "User Rating: \(numberOfStars) Star"
+        }
     }
-    
-    
 }
 

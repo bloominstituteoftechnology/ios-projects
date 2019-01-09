@@ -19,19 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBk-be-k2I" customClass="CustomControl" customModule="Custom_UIControl_Assignment" customModuleProvider="target">
-                                <rect key="frame" x="61" y="296" width="240" height="128"/>
+                                <rect key="frame" x="56" y="138" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.03624573524" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="updateRating:" destination="kxy-xl-U2E" eventType="valueChanged" id="f2n-rb-G1K"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-gN-xBK">
-                                <rect key="frame" x="147" y="202" width="68" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -40,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2UM-HR-2Xu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Root" largeTitleDisplayMode="always" id="yOa-iS-zhK"/>
+                    <navigationItem key="navigationItem" title="User Rating: 1 Star" largeTitleDisplayMode="always" id="yOa-iS-zhK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xe0-RS-05V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
