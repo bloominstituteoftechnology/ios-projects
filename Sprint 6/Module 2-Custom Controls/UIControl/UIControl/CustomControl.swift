@@ -25,7 +25,7 @@ class CustomControl: UIControl {
             self.addSubview(label)
             
             //tag
-            label.text = "⭐️"
+            label.text = "☆"
             label.tag = number
             labels.append(label)
             count += 1.0
