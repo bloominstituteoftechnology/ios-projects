@@ -46,7 +46,15 @@ class CustomControl: UIControl {
     }
     
     private func updateValue(at touch: UITouch) {
-        
+        //loop that iterates through your component labels and detect whether each touch's location
+        for label in labels {
+            let touchPoint = touch.location(in: self)
+            
+            if label.frame.contains(touchPoint) {
+                value = label.tag
+                sendActions(for: [.valueChanged])
+            }
+        }
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -56,7 +64,7 @@ class CustomControl: UIControl {
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
-            sendActions(for: [.valueChanged, .touchDragInside])
+            sendActions(for: [.touchDragInside])
             updateValue(at: touch)
         } else {
             sendActions(for: [.touchDragOutside])
