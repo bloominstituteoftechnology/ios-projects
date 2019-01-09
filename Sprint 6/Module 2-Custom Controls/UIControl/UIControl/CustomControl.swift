@@ -110,7 +110,8 @@ class CustomControl: UIControl {
     extension UIView {
         // "Flare view" animation sequence
         func performFlare() {
-            func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+            func flare()   { transform = CGAffineTransform(scaleX: 2.6, y: 2.6)
+                             transform = CGAffineTransform(rotationAngle: 30.0) }
             func unflare() { transform = .identity }
             
             UIView.animate(withDuration: 0.3,
