@@ -37,8 +37,8 @@ class CustomControl: UIControl {
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
             label.text = "⭐︎"
             label.textAlignment = .center
-            label.textColor = componentInactiveColor
-            subviewArray[0].textColor = componentActiveColor
+            label.textColor = componentActiveColor
+            //subviewArray[0].textColor = componentActiveColor
             
             // Add a tag for each view to represent which star it is
             label.tag = each
@@ -49,10 +49,12 @@ class CustomControl: UIControl {
             // Store each label into a local array
             subviewArray.append(label)
 
-            
             // Add padding of 8.0 between each label
             componentDimensionIncrease += 8
         }
+        
+        
+        
     }
     
     
@@ -76,24 +78,49 @@ class CustomControl: UIControl {
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         
+        // Assign the touch point to the location
         let touchPoint = touch.location(in: self)
         
+        // If contained within the view, send the actions
         if bounds.contains(touchPoint) {
             sendActions(for: [.touchDragInside, .touchDragOutside])
+            
+            // Update the value
+            updateValue(at: touch)
         }
         
+        // Continue tracking the touch event
         return true
     }
+    
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        // Defer: regardless of what happens in function, do this before returning
+        defer { super.endTracking(touch, with: event) }
+        
+        // Unwrap the touch because it's optional
+        guard let touch = touch else { return }
+        
+        // Assign the touch point to the location
+        let touchPoint = touch.location(in: self)
+        
+        // If contained within the view, send the actions
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchUpInside, .touchUpOutside])
+            
+            // Update the value
+            updateValue(at: touch)
+        }
+    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: .touchCancel)
+        super.cancelTracking(with: event)
+    }
+    
     
     func updateValue(at touch: UITouch) {
         
     }
     
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        <#code#>
-    }
-    
-    override func cancelTracking(with event: UIEvent?) {
-        sendActions(for: .touchCancel)
-    }
 }
