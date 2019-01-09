@@ -17,44 +17,47 @@ class CustomControl: UIControl {
         setup()
     }
     
+    var subviewArray: [UILabel] = []
     
+    // New variable to increment the spacing
+    var count: CGFloat = 0.0
     
     func setup() {
         
-        var subviewArray: [UILabel] = []
-        
         // Create 5 labels
-        for each in 1 ... 5 {
-            
-            // New variable to hold the changing componentDimension
-            var componentDimensionIncrease = componentDimension + 8
+        for eachNumber in 1 ... 5 {
             
             // Create the labels
-            let rect = CGRect(x: 8.0, y: 0, width: (componentDimensionIncrease), height: componentDimension)
+            let spacing: CGFloat = (componentDimension * count) + (8.0 * count)
+            let rect = CGRect(x: spacing, y: 0, width: componentDimension, height: componentDimension)
             let label = UILabel(frame: rect)
+            
+            // Add each label as a subview
+            self.addSubview(label)
             
             // Set label's physical characteristics
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
-            label.text = "⭐︎"
+            label.text = "✮"
             label.textAlignment = .center
-            label.textColor = componentActiveColor
-            //subviewArray[0].textColor = componentActiveColor
+
+            //subviewArray[1].textColor = componentActiveColor
             
             // Add a tag for each view to represent which star it is
-            label.tag = each
+            label.tag = eachNumber
             
-            // Add each label as a subview
-            viewController.view.addSubview(label)
+            if label.tag < 2 {
+                label.textColor = componentActiveColor
+            } else {
+                label.textColor = componentInactiveColor
+            }
             
             // Store each label into a local array
             subviewArray.append(label)
 
-            // Add padding of 8.0 between each label
-            componentDimensionIncrease += 8
+            // Increase count
+            count += 1.0
+
         }
-        
-        
-        
     }
     
     
@@ -120,6 +123,10 @@ class CustomControl: UIControl {
     
     
     func updateValue(at touch: UITouch) {
+        
+        for eachLabel in subviewArray {
+            
+        }
         
     }
     
