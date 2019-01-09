@@ -10,14 +10,13 @@ import UIKit
 
 open class LoadingAnimation {
     
-    var signView: SignView
+    var signView: SignView?
     
-    public init() {
-        signView = SignView(frame: CGRect.zero)
-    }
+    public init() {}
     
     
     public func startLoadingAnimation() {
+        signView = SignView(frame: CGRect.zero)
         if let currentVC = UIApplication.topViewController() {
             addSignView(forVC: currentVC)
         }
@@ -30,6 +29,7 @@ open class LoadingAnimation {
     }
     
     func addSignView(forVC vc: UIViewController) {
+        guard let signView = signView else { return }
         signView.frame = CGRect(x: 0,
                                 y: 0,
                                 width: UIScreen.main.bounds.size.width,
@@ -39,9 +39,10 @@ open class LoadingAnimation {
     }
     
     func stopAnimation(forVC vc: UIViewController) {
+        guard let signView = signView else { return }
         DispatchQueue.main.async {
-            self.signView.animationDuration = 0.0
-            self.signView.removeFromSuperview()
+            signView.animationDuration = 0.0
+            signView.removeFromSuperview()
         }
         
     }
