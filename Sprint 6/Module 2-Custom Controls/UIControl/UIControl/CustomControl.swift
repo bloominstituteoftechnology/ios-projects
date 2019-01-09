@@ -30,7 +30,7 @@ class CustomControl: UIControl {
        
         var tags: [Int] = []
         var coordinate: CGFloat = 8.0
-        for number in 1...5 {
+        for number in 1...6 {
         
             var label = UILabel()
             
@@ -55,7 +55,7 @@ class CustomControl: UIControl {
     
     override var intrinsicContentSize: CGSize {
         let componentsWidth = CGFloat(componentCount) * componentDimension
-        let componentsSpacing = CGFloat(componentCount + 1) * 8.0
+        let componentsSpacing = CGFloat(componentCount + 7) * 8.0
         let width = componentsWidth + componentsSpacing
         return CGSize(width: width, height: componentDimension)
     }

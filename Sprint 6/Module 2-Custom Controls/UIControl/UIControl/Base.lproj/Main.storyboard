@@ -37,7 +37,6 @@
                         <subviews>
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3o-ZX-e5M" customClass="CustomControl" customModule="UIControl" customModuleProvider="target">
                                 <rect key="frame" x="118" y="269" width="139" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="updateRating:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dsu-sK-kjR"/>
                                 </connections>
