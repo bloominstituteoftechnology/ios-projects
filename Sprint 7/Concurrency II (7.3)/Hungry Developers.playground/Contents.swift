@@ -14,7 +14,6 @@ class Spoon {
         lock.lock()
         if !inUse {
             inUse = true
-            print("= Spoon \(number!) was picked up")
             lock.unlock()
             return
         } else {
@@ -25,7 +24,6 @@ class Spoon {
     
     func putDown() {
         inUse = false
-        print(" == Spoon \(number!) was put down")
     }
 }
 
