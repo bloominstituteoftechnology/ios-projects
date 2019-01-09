@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CustomControls
+//  Scatter_And_Gather
 //
-//  Created by Austin Cole on 1/8/19.
+//  Created by Austin Cole on 1/9/19.
 //  Copyright © 2019 Austin Cole. All rights reserved.
 //
 
