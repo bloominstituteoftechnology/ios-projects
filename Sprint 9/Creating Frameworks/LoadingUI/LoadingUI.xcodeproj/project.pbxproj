@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		111E651B21E69FDB009DD50C /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E651A21E69FDB009DD50C /* LoadingAnimation.swift */; };
 		111E652121E6A00E009DD50C /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E652021E6A00E009DD50C /* SignView.swift */; };
+		111E652521E6A5C6009DD50C /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111E652421E6A5C5009DD50C /* VCExtension.swift */; };
 		1156E4F221E696D500190EB8 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1156E4F021E696D500190EB8 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		111E651A21E69FDB009DD50C /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		111E652021E6A00E009DD50C /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		111E652421E6A5C5009DD50C /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		1156E4ED21E696D500190EB8 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156E4F021E696D500190EB8 /* LoadingUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingUI.h; sourceTree = "<group>"; };
 		1156E4F121E696D500190EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 				1156E4F021E696D500190EB8 /* LoadingUI.h */,
 				1156E4F121E696D500190EB8 /* Info.plist */,
 				111E651A21E69FDB009DD50C /* LoadingAnimation.swift */,
+				111E652421E6A5C5009DD50C /* VCExtension.swift */,
 				111E652021E6A00E009DD50C /* SignView.swift */,
 			);
 			path = LoadingUI;
@@ -139,6 +142,7 @@
 			files = (
 				111E651B21E69FDB009DD50C /* LoadingAnimation.swift in Sources */,
 				111E652121E6A00E009DD50C /* SignView.swift in Sources */,
+				111E652521E6A5C6009DD50C /* VCExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

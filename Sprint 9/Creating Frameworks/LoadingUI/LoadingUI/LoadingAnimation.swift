@@ -17,13 +17,16 @@ open class LoadingAnimation {
     }
     
     
-    public func startLoadingAnimation(forVC vc: UIViewController) {
-        addSignView(forVC: vc)
+    public func startLoadingAnimation() {
+        if let currentVC = UIApplication.topViewController() {
+            addSignView(forVC: currentVC)
+        }
     }
     
-    public func endLoadingAnimation(forVC vc: UIViewController) {
-        
-        stopAnimation(forVC: vc)
+    public func endLoadingAnimation() {
+        if let currentVC = UIApplication.topViewController() {
+            stopAnimation(forVC: currentVC)
+        }
     }
     
     func addSignView(forVC vc: UIViewController) {
