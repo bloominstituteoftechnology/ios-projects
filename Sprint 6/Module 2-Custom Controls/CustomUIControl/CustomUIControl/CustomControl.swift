@@ -4,7 +4,6 @@ import UIKit
 class CustomControl: UIControl {
     
     static var starValue: Int = 1
-    //let localStarValue: Int = 1
     var labelArray: [UILabel] = []
     
     private let componentDimension: CGFloat = 40.0
@@ -21,8 +20,7 @@ class CustomControl: UIControl {
     
     
     func setup(){
-        
-        //var labelArray: [UILabel] = []
+
         var layoutX: CGFloat = 8.0
         for label in 1...5 {
             let testLabel = UILabel(frame: CGRect(x: layoutX, y: 0, width: componentDimension, height: componentDimension))
@@ -36,6 +34,7 @@ class CustomControl: UIControl {
             }else { testLabel.textColor = componentInactiveColor }
             labelArray.append(testLabel)
             addSubview(testLabel)
+            clipsToBounds = true
         }
     }
     
@@ -47,7 +46,25 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch){
-       
+        
+        let touchPoint = touch.location(in: self)
+        for label in labelArray {
+//            let touchPoint = touch.location(in: self)
+            
+            if label.frame.contains(touchPoint) {
+                if label.textColor == componentInactiveColor {
+                    CustomControl.starValue = label.tag
+                    print(touchPoint, label.tag)
+                    label.textColor = componentActiveColor
+                    sendActions(for: .valueChanged)
+                }else if label.textColor == componentActiveColor {
+                CustomControl.starValue = label.tag - 1
+                label.textColor = componentInactiveColor
+                sendActions(for: [.valueChanged])
+                }
+            }
+        }
+        
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -73,8 +90,8 @@ class CustomControl: UIControl {
         guard let touch = touch else {return}
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
-            updateValue(at: touch)
             sendActions(for: [.touchUpInside])
+            //updateValue(at: touch)
             
         } else {
             

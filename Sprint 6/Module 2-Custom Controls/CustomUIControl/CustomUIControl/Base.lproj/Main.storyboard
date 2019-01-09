@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h34-hm-JYf" customClass="CustomControl" customModule="CustomUIControl" customModuleProvider="target">
+                            <view verifyAmbiguity="ignoreSizes" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h34-hm-JYf" customClass="CustomControl" customModule="CustomUIControl" customModuleProvider="target">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <connections>
                                     <action selector="updateRating:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ih6-fi-xcn"/>
