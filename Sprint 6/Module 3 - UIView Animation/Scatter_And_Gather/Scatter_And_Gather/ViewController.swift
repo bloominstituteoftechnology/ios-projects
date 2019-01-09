@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             self.bLabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             self.dLabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             self.endALabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
-                
+            
                 self.lLabel.transform = CGAffineTransform(rotationAngle: .pi)
                 self.startALabel.transform = CGAffineTransform(rotationAngle: .pi)
                 self.mLabel.transform = CGAffineTransform(rotationAngle: .pi)
