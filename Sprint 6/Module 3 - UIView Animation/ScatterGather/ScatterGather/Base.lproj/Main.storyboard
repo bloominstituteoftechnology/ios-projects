@@ -80,6 +80,7 @@
                         <outlet property="bLabel" destination="H3q-cn-6rW" id="1Zn-rW-qVi"/>
                         <outlet property="dLabel" destination="EtX-Dh-9st" id="PiU-D5-cS8"/>
                         <outlet property="lLabel" destination="3IR-76-8Pz" id="9ap-GX-h9d"/>
+                        <outlet property="lambdaView" destination="ngd-bB-PQJ" id="4eZ-IE-KQE"/>
                         <outlet property="lastALabel" destination="lQc-r7-7TW" id="U6l-L1-sxX"/>
                         <outlet property="mLabel" destination="hbb-YY-xMp" id="4et-q8-XpE"/>
                     </connections>
