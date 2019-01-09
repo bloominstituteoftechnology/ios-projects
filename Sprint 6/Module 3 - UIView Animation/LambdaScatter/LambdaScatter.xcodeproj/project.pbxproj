@@ -12,6 +12,9 @@
 		D165883021E669040060B1D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D165882E21E669040060B1D6 /* Main.storyboard */; };
 		D165883221E669060060B1D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D165883121E669060060B1D6 /* Assets.xcassets */; };
 		D165883521E669060060B1D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D165883321E669060060B1D6 /* LaunchScreen.storyboard */; };
+		D165884121E6968F0060B1D6 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884021E6968F0060B1D6 /* CustomControl.swift */; };
+		D165884321E69E100060B1D6 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884221E69E100060B1D6 /* FloatExtension.swift */; };
+		D165884521E69E3F0060B1D6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884421E69E3F0060B1D6 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D165883121E669060060B1D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D165883421E669060060B1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D165883621E669060060B1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D165884021E6968F0060B1D6 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		D165884221E69E100060B1D6 /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		D165884421E69E3F0060B1D6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,48 @@
 			isa = PBXGroup;
 			children = (
 				D165882A21E669040060B1D6 /* AppDelegate.swift */,
-				D165882C21E669040060B1D6 /* ViewController.swift */,
-				D165882E21E669040060B1D6 /* Main.storyboard */,
-				D165883121E669060060B1D6 /* Assets.xcassets */,
-				D165883321E669060060B1D6 /* LaunchScreen.storyboard */,
+				D165884721E69E900060B1D6 /* ViewControllers */,
+				D165884921E69EBA0060B1D6 /* Views */,
+				D165884821E69EA30060B1D6 /* Resources */,
+				D165884621E69E7B0060B1D6 /* Extensions */,
 				D165883621E669060060B1D6 /* Info.plist */,
 			);
 			path = LambdaScatter;
+			sourceTree = "<group>";
+		};
+		D165884621E69E7B0060B1D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D165884221E69E100060B1D6 /* FloatExtension.swift */,
+				D165884421E69E3F0060B1D6 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D165884721E69E900060B1D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D165882C21E669040060B1D6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D165884821E69EA30060B1D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D165882E21E669040060B1D6 /* Main.storyboard */,
+				D165883121E669060060B1D6 /* Assets.xcassets */,
+				D165883321E669060060B1D6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D165884921E69EBA0060B1D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D165884021E6968F0060B1D6 /* CustomControl.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D165882D21E669040060B1D6 /* ViewController.swift in Sources */,
+				D165884121E6968F0060B1D6 /* CustomControl.swift in Sources */,
 				D165882B21E669040060B1D6 /* AppDelegate.swift in Sources */,
+				D165884321E69E100060B1D6 /* FloatExtension.swift in Sources */,
+				D165884521E69E3F0060B1D6 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
