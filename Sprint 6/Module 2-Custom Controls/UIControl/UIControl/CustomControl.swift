@@ -17,6 +17,7 @@ class CustomControl: UIControl {
     private func setup() {
         var count: CGFloat = 0.0
         for number in 1...5 {
+            
             //space between labels
             let space: CGFloat = (componentDimension * count) + (8.0 * count)
             
