@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viy-Zw-Bbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-606" y="134"/>
+            <point key="canvasLocation" x="-33" y="63"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -33,7 +33,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lxy-p8-1AM">
+                                <rect key="frame" x="55" y="124" width="265" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEL-Bl-PeZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-2T-J91">
+                                        <rect key="frame" x="39" y="0.0" width="37.5" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ6-Mp-jmH">
+                                        <rect key="frame" x="84.5" y="0.0" width="47.5" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-Xn-Hld">
+                                        <rect key="frame" x="140" y="0.0" width="35" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-NU-KSN">
+                                        <rect key="frame" x="183" y="0.0" width="36.5" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-e2-VB5">
+                                        <rect key="frame" x="227.5" y="0.0" width="37.5" height="58"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                        <color key="textColor" red="0.64549908759999997" green="1" blue="0.90091120319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lambda_Logo_Full" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-sM-e69">
+                                <rect key="frame" x="55" y="209" width="265" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gNe-sM-e69" secondAttribute="bottom" constant="330" id="Sfa-GH-VXe"/>
+                            <constraint firstItem="gNe-sM-e69" firstAttribute="top" secondItem="Lxy-p8-1AM" secondAttribute="bottom" constant="27" id="V0S-SH-tkJ"/>
+                            <constraint firstItem="Lxy-p8-1AM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZSb-ZR-VJy"/>
+                            <constraint firstItem="gNe-sM-e69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hH1-fT-KiP"/>
+                            <constraint firstItem="Lxy-p8-1AM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="mHU-Dc-OqL"/>
+                            <constraint firstItem="Lxy-p8-1AM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v0s-Ao-cvT"/>
+                            <constraint firstItem="gNe-sM-e69" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="wgV-a1-8ou"/>
+                            <constraint firstItem="gNe-sM-e69" firstAttribute="width" secondItem="Lxy-p8-1AM" secondAttribute="width" id="yO4-c0-cRn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rGE-x7-cSc">
@@ -43,9 +99,22 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="a2Label" destination="P3d-e2-VB5" id="FFb-6d-o93"/>
+                        <outlet property="aLabel" destination="mXj-2T-J91" id="giE-Uq-jOB"/>
+                        <outlet property="bLabel" destination="lcG-Xn-Hld" id="dcT-bh-7hO"/>
+                        <outlet property="dLabel" destination="AlX-NU-KSN" id="Xno-fa-uE0"/>
+                        <outlet property="lLabel" destination="gEL-Bl-PeZ" id="HT0-uC-KSQ"/>
+                        <outlet property="lambdaImage" destination="gNe-sM-e69" id="Gn4-ze-IAe"/>
+                        <outlet property="mLabel" destination="cQ6-Mp-jmH" id="gt5-Ly-2c7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="614" y="63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lambda_Logo_Full" width="574" height="249"/>
+    </resources>
 </document>

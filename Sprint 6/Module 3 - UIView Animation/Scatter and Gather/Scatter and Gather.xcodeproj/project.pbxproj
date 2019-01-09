@@ -12,6 +12,7 @@
 		849CB16321E696FE00C665FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849CB16121E696FE00C665FF /* Main.storyboard */; };
 		849CB16521E696FF00C665FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849CB16421E696FF00C665FF /* Assets.xcassets */; };
 		849CB16821E696FF00C665FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849CB16621E696FF00C665FF /* LaunchScreen.storyboard */; };
+		849CB17221E6999E00C665FF /* Lambda_Logo_Full.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 849CB17121E6999E00C665FF /* Lambda_Logo_Full.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		849CB16421E696FF00C665FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849CB16721E696FF00C665FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849CB16921E696FF00C665FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849CB17121E6999E00C665FF /* Lambda_Logo_Full.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Lambda_Logo_Full.pdf; path = ../../../../Art/Lambda_Logo_Full.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				849CB15F21E696FE00C665FF /* ViewController.swift */,
 				849CB16121E696FE00C665FF /* Main.storyboard */,
 				849CB16421E696FF00C665FF /* Assets.xcassets */,
+				849CB17121E6999E00C665FF /* Lambda_Logo_Full.pdf */,
 				849CB16621E696FF00C665FF /* LaunchScreen.storyboard */,
 				849CB16921E696FF00C665FF /* Info.plist */,
 			);
@@ -125,6 +128,7 @@
 				849CB16821E696FF00C665FF /* LaunchScreen.storyboard in Resources */,
 				849CB16521E696FF00C665FF /* Assets.xcassets in Resources */,
 				849CB16321E696FE00C665FF /* Main.storyboard in Resources */,
+				849CB17221E6999E00C665FF /* Lambda_Logo_Full.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
