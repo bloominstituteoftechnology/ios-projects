@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-359" y="500"/>
         </scene>
-        <!--View Controller-->
+        <!--User Rating: 1 star-->
         <scene sceneID="vSy-pb-HXP">
             <objects>
-                <viewController id="f5d-gw-F6L" sceneMemberID="viewController">
+                <viewController id="f5d-gw-F6L" customClass="ViewController" customModule="UserStarRating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="37O-tu-ycg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.16862745100000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="updateRating:" destination="PHt-ht-gHX" eventType="valueChanged" id="b2H-fW-ysC"/>
+                                    <action selector="updateRating:" destination="f5d-gw-F6L" eventType="valueChanged" id="a2S-5j-gcs"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -49,10 +49,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FEg-qr-Q5I"/>
                     </view>
-                    <navigationItem key="navigationItem" id="elx-H0-uBd"/>
+                    <navigationItem key="navigationItem" title="User Rating: 1 star" id="Nkv-jx-nlC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ij-ue-XuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="PHt-ht-gHX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="394" y="500"/>
         </scene>
