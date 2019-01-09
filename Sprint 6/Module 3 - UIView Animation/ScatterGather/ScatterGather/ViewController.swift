@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let animBlock = {
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                 view1?.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
-                    .concatenating(CGAffineTransform(scaleX: 4.5, y: 4.5))
+                    .concatenating(CGAffineTransform(scaleX: 6.5, y: 6.5))
                 view1?.backgroundColor = .black
             }
             
@@ -32,11 +32,26 @@ class ViewController: UIViewController {
                 view1?.transform = .identity
                 view1?.textColor = .white
             }
+            
+            UIView.animate(withDuration: 1.0) {
+                view2?.transform = CGAffineTransform(scaleX: 19.0, y: 19.0)
+                view2?.backgroundColor = .red
+                view2?.textColor = .black
+            }
+            
+            UIView.animate(withDuration: 1.5) {
+                view2?.transform = .identity
+                
+                
+            }
         }
+            
         UIView.animateKeyframes(withDuration: 6.0, delay: 0.0, options: [], animations: animBlock, completion: nil)
         }
     }
-    
+
+
+}
     /*
      view.backgroundColor
      view.transform = CGAffineTransform  scale, rotationAngle (pi, or pie / 2.0), mutation
