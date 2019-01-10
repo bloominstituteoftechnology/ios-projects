@@ -10,36 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func getLabelPositionX(for label: UILabel) -> CGFloat {
-        return label.frame.origin.x
-    }
-    
-    func getLabelPositionY(for label: UILabel) -> CGFloat {
-        return label.frame.origin.y
-    }
-    
-    // Get y position of all labels
-    lazy var yLabelOrigins: CGFloat = getLabelPositionY(for: lLabel)
-    
-    // Get X position of labels
-    lazy var lLabelOrigin: CGFloat = getLabelPositionX(for: lLabel)
-    lazy var aLabelOrigin: CGFloat = getLabelPositionX(for: aLabel)
-    lazy var mLabelOrigin: CGFloat = getLabelPositionX(for: mLabel)
-    lazy var bLabelOrigin: CGFloat = getLabelPositionX(for: bLabel)
-    lazy var dLabelOrigin: CGFloat = getLabelPositionX(for: dLabel)
-    lazy var a2LabelOrigin: CGFloat = getLabelPositionX(for: a2Label)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
-
+    var shouldScatter: Bool = false
+    
+    func switchToggleButton() {
+        shouldScatter = !shouldScatter
+    }
+    
+    @IBAction func toggle(_ sender: Any) {
+        
+        if shouldScatter == false {
+            scatter()
+        } else {
+            gather()
+        }
+        switchToggleButton()
+        
+    }
+    
+    
     // Disperses and animates
     func scatter() {
         
         UIView.animate(withDuration: 3.0) {
-            // Inside this closure, set property we want to animate (and how)  to its final value
+            // Inside this closure, set property we want to animate (and how) to its final value
             
             // Logo fade
             self.lambdaImage.alpha = 0.1
@@ -64,36 +61,15 @@ class ViewController: UIViewController {
             self.a2Label.backgroundColor = colorsArray.randomElement()
             
             
-            // Label movements
-            self.lLabel.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.lLabel.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            self.aLabel.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.aLabel.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            self.mLabel.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.mLabel.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            self.bLabel.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.bLabel.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            self.dLabel.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.dLabel.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            self.a2Label.frame.origin.x += CGFloat(Int.random(in: -100..<200))
-            self.a2Label.frame.origin.y += CGFloat(Int.random(in: -100..<200))
-            
-            // Label rotations
-            self.lLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
-            self.aLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
-            self.mLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
-            self.bLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
-            self.dLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
-            self.a2Label.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            // Label movements & rotations
+            self.lLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
+            self.aLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
+            self.mLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
+            self.bLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
+            self.dLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
+            self.a2Label.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100..<200)), y: CGFloat(Int.random(in: -100..<200))).rotated(by: CGFloat(Float.random(in: -1...1)))
             // OR rotationAngle: CGFloat.pi / 4.0
-            
         }
-        
     }
     
     
@@ -121,46 +97,14 @@ class ViewController: UIViewController {
             self.dLabel.backgroundColor = .white
             self.a2Label.backgroundColor = .white
             
-            // Reset label rotations
+            // Reset label movements & rotations
             self.lLabel.transform = CGAffineTransform.identity
             self.aLabel.transform = CGAffineTransform.identity
             self.mLabel.transform = CGAffineTransform.identity
             self.bLabel.transform = CGAffineTransform.identity
             self.dLabel.transform = CGAffineTransform.identity
             self.a2Label.transform = CGAffineTransform.identity
-            
-            // Reset label x and y position
-            self.lLabel.frame.origin.x = self.lLabelOrigin
-            self.lLabel.frame.origin.y = self.yLabelOrigins
-            self.aLabel.frame.origin.x = self.aLabelOrigin
-            self.aLabel.frame.origin.y = self.yLabelOrigins
-            self.mLabel.frame.origin.x = self.mLabelOrigin
-            self.mLabel.frame.origin.y = self.yLabelOrigins
-            self.bLabel.frame.origin.x = self.bLabelOrigin
-            self.bLabel.frame.origin.y = self.yLabelOrigins
-            self.dLabel.frame.origin.x = self.dLabelOrigin
-            self.dLabel.frame.origin.y = self.yLabelOrigins
-            self.a2Label.frame.origin.x = self.a2LabelOrigin
-            self.a2Label.frame.origin.y = self.yLabelOrigins
         }
-    }
-    
-    var shouldScatter: Bool = false
-    
-    func switchToggleButton() {
-        shouldScatter = !shouldScatter
-    }
-    
-    @IBAction func toggle(_ sender: Any) {
-        
-        if shouldScatter == false {
-            scatter()
-        } else {
-            gather()
-        }
-        
-        switchToggleButton()
-        
     }
     
     @IBOutlet weak var lLabel: UILabel!
