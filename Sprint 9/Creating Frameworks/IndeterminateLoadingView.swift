@@ -10,9 +10,10 @@ import UIKit
 
 class IndeterminateLoadingView: UIView, CAAnimationDelegate {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+   init(frame: CGRect, circleColor: UIColor) {
+    self.circleColor = circleColor
+    super.init(frame: frame)
+    
         setupShapeLayer()
     }
     
@@ -41,7 +42,7 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         let thickness: CGFloat = 10.0
         
         shapeLayer.frame = layer.bounds
-        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.strokeColor = circleColor.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = thickness
         shapeLayer.strokeStart = 0.0
@@ -100,7 +101,7 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     // MARK: - Properties
     
     private(set) var isAnimating = false
-
+    private var circleColor: UIColor = .black
     private let shapeLayer = CAShapeLayer()
     private let duration = 1.0
     private var shouldStopAnimationOnNextCycle = false
