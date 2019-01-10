@@ -143,14 +143,14 @@ extension UIView {
         
         
         
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 2,
                        animations: { flare() })
     }
     
     func performUnflare() {
         func unflare() { transform = .identity }
         
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 2,
                        animations: { unflare() })
     }
 }

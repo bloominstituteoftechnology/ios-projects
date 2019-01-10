@@ -27,7 +27,13 @@ class ViewController: UIViewController {
             CATransaction.setCompletionBlock {
             }
             
+            
             for subView in lambdaTextView.subviews{
+                
+                UIView.animate(withDuration: 2.0) {
+                    subView.backgroundColor = .random()
+                }
+                
                 var testPoint: CGPoint
                 repeat {
                     let randomX = CGFloat(integerLiteral: (Int.random(in: 0...2000) - 1000))
@@ -46,7 +52,7 @@ class ViewController: UIViewController {
                 
             }
             
-            UIView.animate(withDuration: 1) {
+            UIView.animate(withDuration: 2) {
                 self.lambdaLogo.alpha = 0.0
             }
             
@@ -60,14 +66,20 @@ class ViewController: UIViewController {
             CATransaction.setCompletionBlock {
             }
             for subView in lambdaTextView.subviews{
+            
                 
+                
+                UIView.animate(withDuration: 2.0) {
+                    subView.backgroundColor = .random()
+                }
                 subView.performUnflare()
                 
             }
             
-            UIView.animate(withDuration: 1) {
+            UIView.animate(withDuration: 2) {
                 self.lambdaLogo.alpha = 1.0
             }
+            
             
             CATransaction.commit()
         }
