@@ -100,6 +100,13 @@ class ViewController: UIViewController {
             self.bLabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             self.dLabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             self.endALabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
+                
+                self.lLabel.textColor = self.getRandomColor(alpha: 1.0)
+                self.startALabel.textColor = self.getRandomColor(alpha: 1.0)
+                self.mLabel.textColor = self.getRandomColor(alpha: 1.0)
+                self.bLabel.textColor = self.getRandomColor(alpha: 1.0)
+                self.dLabel.textColor = self.getRandomColor(alpha: 1.0)
+                self.endALabel.textColor = self.getRandomColor(alpha: 1.0)
             
                 self.lLabel.transform = self.firstHalfRotation
                 self.startALabel.transform = self.firstHalfRotation
@@ -108,12 +115,7 @@ class ViewController: UIViewController {
                 self.dLabel.transform = self.firstHalfRotation
                 self.endALabel.transform = self.firstHalfRotation
             
-                self.lLabel.textColor = self.getRandomColor(alpha: 1.0)
-                self.startALabel.textColor = self.getRandomColor(alpha: 1.0)
-                self.mLabel.textColor = self.getRandomColor(alpha: 1.0)
-                self.bLabel.textColor = self.getRandomColor(alpha: 1.0)
-                self.dLabel.textColor = self.getRandomColor(alpha: 1.0)
-                self.endALabel.textColor = self.getRandomColor(alpha: 1.0)
+                
             }
         case false:
             shouldScramble = true
@@ -131,9 +133,17 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 2.0) {
                 self.lLabel.layer.backgroundColor = self.lowAlphaWhite
                 self.startALabel.layer.backgroundColor = self.lowAlphaWhite
+                self.mLabel.layer.backgroundColor = self.lowAlphaWhite
                 self.bLabel.layer.backgroundColor = self.lowAlphaWhite
                 self.dLabel.layer.backgroundColor = self.lowAlphaWhite
                 self.endALabel.layer.backgroundColor = self.lowAlphaWhite
+                
+                self.lLabel.textColor = .black
+                self.startALabel.textColor = .black
+                self.mLabel.textColor = .black
+                self.bLabel.textColor = .black
+                self.dLabel.textColor = .black
+                self.endALabel.textColor = .black
                 
                 self.lLabel.transform = self.secondHalfRotation
                 self.startALabel.transform = self.secondHalfRotation
@@ -142,12 +152,7 @@ class ViewController: UIViewController {
                 self.dLabel.transform = self.secondHalfRotation
                 self.endALabel.transform = self.secondHalfRotation
                 
-                self.lLabel.textColor = .black
-                self.startALabel.textColor = .black
-                self.mLabel.textColor = .black
-                self.bLabel.textColor = .black
-                self.dLabel.textColor = .black
-                self.endALabel.textColor = .black
+                
             }
             
         }
