@@ -11,6 +11,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var lastALabel: UILabel!
     @IBOutlet weak var lambdaView: UIImageView!
     
+
+    func getlabelPositionX(for label: UILabel) -> CGFloat {
+        return label.frame.origin.x
+    }
+    
+    
     @IBAction func toggle(_ sender: Any) {
         var shouldScramble: Bool = true
         
@@ -23,6 +29,8 @@ class ViewController: UIViewController {
         let view = lambdaView
         
         let animBlock = {
+        
+            
             //animating label L
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                 view1?.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
@@ -46,30 +54,27 @@ class ViewController: UIViewController {
             }
             //animating label m
             UIView.animate(withDuration: 1.0) {
-                view3?.transform = CGAffineTransform(scaleX: 20.0, y: 20.0)
-                view3?.frame.origin.x += 100
-                view3?.frame.origin.y += 300
-                
+                view3?.transform = CGAffineTransform(translationX: -100, y: -300).rotated(by: CGFloat.pi)
+                    .concatenating(CGAffineTransform(scaleX: 19.5, y: 19.5))
                 view3?.backgroundColor = self.getRandomColor()
                 view3?.textColor = self.getRandomColor()
             }
             //returning label m
             UIView.animate(withDuration: 1.0) {
-
                 view3?.transform = .identity
             }
             //animating label b
             UIView.animate(withDuration: 1.0) {
-                view4?.transform = CGAffineTransform(scaleX: 20.0, y: 20.0)
-                
-                view4?.frame.origin.x -= 100
-                view4?.frame.origin.y -= 300
+                //view4?.transform = CGAffineTransform(scaleX: 20.0, y: 20.0)
+                view4?.transform = CGAffineTransform(translationX: 100, y: 300).rotated(by: CGFloat.pi)
+                .concatenating(CGAffineTransform(scaleX: 15.5, y: 15.5))
+//                view4?.frame.origin.x -= 100
+//                view4?.frame.origin.y -= 300
                 view4?.backgroundColor = self.getRandomColor()
                 view4?.textColor = self.getRandomColor()
             }
             //returning label b
             UIView.animate(withDuration: 1.0) {
-
                 view4?.transform = .identity
             }
             //animating d
@@ -77,19 +82,31 @@ class ViewController: UIViewController {
                 view5?.center = self.view.center
             }
             UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.2) {
-                view5?.transform = CGAffineTransform(scaleX: 6.7, y: 5.6)
+                view5?.transform = CGAffineTransform(scaleX: 2.7, y: 1.6)
             }
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.2) {
-                view5?.transform = CGAffineTransform(scaleX: 5.6, y: 6.7)
+                view5?.transform = CGAffineTransform(scaleX: 1.6, y: 2.7)
             }
             UIView.addKeyframe(withRelativeStartTime: 0.7, relativeDuration: 0.15) {
-                view5?.transform = CGAffineTransform(scaleX: 6.11, y: 5.9)
+                view5?.transform = CGAffineTransform(scaleX: 2.11, y: 1.9)
             }
             UIView.addKeyframe(withRelativeStartTime: 0.85, relativeDuration: 0.15) {
                 view5?.transform = .identity
-                
+            
                 view5?.backgroundColor = self.getRandomColor()
                 view5?.textColor = self.getRandomColor()
+            }
+            
+            //animating label last a
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
+                view6?.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    .concatenating(CGAffineTransform(scaleX: 10.5, y: 10.5))
+                view6?.backgroundColor = self.getRandomColor()
+            }
+            //returning label a to origin
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
+                view6?.transform = .identity
+                view6?.textColor = self.getRandomColor()
             }
         }
         
@@ -105,12 +122,3 @@ class ViewController: UIViewController {
     }
 }
 
-/*
- might need this func
- func cleanup() {
- for subview in view.subviews {
- guard !(subview is UIToolbar) else { continue }
- subview.removeFromSuperview()
- }
- }
- */
