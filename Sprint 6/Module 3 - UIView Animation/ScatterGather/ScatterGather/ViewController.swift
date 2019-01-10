@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 //        return label.frame.origin.x
 //    }
     
+// func randomInt(min: Int, max: Int) -> Int {         return min + Int(arc4random_uniform(UInt32(max - min + 1)))     }
     
     @IBAction func toggle(_ sender: Any) {
         var shouldScramble: Bool = true
