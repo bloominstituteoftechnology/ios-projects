@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Friends-->
         <scene sceneID="sz0-Q5-gXS">
             <objects>
                 <tableViewController id="QqJ-sR-tE4" customClass="TableViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="7O6-uN-e3i">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="7O6-uN-e3i" customClass="TableViewCell" customModule="Friends" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7O6-uN-e3i" id="a8e-1J-TbK">
@@ -52,6 +52,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="friendView" destination="35o-zz-K0Q" id="8kP-LL-1a1"/>
+                                    <outlet property="nameLabel" destination="3m3-YW-nDV" id="5OT-eS-QVf"/>
                                     <segue destination="Mo4-oi-WW2" kind="show" id="p84-HO-hiA"/>
                                 </connections>
                             </tableViewCell>
@@ -61,16 +63,16 @@
                             <outlet property="delegate" destination="QqJ-sR-tE4" id="pw0-lj-cBY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1pL-at-2zG"/>
+                    <navigationItem key="navigationItem" title="Friends" id="1pL-at-2zG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j94-wF-Zln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-172" y="53.523238380809602"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="U3x-Of-OES">
             <objects>
-                <viewController id="Mo4-oi-WW2" customClass="ViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mo4-oi-WW2" customClass="DetailViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qNA-6L-VVf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
