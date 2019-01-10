@@ -30,11 +30,16 @@ class ViewController: UIViewController {
             for subView in lambdaTextView.subviews{
                 var testPoint: CGPoint
                 repeat {
-                    testPoint = CGPoint(x: subView.center.x + CGFloat(integerLiteral: Int.random(in: -200...300)) , y: subView.center.y + CGFloat(integerLiteral: Int.random(in: 0...300)))
+                    let randomX = CGFloat(integerLiteral: (Int.random(in: 0...2000) - 1000))
+                    let randomY = CGFloat(integerLiteral: (Int.random(in: 0...2000)))
                     
-                } while !view.bounds.contains(testPoint)
+                    testPoint = CGPoint(x: subView.center.x + randomX, y: subView.center.y + randomY)
+                    
+                } while !super.view.bounds.contains(testPoint)
                 
-                print("(\(testPoint.x),\(testPoint.y))")
+                print("\(subView.tag) - Starting point:(\(subView.center.x),\(subView.center.y))")
+                print("\(subView.tag) - Offset:(\(testPoint.x - subView.center.x),\(testPoint.y - subView.center.y))")
+                print("\(subView.tag) - Final point:(\(testPoint.x),\(testPoint.y))")
                 print(view.bounds.contains(testPoint))
                 
                 subView.performFlare(x: testPoint.x - subView.center.x, y: testPoint.y - subView.center.y)
