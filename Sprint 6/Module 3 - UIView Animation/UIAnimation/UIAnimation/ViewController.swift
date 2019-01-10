@@ -45,11 +45,13 @@ class ViewController: UIViewController {
     }
     
     
-    let randColor: [UIColor] = [.red, .blue, .lightGray, .black, .green, .yellow]
+    let randColor: [UIColor] = [.red, .blue, .lightGray, .orange, .green, .yellow]
     
     func randomColor() -> UIColor {
-        for color in randColor {
+       
+        let color = randColor.randomElement()
         
+        return color ?? .green
     }
     
     var LPosition: CGRect = UILabel().frame
@@ -71,38 +73,58 @@ class ViewController: UIViewController {
         bPosition = b.frame
         dPosition = d.frame
         lastAPosition = lastA.frame
-        lambdaLogoImage.transform.inverted()
         for label in labelArray {
-            let randCGFloatX = CGFloat.random(in: 60...240)
+            let randCGFloatX = CGFloat.random(in: 1...340)
             let randCGFloatY = CGFloat.random(in: 150...650)
             let rect = CGRect(x: randCGFloatX, y: randCGFloatY, width: 50, height: 50)
-            UIView.animate(withDuration: 5) {
-            label.textColor = .black
-            label.tintColor = .black
+            UIView.animate(withDuration: 3) {
+            label.textColor = self.randColor[self.randomInt(min: 0, max: 5)].withAlphaComponent(1.0)
+            label.backgroundColor = self.randColor[self.randomInt(min: 0, max: 5)].withAlphaComponent(0.3)
             label.frame = rect
-            label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 20)), y: CGFloat(self.randomInt(min: 1, max: 20)))
+            label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4)))
             label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: -350, max: 350)))
+            self.lambdaLogoImage.alpha = 0
+           // label.performFlare()
            // label.bounds = rect
            
-           //  var width = label.frame.size.width
-           // self.L.transform = CGAffineTransform(rotationAngle: self.rondomAngel)
                 }
-            }
-        
+            //label.transform = .identity
+            
         }
-    
-    
+    }
     func reset() {
         
         UIView.animate(withDuration: 3) {
+        self.L.transform = .identity
+        self.a.transform = .identity
+        self.m.transform = .identity
+        self.b.transform = .identity
+        self.d.transform = .identity
+        self.lastA.transform = .identity
+
         self.L.frame = self.LPosition
         self.a.frame = self.aPosition
         self.m.frame = self.mPosition
         self.b.frame = self.bPosition
         self.d.frame = self.dPosition
         self.lastA.frame = self.lastAPosition
+        self.lambdaLogoImage.alpha = 1.0
+        self.lambdaLogoImage.transform.inverted()
         }
         
     }
 }
 
+    
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 2.6, y: 2.6)
+            transform = CGAffineTransform(rotationAngle: 30) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.5,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.3) { unflare() }})
+    }
+}
