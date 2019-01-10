@@ -101,7 +101,6 @@
                         <outlet property="L" destination="Kev-0E-4HG" id="aTn-ld-fe3"/>
                         <outlet property="a" destination="TX3-MO-mCG" id="XAf-8j-d0d"/>
                         <outlet property="b" destination="l2f-v3-tLK" id="gvq-4p-v8n"/>
-                        <outlet property="barButton" destination="CkK-eh-XGP" id="WSL-W4-Ugp"/>
                         <outlet property="d" destination="rSK-he-lPy" id="6Jx-g4-8eR"/>
                         <outlet property="lambdaLogoImage" destination="H8O-Wh-hef" id="CrD-b2-Oec"/>
                         <outlet property="lastA" destination="u2O-BZ-4Mc" id="phn-qp-cqR"/>

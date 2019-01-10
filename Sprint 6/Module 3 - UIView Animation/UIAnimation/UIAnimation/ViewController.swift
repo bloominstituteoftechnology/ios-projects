@@ -14,11 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
    
         view.addSubview(lambdaLogoImage)
-        
-        L.translatesAutoresizingMaskIntoConstraints = false
         lambdaLogoImage.translatesAutoresizingMaskIntoConstraints = false
-        
-
     }
     
     var shouldScramble: Bool = true
@@ -32,54 +28,81 @@ class ViewController: UIViewController {
     @IBOutlet weak var lastA: UILabel!
     @IBOutlet weak var lambdaLogoImage: UIImageView!
   
-    @IBOutlet weak var barButton: UIBarButtonItem!
+    
     
     @IBAction func toggle(_ sender: Any) {
     
-      animation()
+        if shouldScramble {
+           animation()
+        } else {
+            reset()
+        }
         shouldScramble = !shouldScramble
     }
     
+    func randomInt(min: Int, max: Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    }
     
-   let numbers = Int.random(in: -250 ... 250)
+    
+    let randColor: [UIColor] = [.red, .blue, .lightGray, .black, .green, .yellow]
+    
+    func randomColor() -> UIColor {
+        for color in randColor {
+        
+    }
+    
+    var LPosition: CGRect = UILabel().frame
+    var aPosition: CGRect = UILabel().frame
+    var mPosition: CGRect = UILabel().frame
+    var bPosition: CGRect = UILabel().frame
+    var dPosition: CGRect = UILabel().frame
+    var lastAPosition: CGRect = UILabel().frame
     
     
     
     
     func animation() {
-        let rect = CGRect(x: numbers, y: numbers, width: 50, height: 50)
+        
         let labelArray: [UILabel] = [L, a, m, b, d, lastA]
-        let point: CGPoint = CGPoint(x: 8, y: 85)
-        
-        let size: CGSize = CGSize(width: 53, height: 49)
+        LPosition = L.frame
+        aPosition = a.frame
+        mPosition = m.frame
+        bPosition = b.frame
+        dPosition = d.frame
+        lastAPosition = lastA.frame
+        lambdaLogoImage.transform.inverted()
         for label in labelArray {
-        
-            if shouldScramble == true {
-            
-            UIView.animate(withDuration: 3) {
-            label.textColor = .white
+            let randCGFloatX = CGFloat.random(in: 60...240)
+            let randCGFloatY = CGFloat.random(in: 150...650)
+            let rect = CGRect(x: randCGFloatX, y: randCGFloatY, width: 50, height: 50)
+            UIView.animate(withDuration: 5) {
+            label.textColor = .black
             label.tintColor = .black
-              
+            label.frame = rect
+            label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 20)), y: CGFloat(self.randomInt(min: 1, max: 20)))
+            label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: -350, max: 350)))
            // label.bounds = rect
-                self.stack.layer.frame = CGRect(x: self.numbers, y: self.numbers, width: 50, height: 50)
-            label.backgroundColor = .red
-            
-                
-                
-                
-          //  var width = label.frame.size.width
+           
+           //  var width = label.frame.size.width
            // self.L.transform = CGAffineTransform(rotationAngle: self.rondomAngel)
-            
+                }
             }
-            } else {
-                
-                label.backgroundColor = .white
-                label.textColor = .black
-                stack.frame = CGRect(origin: point, size: size)
-               // stack.transform = CGAffineTransform(translationX: CGFloat(8), y: CGFloat(72))
-                
-            }
+        
         }
+    
+    
+    func reset() {
+        
+        UIView.animate(withDuration: 3) {
+        self.L.frame = self.LPosition
+        self.a.frame = self.aPosition
+        self.m.frame = self.mPosition
+        self.b.frame = self.bPosition
+        self.d.frame = self.dPosition
+        self.lastA.frame = self.lastAPosition
+        }
+        
     }
 }
 
