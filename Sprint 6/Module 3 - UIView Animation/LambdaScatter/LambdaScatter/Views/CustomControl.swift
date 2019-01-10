@@ -136,9 +136,9 @@ extension UIView {
     func performFlare(x: CGFloat, y: CGFloat) {
         
         func flare()   {
-            print("Other End: (\(x + self.center.x),\(y + self.center.y))")
-            transform = CGAffineTransform(scaleX: 1.0, y: 1.0).translatedBy(x: x, y: y).rotated(by: CGFloat(Double.random(in: 0.0...360.0)))
-            print("After: (\(self.center.x + x),\(self.center.y + y))")
+//            print("Other End: (\(x + self.center.x),\(y + self.center.y))")
+            transform = CGAffineTransform(scaleX: 0.5, y: 0.5).translatedBy(x: x, y: y).rotated(by: CGFloat(Double.random(in: 0.0...360.0)))
+//            print("After: (\(self.center.x + x),\(self.center.y + y))")
         }
         
         

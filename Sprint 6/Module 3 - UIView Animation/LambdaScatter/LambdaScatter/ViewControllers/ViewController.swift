@@ -37,10 +37,10 @@ class ViewController: UIViewController {
                     
                 } while !super.view.bounds.contains(testPoint)
                 
-                print("\(subView.tag) - Starting point:(\(subView.center.x),\(subView.center.y))")
-                print("\(subView.tag) - Offset:(\(testPoint.x - subView.center.x),\(testPoint.y - subView.center.y))")
-                print("\(subView.tag) - Final point:(\(testPoint.x),\(testPoint.y))")
-                print(view.bounds.contains(testPoint))
+//                print("\(subView.tag) - Starting point:(\(subView.center.x),\(subView.center.y))")
+//                print("\(subView.tag) - Offset:(\(testPoint.x - subView.center.x),\(testPoint.y - subView.center.y))")
+//                print("\(subView.tag) - Final point:(\(testPoint.x),\(testPoint.y))")
+//                print(view.bounds.contains(testPoint))
                 
                 subView.performFlare(x: testPoint.x - subView.center.x, y: testPoint.y - subView.center.y)
                 
