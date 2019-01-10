@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Hello!"
         view.addSubview(lambdaLogoImage)
-        lambdaLogoImage.translatesAutoresizingMaskIntoConstraints = false
+       // lambdaLogoImage.translatesAutoresizingMaskIntoConstraints = false
     }
     
     @IBOutlet weak var stack: UIStackView!
