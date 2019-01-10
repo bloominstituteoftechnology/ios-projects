@@ -19,45 +19,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bBt-do-GXZ">
-                                <rect key="frame" x="58" y="317" width="259.5" height="33.5"/>
+                                <rect key="frame" x="37.5" y="317" width="300" height="33.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-76-8Pz">
-                                        <rect key="frame" x="0.0" y="0.0" width="20.5" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IR-76-8Pz">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spk-hB-OW6">
-                                        <rect key="frame" x="50.5" y="0.0" width="15" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spk-hB-OW6">
+                                        <rect key="frame" x="55" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbb-YY-xMp">
-                                        <rect key="frame" x="95.5" y="0.0" width="25" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbb-YY-xMp">
+                                        <rect key="frame" x="110" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-cn-6rW">
-                                        <rect key="frame" x="150.5" y="0.0" width="17" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3q-cn-6rW">
+                                        <rect key="frame" x="165" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtX-Dh-9st">
-                                        <rect key="frame" x="197.5" y="0.0" width="17" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtX-Dh-9st">
+                                        <rect key="frame" x="220" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-r7-7TW">
-                                        <rect key="frame" x="244.5" y="0.0" width="15" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-r7-7TW">
+                                        <rect key="frame" x="275" y="0.0" width="25" height="33.5"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="spk-hB-OW6" firstAttribute="width" secondItem="3IR-76-8Pz" secondAttribute="width" id="3Xt-B2-khG"/>
+                                    <constraint firstItem="EtX-Dh-9st" firstAttribute="height" secondItem="3IR-76-8Pz" secondAttribute="height" id="7LC-YE-HMJ"/>
+                                    <constraint firstItem="lQc-r7-7TW" firstAttribute="height" secondItem="3IR-76-8Pz" secondAttribute="height" id="CCd-Zj-b4l"/>
+                                    <constraint firstItem="H3q-cn-6rW" firstAttribute="width" secondItem="3IR-76-8Pz" secondAttribute="width" id="NDs-dY-3CX"/>
+                                    <constraint firstItem="spk-hB-OW6" firstAttribute="height" secondItem="3IR-76-8Pz" secondAttribute="height" id="Yxu-nM-gsj"/>
+                                    <constraint firstItem="hbb-YY-xMp" firstAttribute="width" secondItem="3IR-76-8Pz" secondAttribute="width" id="aPn-B0-Ge6"/>
+                                    <constraint firstItem="lQc-r7-7TW" firstAttribute="width" secondItem="3IR-76-8Pz" secondAttribute="width" id="ad5-2R-fDh"/>
+                                    <constraint firstItem="EtX-Dh-9st" firstAttribute="width" secondItem="3IR-76-8Pz" secondAttribute="width" id="d2z-Zy-HnN"/>
+                                    <constraint firstItem="H3q-cn-6rW" firstAttribute="height" secondItem="3IR-76-8Pz" secondAttribute="height" id="dfh-Xh-RvR"/>
+                                    <constraint firstItem="hbb-YY-xMp" firstAttribute="height" secondItem="3IR-76-8Pz" secondAttribute="height" id="muE-y0-vqz"/>
+                                </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lambda_Logo_Full" translatesAutoresizingMaskIntoConstraints="NO" id="ngd-bB-PQJ">
                                 <rect key="frame" x="67" y="86" width="240" height="128"/>

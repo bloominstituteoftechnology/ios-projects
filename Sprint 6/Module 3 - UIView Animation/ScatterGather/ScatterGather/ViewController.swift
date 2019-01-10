@@ -79,7 +79,8 @@ class ViewController: UIViewController {
             }
             //animating d
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.4) {
-                view5?.center = self.view.center
+                view5?.transform = CGAffineTransform(translationX: 100, y: 300)
+                //view5?.center = self.view.center
             }
             UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.2) {
                 view5?.transform = CGAffineTransform(scaleX: 2.7, y: 1.6)
