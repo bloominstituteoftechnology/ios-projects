@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="CCc-0F-e9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="CCc-0F-e9L">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -89,13 +89,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="letterLabel1" destination="ulm-0x-dUa" id="5Wm-MZ-I6g"/>
-                        <outlet property="letterLabel2" destination="lQD-Oo-xQN" id="5GT-aD-VbL"/>
-                        <outlet property="letterLabel3" destination="6Vp-qA-zto" id="8xB-cm-eOo"/>
-                        <outlet property="letterLabel4" destination="uu5-eV-zvg" id="DI4-Og-Flx"/>
-                        <outlet property="letterLabel5" destination="1U9-1g-PLi" id="6Tx-XT-At9"/>
-                        <outlet property="letterLabel6" destination="v5f-1p-V8j" id="8eR-Fq-csi"/>
                         <outlet property="logoImageView" destination="O5Z-Tf-ZZG" id="NK8-w9-DFp"/>
+                        <outletCollection property="labels" destination="ulm-0x-dUa" collectionClass="NSMutableArray" id="k17-87-iix"/>
+                        <outletCollection property="labels" destination="lQD-Oo-xQN" collectionClass="NSMutableArray" id="Wdi-oG-yVN"/>
+                        <outletCollection property="labels" destination="6Vp-qA-zto" collectionClass="NSMutableArray" id="xmq-Xc-1El"/>
+                        <outletCollection property="labels" destination="uu5-eV-zvg" collectionClass="NSMutableArray" id="e3h-i7-3rR"/>
+                        <outletCollection property="labels" destination="1U9-1g-PLi" collectionClass="NSMutableArray" id="v6T-Vd-qqn"/>
+                        <outletCollection property="labels" destination="v5f-1p-V8j" collectionClass="NSMutableArray" id="Bel-wh-Lod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

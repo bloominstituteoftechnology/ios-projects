@@ -52,7 +52,7 @@ struct CountedSet<Element: Hashable>: ExpressibleByArrayLiteral, Sequence, Itera
     /// Inserts one of the given element into the set
     mutating func insert(_ element: Element) {
         items[element] = items[element] == nil ? 1 : items[element]! + 1
-        
+        let charc = CharacterSet
     }
     
     /// Removes one of an element from the set

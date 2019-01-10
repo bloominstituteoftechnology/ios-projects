@@ -11,22 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var shouldScramble = true
-    var labels: [UILabel] = []
 
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var letterLabel1: UILabel!
-    @IBOutlet weak var letterLabel2: UILabel!
-    @IBOutlet weak var letterLabel3: UILabel!
-    @IBOutlet weak var letterLabel4: UILabel!
-    @IBOutlet weak var letterLabel5: UILabel!
-    @IBOutlet weak var letterLabel6: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        labels = [letterLabel1, letterLabel2, letterLabel3, letterLabel4, letterLabel5, letterLabel6]
-    }
+    @IBOutlet var labels: [UILabel]!
 
     @IBAction func toggle(_ sender: Any) {
         if shouldScramble {
