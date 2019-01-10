@@ -10,15 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    func getLabelPositionX(for label: UILabel) -> CGFloat {
+        return label.frame.origin.x
+    }
+    
+    func getLabelPositionY(for label: UILabel) -> CGFloat {
+        return label.frame.origin.y
+    }
+    
+    // Get y position of all labels
+    lazy var yLabelOrigins: CGFloat = getLabelPositionY(for: lLabel)
+    
+    // Get X position of labels
+    lazy var lLabelOrigin: CGFloat = getLabelPositionX(for: lLabel)
+    lazy var aLabelOrigin: CGFloat = getLabelPositionX(for: aLabel)
+    lazy var mLabelOrigin: CGFloat = getLabelPositionX(for: mLabel)
+    lazy var bLabelOrigin: CGFloat = getLabelPositionX(for: bLabel)
+    lazy var dLabelOrigin: CGFloat = getLabelPositionX(for: dLabel)
+    lazy var a2LabelOrigin: CGFloat = getLabelPositionX(for: a2Label)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
+
     // Disperses and animates
-    func scramble() {
+    func scatter() {
         
-        UIView.animate(withDuration: 2.0) {
+        UIView.animate(withDuration: 3.0) {
             // Inside this closure, set property we want to animate (and how)  to its final value
             
             // Logo fade
@@ -62,43 +82,84 @@ class ViewController: UIViewController {
             
             self.a2Label.frame.origin.x += CGFloat(Int.random(in: -100..<200))
             self.a2Label.frame.origin.y += CGFloat(Int.random(in: -100..<200))
+            
+            // Label rotations
+            self.lLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            self.aLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            self.mLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            self.bLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            self.dLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            self.a2Label.transform = CGAffineTransform(rotationAngle: CGFloat(Float.random(in: -1...1)))
+            // OR rotationAngle: CGFloat.pi / 4.0
+            
         }
         
     }
     
+    
+    
     // Returns to original size and placement
     func gather() {
         
+        UIView.animate(withDuration: 3.0) {
+            
+            // Image fades back in
+            self.lambdaImage.alpha = 1.0
+            
+            // Colors reset
+            self.lLabel.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            self.aLabel.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            self.mLabel.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            self.bLabel.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            self.dLabel.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            self.a2Label.textColor = #colorLiteral(red: 0.6823529412, green: 0.9960784314, blue: 0.8980392157, alpha: 1)
+            
+            self.lLabel.backgroundColor = .white
+            self.aLabel.backgroundColor = .white
+            self.mLabel.backgroundColor = .white
+            self.bLabel.backgroundColor = .white
+            self.dLabel.backgroundColor = .white
+            self.a2Label.backgroundColor = .white
+            
+            // Reset label rotations
+            self.lLabel.transform = CGAffineTransform.identity
+            self.aLabel.transform = CGAffineTransform.identity
+            self.mLabel.transform = CGAffineTransform.identity
+            self.bLabel.transform = CGAffineTransform.identity
+            self.dLabel.transform = CGAffineTransform.identity
+            self.a2Label.transform = CGAffineTransform.identity
+            
+            // Reset label x and y position
+            self.lLabel.frame.origin.x = self.lLabelOrigin
+            self.lLabel.frame.origin.y = self.yLabelOrigins
+            self.aLabel.frame.origin.x = self.aLabelOrigin
+            self.aLabel.frame.origin.y = self.yLabelOrigins
+            self.mLabel.frame.origin.x = self.mLabelOrigin
+            self.mLabel.frame.origin.y = self.yLabelOrigins
+            self.bLabel.frame.origin.x = self.bLabelOrigin
+            self.bLabel.frame.origin.y = self.yLabelOrigins
+            self.dLabel.frame.origin.x = self.dLabelOrigin
+            self.dLabel.frame.origin.y = self.yLabelOrigins
+            self.a2Label.frame.origin.x = self.a2LabelOrigin
+            self.a2Label.frame.origin.y = self.yLabelOrigins
+        }
     }
     
+    var shouldScatter: Bool = false
+    
+    func switchToggleButton() {
+        shouldScatter = !shouldScatter
+    }
     
     @IBAction func toggle(_ sender: Any) {
         
-        scramble()
+        if shouldScatter == false {
+            scatter()
+        } else {
+            gather()
+        }
         
-        var shouldScramble: Bool = true
-        
-        
-        
-//        let animation = CAKeyframeAnimation(keyPath: "lambdaLogoFade")
-//
-//        // keyFrames that will happen during the duration
-//        //animation.values = [lambdaImage.alpha = 0.1, lambdaImage.alpha = 1]
-//
-//        animation.duration = 3.0
-//
-//        CATransaction.begin()
-//
-//        lambdaImage.layer.add(animation, forKey: "lambdaLogoFadeAnimation")
-//
-//        CATransaction.setCompletionBlock {
-//            self.lambdaImage.alpha = 0.1
-//        }
-//
-//        CATransaction.commit()
-        
-        
-        
+        switchToggleButton()
         
     }
     
