@@ -16,9 +16,9 @@ class ViewController: UIViewController {
 
     var shouldScatter: Bool = false
     
-    func switchToggleButton() {
-        shouldScatter = !shouldScatter
-    }
+//    func switchToggleButton() {
+//        shouldScatter = !shouldScatter
+//    }
     
     @IBAction func toggle(_ sender: Any) {
         
@@ -27,8 +27,7 @@ class ViewController: UIViewController {
         } else {
             gather()
         }
-        switchToggleButton()
-        
+        shouldScatter = !shouldScatter
     }
     
     
