@@ -110,6 +110,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xKk-bx-mxT"/>
                     </view>
+                    <connections>
+                        <outlet property="contactView" destination="85o-h4-D1c" id="Zl1-fF-LQJ"/>
+                        <outlet property="nameLabel" destination="Txa-p2-FIe" id="QyB-Vu-MFn"/>
+                        <outlet property="phoneLabel" destination="jpz-Dk-ZpD" id="CHv-p3-5tc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nj-Gd-sHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
