@@ -4,7 +4,9 @@ class Model {
     static let shared = Model()
     private init() {}
     
-    var contacts: [Contact] = []
+    enum Contact: String, CaseIterable {
+        case dog = "Puggy"
+    }
     
     func count() -> Int {
         return contacts.count

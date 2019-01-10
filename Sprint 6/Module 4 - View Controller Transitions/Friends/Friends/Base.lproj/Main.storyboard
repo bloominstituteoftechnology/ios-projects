@@ -29,7 +29,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QWE-GE-xmv">
                                             <rect key="frame" x="46" y="12.5" width="283" height="75"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35o-zz-K0Q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="35o-zz-K0Q">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="7wb-8F-8LT"/>
@@ -137,4 +137,7 @@
             <point key="canvasLocation" x="-868" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="303" height="348"/>
+    </resources>
 </document>
