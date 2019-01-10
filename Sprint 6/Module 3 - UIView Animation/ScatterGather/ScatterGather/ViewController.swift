@@ -2,6 +2,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.lambdaView.alpha = 1.0
+    }
     
     @IBOutlet weak var lLabel: UILabel!
     @IBOutlet weak var aLabel: UILabel!
@@ -12,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lambdaView: UIImageView!
     
 
-    func getlabelPositionX(for label: UILabel) -> CGFloat {
-        return label.frame.origin.x
-    }
+//    func getlabelPositionX(for label: UILabel) -> CGFloat {
+//        return label.frame.origin.x
+//    }
     
     
     @IBAction func toggle(_ sender: Any) {
@@ -27,6 +31,17 @@ class ViewController: UIViewController {
         let view5 = dLabel
         let view6 = lastALabel
         let view = lambdaView
+        
+        if self.lambdaView.alpha == 0.0 {
+            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseIn, animations: {
+                self.lambdaView.alpha = 1.0
+            })
+                
+        } else {
+            UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveEaseOut, animations: {
+                self.lambdaView.alpha = 0.0
+            })
+        }
         
         let animBlock = {
         
