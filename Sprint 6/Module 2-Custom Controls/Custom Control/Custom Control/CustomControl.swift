@@ -57,7 +57,7 @@ class CustomControl: UIControl {
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
-            sendActions(for: .touchDragInside)
+            sendActions(for: [.touchDragInside, .valueChanged])
             updateValue(at: .init())
         } else {
             sendActions(for: .touchDragOutside)
@@ -70,7 +70,7 @@ class CustomControl: UIControl {
         guard let touch = touch else { return }
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
-            sendActions(for: .touchUpInside)
+            sendActions(for: [.touchUpInside, .valueChanged])
         } else {
             sendActions(for: .touchUpOutside)
         }
@@ -84,7 +84,10 @@ class CustomControl: UIControl {
         let touchPoint = touch.location(in: self)
     
         for label in labels {
-            if label.bounds.contains(touchPoint){
+            if label.bounds.contains(touchPoint) {
+                value = label.tag
+                label.textColor = componentActiveColor
+                sendActions(for: .valueChanged)
                 
             }
         }
