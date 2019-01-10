@@ -26,8 +26,9 @@ class ViewController: UIViewController {
        loadingVC.background = .purple
         loadingVC.circleSize = 400
         loadingVC.circleColor = .yellow
-        loadingVC.circleThikness = 400
-        loadingVC.modalTransitionStyle = .coverVertical
+        loadingVC.thickness = 3
+        loadingVC.duration = 4
+        loadingVC.modalTransitionStyle = .crossDissolve
         present(loadingVC, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {

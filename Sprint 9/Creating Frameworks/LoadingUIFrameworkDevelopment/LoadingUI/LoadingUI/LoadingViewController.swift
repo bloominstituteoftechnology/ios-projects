@@ -14,8 +14,8 @@ public class LoadingViewController: UIViewController {
     
     public var circleSize: CGFloat = 80
     public var circleColor: UIColor = .black
-    public var circleThikness: CGFloat = 15
-    
+    public var thickness: CGFloat = 15
+    public var duration: Double = 3
     public var background: UIColor = .white
     
     
@@ -23,7 +23,7 @@ public class LoadingViewController: UIViewController {
         view.backgroundColor = background
         let frame = CGRect(x: view.bounds.midX - (circleSize/2), y: view.bounds.midY - (circleSize/2), width: circleSize, height: circleSize)
         
-        loadingView = IndeterminateLoadingView(frame: frame, circleColor: circleColor)
+        loadingView = IndeterminateLoadingView(frame: frame, circleColor: circleColor,thickness: thickness, duration: duration )
         view.addSubview(loadingView)
      
     }
