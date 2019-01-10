@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             for subView in lambdaTextView.subviews{
                 
                 UIView.animate(withDuration: 2.0) {
-                    subView.backgroundColor = .random()
+                    subView.layer.backgroundColor = .random()
                 }
                 
                 var testPoint: CGPoint

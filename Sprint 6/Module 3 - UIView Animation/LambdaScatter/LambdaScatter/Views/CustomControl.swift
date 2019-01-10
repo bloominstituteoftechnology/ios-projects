@@ -141,8 +141,6 @@ extension UIView {
 //            print("After: (\(self.center.x + x),\(self.center.y + y))")
         }
         
-        
-        
         UIView.animate(withDuration: 2,
                        animations: { flare() })
     }
