@@ -130,3 +130,25 @@ class CustomControl: UIControl {
     }
     
 }
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare(x: CGFloat, y: CGFloat) {
+        
+        func flare()   {
+            print("(\(x + self.center.x),\(y + self.center.y))")
+            transform = CGAffineTransform(scaleX: 1.6, y: 1.6).translatedBy(x: x + self.center.x, y: y + self.center.y).rotated(by: CGFloat(Double.random(in: 0.0...360.0))) }
+        
+        
+        
+        UIView.animate(withDuration: 1,
+                       animations: { flare() })
+    }
+    
+    func performUnflare() {
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 1,
+                       animations: { unflare() })
+    }
+}

@@ -15,6 +15,7 @@
 		D165884121E6968F0060B1D6 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884021E6968F0060B1D6 /* CustomControl.swift */; };
 		D165884321E69E100060B1D6 /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884221E69E100060B1D6 /* FloatExtension.swift */; };
 		D165884521E69E3F0060B1D6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884421E69E3F0060B1D6 /* ColorExtension.swift */; };
+		D165884B21E6ABCE0060B1D6 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165884A21E6ABCE0060B1D6 /* IntegerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D165884021E6968F0060B1D6 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 		D165884221E69E100060B1D6 /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		D165884421E69E3F0060B1D6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D165884A21E6ABCE0060B1D6 /* IntegerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D165884221E69E100060B1D6 /* FloatExtension.swift */,
+				D165884A21E6ABCE0060B1D6 /* IntegerExtension.swift */,
 				D165884421E69E3F0060B1D6 /* ColorExtension.swift */,
 			);
 			path = Extensions;
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D165884B21E6ABCE0060B1D6 /* IntegerExtension.swift in Sources */,
 				D165882D21E669040060B1D6 /* ViewController.swift in Sources */,
 				D165884121E6968F0060B1D6 /* CustomControl.swift in Sources */,
 				D165882B21E669040060B1D6 /* AppDelegate.swift in Sources */,

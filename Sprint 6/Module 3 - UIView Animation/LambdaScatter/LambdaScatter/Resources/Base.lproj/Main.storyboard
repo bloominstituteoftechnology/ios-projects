@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-158" y="-635"/>
         </scene>
-        <!--Title-->
+        <!--Hey-->
         <scene sceneID="bYy-5d-dSn">
             <objects>
                 <viewController id="fwM-ah-vJ0" customClass="ViewController" customModule="LambdaScatter" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Y0p-k8-l0T">
+                    <navigationItem key="navigationItem" title="Hey" id="Y0p-k8-l0T">
                         <barButtonItem key="rightBarButtonItem" title="Make Magic!" id="vUx-XR-koY">
                             <connections>
                                 <action selector="makeMagic:" destination="fwM-ah-vJ0" id="Efe-0l-2S5"/>

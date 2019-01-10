@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var shouldScramble: Int = 1
+    var moveDirectionArray: [(xChg: Double, yChg: Double)] = []
     
     let lambdaLogo = UIImageView(frame: CGRect(x: 100, y: 300, width: 200, height: 200))
     
@@ -25,14 +26,18 @@ class ViewController: UIViewController {
             CATransaction.begin()
             CATransaction.setCompletionBlock {
             }
-
+            
             for subView in lambdaTextView.subviews{
+                var testPoint: CGPoint
+                repeat {
+                    testPoint = CGPoint(x: subView.center.x + CGFloat(integerLiteral: Int.random(in: -200...300)) , y: subView.center.y + CGFloat(integerLiteral: Int.random(in: 0...300)))
+                    
+                } while !view.bounds.contains(testPoint)
                 
-                UIView.animate(withDuration: 1) {
-                    var frame = subView.frame
-                    frame.origin.y += 100
-                    subView.frame = frame
-                }
+                print("(\(testPoint.x),\(testPoint.y))")
+                print(view.bounds.contains(testPoint))
+                
+                subView.performFlare(x: testPoint.x - subView.center.x, y: testPoint.y - subView.center.y)
                 
             }
             
@@ -49,14 +54,9 @@ class ViewController: UIViewController {
             CATransaction.begin()
             CATransaction.setCompletionBlock {
             }
-            
             for subView in lambdaTextView.subviews{
                 
-                UIView.animate(withDuration: 1) {
-                    var frame = subView.frame
-                    frame.origin.y -= 100
-                    subView.frame = frame
-                }
+                subView.performUnflare()
                 
             }
             
