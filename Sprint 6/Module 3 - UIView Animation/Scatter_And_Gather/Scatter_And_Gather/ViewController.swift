@@ -60,6 +60,10 @@ class ViewController: UIViewController {
     var dFrame = CGRect(x: 1, y: 1, width: 1, height: 1)
     var endAFrame = CGRect(x: 1, y: 1, width: 1, height: 1)
     
+    let lowAlphaWhite = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
+    let secondHalfRotation = CGAffineTransform(rotationAngle: .pi * 2)
+    let firstHalfRotation = CGAffineTransform(rotationAngle: .pi)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lLabel.backgroundColor = lLabel.backgroundColor?.withAlphaComponent(0.0)
@@ -97,12 +101,12 @@ class ViewController: UIViewController {
             self.dLabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             self.endALabel.layer.backgroundColor = self.getRandomColor(alpha: 0.5).cgColor
             
-                self.lLabel.transform = CGAffineTransform(rotationAngle: .pi)
-                self.startALabel.transform = CGAffineTransform(rotationAngle: .pi)
-                self.mLabel.transform = CGAffineTransform(rotationAngle: .pi)
-                self.bLabel.transform = CGAffineTransform(rotationAngle: .pi)
-                self.dLabel.transform = CGAffineTransform(rotationAngle: .pi)
-                self.endALabel.transform = CGAffineTransform(rotationAngle: .pi)
+                self.lLabel.transform = self.firstHalfRotation
+                self.startALabel.transform = self.firstHalfRotation
+                self.mLabel.transform = self.firstHalfRotation
+                self.bLabel.transform = self.firstHalfRotation
+                self.dLabel.transform = self.firstHalfRotation
+                self.endALabel.transform = self.firstHalfRotation
             
                 self.lLabel.textColor = self.getRandomColor(alpha: 1.0)
                 self.startALabel.textColor = self.getRandomColor(alpha: 1.0)
@@ -121,21 +125,22 @@ class ViewController: UIViewController {
             bLabel.unscatter(frame: bFrame)
             dLabel.unscatter(frame: dFrame)
             endALabel.unscatter(frame: endAFrame)
+            
+            
                 
             UIView.animate(withDuration: 2.0) {
-                self.lLabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
-                self.startALabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
-                self.mLabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
-                self.bLabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
-                self.dLabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
-                self.endALabel.layer.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.0).cgColor
+                self.lLabel.layer.backgroundColor = self.lowAlphaWhite
+                self.startALabel.layer.backgroundColor = self.lowAlphaWhite
+                self.bLabel.layer.backgroundColor = self.lowAlphaWhite
+                self.dLabel.layer.backgroundColor = self.lowAlphaWhite
+                self.endALabel.layer.backgroundColor = self.lowAlphaWhite
                 
-                self.lLabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
-                self.startALabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
-                self.mLabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
-                self.bLabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
-                self.dLabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
-                self.endALabel.transform = CGAffineTransform(rotationAngle: .pi * 2)
+                self.lLabel.transform = self.secondHalfRotation
+                self.startALabel.transform = self.secondHalfRotation
+                self.mLabel.transform = self.secondHalfRotation
+                self.bLabel.transform = self.secondHalfRotation
+                self.dLabel.transform = self.secondHalfRotation
+                self.endALabel.transform = self.secondHalfRotation
                 
                 self.lLabel.textColor = .black
                 self.startALabel.textColor = .black
