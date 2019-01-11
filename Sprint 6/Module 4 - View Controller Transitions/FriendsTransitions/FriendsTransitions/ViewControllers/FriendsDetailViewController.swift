@@ -10,6 +10,9 @@ import UIKit
 
 class FriendsDetailViewController: UIViewController {
 
+    var friend: Friend?
+    var delegate: NavigationControllerDelegate?
+    
     @IBOutlet weak var headshotImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,7 +20,6 @@ class FriendsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 

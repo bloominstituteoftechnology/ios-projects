@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsTableViewCell: UITableViewCell {
+class FriendsTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     
     @IBOutlet weak var headshotImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
