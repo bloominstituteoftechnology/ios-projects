@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		845A159E21E8000B0046CFAA /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A159D21E8000B0046CFAA /* NavigationControllerDelegate.swift */; };
+		845A15A021E801340046CFAA /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A159F21E801340046CFAA /* ImageTransitionAnimator.swift */; };
 		84A008DB21E7DFF100AF969B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A008DA21E7DFF100AF969B /* AppDelegate.swift */; };
 		84A008E021E7DFF100AF969B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A008DE21E7DFF100AF969B /* Main.storyboard */; };
 		84A008E221E7DFF200AF969B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A008E121E7DFF200AF969B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		845A159D21E8000B0046CFAA /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		845A159F21E801340046CFAA /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		84A008D721E7DFF100AF969B /* Friends - VC Transitions Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friends - VC Transitions Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A008DA21E7DFF100AF969B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A008DF21E7DFF100AF969B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				845A159D21E8000B0046CFAA /* NavigationControllerDelegate.swift */,
+				845A159F21E801340046CFAA /* ImageTransitionAnimator.swift */,
 			);
 			path = "Other Files";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A008DB21E7DFF100AF969B /* AppDelegate.swift in Sources */,
+				845A15A021E801340046CFAA /* ImageTransitionAnimator.swift in Sources */,
 				84A008F921E7E74200AF969B /* FriendModel.swift in Sources */,
 				84A008F121E7E20800AF969B /* TableViewCell.swift in Sources */,
 				84A008F521E7E6E700AF969B /* Friend.swift in Sources */,
