@@ -4,11 +4,19 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
 
     let reuseIdentifier = "friendCell"
     
+    var friends: [Friend] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
+    
+        let friend1 = Friend(imageFriend: UIImage(named: "cat")!, name: "Heather", info: "Hates running")
+        
+        let friend2 = Friend(imageFriend: UIImage(named: "dog")!, name: "Tim",  info: "Loves the Lakers")
+        
+        friends.append(friend1)
+        friends.append(friend2)
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.count()
@@ -17,15 +25,21 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TableViewCell else { fatalError("unable to dequeue TableViewCell")}
         
-        let contact = Model.shared.contact(forIndex: indexPath.row)
-        //cell.friendView.image = contact.image
-        cell.nameLabel.text = contact.name
+        let friend = friends[indexPath.row]
+        cell.friendView?.image = friend.imageFriend
+        cell.nameLabel?.text = friend.name
+        
         return cell
     }
 
 //    MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.transitioningDelegate = self
+        guard let indexPath = tableView.indexPathForSelectedRow
+            else { return }
+        guard let destination = segue.destination as? DetailViewController
+            else { return }
+        
+        destination.friend = Model.shared.friend(forIndex: indexPath.row)
     }
 
 }

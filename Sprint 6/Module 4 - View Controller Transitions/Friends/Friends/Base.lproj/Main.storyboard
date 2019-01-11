@@ -29,7 +29,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QWE-GE-xmv">
                                             <rect key="frame" x="46" y="12.5" width="283" height="75"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="35o-zz-K0Q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35o-zz-K0Q">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="7wb-8F-8LT"/>
@@ -93,8 +93,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-Dk-ZpD">
-                                        <rect key="frame" x="81.5" y="204" width="112" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-Dk-ZpD">
+                                        <rect key="frame" x="123.5" y="204" width="28.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -112,8 +112,8 @@
                     </view>
                     <connections>
                         <outlet property="contactView" destination="85o-h4-D1c" id="Zl1-fF-LQJ"/>
+                        <outlet property="infoLabel" destination="jpz-Dk-ZpD" id="Rwq-zF-4R1"/>
                         <outlet property="nameLabel" destination="Txa-p2-FIe" id="QyB-Vu-MFn"/>
-                        <outlet property="phoneLabel" destination="jpz-Dk-ZpD" id="CHv-p3-5tc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nj-Gd-sHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +137,4 @@
             <point key="canvasLocation" x="-868" y="54"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="dog" width="303" height="348"/>
-    </resources>
 </document>

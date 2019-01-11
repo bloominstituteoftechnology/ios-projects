@@ -1,18 +1,17 @@
-import Foundation
+import UIKit
 
 class Model {
     static let shared = Model()
     private init() {}
-    
-    enum Contact: String, CaseIterable {
-        case dog = "Puggy"
-    }
+
+    var friends: [Friend] = []
+
     
     func count() -> Int {
-        return contacts.count
+        return friends.count
     }
     
-    func contact(forIndex index: Int) -> Contact {
-        return contacts[index]
+    func friend(forIndex index: Int) -> Friend {
+        return friends[index]
     }
 }
