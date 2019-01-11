@@ -5,6 +5,7 @@ import UIKit
 class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     let tableViewCell = TableViewCell()
+    let detailViewController = DetailViewController()
     
     // Amount of time for transition
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -15,7 +16,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         // Get access to the view controllers
-        guard let fromTableViewCell = transitionContext.viewController(forKey: .from) as? UITableViewCell,
+        guard let fromViewController = transitionContext.viewController(forKey: .from) as? UIViewController,
             let toDetailViewController = transitionContext.viewController(forKey: .to) as? UIViewController,
             let toView = transitionContext.view(forKey: .to) else { return }
         
@@ -27,10 +28,10 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         toView.alpha = 0
         
         // Get the source label and destination label from other view controllers
-//        let sourceLabel = fromTableViewCell.friendNameLabel
-//        let destinationLabel = toDetailViewController.nameLabel
-//        let sourceImage = fromTableViewCell.friendImage
-//        let destinationImage = toDetailViewController.friendImage
+        let sourceLabel = tableViewCell.friendNameLabel
+        let destinationLabel = detailViewController.nameLabel
+        let sourceImage = tableViewCell.friendImage
+        let destinationImage = detailViewController.friendImage
         
     }
     
@@ -38,7 +39,7 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
         
 
-    
+    let navigationControllerDelegate = NavigationControllerDelegate()
     
     
 }

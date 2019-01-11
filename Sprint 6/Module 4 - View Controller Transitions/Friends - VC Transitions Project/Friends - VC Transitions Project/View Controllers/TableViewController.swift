@@ -4,6 +4,9 @@ import UIKit
 
 class TableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
     
+    var nameLabel: UILabel?
+    var friendImage: UIImageView?
+    
     // Table View's initial load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,12 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
     // Prepare for segue between Table View Controller and Detail View Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        // Set the table view as the delegate for the transition
+        segue.destination.transitioningDelegate = self
+        
+        // Pass my cell into the sourceCell in the Delegate
+        //
+        
         // Get the new view controller using segue.destination
         guard
             let destination = segue.destination as? DetailViewController,
@@ -53,8 +62,7 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
         let friend = FriendModel.shared.friendArray[indexPath.row]
         destination.friend = friend
         
-        // Set the table view as the delegate for the transition
-        segue.destination.transitioningDelegate = self
+
         
         
     }
