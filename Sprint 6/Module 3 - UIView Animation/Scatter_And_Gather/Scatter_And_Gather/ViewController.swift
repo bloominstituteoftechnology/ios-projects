@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lambdaLogoImageView: UIImageView!
     
     var shouldScramble = true
-    
+
     var lFrame = CGRect(x: 1, y: 1, width: 1, height: 1)
     var startAFrame = CGRect(x: 1, y: 1, width: 1, height: 1)
     var mFrame = CGRect(x: 1, y: 1, width: 1, height: 1)
