@@ -1,13 +1,16 @@
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
-
+class FriendsTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+    
+    var sourceCell = NavigationControllerDelegate.navDelegate.sourceCell
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Model.shared.loadDummyFriends()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.delegate = NavigationControllerDelegate.navDelegate
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,7 +36,7 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! FriendTableViewCell
 
-        cell.friendNameLabel.text = Model.shared.friendsList[indexPath.row].name
+        cell.nameLabel.text = Model.shared.friendsList[indexPath.row].name
         cell.friendImageView.image = Model.shared.friendsList[indexPath.row].image
 
         return cell
@@ -77,16 +80,28 @@ class FriendsTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
+    var selectedCell: IndexPath?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("This cell was selected: \(indexPath.row)")
+        selectedCell = indexPath
+    }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        guard  let indexPath = tableView.indexPathForSelectedRow else { return }
-        guard let destination = segue.destination as? ViewController else { return }
+         // Get the new view controller using segue.destination.
+        //guard  let indexPath = tableView.indexPathForSelectedRow else { return }
+        //guard let destination = segue.destination as? ViewController else { return }
         // Pass the selected object to the new view controller.
-        let friend = Model.shared.friendsList[indexPath.row]
-        destination.friend = friend
+        //let friend = Model.shared.friendsList[indexPath.row]
+//        destination.friend = friend
+        
+        segue.destination.transitioningDelegate = self
     }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        NavigationControllerDelegate.navDelegate.navigationController(<#T##navigationController: UINavigationController##UINavigationController#>, animationControllerFor: <#T##UINavigationController.Operation#>, from: <#T##UITableViewController#>, to: <#T##UIViewController#>)
+    }
+    let animator = Animator()
     
 
 }

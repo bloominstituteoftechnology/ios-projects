@@ -1,28 +1,33 @@
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UINavigationControllerDelegate {
+    
+    
     var friend: Friend?
+    var sourceCell: UITableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        friendDetailNameLabel.text = friend?.name
+        print(animator)
+        nameLabel.text = friend?.name
         
-        friendDetailJobLabel.text = friend?.job
+        jobLabel.text = friend?.job
         
-        friendDetailImageView.image = friend?.image
+        imageView.image = friend?.image
+        imageView.backgroundColor = .green
         
         friendDetailTitleLabel.title = friend?.name
         
     }
     
-    @IBOutlet weak var friendDetailImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var friendDetailNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var friendDetailJobLabel: UILabel!
+    @IBOutlet weak var jobLabel: UILabel!
     
     @IBOutlet weak var friendDetailTitleLabel: UINavigationItem!
     
+    let animator = Animator()
 }
 

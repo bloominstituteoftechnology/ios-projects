@@ -38,11 +38,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="90" id="b3r-QU-gDi" customClass="FriendTableViewCell" customModule="Module4ViewControllerTransitions" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="90" id="b3r-QU-gDi" customClass="FriendTableViewCell" customModule="Module4ViewControllerTransitions" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b3r-QU-gDi" id="oEa-rW-JtL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdy-KL-qlk">
@@ -69,9 +69,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="friendImageView" destination="lTT-4t-cxu" id="nSR-i3-1yT"/>
-                                    <outlet property="friendNameLabel" destination="Qdy-KL-qlk" id="9Bp-Ya-bL8"/>
-                                    <segue destination="UYd-w3-eBs" kind="show" id="KE4-a6-k81"/>
+                                    <outlet property="friendImageView" destination="lTT-4t-cxu" id="U8r-kQ-zle"/>
+                                    <outlet property="nameLabel" destination="Qdy-KL-qlk" id="bdB-qj-661"/>
+                                    <segue destination="UYd-w3-eBs" kind="show" id="8FW-yV-EKC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,10 +131,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cod-8m-FjG"/>
                     <connections>
-                        <outlet property="friendDetailImageView" destination="hzT-sM-xFA" id="19k-N0-Y4B"/>
-                        <outlet property="friendDetailJobLabel" destination="vcJ-VG-Lty" id="O4t-sa-ki4"/>
-                        <outlet property="friendDetailNameLabel" destination="GEy-Bi-1bQ" id="SRx-Ob-HWP"/>
                         <outlet property="friendDetailTitleLabel" destination="cod-8m-FjG" id="c0O-7E-UAj"/>
+                        <outlet property="imageView" destination="hzT-sM-xFA" id="fYI-ZX-BzI"/>
+                        <outlet property="jobLabel" destination="vcJ-VG-Lty" id="Rzs-Yh-smr"/>
+                        <outlet property="nameLabel" destination="GEy-Bi-1bQ" id="kwl-bb-7Mo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIS-sf-GOc" userLabel="First Responder" sceneMemberID="firstResponder"/>

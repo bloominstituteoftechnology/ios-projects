@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB68315421E8024F00DDD9F0 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68315321E8024F00DDD9F0 /* FriendTableViewCell.swift */; };
+		AB68315621E8177D00DDD9F0 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68315521E8177D00DDD9F0 /* NavigationControllerDelegate.swift */; };
+		AB68315821E819F900DDD9F0 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68315721E819F900DDD9F0 /* ImageTransitionAnimator.swift */; };
 		ABAA30E621E7E30D001D559A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA30E521E7E30D001D559A /* AppDelegate.swift */; };
 		ABAA30E821E7E30D001D559A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA30E721E7E30D001D559A /* ViewController.swift */; };
 		ABAA30EB21E7E30D001D559A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA30E921E7E30D001D559A /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		AB68315321E8024F00DDD9F0 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		AB68315521E8177D00DDD9F0 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		AB68315721E819F900DDD9F0 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		ABAA30E221E7E30D001D559A /* Module4ViewControllerTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Module4ViewControllerTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAA30E521E7E30D001D559A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAA30E721E7E30D001D559A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				ABAA30F921E7F378001D559A /* Friend.swift */,
 				ABAA30FB21E7F500001D559A /* Model.swift */,
 				ABAA30E721E7E30D001D559A /* ViewController.swift */,
+				AB68315521E8177D00DDD9F0 /* NavigationControllerDelegate.swift */,
+				AB68315721E819F900DDD9F0 /* ImageTransitionAnimator.swift */,
 				ABAA30E921E7E30D001D559A /* Main.storyboard */,
 				AB68315321E8024F00DDD9F0 /* FriendTableViewCell.swift */,
 				ABAA30EC21E7E30E001D559A /* Assets.xcassets */,
@@ -148,10 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAA30FC21E7F500001D559A /* Model.swift in Sources */,
+				AB68315821E819F900DDD9F0 /* ImageTransitionAnimator.swift in Sources */,
 				ABAA30E821E7E30D001D559A /* ViewController.swift in Sources */,
 				ABAA30E621E7E30D001D559A /* AppDelegate.swift in Sources */,
 				AB68315421E8024F00DDD9F0 /* FriendTableViewCell.swift in Sources */,
 				ABAA30F821E7F2FE001D559A /* FriendsTableViewController.swift in Sources */,
+				AB68315621E8177D00DDD9F0 /* NavigationControllerDelegate.swift in Sources */,
 				ABAA30FA21E7F378001D559A /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
