@@ -19,7 +19,7 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.shared.count()
+        return friends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,7 +39,7 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
         guard let destination = segue.destination as? DetailViewController
             else { return }
         
-        destination.friend = Model.shared.friend(forIndex: indexPath.row)
+        destination.friend = friends[indexPath.row]
     }
 
 }

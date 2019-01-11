@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         guard let friend = friend else { return }
-        //contactView.image = contact.image(UIImage)
+        contactView.image = friend.imageFriend
         nameLabel.text = friend.name
         infoLabel.text = friend.info
     }
