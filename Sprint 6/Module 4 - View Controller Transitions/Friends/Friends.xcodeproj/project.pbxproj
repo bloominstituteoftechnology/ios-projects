@@ -12,6 +12,11 @@
 		A216088921E7E1D7004385A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A216088721E7E1D7004385A0 /* Main.storyboard */; };
 		A216088B21E7E1D7004385A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A216088A21E7E1D7004385A0 /* Assets.xcassets */; };
 		A216088E21E7E1D7004385A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A216088C21E7E1D7004385A0 /* LaunchScreen.storyboard */; };
+		A216089621E7E498004385A0 /* FriendsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216089521E7E498004385A0 /* FriendsTableTableViewController.swift */; };
+		A216089821E7E63A004385A0 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216089721E7E63A004385A0 /* FriendModel.swift */; };
+		A216089A21E7E8B9004385A0 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216089921E7E8B9004385A0 /* NavigationControllerDelegate.swift */; };
+		A216089C21E7EB7E004385A0 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216089B21E7EB7E004385A0 /* ImageTransitionAnimator.swift */; };
+		A21608A021E7FCDD004385A0 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216089F21E7FCDD004385A0 /* FriendTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		A216088A21E7E1D7004385A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A216088D21E7E1D7004385A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A216088F21E7E1D7004385A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A216089521E7E498004385A0 /* FriendsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableTableViewController.swift; sourceTree = "<group>"; };
+		A216089721E7E63A004385A0 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		A216089921E7E8B9004385A0 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		A216089B21E7EB7E004385A0 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
+		A216089F21E7FCDD004385A0 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +64,13 @@
 		A216088221E7E1D7004385A0 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				A216089721E7E63A004385A0 /* FriendModel.swift */,
 				A216088321E7E1D7004385A0 /* AppDelegate.swift */,
 				A216088521E7E1D7004385A0 /* ViewController.swift */,
+				A216089921E7E8B9004385A0 /* NavigationControllerDelegate.swift */,
+				A216089521E7E498004385A0 /* FriendsTableTableViewController.swift */,
+				A216089F21E7FCDD004385A0 /* FriendTableViewCell.swift */,
+				A216089B21E7EB7E004385A0 /* ImageTransitionAnimator.swift */,
 				A216088721E7E1D7004385A0 /* Main.storyboard */,
 				A216088A21E7E1D7004385A0 /* Assets.xcassets */,
 				A216088C21E7E1D7004385A0 /* LaunchScreen.storyboard */,
@@ -135,8 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A216089A21E7E8B9004385A0 /* NavigationControllerDelegate.swift in Sources */,
+				A216089621E7E498004385A0 /* FriendsTableTableViewController.swift in Sources */,
+				A216089821E7E63A004385A0 /* FriendModel.swift in Sources */,
+				A216089C21E7EB7E004385A0 /* ImageTransitionAnimator.swift in Sources */,
 				A216088621E7E1D7004385A0 /* ViewController.swift in Sources */,
 				A216088421E7E1D7004385A0 /* AppDelegate.swift in Sources */,
+				A21608A021E7FCDD004385A0 /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

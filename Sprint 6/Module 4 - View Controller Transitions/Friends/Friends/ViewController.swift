@@ -8,11 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    var friend: Friend?
+    
+    @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var friendOccupation: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        guard let friend = friend else {return}
+        friendImageView.image = friend.image
+        friendName.text = friend.name
+        friendOccupation.text = friend.occupation
     }
 
 

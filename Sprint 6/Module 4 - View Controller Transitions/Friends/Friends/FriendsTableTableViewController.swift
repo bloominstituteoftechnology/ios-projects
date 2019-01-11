@@ -8,10 +8,16 @@
 
 import UIKit
 
-class FriendsTableTableViewController: UITableViewController {
+class FriendsTableTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+    let navConDel = NavigationControllerDelegate()
+    var nameLabel: UILabel?
+    var imageView: UIImageView?
+    
+    let friends = [Friend(name: "Austin Cole", occupation: "iOS4 Student", image: UIImage(named: "20190106_160712")!),Friend(name: "Austin Cole's Identical Twin", occupation: "Barbershop Inspector", image: UIImage(named: "20190106_160712")!)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = navConDel
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,23 +30,22 @@ class FriendsTableTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
-
+        cell.imageView?.image = friends[indexPath.row].image
+        cell.textLabel?.text = friends[indexPath.row].name
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,15 +81,17 @@ class FriendsTableTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let destination = segue.destination as? ViewController else { return }
+        navConDel.sourceCell = tableView.cellForRow(at: indexPath) as? FriendTableViewCell
+        destination.friend = friends[indexPath.row]
+        imageView = tableView.cellForRow(at: indexPath)?.imageView
+        nameLabel = tableView.cellForRow(at: indexPath)?.textLabel
+        
     }
-    */
 
 }

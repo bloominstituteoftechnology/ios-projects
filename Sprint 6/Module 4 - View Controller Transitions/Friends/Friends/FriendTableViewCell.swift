@@ -9,7 +9,6 @@
 import UIKit
 
 class FriendTableViewCell: UITableViewCell {
-    @IBOutlet weak var friendNameLabel: UILabel!
     @IBOutlet weak var friendImagelabel: UIImageView!
     
 
