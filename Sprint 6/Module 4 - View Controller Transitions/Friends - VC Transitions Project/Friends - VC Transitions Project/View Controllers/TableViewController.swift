@@ -2,11 +2,14 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
     
     // Table View's initial load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Provide navigation controller with a delegate
+        navigationController?.delegate = navigationControllerDelegate
         
         FriendModel.shared.createFriend()
     }
@@ -45,13 +48,23 @@ class TableViewController: UITableViewController {
             let destination = segue.destination as? DetailViewController,
             let indexPath = tableView.indexPathForSelectedRow
             else { return }
-            
+        
         // Pass the friend that corresponds with the indexPath that was tapped to the new view controller
         let friend = FriendModel.shared.friendArray[indexPath.row]
         destination.friend = friend
         
+        // Set the table view as the delegate for the transition
+        segue.destination.transitioningDelegate = self
+        
         
     }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return imageTransitionAnimator
+    }
+    
+    private let imageTransitionAnimator = ImageTransitionAnimator()
+    private let navigationControllerDelegate = NavigationControllerDelegate()
     
     
 }
