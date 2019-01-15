@@ -19,6 +19,8 @@ class CustomControl: UIControl {
         setup()
     }
     
+    
+    
     func setup() {
         
         var labelsArray: [UILabel] = []
@@ -57,14 +59,61 @@ class CustomControl: UIControl {
             count += 1.0
 
         }
-        
     }
     
+
+    // Tell Auto Layout how big the custom control should be
     override var intrinsicContentSize: CGSize {
         let componentsWidth = CGFloat(componentCount) * componentDimension
         let componentsSpacing = CGFloat(componentCount + 1) * 8.0
         let width = componentsWidth + componentsSpacing
         return CGSize(width: width, height: componentDimension)
+    }
+    
+    
+    // MARK: - Touch Handler Implementation
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        // Respond to the start of user's touch
+        updateValue(at: touch)
+        
+        return true
+    }
+    
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchDragInside, .touchDragOutside])
+            updateValue(at: touch)
+        }
+        
+        return true
+    }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        defer { super.endTracking(touch, with: event) }
+        
+        // Touch is optional, so unwrap it
+        guard let touch = touch else { return }
+        
+        // Get current location
+        let touchPoint = touch.location(in: self)
+        
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchUpInside, .touchUpOutside])
+            updateValue(at: touch)
+        }
+    }
+    
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: [.touchCancel])
+    }
+    
+    func updateValue(at touch: UITouch) {
+        
     }
     
 }
