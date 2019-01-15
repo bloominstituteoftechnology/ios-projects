@@ -78,9 +78,10 @@ class CustomControl: UIControl {
     }
     
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        guard let touchPoint =  touch?.location(in: self) else {return}
+        guard let touch = touch else { return }
+        let touchPoint =  touch.location(in: self)
         if bounds.contains(touchPoint){
-            self.updateValue(at: touch!)
+            self.updateValue(at: touch)
             sendActions(for: [.touchUpInside, .valueChanged])
         } else {
             sendActions(for: [.touchUpOutside])
