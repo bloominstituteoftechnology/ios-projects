@@ -24,6 +24,20 @@ class ViewController: UIViewController {
         return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
     }
     
+    func fadeLogo() {
+        if self.lambdaView.alpha == 0.0 {
+            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseIn, animations: {
+                self.lambdaView.alpha = 1.0
+            })
+            
+        } else {
+            UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveEaseOut, animations: {
+                self.lambdaView.alpha = 0.0
+            })
+        }
+    }
+        
+    
     @IBAction func toggle(_ sender: Any) {
         if shouldScramble == false {
             scatter()
@@ -34,13 +48,13 @@ class ViewController: UIViewController {
     }
     
     func scatter() {
-        
+        fadeLogo()
+       
+            
     }
     
     func gather() {
+        fadeLogo()
         
     }
-    
-    
 }
-
