@@ -69,7 +69,7 @@ class CustomControl: UIControl {
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchPoint =  touch.location(in: self)
         if bounds.contains(touchPoint){
-            self.updateValue(at: touch)
+            updateValue(at: touch)
             sendActions(for: [.touchDragInside, .valueChanged])
         } else {
             sendActions(for: [.touchDragOutside])
@@ -81,7 +81,7 @@ class CustomControl: UIControl {
         guard let touch = touch else { return }
         let touchPoint =  touch.location(in: self)
         if bounds.contains(touchPoint){
-            self.updateValue(at: touch)
+            updateValue(at: touch)
             sendActions(for: [.touchUpInside, .valueChanged])
         } else {
             sendActions(for: [.touchUpOutside])
@@ -98,9 +98,11 @@ class CustomControl: UIControl {
             let touchPoint = touch.location(in: label)
             if bounds.contains(touchPoint) {
                 CustomControl.value = label.tag
+                if label.tag <= CustomControl.value {
                 label.textColor = componentActiveColor
                 label.performFlare()
                 sendActions(for: [.valueChanged])
+                }
             } else {
                 label.textColor = componentInactiveColor
                 sendActions(for: [.valueChanged])
@@ -108,17 +110,17 @@ class CustomControl: UIControl {
         }
     }
 }
-    extension UIView {
-        // "Flare view" animation sequence
-        func performFlare() {
-            func flare()   { transform = CGAffineTransform(scaleX: 2.6, y: 2.6)
-                             transform = CGAffineTransform(rotationAngle: 30.0) }
-            func unflare() { transform = .identity }
-            
-            UIView.animate(withDuration: 0.3,
-                           animations: { flare() },
-                           completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
-        }
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 2.6, y: 2.6)
+            transform = CGAffineTransform(rotationAngle: 30.0) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
-    
+}
+
 
