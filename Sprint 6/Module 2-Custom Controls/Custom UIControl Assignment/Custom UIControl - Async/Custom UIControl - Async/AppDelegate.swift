@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Custom UIControl Assignment
+//  Custom UIControl - Async
 //
-//  Created by Ivan Caldwell on 1/8/19.
+//  Created by Ivan Caldwell on 1/15/19.
 //  Copyright © 2019 Ivan Caldwell. All rights reserved.
 //
 

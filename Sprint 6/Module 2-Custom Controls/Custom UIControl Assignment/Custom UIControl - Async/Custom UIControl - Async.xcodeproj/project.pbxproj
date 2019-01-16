@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CCA34C721E5347700A43AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA34C621E5347700A43AB1 /* AppDelegate.swift */; };
-		2CCA34C921E5347700A43AB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA34C821E5347700A43AB1 /* ViewController.swift */; };
-		2CCA34CC21E5347700A43AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CA21E5347700A43AB1 /* Main.storyboard */; };
-		2CCA34CE21E5348100A43AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CD21E5348100A43AB1 /* Assets.xcassets */; };
-		2CCA34D121E5348100A43AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */; };
-		2CCA34D921E5373700A43AB1 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA34D821E5373700A43AB1 /* CustomControl.swift */; };
+		2C2B43E421EE7A980071AEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B43E321EE7A980071AEB4 /* AppDelegate.swift */; };
+		2C2B43E621EE7A980071AEB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B43E521EE7A980071AEB4 /* ViewController.swift */; };
+		2C2B43E921EE7A980071AEB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B43E721EE7A980071AEB4 /* Main.storyboard */; };
+		2C2B43EB21EE7AAB0071AEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B43EA21EE7AAB0071AEB4 /* Assets.xcassets */; };
+		2C2B43EE21EE7AAB0071AEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B43EC21EE7AAB0071AEB4 /* LaunchScreen.storyboard */; };
+		2C2B43F621EE86EA0071AEB4 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B43F521EE86EA0071AEB4 /* CustomControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CCA34C321E5347700A43AB1 /* Custom UIControl Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom UIControl Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CCA34C621E5347700A43AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CCA34C821E5347700A43AB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2CCA34CB21E5347700A43AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2CCA34CD21E5348100A43AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2CCA34D021E5348100A43AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2CCA34D221E5348100A43AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CCA34D821E5373700A43AB1 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		2C2B43E021EE7A980071AEB4 /* Custom UIControl - Async.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom UIControl - Async.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2B43E321EE7A980071AEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C2B43E521EE7A980071AEB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C2B43E821EE7A980071AEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C2B43EA21EE7AAB0071AEB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C2B43ED21EE7AAB0071AEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C2B43EF21EE7AAB0071AEB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C2B43F521EE86EA0071AEB4 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2CCA34C021E5347700A43AB1 /* Frameworks */ = {
+		2C2B43DD21EE7A980071AEB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,104 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CCA34BA21E5347700A43AB1 = {
+		2C2B43D721EE7A980071AEB4 = {
 			isa = PBXGroup;
 			children = (
-				2CCA34C521E5347700A43AB1 /* Custom UIControl Assignment */,
-				2CCA34C421E5347700A43AB1 /* Products */,
+				2C2B43E221EE7A980071AEB4 /* Custom UIControl - Async */,
+				2C2B43E121EE7A980071AEB4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2CCA34C421E5347700A43AB1 /* Products */ = {
+		2C2B43E121EE7A980071AEB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CCA34C321E5347700A43AB1 /* Custom UIControl Assignment.app */,
+				2C2B43E021EE7A980071AEB4 /* Custom UIControl - Async.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CCA34C521E5347700A43AB1 /* Custom UIControl Assignment */ = {
+		2C2B43E221EE7A980071AEB4 /* Custom UIControl - Async */ = {
 			isa = PBXGroup;
 			children = (
-				2CCA34DC21E537FC00A43AB1 /* Model */,
-				2CCA34DB21E537E800A43AB1 /* View Controllers */,
-				2CCA34DA21E537C600A43AB1 /* Views */,
-				2CCA34DD21E5381900A43AB1 /* Resources */,
-				2CCA34D221E5348100A43AB1 /* Info.plist */,
+				2C2B43E321EE7A980071AEB4 /* AppDelegate.swift */,
+				2C2B43E521EE7A980071AEB4 /* ViewController.swift */,
+				2C2B43E721EE7A980071AEB4 /* Main.storyboard */,
+				2C2B43F521EE86EA0071AEB4 /* CustomControl.swift */,
+				2C2B43EA21EE7AAB0071AEB4 /* Assets.xcassets */,
+				2C2B43EC21EE7AAB0071AEB4 /* LaunchScreen.storyboard */,
+				2C2B43EF21EE7AAB0071AEB4 /* Info.plist */,
 			);
-			path = "Custom UIControl Assignment";
-			sourceTree = "<group>";
-		};
-		2CCA34DA21E537C600A43AB1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2CCA34CA21E5347700A43AB1 /* Main.storyboard */,
-				2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		2CCA34DB21E537E800A43AB1 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2CCA34C821E5347700A43AB1 /* ViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		2CCA34DC21E537FC00A43AB1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2CCA34D821E5373700A43AB1 /* CustomControl.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2CCA34DD21E5381900A43AB1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2CCA34C621E5347700A43AB1 /* AppDelegate.swift */,
-				2CCA34CD21E5348100A43AB1 /* Assets.xcassets */,
-			);
-			path = Resources;
+			path = "Custom UIControl - Async";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CCA34C221E5347700A43AB1 /* Custom UIControl Assignment */ = {
+		2C2B43DF21EE7A980071AEB4 /* Custom UIControl - Async */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CCA34D521E5348100A43AB1 /* Build configuration list for PBXNativeTarget "Custom UIControl Assignment" */;
+			buildConfigurationList = 2C2B43F221EE7AAB0071AEB4 /* Build configuration list for PBXNativeTarget "Custom UIControl - Async" */;
 			buildPhases = (
-				2CCA34BF21E5347700A43AB1 /* Sources */,
-				2CCA34C021E5347700A43AB1 /* Frameworks */,
-				2CCA34C121E5347700A43AB1 /* Resources */,
+				2C2B43DC21EE7A980071AEB4 /* Sources */,
+				2C2B43DD21EE7A980071AEB4 /* Frameworks */,
+				2C2B43DE21EE7A980071AEB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Custom UIControl Assignment";
-			productName = "Custom UIControl Assignment";
-			productReference = 2CCA34C321E5347700A43AB1 /* Custom UIControl Assignment.app */;
+			name = "Custom UIControl - Async";
+			productName = "Custom UIControl - Async";
+			productReference = 2C2B43E021EE7A980071AEB4 /* Custom UIControl - Async.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2CCA34BB21E5347700A43AB1 /* Project object */ = {
+		2C2B43D821EE7A980071AEB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ivan Caldwell";
 				TargetAttributes = {
-					2CCA34C221E5347700A43AB1 = {
+					2C2B43DF21EE7A980071AEB4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 2CCA34BE21E5347700A43AB1 /* Build configuration list for PBXProject "Custom UIControl Assignment" */;
+			buildConfigurationList = 2C2B43DB21EE7A980071AEB4 /* Build configuration list for PBXProject "Custom UIControl - Async" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 2CCA34BA21E5347700A43AB1;
-			productRefGroup = 2CCA34C421E5347700A43AB1 /* Products */;
+			mainGroup = 2C2B43D721EE7A980071AEB4;
+			productRefGroup = 2C2B43E121EE7A980071AEB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CCA34C221E5347700A43AB1 /* Custom UIControl Assignment */,
+				2C2B43DF21EE7A980071AEB4 /* Custom UIControl - Async */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2CCA34C121E5347700A43AB1 /* Resources */ = {
+		2C2B43DE21EE7A980071AEB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CCA34D121E5348100A43AB1 /* LaunchScreen.storyboard in Resources */,
-				2CCA34CE21E5348100A43AB1 /* Assets.xcassets in Resources */,
-				2CCA34CC21E5347700A43AB1 /* Main.storyboard in Resources */,
+				2C2B43EE21EE7AAB0071AEB4 /* LaunchScreen.storyboard in Resources */,
+				2C2B43EB21EE7AAB0071AEB4 /* Assets.xcassets in Resources */,
+				2C2B43E921EE7A980071AEB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2CCA34BF21E5347700A43AB1 /* Sources */ = {
+		2C2B43DC21EE7A980071AEB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CCA34C921E5347700A43AB1 /* ViewController.swift in Sources */,
-				2CCA34D921E5373700A43AB1 /* CustomControl.swift in Sources */,
-				2CCA34C721E5347700A43AB1 /* AppDelegate.swift in Sources */,
+				2C2B43E621EE7A980071AEB4 /* ViewController.swift in Sources */,
+				2C2B43F621EE86EA0071AEB4 /* CustomControl.swift in Sources */,
+				2C2B43E421EE7A980071AEB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2CCA34CA21E5347700A43AB1 /* Main.storyboard */ = {
+		2C2B43E721EE7A980071AEB4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CCA34CB21E5347700A43AB1 /* Base */,
+				2C2B43E821EE7A980071AEB4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2CCA34CF21E5348100A43AB1 /* LaunchScreen.storyboard */ = {
+		2C2B43EC21EE7AAB0071AEB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CCA34D021E5348100A43AB1 /* Base */,
+				2C2B43ED21EE7AAB0071AEB4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -198,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2CCA34D321E5348100A43AB1 /* Debug */ = {
+		2C2B43F021EE7AAB0071AEB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		2CCA34D421E5348100A43AB1 /* Release */ = {
+		2C2B43F121EE7AAB0071AEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -314,34 +282,34 @@
 			};
 			name = Release;
 		};
-		2CCA34D621E5348100A43AB1 /* Debug */ = {
+		2C2B43F321EE7AAB0071AEB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Custom UIControl Assignment/Info.plist";
+				INFOPLIST_FILE = "Custom UIControl - Async/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.Custom-UIControl-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.Custom-UIControl---Async";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2CCA34D721E5348100A43AB1 /* Release */ = {
+		2C2B43F421EE7AAB0071AEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Custom UIControl Assignment/Info.plist";
+				INFOPLIST_FILE = "Custom UIControl - Async/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.Custom-UIControl-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.Custom-UIControl---Async";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CCA34BE21E5347700A43AB1 /* Build configuration list for PBXProject "Custom UIControl Assignment" */ = {
+		2C2B43DB21EE7A980071AEB4 /* Build configuration list for PBXProject "Custom UIControl - Async" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CCA34D321E5348100A43AB1 /* Debug */,
-				2CCA34D421E5348100A43AB1 /* Release */,
+				2C2B43F021EE7AAB0071AEB4 /* Debug */,
+				2C2B43F121EE7AAB0071AEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CCA34D521E5348100A43AB1 /* Build configuration list for PBXNativeTarget "Custom UIControl Assignment" */ = {
+		2C2B43F221EE7AAB0071AEB4 /* Build configuration list for PBXNativeTarget "Custom UIControl - Async" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CCA34D621E5348100A43AB1 /* Debug */,
-				2CCA34D721E5348100A43AB1 /* Release */,
+				2C2B43F321EE7AAB0071AEB4 /* Debug */,
+				2C2B43F421EE7AAB0071AEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2CCA34BB21E5347700A43AB1 /* Project object */;
+	rootObject = 2C2B43D821EE7A980071AEB4 /* Project object */;
 }
