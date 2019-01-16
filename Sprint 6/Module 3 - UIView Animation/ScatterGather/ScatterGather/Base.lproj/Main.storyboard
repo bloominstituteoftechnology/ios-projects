@@ -17,7 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lambda_Logo_Full" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-28-T5l">
+                                <rect key="frame" x="65" y="64" width="245" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sW7-hs-WJa"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cva-cj-0V7">
+                                <rect key="frame" x="62.5" y="314" width="250" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-0t-KCn">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbp-vj-WY4">
+                                        <rect key="frame" x="45" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5K-Gh-ZtM">
+                                        <rect key="frame" x="90" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ7-ch-sMc">
+                                        <rect key="frame" x="135" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ6-Xs-ctD">
+                                        <rect key="frame" x="180" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-5v-ACk">
+                                        <rect key="frame" x="225" y="0.0" width="25" height="39"/>
+                                        <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rbp-vj-WY4" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="0IU-Gw-1Jh"/>
+                                    <constraint firstItem="v5K-Gh-ZtM" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="2Qu-uf-Ioz"/>
+                                    <constraint firstItem="wZ7-ch-sMc" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="cjs-Gi-rrV"/>
+                                    <constraint firstItem="cJ6-Xs-ctD" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="dsM-ch-PQK"/>
+                                    <constraint firstItem="wZ7-ch-sMc" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="nTA-nr-2dY"/>
+                                    <constraint firstItem="cJ6-Xs-ctD" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="ngG-Fb-BfN"/>
+                                    <constraint firstItem="hRZ-5v-ACk" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="oTk-MT-oSy"/>
+                                    <constraint firstItem="hRZ-5v-ACk" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="rLT-yI-1X4"/>
+                                    <constraint firstItem="v5K-Gh-ZtM" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="vlg-zb-BPw"/>
+                                    <constraint firstItem="rbp-vj-WY4" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="znR-eH-C4s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92506376209999996" blue="0.98922868740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V6e-28-T5l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BbM-Ez-EVQ"/>
+                            <constraint firstItem="cva-cj-0V7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Es0-TP-SBc"/>
+                            <constraint firstItem="cva-cj-0V7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eu5-pC-X8N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V6e-28-T5l" secondAttribute="trailing" constant="65" id="cDa-mi-PjW"/>
+                            <constraint firstItem="V6e-28-T5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="xfr-LV-dQF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="34e-Yf-yay">
@@ -27,6 +95,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aLabel" destination="rbp-vj-WY4" id="7dK-zB-1pb"/>
+                        <outlet property="aLastLabel" destination="hRZ-5v-ACk" id="mNP-gZ-piR"/>
+                        <outlet property="bLabel" destination="wZ7-ch-sMc" id="doS-OK-zqn"/>
+                        <outlet property="dLabel" destination="cJ6-Xs-ctD" id="DHA-dy-QaH"/>
+                        <outlet property="lLabel" destination="Zl5-0t-KCn" id="18y-hG-oAe"/>
+                        <outlet property="lambdaView" destination="V6e-28-T5l" id="kGk-Ly-aj1"/>
+                        <outlet property="mLabel" destination="v5K-Gh-ZtM" id="CWL-Xx-IVK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,4 +128,7 @@
             <point key="canvasLocation" x="417" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lambda_Logo_Full" width="574" height="249"/>
+    </resources>
 </document>
