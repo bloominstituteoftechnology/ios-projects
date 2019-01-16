@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
-    let randColor: [UIColor] = [.red, .blue, .lightGray, .orange, .green, .brown, .yellow]
+    let randColor: [UIColor] = [.red, .blue, .purple, .orange, .lightGray, .orange, .green, .brown, .yellow]
     
     var shouldScramble: Bool = true
     var LPosition: CGRect = UILabel().frame
@@ -64,8 +64,8 @@ class ViewController: UIViewController {
             let randCGFloatY = CGFloat.random(in: 0...650)
             let rect = CGRect(x: randCGFloatX, y: randCGFloatY, width: 50, height: 50)
             UIView.animate(withDuration: 3) {
-            label.textColor = self.randColor[self.randomInt(min: 0, max: 6)].withAlphaComponent(1.0)
-            label.backgroundColor = self.randColor[self.randomInt(min: 0, max: 6)].withAlphaComponent(0.3)
+            label.textColor = self.randColor[self.randomInt(min: 0, max: 8)].withAlphaComponent(1.0)
+            label.backgroundColor = self.randColor[self.randomInt(min: 0, max: 8)].withAlphaComponent(0.3)
             label.frame = rect
             label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4)))
             label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 350)))
