@@ -125,9 +125,13 @@ class CustomControl: UIControl {
         sendActions(for: [.touchCancel])
     }
     
+    
+    
     func updateValue(at touch: UITouch) {
         
-        var count = 0
+        // Stores the value previously held before movement changes
+        let oldValue = value
+        
         // Check if touches intersect with stored label subviews
         for eachLabel in labelsArray {
             
@@ -136,33 +140,48 @@ class CustomControl: UIControl {
                 
                 // Set the control's value to the label's tag
                 value = eachLabel.tag
+            }
+            
+            // If value has changed/moved...
+            if value != oldValue {
                 
-                // Update label colors
+                // ... and if label tag matches the value...
+                if eachLabel.tag == value {
+                    
+                    // Update label colors
+                    updateLabels()
+                    
+                    // Send action for valueChanged
+                    sendActions(for: .valueChanged)
+                }
+            }
+        }
+    }
+   
+    
+    
+    // Update label colors
+    private func updateLabels() {
+        
+        // For each label in the labels array
+        for eachLabel in labelsArray {
+            
+            // If the label's tag is less than or equal to the value
+            if eachLabel.tag <= value {
+                
+                // Label color is active
                 eachLabel.textColor = componentActiveColor
                 
-//                var eachLabelTag = eachLabel.tag
-                
-//                if eachLabelTag < eachLabel.tag {
-//                    eachLabel.textColor = componentActiveColor
-//                }
-                
-
-                // Send action for valueChanged
-                sendActions(for: .valueChanged)
-                
-                count += 1
-                
+                // Label animates with flare
                 eachLabel.performFlare()
                 
             } else {
+                
+                // Labels in front of the value label keep the inactive color
                 eachLabel.textColor = componentInactiveColor
-                sendActions(for: .valueChanged)
             }
         }
-        
-        
     }
-    
     
     
 }
