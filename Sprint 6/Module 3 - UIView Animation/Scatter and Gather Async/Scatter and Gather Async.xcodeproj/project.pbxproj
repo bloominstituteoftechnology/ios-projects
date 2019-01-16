@@ -12,6 +12,7 @@
 		84B2D4D021EFCBFE00906AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B2D4CE21EFCBFE00906AEF /* Main.storyboard */; };
 		84B2D4D221EFCBFF00906AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B2D4D121EFCBFF00906AEF /* Assets.xcassets */; };
 		84B2D4D521EFCBFF00906AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B2D4D321EFCBFF00906AEF /* LaunchScreen.storyboard */; };
+		84B2D4DD21EFE66800906AEF /* UIColor + Custom Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2D4DC21EFE66800906AEF /* UIColor + Custom Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		84B2D4D121EFCBFF00906AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B2D4D421EFCBFF00906AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B2D4D621EFCBFF00906AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B2D4DC21EFE66800906AEF /* UIColor + Custom Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Custom Colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				84B2D4CA21EFCBFE00906AEF /* AppDelegate.swift */,
 				84B2D4CC21EFCBFE00906AEF /* ViewController.swift */,
+				84B2D4DC21EFE66800906AEF /* UIColor + Custom Colors.swift */,
 				84B2D4CE21EFCBFE00906AEF /* Main.storyboard */,
 				84B2D4D121EFCBFF00906AEF /* Assets.xcassets */,
 				84B2D4D321EFCBFF00906AEF /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				84B2D4CD21EFCBFE00906AEF /* ViewController.swift in Sources */,
 				84B2D4CB21EFCBFE00906AEF /* AppDelegate.swift in Sources */,
+				84B2D4DD21EFE66800906AEF /* UIColor + Custom Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

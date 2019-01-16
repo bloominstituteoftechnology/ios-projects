@@ -3,9 +3,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Reference properties
+    
+    let imageName = "Lambda_Logo_Full"
+    lazy var logoImage = UIImage(named: imageName)
+    lazy var logoImageView = UIImageView(image: logoImage!)
+
+    
+    // MARK: - Loading & Toggling
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        view.addSubview(logoImageView)
         createLabels()
         
         createLogo()
@@ -17,10 +28,17 @@ class ViewController: UIViewController {
     
     @IBAction func toggle(_ sender: Any) {
         
+        if shouldScramble == false {
+            scatter()
+        } else {
+            gather()
+        }
         
+        shouldScramble = !shouldScramble
         
     }
     
+    // MARK: - Label Construction
     
     var labelArray: [UILabel] = []
     
@@ -97,14 +115,14 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: - Image Construction
+    
     func createLogo() {
         
-        let imageName = "Lambda_Logo_Full"
-        let logoImage = UIImage(named: imageName)
-        let logoImageView = UIImageView(image: logoImage!)
+
         logoImageView.contentMode = .scaleAspectFit
         
-        view.addSubview(logoImageView)
+
         
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -135,6 +153,40 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: - Animation Features
+    
+    func scatter() {
+        
+        UIView.animate(withDuration: 2) {
+            
+            // Fade out logo
+            self.logoImageView.alpha = 0
+            
+            // Move letters to random locations and randomly rotate them
+            // Assign random text color
+            // Assign random background color
+            
+        }
+        
+    }
+    
+    func gather() {
+        
+        UIView.animate(withDuration: 2) {
+            
+            // Fade in logo
+            self.logoImageView.alpha = 1.0
+            
+            // Reset text color and background color
+            
+            // Move letters back to original location and angle
+            
+        }
+
+        
+    }
+    
+
     
 }
 
