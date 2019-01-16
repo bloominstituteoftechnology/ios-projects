@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         shouldScramble = !shouldScramble
     }
     
+    //allows for random colors
+    func getRandomColor() -> UIColor {
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
+    }
+    
     @IBAction func toggle(_ sender: Any) {
         if shouldScramble == false {
             scatter()
