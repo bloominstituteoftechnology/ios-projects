@@ -20,7 +20,13 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="34e-Yf-yay"/>
+                    <navigationItem key="navigationItem" id="34e-Yf-yay">
+                        <barButtonItem key="rightBarButtonItem" title="toggle" id="PWf-kY-lsw">
+                            <connections>
+                                <action selector="toggle:" destination="BYZ-38-t0r" id="mRI-xW-YFg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
