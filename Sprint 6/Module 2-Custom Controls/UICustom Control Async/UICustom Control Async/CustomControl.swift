@@ -7,6 +7,9 @@ class CustomControl: UIControl {
     // Establish control as a value-providing and value-changing type
     var value: Int = 1
     
+    // Array to store label
+    var labelsArray: [UILabel] = []
+    
     private let componentDimension: CGFloat = 40.0
     private let componentCount = 5
     private let componentActiveColor = UIColor.black
@@ -19,11 +22,9 @@ class CustomControl: UIControl {
         setup()
     }
     
-    
+
     
     func setup() {
-        
-        var labelsArray: [UILabel] = []
         
         // Variable to increment spacing
         var count: CGFloat = 0.0
@@ -49,6 +50,7 @@ class CustomControl: UIControl {
             label.textAlignment = .center
             
             // First label has active color, the rest have the inactive color
+            //label.textColor = componentInactiveColor
             if label.tag > 1 {
                 label.textColor = componentInactiveColor
             } else {
@@ -78,32 +80,43 @@ class CustomControl: UIControl {
         // Respond to the start of user's touch
         updateValue(at: touch)
         
+        sendActions(for: [.touchDown, .valueChanged])
+        
         return true
     }
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         
+        // Assign the touch point to the current location
         let touchPoint = touch.location(in: self)
         
+        // If contained within the view, send the actions
         if bounds.contains(touchPoint) {
             sendActions(for: [.touchDragInside, .touchDragOutside])
+            
+            // Update the value
             updateValue(at: touch)
         }
         
+        // Continue tracking the touch event
         return true
     }
     
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        // Defer: call super before returning, regardless of what happens in function
         defer { super.endTracking(touch, with: event) }
         
         // Touch is optional, so unwrap it
         guard let touch = touch else { return }
         
-        // Get current location
+        // Assign the touch point to the current location
         let touchPoint = touch.location(in: self)
         
+        // If contained within the view, send the actions
         if bounds.contains(touchPoint) {
             sendActions(for: [.touchUpInside, .touchUpOutside])
+            
+            // Update the value
             updateValue(at: touch)
         }
     }
@@ -114,6 +127,56 @@ class CustomControl: UIControl {
     
     func updateValue(at touch: UITouch) {
         
+        var count = 0
+        // Check if touches intersect with stored label subviews
+        for eachLabel in labelsArray {
+            
+            // Detect whether each touch's location is contained in each label's frame
+            if eachLabel.frame.contains(touch.location(in: self)) {
+                
+                // Set the control's value to the label's tag
+                value = eachLabel.tag
+                
+                // Update label colors
+                eachLabel.textColor = componentActiveColor
+                
+//                var eachLabelTag = eachLabel.tag
+                
+//                if eachLabelTag < eachLabel.tag {
+//                    eachLabel.textColor = componentActiveColor
+//                }
+                
+
+                // Send action for valueChanged
+                sendActions(for: .valueChanged)
+                
+                count += 1
+                
+                eachLabel.performFlare()
+                
+            } else {
+                eachLabel.textColor = componentInactiveColor
+                sendActions(for: .valueChanged)
+            }
+        }
+        
+        
+    }
+    
+    
+    
+}
+
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+    UIView.animate(withDuration: 0.3,
+                   animations: { flare() },
+                   completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
     
 }
