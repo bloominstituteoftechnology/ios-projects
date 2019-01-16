@@ -13,6 +13,7 @@
 		F83BD17B21E5426D006148A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17A21E5426D006148A4 /* Assets.xcassets */; };
 		F83BD17E21E5426D006148A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17C21E5426D006148A4 /* LaunchScreen.storyboard */; };
 		F83BD18621E54645006148A4 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83BD18521E54645006148A4 /* CustomControl.swift */; };
+		F8CFC9BC21EE9F630070B0FE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8CFC9BB21EE9F5F0070B0FE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F83BD17D21E5426D006148A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F83BD17F21E5426D006148A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F83BD18521E54645006148A4 /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
+		F8CFC9BB21EE9F5F0070B0FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		F83BD17221E5426C006148A4 /* Custom Controls */ = {
 			isa = PBXGroup;
 			children = (
-				F83BD17321E5426C006148A4 /* AppDelegate.swift */,
+				F8CFC9BD21EEA7350070B0FE /* Resources */,
 				F83BD17521E5426C006148A4 /* ViewController.swift */,
 				F83BD17721E5426C006148A4 /* Main.storyboard */,
 				F83BD18521E54645006148A4 /* CustomControl.swift */,
+				F8CFC9BB21EE9F5F0070B0FE /* README.md */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		F8CFC9BD21EEA7350070B0FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F83BD17321E5426C006148A4 /* AppDelegate.swift */,
 				F83BD17A21E5426D006148A4 /* Assets.xcassets */,
 				F83BD17C21E5426D006148A4 /* LaunchScreen.storyboard */,
 				F83BD17F21E5426D006148A4 /* Info.plist */,
 			);
-			path = "Custom Controls";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			files = (
 				F83BD17E21E5426D006148A4 /* LaunchScreen.storyboard in Resources */,
 				F83BD17B21E5426D006148A4 /* Assets.xcassets in Resources */,
+				F8CFC9BC21EE9F630070B0FE /* README.md in Resources */,
 				F83BD17921E5426C006148A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
