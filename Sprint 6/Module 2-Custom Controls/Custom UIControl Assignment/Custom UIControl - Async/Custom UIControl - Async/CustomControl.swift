@@ -15,10 +15,12 @@ import UIKit
 extension UIView {
     // "Flare view" animation sequence
     func performFlare() {
-        func flare() { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func flare() {
+            transform = CGAffineTransform(scaleX: 1.6, y: 1.6)
+        }
         func unflare() { transform = .identity }
         UIView.animate(withDuration: 0.3,
-                       animations: { flare() },
+                       animations: { flare()},
                        completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
@@ -30,7 +32,7 @@ class CustomControl: UIControl {
     var labels: [UILabel] = []
     
     private let componentDimension :CGFloat = 40.0
-    private let componentCount = 5
+    private let componentCount = 6
     private let componentActiveColor = UIColor.black
     private let componentInactiveColor = UIColor.gray
     
