@@ -96,25 +96,24 @@ class CustomControl: UIControl {
     func updateValue(at touch: UITouch ) {
         for label in labels {
             let touchPoint = touch.location(in: label)
-            if bounds.contains(touchPoint) {
-                CustomControl.value = label.tag
-                if label.tag <= CustomControl.value {
+            if bounds.contains(touchPoint) {  CustomControl.value = label.tag }
+            if CustomControl.value >= label.tag {
                 label.textColor = componentActiveColor
                 label.performFlare()
-                sendActions(for: [.valueChanged])
-                }
+                
             } else {
                 label.textColor = componentInactiveColor
-                sendActions(for: [.valueChanged])
             }
+            sendActions(for: [.valueChanged])
         }
     }
+    
 }
 extension UIView {
     // "Flare view" animation sequence
     func performFlare() {
-        func flare()   { transform = CGAffineTransform(scaleX: 2.6, y: 2.6)
-            transform = CGAffineTransform(rotationAngle: 30.0) }
+        func flare()   { transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            transform = CGAffineTransform(rotationAngle: 15.0) }
         func unflare() { transform = .identity }
         
         UIView.animate(withDuration: 0.3,
@@ -122,5 +121,3 @@ extension UIView {
                        completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
-
-
