@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
         }
     }
     
-    private func updateViews() {
+    func updateViews() {
         
         // Make sure there is a friend
         guard let friend = friend else { return }
