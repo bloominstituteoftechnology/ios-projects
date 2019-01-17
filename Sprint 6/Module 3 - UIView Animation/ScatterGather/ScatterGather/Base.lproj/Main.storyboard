@@ -25,57 +25,45 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cva-cj-0V7">
-                                <rect key="frame" x="62.5" y="314" width="250" height="39"/>
+                                <rect key="frame" x="74" y="314" width="227" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-0t-KCn">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbp-vj-WY4">
-                                        <rect key="frame" x="45" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="37" y="0.0" width="22" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5K-Gh-ZtM">
-                                        <rect key="frame" x="90" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="79" y="0.0" width="25" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ7-ch-sMc">
-                                        <rect key="frame" x="135" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="124" y="0.0" width="19.5" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ6-Xs-ctD">
-                                        <rect key="frame" x="180" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="163.5" y="0.0" width="21.5" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-5v-ACk">
-                                        <rect key="frame" x="225" y="0.0" width="25" height="39"/>
+                                        <rect key="frame" x="205" y="0.0" width="22" height="39"/>
                                         <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="rbp-vj-WY4" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="0IU-Gw-1Jh"/>
-                                    <constraint firstItem="v5K-Gh-ZtM" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="2Qu-uf-Ioz"/>
-                                    <constraint firstItem="wZ7-ch-sMc" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="cjs-Gi-rrV"/>
-                                    <constraint firstItem="cJ6-Xs-ctD" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="dsM-ch-PQK"/>
-                                    <constraint firstItem="wZ7-ch-sMc" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="nTA-nr-2dY"/>
-                                    <constraint firstItem="cJ6-Xs-ctD" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="ngG-Fb-BfN"/>
-                                    <constraint firstItem="hRZ-5v-ACk" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="oTk-MT-oSy"/>
-                                    <constraint firstItem="hRZ-5v-ACk" firstAttribute="width" secondItem="Zl5-0t-KCn" secondAttribute="width" id="rLT-yI-1X4"/>
-                                    <constraint firstItem="v5K-Gh-ZtM" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="vlg-zb-BPw"/>
-                                    <constraint firstItem="rbp-vj-WY4" firstAttribute="height" secondItem="Zl5-0t-KCn" secondAttribute="height" id="znR-eH-C4s"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92506376209999996" blue="0.98922868740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
