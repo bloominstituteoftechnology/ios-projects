@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                     label!.center.y = self.getRandomLocationY()
                     label!.backgroundColor = self.getRandomColor()
                     label!.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-                    label!.transform = CGAffineTransform(scaleX: 2, y: 2)
+                    label!.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                     label!.textColor = self.getRandomColor()
                 }
             }
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     
     func getRandomLocationY() -> CGFloat {
         // Huhhhhh... This is annoying...
-        let number = Float.random(in: Float(-maxHeight + labelHeight) ... Float(maxHeight/2))
+        let number = Float.random(in: Float(0 + labelHeight * 2) ... Float(maxHeight))
         return CGFloat(number)
     }
 }
