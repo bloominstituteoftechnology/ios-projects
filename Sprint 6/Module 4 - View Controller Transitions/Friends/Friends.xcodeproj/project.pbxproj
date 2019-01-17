@@ -62,8 +62,8 @@
 			children = (
 				486571D121F1218A00E85393 /* AppDelegate.swift */,
 				486571E721F12F5D00E85393 /* Friend.swift */,
-				486571E321F12A8400E85393 /* TableViewController.swift */,
 				486571E521F12D2100E85393 /* TableViewCell.swift */,
+				486571E321F12A8400E85393 /* TableViewController.swift */,
 				486571D321F1218A00E85393 /* DetailViewController.swift */,
 				486571D521F1218A00E85393 /* Main.storyboard */,
 				486571D821F1218B00E85393 /* Assets.xcassets */,
