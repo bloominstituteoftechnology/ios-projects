@@ -109,6 +109,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PeC-tt-fTj"/>
                     </view>
+                    <connections>
+                        <outlet property="friendView" destination="NEk-Ce-NWU" id="Hio-mh-hb6"/>
+                        <outlet property="infoLabel" destination="kz6-a7-okg" id="CUx-PS-08v"/>
+                        <outlet property="nameLabel" destination="oAo-GD-MaB" id="u4p-EM-yuG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afX-2h-O7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
