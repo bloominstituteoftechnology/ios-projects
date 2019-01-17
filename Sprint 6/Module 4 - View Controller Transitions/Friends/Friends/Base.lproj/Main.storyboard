@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="-206" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="OV3-Bb-swO">
             <objects>
-                <viewController id="iHP-7Z-g1C" sceneMemberID="viewController">
+                <viewController id="iHP-7Z-g1C" customClass="DetailViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eCz-s1-szQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
