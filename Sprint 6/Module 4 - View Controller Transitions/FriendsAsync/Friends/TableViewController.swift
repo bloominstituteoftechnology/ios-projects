@@ -12,7 +12,12 @@ class TableViewController: UITableViewController, LabelProviding, UIViewControll
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateTable()
        navigationController?.delegate = navigationControllerDelegate
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     var friendName: UILabel!
@@ -37,11 +42,6 @@ class TableViewController: UITableViewController, LabelProviding, UIViewControll
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell else { fatalError("No such cell")}
 
-       
-       
-       
-   
-        
         cell.textLabel?.text = friends.friends[indexPath.row]
         cell.imageView?.image = friends.friendsImage[indexPath.row]
         
@@ -62,6 +62,24 @@ class TableViewController: UITableViewController, LabelProviding, UIViewControll
         destinationDVC.index = index
         friendName = tableView.cellForRow(at: indexPath)?.textLabel
         friendImage = tableView.cellForRow(at: indexPath)?.imageView
+    }
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        
+        let tableViewHeight = tableView.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+        }
+        
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter += 1
+        }
     }
   
 }

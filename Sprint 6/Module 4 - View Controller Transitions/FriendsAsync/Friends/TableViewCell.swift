@@ -22,7 +22,7 @@ class TableViewCell: UITableViewCell, LabelProviding, UIViewControllerTransition
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.imageView?.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
+        self.imageView?.frame = CGRect(x: 8, y: 0, width: 70, height: 70)
         guard let label = self.textLabel else { return }
         label.frame = CGRect(x: 110, y: 15, width: 120, height: 20)
         label.font = UIFont(name: "Neuropol X", size: 20)
