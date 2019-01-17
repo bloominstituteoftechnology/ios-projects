@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,10 +21,10 @@ class ViewController: UIViewController {
         view.addSubview(greeenSquare)
         greeenSquare.translatesAutoresizingMaskIntoConstraints = false
         
-        let greeenPurple = UIView()
-        greeenPurple.backgroundColor = .purple
-        view.addSubview(greeenPurple)
-        greeenPurple.translatesAutoresizingMaskIntoConstraints = false
+        let purpleSquare = UIView()
+        purpleSquare.backgroundColor = .purple
+        view.addSubview(purpleSquare)
+        purpleSquare.translatesAutoresizingMaskIntoConstraints = false
         
         let widthConstraint = NSLayoutConstraint(item: greeenSquare,
                                                  attribute: .width,
@@ -60,15 +63,15 @@ class ViewController: UIViewController {
         
         
         
-        let topConstraintgreeenPurple = NSLayoutConstraint(item: greeenPurple,
+        let topConstraintPurpleSquare = NSLayoutConstraint(item: purpleSquare,
                                                  attribute: .top,
                                                  relatedBy: .equal,
                                                  toItem: greeenSquare,
                                                  attribute: .bottom,
                                                  multiplier: 1.0,
-                                                 constant: 10.0)
+                                                 constant: 20.0)
         
-        let widthConstraintgreeenPurple = NSLayoutConstraint(item: greeenPurple,
+        let widthConstraintPurpleSquare = NSLayoutConstraint(item: purpleSquare,
                                                   attribute: .width,
                                                   relatedBy: .equal,
                                                   toItem: greeenSquare,
@@ -76,23 +79,23 @@ class ViewController: UIViewController {
                                                   multiplier: 1.0,
                                                   constant: 0.0)
         
-        let bottomCConstraintgreeenPurple = NSLayoutConstraint(item: view,
+        let bottomConstraintPurpleSquare = NSLayoutConstraint(item: view,
                                                    attribute: .bottom,
                                                    relatedBy: .equal,
-                                                   toItem: greeenPurple,
+                                                   toItem: purpleSquare,
                                                    attribute: .bottom,
                                                    multiplier: 1.0,
-                                                   constant: 10.0)
+                                                   constant: 20.0)
         
-        let centerXConstraintgreeenPurple = NSLayoutConstraint(item: greeenPurple,
+        let centerXConstraintPurpleSquare = NSLayoutConstraint(item: purpleSquare,
                                                    attribute: .centerX,
                                                    relatedBy: .equal,
                                                    toItem: view,
                                                    attribute: .centerX,
                                                    multiplier: 1.0,
-                                                   constant: 0.0)
+                                                   constant: 90.0)
         
-        NSLayoutConstraint.activate([widthConstraintgreeenPurple, topConstraintgreeenPurple , centerXConstraintgreeenPurple, bottomCConstraintgreeenPurple])
+        NSLayoutConstraint.activate([widthConstraintPurpleSquare, topConstraintPurpleSquare , centerXConstraintPurpleSquare, bottomConstraintPurpleSquare])
         
     }
 

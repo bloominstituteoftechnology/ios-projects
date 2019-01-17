@@ -91,7 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="qjp-sb-Ci0">
-                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="CkK-eh-XGP">
+                        <barButtonItem key="rightBarButtonItem" title="Animation" id="CkK-eh-XGP">
                             <connections>
                                 <action selector="toggle:" destination="BYZ-38-t0r" id="clL-pa-emN"/>
                             </connections>

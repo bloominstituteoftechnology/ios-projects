@@ -16,6 +16,14 @@ class ViewController: UIViewController {
         view.addSubview(lambdaLogoImage)
         lambdaLogoImage.translatesAutoresizingMaskIntoConstraints = false
     }
+    var animationPerformedOnce = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        
+       
+    }
+    
     
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var L: UILabel!
@@ -65,10 +73,10 @@ class ViewController: UIViewController {
             let rect = CGRect(x: randCGFloatX, y: randCGFloatY, width: 50, height: 50)
             UIView.animate(withDuration: 3) {
             label.textColor = self.randColor[self.randomInt(min: 0, max: 6)].withAlphaComponent(1.0)
-            label.backgroundColor = self.randColor[self.randomInt(min: 0, max: 6)].withAlphaComponent(0.3)
+            label.backgroundColor = self.randColor[self.randomInt(min: 0, max: 6)].withAlphaComponent(0.5)
             label.frame = rect
-            label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4)))
-            label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 350)))
+            label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 5)), y: CGFloat(self.randomInt(min: 1, max: 5)))
+            label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 650)))
             self.lambdaLogoImage.alpha = 0
                 }
         }
