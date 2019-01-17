@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="neuropol x rg.ttf">
+            <string>NeuropolXRg-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Friends-->
         <scene sceneID="7eH-Gg-Gbt">
@@ -91,7 +96,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="33N-Pg-9sM">
-                                <rect key="frame" x="8" y="374" width="359" height="49"/>
+                                <rect key="frame" x="8" y="374" width="359" height="52.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-JQ-Rns">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
@@ -100,8 +105,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-BM-Caz">
-                                        <rect key="frame" x="0.0" y="28.5" width="359" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="359" height="24"/>
+                                        <fontDescription key="fontDescription" name="NeuropolXRg-Regular" family="Neuropol X" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
