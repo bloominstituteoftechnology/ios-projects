@@ -8,12 +8,16 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let blossom = Friend(imageFriend: UIImage(named: "blossom")!, name: "Blossom", info: "Love flowers")
+        
+        let bubbles = Friend(imageFriend: UIImage(named: "bubbles")!, name: "Bubbles", info: "Love taking baths")
+        
+        let buttercup = Friend(imageFriend: UIImage(named: "buttercup")!, name: "Buttercup", info: "Loves cupcakes")
+        
+        friends.append(blossom)
+        friends.append(bubbles)
+        friends.append(buttercup)
     }
 
     // MARK: - Table view data source
