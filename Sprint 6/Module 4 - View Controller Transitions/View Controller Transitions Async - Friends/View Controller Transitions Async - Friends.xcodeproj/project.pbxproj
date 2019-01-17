@@ -16,6 +16,8 @@
 		843A4D1121F11B8B0001A992 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4D1021F11B8B0001A992 /* TableViewCell.swift */; };
 		843A4D1521F11F180001A992 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4D1421F11F180001A992 /* Friend.swift */; };
 		843A4D1721F11F520001A992 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4D1621F11F520001A992 /* FriendModel.swift */; };
+		843A4D1A21F134FC0001A992 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4D1921F134FC0001A992 /* NavigationControllerDelegate.swift */; };
+		843A4D1E21F1366A0001A992 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A4D1D21F1366A0001A992 /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		843A4D1021F11B8B0001A992 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		843A4D1421F11F180001A992 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		843A4D1621F11F520001A992 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		843A4D1921F134FC0001A992 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		843A4D1D21F1366A0001A992 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				843A4CFE21F119720001A992 /* Main.storyboard */,
 				843A4D1321F11F040001A992 /* Models */,
 				843A4D1221F11EE70001A992 /* Views */,
+				843A4D1821F134E10001A992 /* Transitions */,
 				843A4D0121F119730001A992 /* Assets.xcassets */,
 				843A4D0321F119730001A992 /* LaunchScreen.storyboard */,
 				843A4D0621F119730001A992 /* Info.plist */,
@@ -90,6 +95,15 @@
 				843A4D1621F11F520001A992 /* FriendModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		843A4D1821F134E10001A992 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				843A4D1921F134FC0001A992 /* NavigationControllerDelegate.swift */,
+				843A4D1D21F1366A0001A992 /* ImageTransitionAnimator.swift */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				843A4CFB21F119720001A992 /* AppDelegate.swift in Sources */,
+				843A4D1E21F1366A0001A992 /* ImageTransitionAnimator.swift in Sources */,
 				843A4D1721F11F520001A992 /* FriendModel.swift in Sources */,
 				843A4D1121F11B8B0001A992 /* TableViewCell.swift in Sources */,
 				843A4D1521F11F180001A992 /* Friend.swift in Sources */,
 				843A4D0F21F11B5A0001A992 /* TableViewController.swift in Sources */,
+				843A4D1A21F134FC0001A992 /* NavigationControllerDelegate.swift in Sources */,
 				843A4D0D21F11B2C0001A992 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
