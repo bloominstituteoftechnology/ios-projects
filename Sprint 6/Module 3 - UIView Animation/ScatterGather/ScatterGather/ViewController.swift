@@ -52,6 +52,7 @@ class ViewController: UIViewController {
             fadeLogo()
             
         } else {
+            gather()
             fadeLogo()
             
         }
@@ -74,21 +75,34 @@ class ViewController: UIViewController {
         aLastPosition = aLastLabel.frame
         
         for label in labelArray {
-            let randCGFloatX = CGFloat.random(in: 0...340)
-            let randCGFloatY = CGFloat.random(in: 0...650)
+            let randCGFloatX = CGFloat.random(in: 0...240)
+            let randCGFloatY = CGFloat.random(in: 0...240)
             let rect = CGRect(x: randCGFloatX, y: randCGFloatY, width: 80, height: 80)
             
             UIView.animate(withDuration: 3) {
-                label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 340)))
+                label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 200)))
                 label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4)))
                 label.frame = rect
                 label.backgroundColor = self.getRandomColor()
                 label.textColor = self.getRandomColor()
 
             }
-            
-
-        
         }
+    }
+    
+    func gather() {
+        let animBlock = {
+        
+        UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
+            self.lLabel.transform = .identity
+            self.aLabel.transform = .identity
+            self.mLabel.transform = .identity
+            self.bLabel.transform = .identity
+            self.dLabel.transform = .identity
+            self.aLastLabel.transform = .identity
+
+            }
+        }
+        UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: animBlock, completion: nil)
     }
 }
