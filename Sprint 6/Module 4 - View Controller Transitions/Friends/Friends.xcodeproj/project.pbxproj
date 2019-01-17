@@ -15,6 +15,8 @@
 		486571E421F12A8400E85393 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E321F12A8400E85393 /* TableViewController.swift */; };
 		486571E621F12D2100E85393 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E521F12D2100E85393 /* TableViewCell.swift */; };
 		486571E821F12F5D00E85393 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E721F12F5D00E85393 /* Friend.swift */; };
+		486571EA21F140A200E85393 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E921F140A200E85393 /* NavigationControllerDelegate.swift */; };
+		486571EC21F1432600E85393 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571EB21F1432600E85393 /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		486571E321F12A8400E85393 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		486571E521F12D2100E85393 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		486571E721F12F5D00E85393 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		486571E921F140A200E85393 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		486571EB21F1432600E85393 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				486571E721F12F5D00E85393 /* Friend.swift */,
 				486571E521F12D2100E85393 /* TableViewCell.swift */,
 				486571E321F12A8400E85393 /* TableViewController.swift */,
+				486571E921F140A200E85393 /* NavigationControllerDelegate.swift */,
+				486571EB21F1432600E85393 /* ImageTransitionAnimator.swift */,
 				486571D321F1218A00E85393 /* DetailViewController.swift */,
 				486571D521F1218A00E85393 /* Main.storyboard */,
 				486571D821F1218B00E85393 /* Assets.xcassets */,
@@ -148,7 +154,9 @@
 				486571E621F12D2100E85393 /* TableViewCell.swift in Sources */,
 				486571E821F12F5D00E85393 /* Friend.swift in Sources */,
 				486571E421F12A8400E85393 /* TableViewController.swift in Sources */,
+				486571EA21F140A200E85393 /* NavigationControllerDelegate.swift in Sources */,
 				486571D221F1218A00E85393 /* AppDelegate.swift in Sources */,
+				486571EC21F1432600E85393 /* ImageTransitionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

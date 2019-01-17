@@ -27,17 +27,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pj3-HD-pGo">
-                                            <rect key="frame" x="30" y="75" width="315" height="50"/>
+                                            <rect key="frame" x="30" y="50" width="315" height="100"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ciU-8h-yJd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="DMQ-uI-kj4"/>
-                                                        <constraint firstAttribute="height" constant="50" id="R9I-hD-0Bf"/>
+                                                        <constraint firstAttribute="width" constant="100" id="DMQ-uI-kj4"/>
+                                                        <constraint firstAttribute="height" constant="100" id="R9I-hD-0Bf"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfB-3g-NQX">
-                                                    <rect key="frame" x="70" y="0.0" width="245" height="50"/>
+                                                    <rect key="frame" x="120" y="0.0" width="195" height="100"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
