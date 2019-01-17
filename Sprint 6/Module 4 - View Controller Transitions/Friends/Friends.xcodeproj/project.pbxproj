@@ -14,6 +14,7 @@
 		486571DC21F1218B00E85393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486571DA21F1218B00E85393 /* LaunchScreen.storyboard */; };
 		486571E421F12A8400E85393 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E321F12A8400E85393 /* TableViewController.swift */; };
 		486571E621F12D2100E85393 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E521F12D2100E85393 /* TableViewCell.swift */; };
+		486571E821F12F5D00E85393 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486571E721F12F5D00E85393 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		486571DD21F1218B00E85393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486571E321F12A8400E85393 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		486571E521F12D2100E85393 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		486571E721F12F5D00E85393 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				486571D121F1218A00E85393 /* AppDelegate.swift */,
+				486571E721F12F5D00E85393 /* Friend.swift */,
 				486571E321F12A8400E85393 /* TableViewController.swift */,
 				486571E521F12D2100E85393 /* TableViewCell.swift */,
 				486571D321F1218A00E85393 /* DetailViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				486571D421F1218A00E85393 /* DetailViewController.swift in Sources */,
 				486571E621F12D2100E85393 /* TableViewCell.swift in Sources */,
+				486571E821F12F5D00E85393 /* Friend.swift in Sources */,
 				486571E421F12A8400E85393 /* TableViewController.swift in Sources */,
 				486571D221F1218A00E85393 /* AppDelegate.swift in Sources */,
 			);
