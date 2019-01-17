@@ -8,7 +8,8 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class DetailViewController: UIViewController, LabelProviding, UIViewControllerTransitioningDelegate {
+    
 
   
     override func viewDidLoad() {
@@ -20,12 +21,12 @@ class DetailViewController: UIViewController, UIViewControllerTransitioningDeleg
    
 
     @IBOutlet weak var friendImage: UIImageView!
-    @IBOutlet weak var frieandName: UILabel!
+    @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendPositin: UILabel!
     
     func update() {
         guard let index = index else { return }
-        frieandName.text = friend.friends[index]
+        friendName.text = friend.friends[index]
         friendPositin.text = friend.friednsPosition[index]
         friendImage.image = friend.friendsImage[index]
         navigationItem.title = friend.friends[index]

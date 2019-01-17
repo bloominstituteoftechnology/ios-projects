@@ -8,17 +8,15 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
-    
-    
-
+class TableViewController: UITableViewController, LabelProviding, UIViewControllerTransitioningDelegate {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
        navigationController?.delegate = navigationControllerDelegate
     }
     
-    var friendNameLabel: UILabel?
-    var friendLargeImage: UIImageView?
+    var friendName: UILabel!
+    var friendImage: UIImageView!
     
     
     let navigationControllerDelegate = NavigationControllerDelegate()
@@ -56,8 +54,8 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
         navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath) as? TableViewCell
         let index = indexPath.row
         destinationDVC.index = index
-        friendNameLabel = tableView.cellForRow(at: indexPath)?.textLabel
-        friendLargeImage = tableView.cellForRow(at: indexPath)?.imageView
+        friendName = tableView.cellForRow(at: indexPath)?.textLabel
+        friendImage = tableView.cellForRow(at: indexPath)?.imageView
     }
   
 }
