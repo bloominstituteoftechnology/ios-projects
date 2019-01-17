@@ -13,6 +13,7 @@
 		F8CFCA3621F11FFF0070B0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CFCA3521F11FFF0070B0FE /* Assets.xcassets */; };
 		F8CFCA3921F11FFF0070B0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CFCA3721F11FFF0070B0FE /* LaunchScreen.storyboard */; };
 		F8CFCA4421F12CA30070B0FE /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFCA4321F12CA30070B0FE /* FriendsTableViewController.swift */; };
+		F8CFCA4621F130FC0070B0FE /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFCA4521F130FC0070B0FE /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F8CFCA3821F11FFF0070B0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CFCA3A21F11FFF0070B0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CFCA4321F12CA30070B0FE /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		F8CFCA4521F130FC0070B0FE /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F8CFCA2D21F11FFE0070B0FE /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				F8CFCA4721F131040070B0FE /* Model */,
 				F8CFCA4121F12A2A0070B0FE /* View */,
 				F8CFCA4221F12A310070B0FE /* View Controllers */,
 				F8CFCA4021F12A0C0070B0FE /* Resources */,
@@ -89,6 +92,14 @@
 				F8CFCA4321F12CA30070B0FE /* FriendsTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F8CFCA4721F131040070B0FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8CFCA4521F130FC0070B0FE /* Friends.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				F8CFCA3121F11FFE0070B0FE /* FriendViewController.swift in Sources */,
 				F8CFCA2F21F11FFE0070B0FE /* AppDelegate.swift in Sources */,
 				F8CFCA4421F12CA30070B0FE /* FriendsTableViewController.swift in Sources */,
+				F8CFCA4621F130FC0070B0FE /* Friends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = Friends/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Friends/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
