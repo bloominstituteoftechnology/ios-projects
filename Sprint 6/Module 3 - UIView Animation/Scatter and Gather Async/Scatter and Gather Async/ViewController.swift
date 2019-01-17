@@ -17,6 +17,7 @@ import UIKit
 
         
         view.addSubview(logoImageView)
+        
         createLabels()
         
         createLogo()
@@ -167,14 +168,6 @@ import UIKit
                 
                 // Assign random text color
                 eachLabel.textColor = self.textColorArray.randomElement()
-                
-//                let textLayer = CATextLayer()
-//                textLayer.string = eachLabel.text
-//                self.view.layer.addSublayer(textLayer)
-//                let animation1 = CABasicAnimation(keyPath: "foregroundColor")
-//                animation1.toValue = self.backgroundColorArray.randomElement()
-//                animation1.duration = 3.0
-//                textLayer.add(animation1, forKey: "eachLabel")
   
                 // Assign random background color
                 eachLabel.layer.backgroundColor = self.backgroundColorArray.randomElement()
