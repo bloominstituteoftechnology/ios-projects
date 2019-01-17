@@ -12,8 +12,10 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         guard let friend = friend else { return }
+        friendView.image = friend.imageFriend
+        nameLabel.text = friend.name
+        infoLabel.text = friend.info
         
     }
-
 }
 
