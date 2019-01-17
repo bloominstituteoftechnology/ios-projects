@@ -4,12 +4,6 @@ class ViewController: UIViewController {
     var shouldScramble: Bool = false
     
     var labelsArray: [UILabel] = []
-    var lPosition: CGRect = UILabel().frame
-    var aPosition: CGRect = UILabel().frame
-    var mPosition: CGRect = UILabel().frame
-    var bPosition: CGRect = UILabel().frame
-    var dPosition: CGRect = UILabel().frame
-    var aLastPosition: CGRect = UILabel().frame
 
     
     @IBOutlet weak var lambdaView: UIImageView!
@@ -67,12 +61,6 @@ class ViewController: UIViewController {
     func scatter() {
         let labelArray: [UILabel] = [lLabel, aLabel, mLabel, bLabel, dLabel, aLastLabel]
         labelsArray = labelArray
-        lPosition = lLabel.frame
-        aPosition = aLabel.frame
-        mPosition = mLabel.frame
-        bPosition = bLabel.frame
-        dPosition = dLabel.frame
-        aLastPosition = aLastLabel.frame
         
         for label in labelArray {
             let randCGFloatX = CGFloat.random(in: 0...240)
