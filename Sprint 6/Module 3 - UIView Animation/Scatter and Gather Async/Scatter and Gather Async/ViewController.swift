@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+@IBDesignable class ViewController: UIViewController {
 
     // MARK: - Reference properties
     
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
             lambdaLabel.textAlignment = .center
             
-            lambdaLabel.backgroundColor = .yellow
+            lambdaLabel.backgroundColor = .clear
             
             view.addSubview(lambdaLabel)
             
@@ -122,8 +122,6 @@ class ViewController: UIViewController {
 
         logoImageView.contentMode = .scaleAspectFit
         
-
-        
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         let leadingConstraint = NSLayoutConstraint(item: logoImageView,
@@ -157,36 +155,64 @@ class ViewController: UIViewController {
     
     func scatter() {
         
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 3.0) {
             
             // Fade out logo
             self.logoImageView.alpha = 0
             
-            // Move letters to random locations and randomly rotate them
-            // Assign random text color
-            // Assign random background color
-            
+            for eachLabel in self.labelArray {
+               
+                // Move letters to random locations and randomly rotate them
+                eachLabel.transform = CGAffineTransform(translationX: CGFloat(Int.random(in: -100...100)), y: CGFloat(Int.random(in: -300...300))).rotated(by: CGFloat.random(in: -3...3))
+                
+                // Assign random text color
+                eachLabel.textColor = self.textColorArray.randomElement()
+  
+                
+                // Assign random background color
+                eachLabel.layer.backgroundColor = self.backgroundColorArray.randomElement()
+                
+                eachLabel.layer.cornerRadius = 30
+            }
+
         }
-        
     }
     
     func gather() {
         
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 3.0) {
             
             // Fade in logo
             self.logoImageView.alpha = 1.0
             
-            // Reset text color and background color
-            
-            // Move letters back to original location and angle
-            
+            for eachLabel in self.labelArray {
+                // Reset text color and background color
+                eachLabel.textColor = .black
+                
+                eachLabel.layer.backgroundColor = UIColor.clear.cgColor
+                
+                // Move letters back to original location and angle
+                eachLabel.transform = CGAffineTransform.identity
+            }
         }
 
         
     }
+    
+    // MARK: - Custom Colors
+    
+    let textColorArray: [UIColor] = [UIColor.coralOrange, UIColor.bluePurple, UIColor.russianViolet, UIColor.purpleNavy, UIColor.deepViolet, UIColor.myrtleGreen, UIColor.blackCoral]
+    
+    let backgroundColorArray: [CGColor] = [UIColor.teaGreen.cgColor, UIColor.mantis.cgColor, UIColor.aquamarine.cgColor, UIColor.magicMint.cgColor, UIColor.mediumAquamarine.cgColor, UIColor.paleGreen.cgColor, UIColor.lightCyan.cgColor, UIColor.paleGreen.cgColor, UIColor.turquoise.cgColor, UIColor.weldonBlue.cgColor, UIColor.darkSkyBlue.cgColor, UIColor.electricBlue.cgColor]
     
 
     
 }
 
+
+
+//let animation = CAKeyframeAnimation(keyPath: "backgroundColor")
+//
+//animation.values = [UIColor.lightCyan]
+//
+//animation.duration = 3.0
