@@ -3,8 +3,14 @@ import UIKit
 class ViewController: UIViewController {
     var shouldScramble: Bool = false
     
+    
     var labelsArray: [UILabel] = []
+    var lposition: CGRect = UILabel().frame
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+    }
     
     @IBOutlet weak var lambdaView: UIImageView!
     @IBOutlet weak var lLabel: UILabel!
@@ -61,6 +67,8 @@ class ViewController: UIViewController {
     func scatter() {
         let labelArray: [UILabel] = [lLabel, aLabel, mLabel, bLabel, dLabel, aLastLabel]
         labelsArray = labelArray
+        lposition = lLabel.frame
+
         
         for label in labelArray {
             let randCGFloatX = CGFloat.random(in: 0...240)
@@ -79,18 +87,22 @@ class ViewController: UIViewController {
     }
     
     func gather() {
-        let animBlock = {
-        
-        UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
+        for label in labelsArray {
+        //let animBlock = {
+            UIView.animate(withDuration: 1.5) {
+            label.textColor = .black
+        //UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
             self.lLabel.transform = .identity
             self.aLabel.transform = .identity
             self.mLabel.transform = .identity
             self.bLabel.transform = .identity
             self.dLabel.transform = .identity
             self.aLastLabel.transform = .identity
-
+            
+            self.lLabel.frame = self.lposition
             }
         }
-        UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: animBlock, completion: nil)
+//        UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: animBlock, completion: nil)
     }
 }
+
