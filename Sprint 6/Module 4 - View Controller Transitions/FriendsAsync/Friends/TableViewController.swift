@@ -37,8 +37,14 @@ class TableViewController: UITableViewController, LabelProviding, UIViewControll
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell else { fatalError("No such cell")}
 
+       
+       
+       
+   
+        
         cell.textLabel?.text = friends.friends[indexPath.row]
         cell.imageView?.image = friends.friendsImage[indexPath.row]
+        
 
         return cell
     }

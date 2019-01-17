@@ -17,8 +17,6 @@ typealias LabelProvidingVC = LabelProviding & UIViewController
 
 class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
-    var switchBool = true
-    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 1
     }

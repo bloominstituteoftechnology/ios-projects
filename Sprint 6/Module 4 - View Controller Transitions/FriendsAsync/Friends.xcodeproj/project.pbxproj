@@ -17,6 +17,7 @@
 		A5B1072521E7FC2600856366 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1072421E7FC2600856366 /* NavigationControllerDelegate.swift */; };
 		A5B1072721E7FE3F00856366 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1072621E7FE3F00856366 /* ImageTransitionAnimator.swift */; };
 		A5B1072921E8176900856366 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1072821E8176900856366 /* TableViewCell.swift */; };
+		A5BBB99421F13483003056E3 /* neuropol x rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5BBB99321F13482003056E3 /* neuropol x rg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A5B1072421E7FC2600856366 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		A5B1072621E7FE3F00856366 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 		A5B1072821E8176900856366 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A5BBB99321F13482003056E3 /* neuropol x rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuropol x rg.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A5B1072621E7FE3F00856366 /* ImageTransitionAnimator.swift */,
 				A5B1072021E7E8FA00856366 /* Friend.swift */,
 				A5B1070F21E7DDC100856366 /* Assets.xcassets */,
+				A5BBB99321F13482003056E3 /* neuropol x rg.ttf */,
 				A5B1071121E7DDC100856366 /* LaunchScreen.storyboard */,
 				A5B1071421E7DDC100856366 /* Info.plist */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				A5B1071321E7DDC100856366 /* LaunchScreen.storyboard in Resources */,
 				A5B1071021E7DDC100856366 /* Assets.xcassets in Resources */,
+				A5BBB99421F13483003056E3 /* neuropol x rg.ttf in Resources */,
 				A5B1070E21E7DDC000856366 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

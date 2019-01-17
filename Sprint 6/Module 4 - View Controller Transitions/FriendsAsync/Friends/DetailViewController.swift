@@ -22,12 +22,13 @@ class DetailViewController: UIViewController, LabelProviding, UIViewControllerTr
 
     @IBOutlet weak var friendImage: UIImageView!
     @IBOutlet weak var friendName: UILabel!
-    @IBOutlet weak var friendPositin: UILabel!
+    @IBOutlet weak var friendPositinInLambda: UILabel!
     
     func update() {
         guard let index = index else { return }
         friendName.text = friend.friends[index]
-        friendPositin.text = friend.friednsPosition[index]
+        friendName.font = UIFont(name: "Neuropol X", size: 20)
+        friendPositinInLambda.text = friend.friednsPositionInLambda[index]
         friendImage.image = friend.friendsImage[index]
         navigationItem.title = friend.friends[index]
     }
