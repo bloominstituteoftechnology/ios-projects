@@ -7,6 +7,9 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         FriendModel.shared.createFriend()
+        
+        // Set the navigationController's delegate to an instance of the NavigationControllerDelegate()
+        navigationController?.delegate = navigationControllerDelegate
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,8 +41,13 @@ class TableViewController: UITableViewController {
         let friend = FriendModel.shared.friendArray[indexPath.row]
         destination.friend = friend
         
+        // Get the tapped row and use it to give the navigation controller delegate the source table view cell (Set the source cell as the tapped table view cell)
+        navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath)!
+        
+        
     }
     
-    
+    // Create a strong reference to the NavigationControllerDelegate class
+    let navigationControllerDelegate = NavigationControllerDelegate()
     
 }

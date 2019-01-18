@@ -18,16 +18,11 @@ class ImageTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - Reference Properties
     
-
-    
-    let tableViewCell = TableViewCell()
-    
-    lazy var sourceImage = tableViewCell.friendImageOutlet
-    lazy var sourceName = tableViewCell.friendNameOutlet
-    
-    let detailViewController = DetailViewController()
-    
-    lazy var destinationImage = detailViewController.friendImageOutlet
-    lazy var destinationName = detailViewController.friendNameOutlet
+    // Properties for the views that the animator will need to know about
+    // Provide a place to hold the information later
+    var sourceImage: UIImageView!
+    var sourceLabel: UILabel!
+    var destinationImage: UIImageView!
+    var destinationLabel: UILabel!
     
 }
