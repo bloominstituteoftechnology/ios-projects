@@ -131,6 +131,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer delaysTouchesBegan="YES" minimumNumberOfTouches="1" id="r73-Sm-cgP">
+                    <rectEdge key="edges" left="YES" top="YES"/>
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="bY7-lu-hA9"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="qC6-b9-NXI"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="133.5832083958021"/>
         </scene>
