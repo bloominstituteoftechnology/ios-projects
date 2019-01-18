@@ -42,18 +42,20 @@ class CustomControl: UIControl {
     }
     
     func setup() {
-        for num in 1 ... componentCount {
+        for num in 0 ... componentCount - 1 {
             let label: UILabel = UILabel(frame: CGRect(x: 8.0 + offset,
                                                        y: 0.0,
                                                        width: componentDimension,
                                                        height: componentDimension))
             self.addSubview(label)
-            label.tag = num
+            label.tag = componentCount - num
+            print(label.tag)
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
             label.text = "✯"
             label.textAlignment = NSTextAlignment.center
             if label.tag > 1 {
                 label.textColor = componentInactiveColor
+                
             }
             labels.append(label)
             offset += 8.0 + componentDimension
@@ -100,15 +102,16 @@ class CustomControl: UIControl {
     }
     
     func updateValue (at touch: UITouch) {
+        
         for label in labels {
             let touchPoint = touch.location(in: label)
             if bounds.contains(touchPoint) {
                 value = label.tag
                 label.performFlare()
-                label.textColor = componentActiveColor
+                label.textColor = componentInactiveColor
                 sendActions(for: [.valueChanged])
             } else {
-                label.textColor = componentInactiveColor
+                label.textColor = componentActiveColor
                 sendActions(for: [.valueChanged])
             }
         }

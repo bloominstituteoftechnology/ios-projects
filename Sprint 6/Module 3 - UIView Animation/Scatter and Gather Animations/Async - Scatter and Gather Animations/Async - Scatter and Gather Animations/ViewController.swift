@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     
     func getRandomLocationY() -> CGFloat {
         // Huhhhhh... This is annoying...
-        let number = Float.random(in: Float(0 + labelHeight * 2) ... Float(maxHeight))
+        let number = Float.random(in: Float(0 + labelHeight * 2) ... Float(maxHeight + labelHeight))
         return CGFloat(number)
     }
 }

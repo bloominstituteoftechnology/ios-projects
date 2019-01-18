@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         if ratingControl.value > 1 {
             self.title = "User Rating: \(ratingControl.value) Stars"
         } else {
-            self.title = "User Rating: 1 Star"
+            self.title = "User Rating: \(ratingControl.value) Star"
         }
     }    
 }

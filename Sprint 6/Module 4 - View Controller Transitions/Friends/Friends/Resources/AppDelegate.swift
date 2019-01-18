@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Scatter and Gather Animations
+//  Friends
 //
-//  Created by Ivan Caldwell on 1/9/19.
+//  Created by Ivan Caldwell on 1/17/19.
 //  Copyright © 2019 Ivan Caldwell. All rights reserved.
 //
 
