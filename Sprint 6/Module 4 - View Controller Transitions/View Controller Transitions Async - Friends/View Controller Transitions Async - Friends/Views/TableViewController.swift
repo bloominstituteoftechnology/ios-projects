@@ -43,11 +43,13 @@ class TableViewController: UITableViewController {
         
         // Get the tapped row and use it to give the navigation controller delegate the source table view cell (Set the source cell as the tapped table view cell)
         navigationControllerDelegate.sourceCell = tableView.cellForRow(at: indexPath)!
+        navigationControllerDelegate.detailViewController = detailViewController
         
         
     }
     
     // Create a strong reference to the NavigationControllerDelegate class
     let navigationControllerDelegate = NavigationControllerDelegate()
+    let detailViewController = DetailViewController()
     
 }

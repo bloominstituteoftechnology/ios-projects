@@ -9,7 +9,13 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     // Keep a strong reference to the animator object
     let animator = ImageTransitionAnimator()
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from: fromVC, to toVC: UIViewController) {
+    weak private(set) var navigationController: UINavigationController?
+    
+    var detailViewController: DetailViewController!
+    
+    private func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+        
+        
         
         // Configure the animator object by "filling the buckets" we gave the animator as placeholders for information
         animator.sourceImage = sourceCell.imageView!
@@ -23,6 +29,7 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         
     }
     
+
 
     
 }
