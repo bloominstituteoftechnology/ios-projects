@@ -1,6 +1,6 @@
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
     
     let reuseIdentifier = "friendCell"
     
@@ -37,11 +37,12 @@ class TableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow
-            else { return }
-        guard let destination = segue.destination as? DetailViewController
-            else { return }
-        
-        destination.friend = friends[indexPath.row]
+        segue.destination.transitioningDelegate = self
+//        guard let indexPath = tableView.indexPathForSelectedRow
+//            else { return }
+//        guard let destination = segue.destination as? DetailViewController
+//            else { return }
+//
+//        destination.friend = friends[indexPath.row]
     }
 }
