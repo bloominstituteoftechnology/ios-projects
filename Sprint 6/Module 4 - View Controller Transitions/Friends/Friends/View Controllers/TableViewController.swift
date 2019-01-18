@@ -29,6 +29,7 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = navigationControllerDelegate
     }
 
     // MARK: - Table view data source
@@ -42,10 +43,13 @@ class TableViewController: UITableViewController, UIViewControllerTransitioningD
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = friends[indexPath.row].name
-        cell.detailTextLabel?.text = friends[indexPath.row].title
-        cell.imageView?.image = friends[indexPath.row].image
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell else { fatalError("Cell Error")}
+//        cell.textLabel?.text = friends[indexPath.row].name
+//        cell.detailTextLabel?.text = friends[indexPath.row].title
+//        cell.imageView?.image = friends[indexPath.row].image
+        cell.friendName.text = friends[indexPath.row].name
+        cell.friendTitle.text = friends[indexPath.row].title
+        cell.friendImage.image = friends[indexPath.row].image
         return cell
     }
 
