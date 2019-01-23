@@ -13,7 +13,7 @@ class FriendsTableTableViewController: UITableViewController, UIViewControllerTr
     var nameLabel: UILabel?
     var imageView: UIImageView?
     
-    let friends = [Friend(name: "Austin Cole", occupation: "iOS4 Student", image: UIImage(named: "20190106_160712")!),Friend(name: "Austin Cole's Identical Twin", occupation: "Barbershop Inspector", image: UIImage(named: "20190106_160712")!)]
+    let friends = [Friend(name: "Austin Cole", occupation: "iOS4 Student", image: UIImage(named: "20190106_160712")!),Friend(name: "Oink Johnson (Austin Cole's Identical Twin)", occupation: "Barbershop Inspector", image: UIImage(named: "20190106_160712")!)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
