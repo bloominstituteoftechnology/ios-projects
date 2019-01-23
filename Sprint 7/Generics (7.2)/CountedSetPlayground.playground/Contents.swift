@@ -38,11 +38,7 @@ struct CountedSet<Element> where Element: Hashable {
     
     subscript(_ member: Element) -> Int{
         
-        if let index = items.index(forKey: member){
-            return index.hashValue
-        } else {
-            return 0
-        }
+        return items[member] ?? 0
         
     }
     
@@ -50,29 +46,16 @@ struct CountedSet<Element> where Element: Hashable {
         return items.count
     }
     
-    private(set) var items: [Element:Int] = [:]
+    private(set) var items = [Element:Int]()
     
 }
 
 extension CountedSet : ExpressibleByArrayLiteral {
 
-    init(){
-
-        
-        items = countedSet
-        typealias ArrayLiteralElement = countedSet
-
-
-        func removeDuplicates() -> [Element] {
-            var seen: Set<Element> = []
-            var result: [Element] = []
-            for item in self {
-                if seen.contains(item) == false {
-                    seen.insert(item)
-                    result.append(item)
-                }
-            }
-            return result
+    init(arrayLiteral: Element...) {
+        self.init()
+        for element in arrayLiteral {
+            self.insert(element)
         }
     }
 
@@ -80,4 +63,19 @@ extension CountedSet : ExpressibleByArrayLiteral {
 
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
-print(aCountedSet)
+aCountedSet.insert(.iron)
+aCountedSet.insert(.iron)
+aCountedSet[.iron]
+aCountedSet.remove(element: .iron)
+aCountedSet.remove(element: .iron)
+aCountedSet.insert(.elven)
+aCountedSet.insert(.elven)
+aCountedSet.insert(.dwarvish)
+aCountedSet.insert(.magic)
+aCountedSet.insert(.magic)
+aCountedSet.insert(.magic)
+
+aCountedSet.count
+aCountedSet[.elven]
+aCountedSet[.dwarvish]
+aCountedSet[.magic]
