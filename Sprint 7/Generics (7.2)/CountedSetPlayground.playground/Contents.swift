@@ -46,11 +46,17 @@ struct CountedSet<Element> where Element: Hashable {
         return items.count
     }
     
+    func contains(_ element: Element) -> Bool {
+        return items[element] != nil
+    }
+    
+    
     private(set) var items = [Element:Int]()
     
 }
 
 extension CountedSet : ExpressibleByArrayLiteral {
+    
 
     init(arrayLiteral: Element...) {
         self.init()
@@ -65,8 +71,8 @@ extension CountedSet : Equatable {
     static func == (lhs: CountedSet, rhs: CountedSet) -> Bool {
         return lhs.items == rhs.items
     }
-    
 }
+
 
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
