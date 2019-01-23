@@ -36,10 +36,9 @@ class Developer {
     let name: String
     
     func think(){
-        if leftSpoon.index < 5 {
-            leftSpoon.pickUp()
-            print("\(self.name) has \(leftSpoon.name) for a left spoon.")
-        }
+    
+        leftSpoon.pickUp()
+        print("\(self.name) has \(leftSpoon.name) for a left spoon.")
         rightSpoon.pickUp()
         print("\(self.name) has \(rightSpoon.name) for a right spoon.")
     }
@@ -47,17 +46,18 @@ class Developer {
     func eat(){
         print("\(self.name) started eating")
         
-        let randomUSeconds: useconds_t = arc4random_uniform(5000000)
-        usleep(randomUSeconds)
+        usleep(UInt32.random(in: 1...5000000))
         
-        print("**************** \(self.name) finished eating ****************")
         leftSpoon.putDown()
         rightSpoon.putDown()
+        print("**************** \(self.name) finished eating ****************")
     }
     
     func run(){
-        think()
-        eat()
+        for _ in 0..<10000 {
+            think()
+            eat()
+        }
     }
     
 
@@ -77,8 +77,8 @@ var developer5 = Developer(leftSpoon: spoon4, rightSpoon: spoon5, name: "Dev5")
 
 var developers = [developer1, developer2, developer3, developer4, developer5]
 
-while true {
-    DispatchQueue.concurrentPerform(iterations: 5) {
-        developers[$0].run()
-    }
+
+DispatchQueue.concurrentPerform(iterations: 5) {
+    developers[$0].run()
 }
+
