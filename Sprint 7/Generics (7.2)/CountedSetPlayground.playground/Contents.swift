@@ -61,6 +61,13 @@ extension CountedSet : ExpressibleByArrayLiteral {
 
 }
 
+extension CountedSet : Equatable {
+    static func == (lhs: CountedSet, rhs: CountedSet) -> Bool {
+        return lhs.items == rhs.items
+    }
+    
+}
+
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
 aCountedSet.insert(.iron)
@@ -79,3 +86,8 @@ aCountedSet.count
 aCountedSet[.elven]
 aCountedSet[.dwarvish]
 aCountedSet[.magic]
+var anotherCountedSet = CountedSet<Arrow>()
+var yetAnotherCountedSet = CountedSet<Arrow>()
+
+print(aCountedSet == anotherCountedSet)
+print(anotherCountedSet == yetAnotherCountedSet)
