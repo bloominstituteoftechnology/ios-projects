@@ -1,23 +1,16 @@
 import UIKit
 
-let lock = NSLock()
-
-
-
-
-
-
 class Spoon {
+    
+    private let lock = NSLock()
     
     let id = UUID().uuidString
     
     func pickUp() {
         lock.lock()
-        return
     }
     func putDown() {
         lock.unlock()
-        return
     }
 }
 
@@ -28,29 +21,26 @@ class Developer {
     
     func think() {
         print("\(self.developer!) is thinking.")
-        if self.developer?.count == 5 {
+        if (self.developer?.count)! == 3 {
             print("\(self.developer!) is trying to pick up the right spoon.")
             rightSpoon?.pickUp()
             print("\(self.developer!) picked up the right spoon.")
             print("\(self.developer!) is trying to pick up the left spoon.")
-            print(leftSpoon?.id)
             leftSpoon?.pickUp()
             print("\(self.developer!) picked up the left spoon.")
         } else {
             print("\(self.developer!) is trying to pick up the left spoon.")
-            print(leftSpoon?.id)
             leftSpoon?.pickUp()
             print("\(self.developer!) picked up the left spoon.")
             print("\(self.developer!) is trying to pick up the right spoon.")
             rightSpoon?.pickUp()
-            print(rightSpoon?.id)
             print("\(self.developer!) picked up the right spoon.")
         }
         
     }
     func eat() {
         print("\(self.developer!) is eating.")
-        usleep(500)
+        usleep(UInt32.random(in: 1...5000000))
         print("\(self.developer!) is trying to put down the right spoon.")
         rightSpoon?.putDown()
         print("\(self.developer!) put down the right spoon.")
@@ -90,11 +80,11 @@ developers[2].leftSpoon = spoons[3]
 developers[3].leftSpoon = spoons[4]
 developers[4].leftSpoon = spoons[0]
 
-developers[0].developer = "Austin"
-developers[1].developer = "Sam"
-developers[2].developer = "Jared"
-developers[3].developer = "Holly"
-developers[4].developer = "Rebecca"
+developers[0].developer = "100"
+developers[1].developer = "200"
+developers[2].developer = "3"
+developers[3].developer = "4"
+developers[4].developer = "5"
 
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
