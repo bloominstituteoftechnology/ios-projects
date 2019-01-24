@@ -13,6 +13,7 @@
 		111915FD21FA624100A8554F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111915FB21FA624100A8554F /* LaunchScreen.storyboard */; };
 		1119160021FA624100A8554F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 111915FF21FA624100A8554F /* main.m */; };
 		1119160921FA62EF00A8554F /* calcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1119160821FA62EF00A8554F /* calcVC.m */; };
+		11CECA3021FA6600004DAF13 /* calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA2F21FA6600004DAF13 /* calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		111915FF21FA624100A8554F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1119160721FA62EF00A8554F /* calcVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calcVC.h; sourceTree = "<group>"; };
 		1119160821FA62EF00A8554F /* calcVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calcVC.m; sourceTree = "<group>"; };
+		11CECA2E21FA6600004DAF13 /* calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculator.h; sourceTree = "<group>"; };
+		11CECA2F21FA6600004DAF13 /* calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 				111915F021FA624000A8554F /* AppDelegate.h */,
 				111915F121FA624000A8554F /* AppDelegate.m */,
 				111915F621FA624000A8554F /* Main.storyboard */,
+				11CECA2E21FA6600004DAF13 /* calculator.h */,
+				11CECA2F21FA6600004DAF13 /* calculator.m */,
 				1119160A21FA62F300A8554F /* View Controllers */,
 				111915F921FA624100A8554F /* Assets.xcassets */,
 				111915FB21FA624100A8554F /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1119160021FA624100A8554F /* main.m in Sources */,
+				11CECA3021FA6600004DAF13 /* calculator.m in Sources */,
 				111915F221FA624000A8554F /* AppDelegate.m in Sources */,
 				1119160921FA62EF00A8554F /* calcVC.m in Sources */,
 			);
