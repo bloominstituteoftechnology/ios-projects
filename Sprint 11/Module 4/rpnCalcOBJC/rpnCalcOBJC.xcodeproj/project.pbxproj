@@ -15,6 +15,7 @@
 		1119160921FA62EF00A8554F /* calcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1119160821FA62EF00A8554F /* calcVC.m */; };
 		11CECA3021FA6600004DAF13 /* calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA2F21FA6600004DAF13 /* calculator.m */; };
 		11CECA3421FA67C8004DAF13 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA3321FA67C8004DAF13 /* Stack.m */; };
+		11CECA3721FA69BC004DAF13 /* Accumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CECA3621FA69BC004DAF13 /* Accumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		11CECA2F21FA6600004DAF13 /* calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculator.m; sourceTree = "<group>"; };
 		11CECA3221FA67C8004DAF13 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		11CECA3321FA67C8004DAF13 /* Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		11CECA3521FA69BC004DAF13 /* Accumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Accumulator.h; sourceTree = "<group>"; };
+		11CECA3621FA69BC004DAF13 /* Accumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Accumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 				111915F021FA624000A8554F /* AppDelegate.h */,
 				111915F121FA624000A8554F /* AppDelegate.m */,
 				111915F621FA624000A8554F /* Main.storyboard */,
+				11CECA3821FA69C1004DAF13 /* Controllers */,
 				11CECA3121FA67BD004DAF13 /* Model */,
 				1119160A21FA62F300A8554F /* View Controllers */,
 				111915F921FA624100A8554F /* Assets.xcassets */,
@@ -95,6 +99,15 @@
 				11CECA3321FA67C8004DAF13 /* Stack.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11CECA3821FA69C1004DAF13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11CECA3521FA69BC004DAF13 /* Accumulator.h */,
+				11CECA3621FA69BC004DAF13 /* Accumulator.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CECA3721FA69BC004DAF13 /* Accumulator.m in Sources */,
 				1119160021FA624100A8554F /* main.m in Sources */,
 				11CECA3021FA6600004DAF13 /* calculator.m in Sources */,
 				111915F221FA624000A8554F /* AppDelegate.m in Sources */,
