@@ -14,7 +14,6 @@ open class LoadingAnimation {
     
     public init() {}
     
-    
     public func startLoadingAnimation() {
         signView = SignView(frame: CGRect.zero)
         if let currentVC = UIApplication.topViewController() {
