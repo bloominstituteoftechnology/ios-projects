@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
+}
+
 class CustomControl: UIControl {
     
     var value: Int = 1
@@ -97,6 +109,7 @@ class CustomControl: UIControl {
         let tapLocation = touch.location(in: self)
         for label in labelArray {
             if label.frame.contains(tapLocation) {
+                label.performFlare()
                 value = label.tag
                 if label.textColor == componentInactiveColor && value != 1 {
                     label.textColor = componentActiveColor
@@ -127,5 +140,10 @@ class CustomControl: UIControl {
             }
         }
     }
+    
+    
+    
+    
+    
     
 }
