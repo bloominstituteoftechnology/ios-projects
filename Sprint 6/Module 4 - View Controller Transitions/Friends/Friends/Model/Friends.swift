@@ -1,5 +1,8 @@
 import UIKit
+import Foundation
 
-class Friends {
-    private let friends = ["John": ["friend1","Web Developer"], "Jeff": ["friend2", "Data Scientist"]]
+struct Friends {
+    let friendName = ["John", "Jeff"]
+    let friendImage = ["friend1", "friend2"]
+    let friendJobTitle = ["Web Developer", "Data Scientist"]
 }
