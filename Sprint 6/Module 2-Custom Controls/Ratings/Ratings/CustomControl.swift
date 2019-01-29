@@ -66,12 +66,59 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
-//        let touchPoint = touch.location(in: self)
-//        let (x, y) = (touchPoint.x / bounds.width, touchPoint.y / bounds.height)
-//        value = (x: Double(x), y: Double(y))
-        sendActions(for: .valueChanged)
+        
+       let oldValue = value
+        
+        //  let touchPoint = touch.location(in: self)
+        for labels in labelArray {
+            // Detect whether each touch's location is contained in each label's frame
+            if labels.frame.contains(touch.location(in: self)) {
+                
+                // Set the control's value to the label's tag
+                value = labels.tag
+            }
+       
+        
+        // If value has changed/moved.
+        if value != oldValue {
+            
+            // if label tag matches the value...
+            if labels.tag == value {
+                
+                // Update label colors
+                updateLabels()
+                
+                // Send action for valueChanged
+                sendActions(for: .valueChanged)
+            }
+        }
+
     }
     
+    }
+    
+    // Update label colors
+    private func updateLabels() {
+        
+        // For each label in the labels array
+        for labels in labelArray {
+            
+            // If the label's tag is less than or equal to the value
+            if labels.tag <= value {
+                
+                // Label color is active
+                labels.textColor = componentActiveColor
+                
+                // Label animates with flare
+                labels.performFlare()
+                
+            } else {
+                
+                // Labels in front of the value label keep the inactive color
+                labels.textColor = componentInactiveColor
+            }
+        }
+    }
     
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -102,6 +149,19 @@ class CustomControl: UIControl {
     //incoming phone call that will interrupt user event. *Required*
     override func cancelTracking(with event: UIEvent?) {
         sendActions(for: .touchCancel)
+    }
+    
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
     
 }

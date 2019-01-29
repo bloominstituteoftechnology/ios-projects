@@ -36,7 +36,7 @@
                         <subviews>
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-Yk-UCB" customClass="CustomControl" customModule="Ratings" customModuleProvider="target">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.28374357880000001" green="0.53115368149999997" blue="0.81270333900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="updateRating:" destination="3dd-s8-xQ1" eventType="valueChanged" id="0HG-64-lbc"/>
                                 </connections>
