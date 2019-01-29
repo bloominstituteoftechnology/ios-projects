@@ -81,10 +81,16 @@ class CustomControl: UIControl {
     
     func updateValue(at touch: UITouch) {
         //loop through component labels and detects whether touch location is contained in each label's frame
-        
-        //when touch overlaps label set control's value to that tag
-        
-        //update label colors to reflect current touch send valueChanged action
+        for label in labels {
+            let touchPoint = touch.location(in: self)
+            //when touch overlaps label set control's value to that tag
+            //update label colors to reflect current touch send valueChanged action
+            if label.frame.contains(touchPoint) {
+                value = label.tag
+                sendActions(for: [.valueChanged])
+                label.performFlare()
+            }
+        }
     }
 }
 
