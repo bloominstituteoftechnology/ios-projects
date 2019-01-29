@@ -5,7 +5,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func updateRating(_ ratingControl: CustomControl) {
-        
         let n = ratingControl.value
         
         if n > 1 {
@@ -13,11 +12,6 @@ class ViewController: UIViewController {
         } else {
             title = "User Rating: \(n) star"
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }
 

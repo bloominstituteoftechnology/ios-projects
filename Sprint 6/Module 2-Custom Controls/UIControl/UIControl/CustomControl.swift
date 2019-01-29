@@ -7,6 +7,7 @@ class CustomControl: UIControl {
     //MARK: - Properties
     var labels: [UILabel] = []
     var value: Int = 1
+    
     let componentDimension: CGFloat = 40.0
     let componentCount = 5
     let componentActiveColor = UIColor.black
@@ -18,7 +19,7 @@ class CustomControl: UIControl {
     }
     
     func setup() {
-        let count: CGFloat = 0.0
+        var count: CGFloat = 0.0
         for number in 1...5 {
             //spacing
             let space: CGFloat = (componentDimension * count) + (8.0 * count)
@@ -30,6 +31,7 @@ class CustomControl: UIControl {
             labels.append(label)
             //add tag for each view
             label.tag = number
+            count += 1.0
             //set font to bold system font size 32
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
             //set text to Unicode star
