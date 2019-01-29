@@ -96,6 +96,7 @@ class CustomControl: UIControl {
         let touchPoint = touch.location(in: self)
         
         if bounds.contains(touchPoint) {
+            updateValue(at: touch)
             sendActions(for: [.valueChanged, .touchUpInside])
         } else {
             sendActions(for: [.touchUpOutside])
