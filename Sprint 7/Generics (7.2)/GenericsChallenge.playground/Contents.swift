@@ -36,11 +36,7 @@ struct CountedSet<Element> where Element: Hashable {
         guard elements[element] != nil else { return 0 }
         return elements[element]!
     }
-    
-//    func countedSetIsEmpty() -> Bool{
-//        return true
-//    }
-    
+
     func count(_ countedSet: Dictionary<Element, Int> ) -> Int{
         guard !countedSet.isEmpty else { return 0 }
         return countedSet.keys.count
