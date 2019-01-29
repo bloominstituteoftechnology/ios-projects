@@ -17,7 +17,17 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HX3-mV-rAr" customClass="CustomControl" customModule="UIControl" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="283.5" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.94988665800000005" green="0.94988665800000005" blue="0.94988665800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HX3-mV-rAr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10F-mw-IpB"/>
+                            <constraint firstItem="HX3-mV-rAr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M30-TT-JHy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EFg-J3-10k"/>
