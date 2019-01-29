@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-
+    @IBAction func updateRating(_ sender: CustomControl) {
+        title = "User Rating: \(sender.value) stars "
+    }
 }
 
