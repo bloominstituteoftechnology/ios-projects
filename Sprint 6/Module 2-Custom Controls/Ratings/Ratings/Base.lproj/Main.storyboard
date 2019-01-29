@@ -44,7 +44,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z48-Yk-UCB" firstAttribute="centerY" secondItem="6Db-Pp-HMs" secondAttribute="centerY" id="zEB-5T-OOl"/>
+                            <constraint firstItem="Z48-Yk-UCB" firstAttribute="centerX" secondItem="6Db-Pp-HMs" secondAttribute="centerX" id="d18-dk-SWV"/>
+                            <constraint firstItem="Z48-Yk-UCB" firstAttribute="centerY" secondItem="6Db-Pp-HMs" secondAttribute="centerY" id="lKC-Jk-YKE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aVh-mQ-v5p"/>
                     </view>
@@ -53,20 +54,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kv2-Yg-2H2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="667" y="763"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="m0c-9U-X3b">
-            <objects>
-                <viewController id="5O5-ny-bug" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eEG-B3-7p6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IJB-Sy-p21"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CJZ-9S-oP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
