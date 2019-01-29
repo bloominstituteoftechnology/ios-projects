@@ -47,17 +47,22 @@ class CustomControl: UIControl {
             label.font = UIFont.boldSystemFont(ofSize: 32.0)
             label.textAlignment = .center
             
+            // First label has active color, the rest have the inactive color
+        
             if label.tag > 1 {
                 label.textColor = componentInactiveColor
             } else {
                 label.textColor = componentActiveColor
             }
             
+            //increase the count of the label to get out of the loop
             count += 1.0
  
         }
     }
 
+     // Tell Auto Layout how big the custom control should be
+    
     override var intrinsicContentSize: CGSize {
         let componentsWidth = CGFloat(componentCount) * componentDimension
         let componentsSpacing = CGFloat(componentCount + 1) * 8.0
@@ -66,9 +71,10 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
+        // Stores the value previously held before movement changes
+        let oldValue = value
         
-       let oldValue = value
-        
+        // Check if touches intersect with stored label subviews
         //  let touchPoint = touch.location(in: self)
         for labels in labelArray {
             // Detect whether each touch's location is contained in each label's frame
@@ -77,27 +83,27 @@ class CustomControl: UIControl {
                 // Set the control's value to the label's tag
                 value = labels.tag
             }
-       
-        
-        // If value has changed/moved.
-        if value != oldValue {
             
-            // if label tag matches the value...
-            if labels.tag == value {
+            
+            // If value has changed/moved.
+            if value != oldValue {
                 
-                // Update label colors
-                updateLabels()
-                
-                // Send action for valueChanged
-                sendActions(for: .valueChanged)
+                // if label tag matches the value...
+                if labels.tag == value {
+                    
+                    // Update label colors
+                    updateLabels()
+                    
+                    // Send action for valueChanged
+                    sendActions(for: .valueChanged)
+                }
             }
+            
         }
-
+        
     }
     
-    }
-    
-    // Update label colors
+    // Update the label colors
     private func updateLabels() {
         
         // For each label in the labels array
@@ -120,17 +126,22 @@ class CustomControl: UIControl {
         }
     }
     
+     // MARK: - Touch Handler Implementation
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+         // Respond to the start of user's touch
+        updateValue(at: touch)
         sendActions(for: .touchDown)
         return true
     }
     //user moves the finger inside/outside control
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        // Assign the touch point to the current location
         let touchPoint = touch.location(in: self)
+         // If contained within the view, send the actions
         if bounds.contains(touchPoint) {
             sendActions(for: [.touchDragInside, .touchDragOutside])
-            
+            // Update the value
             updateValue(at: touch)
         }
         return true
