@@ -39,7 +39,11 @@ class CustomControl: UIControl {
             //set textColor to active for the first or inactive for the others
             label.textColor = componentInactiveColor
         }
-        
-        
+    }
+    override var intrinsicContentSize: CGSize {
+        let componentsWidth = CGFloat(componentCount) * componentDimension
+        let componentsSpacing = CGFloat(componentCount + 1) * 8.0
+        let width = componentsWidth + componentsSpacing
+        return CGSize(width: width, height: componentDimension)
     }
 }
