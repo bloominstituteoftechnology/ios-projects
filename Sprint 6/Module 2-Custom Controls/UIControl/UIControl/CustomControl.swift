@@ -80,6 +80,22 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
+        //loop through component labels and detects whether touch location is contained in each label's frame
         
+        //when touch overlaps label set control's value to that tag
+        
+        //update label colors to reflect current touch send valueChanged action
+    }
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
     }
 }
