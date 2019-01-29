@@ -64,4 +64,44 @@ class CustomControl: UIControl {
         let width = componentsWidth + componentsSpacing
         return CGSize(width: width, height: componentDimension)
     }
+    
+    func updateValue(at touch: UITouch) {
+//        let touchPoint = touch.location(in: self)
+//        let (x, y) = (touchPoint.x / bounds.width, touchPoint.y / bounds.height)
+//        value = (x: Double(x), y: Double(y))
+        sendActions(for: .valueChanged)
+    }
+    
+    
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        sendActions(for: .touchDown)
+        return true
+    }
+    //user moves the finger inside/outside control
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchDragInside, .touchDragOutside])
+            
+            updateValue(at: touch)
+        }
+        return true
+    }
+    //user lifts finger
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+         defer { super.endTracking(touch, with: event) }
+        guard let touch = touch else {return}
+        let touchPoint = touch.location(in: self)
+        if bounds.contains(touchPoint) {
+            sendActions(for: [.touchUpInside, .touchUpOutside])
+            
+            updateValue(at: touch)
+        }
+    }
+    //incoming phone call that will interrupt user event. *Required*
+    override func cancelTracking(with event: UIEvent?) {
+        sendActions(for: .touchCancel)
+    }
+    
 }
