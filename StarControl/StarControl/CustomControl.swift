@@ -44,7 +44,7 @@ class CustomControl: UIControl {
             var newLabel = UILabel(frame: CGRect(x: count, y: 0.0, width: componentDimension, height: componentDimension))
             newLabel.textAlignment = .center
             newLabel.text = "★"
-            newLabel.font = UIFont(name: "bold system font", size: 32.0)
+            newLabel.font = UIFont.boldSystemFont(ofSize: 32)
             if count == 8.0 {
                 newLabel.textColor = componentActiveColor
             } else {
