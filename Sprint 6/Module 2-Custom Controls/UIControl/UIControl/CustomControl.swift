@@ -98,13 +98,19 @@ class CustomControl: UIControl {
 }
 
 extension UIView {
+    //var labels = labels
+
     // "Flare view" animation sequence
     func performFlare() {
         func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
         func unflare() { transform = .identity }
+        func color() { layer.backgroundColor = UIColor.blue.cgColor }
+        func unColor() { layer.backgroundColor = UIColor.clear.cgColor }
         
-        UIView.animate(withDuration: 0.3,
-                       animations: { flare() },
-                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+        UIView.animate(withDuration: 0.5,
+                       animations: { flare(); color() },
+                       completion: { _ in UIView.animate(withDuration: 0.3) { unflare() }; unColor()})
+        
+       
     }
 }
