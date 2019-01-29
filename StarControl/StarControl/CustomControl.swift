@@ -26,12 +26,12 @@ class CustomControl: UIControl {
     
     func setup() {
         
-        var count: CGFloat = 0.0
+        var count: CGFloat = -40.0
         while labelArray.count <= 4 {
             count += (8.0 + componentDimension)
             var newLabel = UILabel(frame: CGRect(x: count, y: 0.0, width: componentDimension, height: componentDimension))
             newLabel.textAlignment = .center
-            newLabel.text = "☆"
+            newLabel.text = "★"
             newLabel.font = UIFont(name: "bold system font", size: 32.0)
             if count == 8.0 {
                 newLabel.textColor = componentActiveColor
@@ -44,6 +44,7 @@ class CustomControl: UIControl {
             self.addSubview(newLabel)
             
             // ☆WHITE STAR U+2606
+            // ★BLACK STAR Unicode: U+2605, UTF-8: E2 98 85
         }
     }
     
@@ -67,7 +68,7 @@ class CustomControl: UIControl {
         let touchPoint = touch.location(in: self)
         
         if bounds.contains(touchPoint) {
-            sendActions(for: [.touchDragInside])
+            sendActions(for: [.valueChanged, .touchDragInside])
         } else {
             sendActions(for: [.touchDragOutside])
         }
@@ -82,7 +83,7 @@ class CustomControl: UIControl {
         let touchPoint = touch.location(in: self)
         
         if bounds.contains(touchPoint) {
-            sendActions(for: [.touchUpInside])
+            sendActions(for: [.valueChanged, .touchUpInside])
         } else {
             sendActions(for: [.touchUpOutside])
         }
@@ -93,7 +94,38 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
-        
+        let tapLocation = touch.location(in: self)
+        for label in labelArray {
+            if label.frame.contains(tapLocation) {
+                value = label.tag
+                if label.textColor == componentInactiveColor && value != 1 {
+                    label.textColor = componentActiveColor
+                    for otherlabel in labelArray {
+                        if otherlabel.tag <= label.tag {
+                            otherlabel.textColor = componentActiveColor
+                        } else {
+                            otherlabel.textColor = componentInactiveColor
+                        }
+                    }
+                } else if label.textColor == componentActiveColor && value != 1 {
+                    label.textColor = componentInactiveColor
+                    value = label.tag - 1
+                    for otherlabel in labelArray {
+                        if otherlabel.tag >= label.tag {
+                            otherlabel.textColor = componentInactiveColor
+                        }
+                    }
+                } else if value == 1 {
+                    for otherlabel in labelArray {
+                        if otherlabel.tag > 1 {
+                            otherlabel.textColor = componentInactiveColor
+                        }
+                    }
+                }
+                
+                sendActions(for: [.valueChanged])
+            }
+        }
     }
     
 }

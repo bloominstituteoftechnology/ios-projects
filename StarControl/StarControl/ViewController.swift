@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         } else {
             self.title = "User Rating: \(ratingControl.value) Stars"
         }
-     
-        
         
         
     }
