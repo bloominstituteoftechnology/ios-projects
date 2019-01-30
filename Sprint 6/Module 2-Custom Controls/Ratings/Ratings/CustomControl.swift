@@ -29,6 +29,7 @@ class CustomControl: UIControl {
         var count: CGFloat = 0.0
         
         for labels in 1...5 {
+            
             let spacing: CGFloat = (componentDimension * count) + (8.0 * count)
             
             let label = UILabel(frame: CGRect(x: spacing, y: 0.0, width: componentDimension, height: componentDimension))
@@ -153,7 +154,6 @@ class CustomControl: UIControl {
         let touchPoint = touch.location(in: self)
         if bounds.contains(touchPoint) {
             sendActions(for: [.touchUpInside, .touchUpOutside])
-            
             updateValue(at: touch)
         }
     }
