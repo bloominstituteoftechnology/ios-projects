@@ -95,15 +95,12 @@ class CustomControl: UIControl {
             let touchPoint = touch.location(in: self)
             if label.frame.contains(touchPoint) {
                 value = label.tag
+                sendActions(for: [.valueChanged])
             }
         }
         
         for label in labels {
-            if label.tag <= value {
-                label.textColor = componentActiveColor
-            } else {
-                label.textColor = componentInactiveColor
-            }
+            label.textColor = (label.tag <= value) ? componentActiveColor : componentInactiveColor
         }
     }
     
