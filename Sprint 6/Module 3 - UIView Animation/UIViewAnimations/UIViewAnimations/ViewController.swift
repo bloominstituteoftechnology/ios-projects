@@ -32,11 +32,26 @@ class ViewController: UIViewController {
 
     @IBAction func toggleBarButtonItemPressed(_ sender: UIBarButtonItem) {
         if shouldScramble == false {
-        lambdaLogoImageView.alpha = 0
-           shouldScramble = true
+           scatter()
+           
         } else {
-            lambdaLogoImageView.alpha = 1
-            shouldScramble = false
+            
+            gather()
+        }
+        
+        shouldScramble = !shouldScramble
+    }
+    
+    func scatter() {
+        UIView.animate(withDuration: 3) {
+            self.lambdaLogoImageView.alpha = 0
+        }
+    }
+    
+    func gather() {
+        
+        UIView.animate(withDuration: 3) {
+            self.lambdaLogoImageView.alpha = 1
         }
     }
 }
