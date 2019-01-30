@@ -19,27 +19,17 @@ class CustomControl: UIControl {
     
     func setup() {
         
-        
-//        for index in 0..<ViewController.starCount {
-//            print("shut up, xcode")
-//            var newLabel = create.UILabel
-//            labelArray.append(newLabel)
-//            let tag = labelArray[indexPath.row]
-//            label.frameSize = [componentDimension, componentDimension]
-//            func labelTray {
-//                UIStackView.labelArray.spacing(8)
-//                UIStackView.labelArray.initialSpacing(8)
-//            }
-//            label.font = .systemBold
-//            label.fontSize = 32
-//            label.text = "*"
-//            label.alignment = center
-//            if label == active {
-//                label.textColor = componentActiveColor
-//            } else {
-//                label.textColor = componentInactiveColor
-//            }
-//        }
+        for something in 0 ... 5 {
+            // create label
+            let star = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: componentDimension, height: componentDimension))
+            
+            // add each label as a subview
+            addSubview(star)
+            
+            // store each label into a local array
+            labelArray.append(star)
+            
+        }
     }
     
     override var intrinsicContentSize: CGSize {
