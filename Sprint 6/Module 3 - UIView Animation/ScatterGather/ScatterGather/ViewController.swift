@@ -100,7 +100,15 @@ class ViewController: UIViewController {
             logoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
             ])
-
+    }
+    
+    //get random colors
+    func getRandomColor() -> UIColor {
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
     }
 }
 
