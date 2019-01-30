@@ -19,9 +19,15 @@ class CustomControl: UIControl {
     
     func setup() {
         
+        // Set the starting point for the first star
+        var xCoordinate: CGFloat = 8.0
+        
         for position in 0 ... 5 {
-            // create label
-            let star = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: componentDimension, height: componentDimension))
+            // create label and its frame as a square
+            let star = UILabel(frame: CGRect(x: xCoordinate, y: 0.0, width: componentDimension, height: componentDimension))
+            
+            // update the coordinate of the next star
+            xCoordinate += 8.0 + componentDimension
             
             // add each label as a subview
             addSubview(star)
