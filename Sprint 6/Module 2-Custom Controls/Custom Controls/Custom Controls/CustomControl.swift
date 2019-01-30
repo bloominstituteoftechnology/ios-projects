@@ -11,32 +11,35 @@ class CustomControl: UIControl {
     private let componentInactiveColor = UIColor.gray
     
     required init?(coder aCoder: NSCoder) {
-        super.init().CustomControl.setup()
+        super.init(coder: aCoder)
+        setup()
     }
     
     var labelArray: [UILabel] = []
     
     func setup() {
-        for index in 0..<ViewController.starCount {
-            print("shut up, xcode")
-            var newLabel = create.UILabel
-            labelArray.append(newLabel)
-            let tag = labelArray[indexPath.row]
-            label.frameSize = [componentDimension, componentDimension]
-            func labelTray {
-                UIStackView.labelArray.spacing(8)
-                UIStackView.labelArray.initialSpacing(8)
-            }
-            label.font = .systemBold
-            label.fontSize = 32
-            label.text = "*"
-            label.alignment = center
-            if label == active {
-                label.textColor = componentActiveColor
-            } else {
-                label.textColor = componentInactiveColor
-            }
-        }
+        
+        
+//        for index in 0..<ViewController.starCount {
+//            print("shut up, xcode")
+//            var newLabel = create.UILabel
+//            labelArray.append(newLabel)
+//            let tag = labelArray[indexPath.row]
+//            label.frameSize = [componentDimension, componentDimension]
+//            func labelTray {
+//                UIStackView.labelArray.spacing(8)
+//                UIStackView.labelArray.initialSpacing(8)
+//            }
+//            label.font = .systemBold
+//            label.fontSize = 32
+//            label.text = "*"
+//            label.alignment = center
+//            if label == active {
+//                label.textColor = componentActiveColor
+//            } else {
+//                label.textColor = componentInactiveColor
+//            }
+//        }
     }
     
     override var intrinsicContentSize: CGSize {
