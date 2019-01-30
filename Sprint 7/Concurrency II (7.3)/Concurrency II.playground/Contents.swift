@@ -35,21 +35,31 @@ class Developer {
     
     
     func think() {
-        print("\(dev) is eating")
+        print("\(dev) is think ")
          if leftSpoon.index > rightSpoon.index {
+            print("\(dev) is think until the right spoon is available")
             rightSpoon.pickUp()
+            print("\(dev) pick up right spoon")
+            print("\(dev) is think until the left spoon is available")
             leftSpoon.pickUp()
+            print("\(dev) pick up left spoon")
          } else {
             leftSpoon.pickUp()
+            print("\(dev) pick up left spoon")
             rightSpoon.pickUp()
+            print("\(dev) pick up right spoon")
         }
     }
     
     func eat() {
-        usleep(useconds_t(Int.random(in: 1...500)))
+        print("\(dev) is eating")
+        usleep(useconds_t(Int.random(in: 1...50_000)))
+        
         rightSpoon.putDown()
+        print("\(dev) put down right spoon")
+        
         leftSpoon.putDown()
-     
+        print("\(dev) put down left spoon")
     }
     
     func run() {
