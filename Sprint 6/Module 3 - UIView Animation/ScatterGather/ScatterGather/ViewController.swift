@@ -3,7 +3,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - Properties
+    var shouldScramble: Bool = false
+
+    
     @IBAction func toggle(_ sender: Any) {
+        
+        if shouldScramble == true {
+            scatter()
+        } else {
+            gather()
+        }
+        
+    }
+    
+    func scatter() {
+        
+    }
+    
+    func gather() {
+        
     }
     
     override func viewDidLoad() {
