@@ -6,7 +6,7 @@ class ViewController: UIViewController {
     
     //MARK: - Properties
     var shouldScramble: Bool = false
-
+    var label: UILabel!
     
     @IBAction func toggle(_ sender: Any) {
         
@@ -28,9 +28,71 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        //adding all my labels programatically
+        let lLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        lLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(lLabel)
+        lLabel.textAlignment = .center
+        lLabel.text = "L"
+        self.view.addSubview(lLabel)
+        
+        let aLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        aLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(aLabel)
+        aLabel.textAlignment = .center
+        aLabel.text = "A"
+        self.view.addSubview(aLabel)
+        
+        
+        let mLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        mLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(mLabel)
+        mLabel.textAlignment = .center
+        mLabel.text = "M"
+        self.view.addSubview(mLabel)
+        
+        let bLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        bLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bLabel)
+        bLabel.textAlignment = .center
+        bLabel.text = "B"
+        self.view.addSubview(bLabel)
+        
+        let dLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        dLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(dLabel)
+        dLabel.textAlignment = .center
+        dLabel.text = "D"
+        self.view.addSubview(dLabel)
+        
+        let lastALabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        lastALabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(lastALabel)
+        lastALabel.textAlignment = .center
+        lastALabel.text = "A"
+        self.view.addSubview(lastALabel)
+        
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        
+        stackView.addArrangedSubview(lLabel)
+        stackView.addArrangedSubview(aLabel)
+        stackView.addArrangedSubview(mLabel)
+        stackView.addArrangedSubview(bLabel)
+        stackView.addArrangedSubview(dLabel)
+        stackView.addArrangedSubview(lastALabel)
+
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+            ])
+
     }
-
-
 }
 
