@@ -91,10 +91,12 @@ class CustomControl: UIControl {
     // MARK: - Private Method
     
     private func updateValue(at touch: UITouch) {
+        
         for label in labels {
             let touchPoint = touch.location(in: self)
             if label.frame.contains(touchPoint) {
                 value = label.tag
+                label.performFlare()
                 sendActions(for: [.valueChanged])
             }
         }
@@ -103,5 +105,16 @@ class CustomControl: UIControl {
             label.textColor = (label.tag <= value) ? componentActiveColor : componentInactiveColor
         }
     }
-    
+}
+
+extension UIView {
+    // "Flare view" animation sequence
+    func performFlare() {
+        func flare()   { transform = CGAffineTransform(scaleX: 1.6, y: 1.6) }
+        func unflare() { transform = .identity }
+        
+        UIView.animate(withDuration: 0.3,
+                       animations: { flare() },
+                       completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
+    }
 }
