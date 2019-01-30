@@ -37,6 +37,17 @@ class CustomControl: UIControl {
             
             // add a tag to each star
             star.tag = position
+            
+            // Set the font (bold system font, size 32.0)
+            star.font = UIFont.boldSystemFont(ofSize: 32.0)
+            
+            // Set the text (pick your favorite Unicode star from the character picker)
+            // ⭐️
+            star.text = "⭐️"
+            
+            // Set the alignment (center) for your label.
+            star.textAlignment = .center
+            
         }
     }
     
