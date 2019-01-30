@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         aLabel.text = "A"
         self.view.addSubview(aLabel)
         
-        
         let mLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         mLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mLabel)
@@ -86,11 +85,20 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(bLabel)
         stackView.addArrangedSubview(dLabel)
         stackView.addArrangedSubview(lastALabel)
+        
+        let logoView = UIImageView()
+        logoView.image = UIImage(named: "Lambda_Logo_Full")
+        logoView.contentMode = .scaleAspectFit
+        logoView.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
+        logoView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoView)
 
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            logoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
             ])
 
     }
