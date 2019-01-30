@@ -67,7 +67,7 @@ class CustomControl: UIControl {
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        updateValue(at: <#T##UITouch#>)
+        updateValue(at: touch)
         return true
     }
     
@@ -94,14 +94,7 @@ class CustomControl: UIControl {
         
     }
     
-//    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-//        // Track the touch location in the view
-//        let touchPoint = touch.location(in: self)
-//        // Set the color based on the user touch location
-//        sendActions(for: [.touchDown, .valueChanged])
-//        return true
-//    }
-//
+
 //    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 //        print("Continue tracking touch: \(touch.location(in: self))")
 //        let touchPoint = touch.location(in: self)
@@ -137,7 +130,7 @@ class CustomControl: UIControl {
 //        sendActions(for: [.touchCancel])
 //        super.cancelTracking(with: event)
 //    }
-    
+//    
 //    override func updateValue(at touch: UITouch) {
 //        for.loop.componentLabels {
 //        guard let touchLocation.labelFrame == true
