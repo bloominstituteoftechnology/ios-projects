@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension CGFloat {
+    static func randomColor() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func randomColor() -> UIColor {
+        return UIColor(red:   .randomColor(),
+                       green: .randomColor(),
+                       blue:  .randomColor(),
+                       alpha: 1.0)
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -37,6 +52,8 @@ class ViewController: UIViewController {
     
     var labelArray: [UILabel] = []
     
+    
+    
     func setLabels() {
         var count: CGFloat = 0.0
         while labelArray.count <= 6 {
@@ -60,28 +77,68 @@ class ViewController: UIViewController {
             newLabel.font = UIFont(name: "Noteworthy", size: 60)
             
             labelArray.append(newLabel)
-            newLabel.tag = self.labelArray.count
+            newLabel.tag = Int(count)
             view.addSubview(newLabel)
           
         }
     }
     
     func scatter() {
-      /*  UIView.animateWithDuration(0.5, delay: 0.5, options: .curveEaseOut, animations: {
-            self.uiImageView.alpha = 0.0
-        }, completion: nil)*/
-        
+      
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
             self.lambdaImageView.alpha = 0.0
-        }) { (_) in
-            UIView.animate(withDuration: 1.0
-            , animations: {
-            self.lambdaImageView.alpha = 1.0
-            })
+         }, completion: nil)
+        
+        
+        for letter in labelArray {
+            let randX = CGFloat.random(in: 0 ..< 300)
+            let randY = CGFloat.random(in: 100 ..< 550)
+            let randRotation = CGFloat.random(in: 1 ..< 6)
+            letter.textColor = .randomColor()
+            letter.backgroundColor = .randomColor()
+            
+            UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
+                    letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi/randRotation)
+                }) //of the 4 secs what percentage (realtive)
+                
+                UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                    letter.center = CGPoint(x: randX, y: randY)
+                })
+                
+                
+            }, completion: nil)
+            
         }
+        
     }
     
     func gather() {
+        
+        UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseIn, animations: {
+            self.lambdaImageView.alpha = 1.0
+        }, completion: nil)
+    
+        
+        for letter in labelArray {
+            letter.textColor = .black
+            letter.backgroundColor = .clear
+            
+            UIView.animateKeyframes(withDuration: 3.0, delay: 0, options: [], animations: {
+                
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
+                    letter.transform = .identity
+                })
+                
+                UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                    letter.center = CGPoint(x: CGFloat(letter.tag), y: 100.0)
+                })
+                
+                
+            }, completion: nil)
+        }
+        
+        
         
     }
     
