@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBOutlet weak var lambdaImageView: UIImageView!
+    
     // Create Labels
    
     
@@ -64,7 +67,18 @@ class ViewController: UIViewController {
     }
     
     func scatter() {
+      /*  UIView.animateWithDuration(0.5, delay: 0.5, options: .curveEaseOut, animations: {
+            self.uiImageView.alpha = 0.0
+        }, completion: nil)*/
         
+        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
+            self.lambdaImageView.alpha = 0.0
+        }) { (_) in
+            UIView.animate(withDuration: 1.0
+            , animations: {
+            self.lambdaImageView.alpha = 1.0
+            })
+        }
     }
     
     func gather() {

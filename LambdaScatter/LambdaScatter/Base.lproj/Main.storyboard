@@ -35,15 +35,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-Pg-mEs">
-                                <rect key="frame" x="8" y="196" width="359" height="128"/>
+                                <rect key="frame" x="20" y="262" width="335" height="107"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NwV-Pg-mEs" secondAttribute="bottom" constant="343" id="32x-Tg-edO"/>
-                            <constraint firstItem="NwV-Pg-mEs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lp3-I1-JOh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NwV-Pg-mEs" secondAttribute="trailing" constant="8" id="nQK-kq-jFc"/>
-                            <constraint firstItem="NwV-Pg-mEs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="tLI-QI-CUh"/>
+                            <constraint firstItem="NwV-Pg-mEs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="198" id="LCC-Cn-Bt7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NwV-Pg-mEs" secondAttribute="bottom" constant="298" id="c2n-pR-IYz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NwV-Pg-mEs" secondAttribute="trailing" constant="20" id="nrz-FC-IWs"/>
+                            <constraint firstItem="NwV-Pg-mEs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z69-nW-yZL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,10 +54,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lambdaImageView" destination="NwV-Pg-mEs" id="cxp-vf-81u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="134"/>
+            <point key="canvasLocation" x="101.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
