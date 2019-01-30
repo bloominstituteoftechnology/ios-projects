@@ -2,6 +2,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "Set Rating Below"
+    }
+    
     // Follows both steps 7 & 8 of the README where `sender` is changed to `ratingControl`
     @IBAction func updateRating(_ ratingControl: CustomControl) {
         if ratingControl.value == 1 {

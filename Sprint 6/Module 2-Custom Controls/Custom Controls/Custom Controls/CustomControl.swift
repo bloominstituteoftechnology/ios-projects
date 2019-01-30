@@ -22,7 +22,7 @@ class CustomControl: UIControl {
         // Set the starting point for the first star
         var xCoordinate: CGFloat = 8.0
         
-        for position in 0 ... 5 {
+        for position in 0 ... 4 {
             // create label and its frame as a square
             let star = UILabel(frame: CGRect(x: xCoordinate, y: 0.0, width: componentDimension, height: componentDimension))
             
@@ -42,15 +42,23 @@ class CustomControl: UIControl {
             star.font = UIFont.boldSystemFont(ofSize: 32.0)
             
             // Set the text (pick your favorite Unicode star from the character picker)
-            // ⭐️
-            star.text = "⭐️"
+            // “✯” U+272F - http://xahlee.info/comp/unicode_stars.html
+            star.text = "✯"
             
             // Set the alignment (center) for your label.
             star.textAlignment = .center
             
+            // Every star but the first should be grayed out.
+            if star.tag != 0 {
+                star.textColor = componentInactiveColor
+            } else {
+                star.textColor = componentActiveColor
+            }
+            
         }
     }
     
+    // Tells Auto Layout how big the custom control should be
     override var intrinsicContentSize: CGSize {
         let componentsWidth = CGFloat(componentCount) * componentDimension
         let componentsSpacing = CGFloat(componentCount + 1) * 8.0
@@ -58,57 +66,57 @@ class CustomControl: UIControl {
         return CGSize(width: width, height: componentDimension)
     }
     
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        // Track the touch location in the view
-        let touchPoint = touch.location(in: self)
-        // Set the color based on the user touch location
-        sendActions(for: [.touchDown, .valueChanged])
-        return true
-    }
-    
-    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        print("Continue tracking touch: \(touch.location(in: self))")
-        let touchPoint = touch.location(in: self)
-        if bounds.contains(touchPoint) {
-            sendActions(for: [.touchDragInside, .valueChanged])
-        } else {
-            sendActions(for: [.touchDragOutside])
-        }
-        // Continues tracking
-        return true
-    }
-    
-    
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        // Make sure to call this (super.endTracking) no matter what happens, at the end of the execution of the function.
-        defer {
-            super.endTracking(touch, with: event)
-        }
-        
-        guard let touch = touch else {
-            return
-        }
-        
-        let touchPoint = touch.location(in: self)
-        if bounds.contains(touchPoint) {
-            sendActions(for: [.touchUpInside, .valueChanged])
-        } else {
-            sendActions(for: [.touchUpOutside])
-        }
-    }
-    
-    override func cancelTracking(with event: UIEvent?) {
-        sendActions(for: [.touchCancel])
-        super.cancelTracking(with: event)
-    }
-    
-    override func updateValue(at touch: UITouch) {
-        for.loop.componentLabels {
-        guard let touchLocation.labelFrame == true
-            else { return }
-        }
-        touch.meets.label = controlValue.labelArray(tag.indexRow.path)
-        sendAction(for: [valueChanged])
-    }
-    var color: UIColor = .white
+//    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+//        // Track the touch location in the view
+//        let touchPoint = touch.location(in: self)
+//        // Set the color based on the user touch location
+//        sendActions(for: [.touchDown, .valueChanged])
+//        return true
+//    }
+//    
+//    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+//        print("Continue tracking touch: \(touch.location(in: self))")
+//        let touchPoint = touch.location(in: self)
+//        if bounds.contains(touchPoint) {
+//            sendActions(for: [.touchDragInside, .valueChanged])
+//        } else {
+//            sendActions(for: [.touchDragOutside])
+//        }
+//        // Continues tracking
+//        return true
+//    }
+//    
+//    
+//    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+//        // Make sure to call this (super.endTracking) no matter what happens, at the end of the execution of the function.
+//        defer {
+//            super.endTracking(touch, with: event)
+//        }
+//        
+//        guard let touch = touch else {
+//            return
+//        }
+//        
+//        let touchPoint = touch.location(in: self)
+//        if bounds.contains(touchPoint) {
+//            sendActions(for: [.touchUpInside, .valueChanged])
+//        } else {
+//            sendActions(for: [.touchUpOutside])
+//        }
+//    }
+//    
+//    override func cancelTracking(with event: UIEvent?) {
+//        sendActions(for: [.touchCancel])
+//        super.cancelTracking(with: event)
+//    }
+//    
+//    override func updateValue(at touch: UITouch) {
+//        for.loop.componentLabels {
+//        guard let touchLocation.labelFrame == true
+//            else { return }
+//        }
+//        touch.meets.label = controlValue.labelArray(tag.indexRow.path)
+//        sendAction(for: [valueChanged])
+//    }
+//    var color: UIColor = .white
 }

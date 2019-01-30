@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F834D92222014ED800D65C06 /* README-Progress.md in Resources */ = {isa = PBXBuildFile; fileRef = F834D92122014ED800D65C06 /* README-Progress.md */; };
+		F834D94422024FCD00D65C06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F834D94322024FCD00D65C06 /* Default-568h@2x.png */; };
 		F83BD17421E5426C006148A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83BD17321E5426C006148A4 /* AppDelegate.swift */; };
 		F83BD17621E5426C006148A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83BD17521E5426C006148A4 /* ViewController.swift */; };
 		F83BD17921E5426C006148A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83BD17721E5426C006148A4 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		F834D92122014ED800D65C06 /* README-Progress.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README-Progress.md"; path = "../../README-Progress.md"; sourceTree = "<group>"; };
+		F834D94322024FCD00D65C06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F83BD17021E5426C006148A4 /* Custom Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83BD17321E5426C006148A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83BD17521E5426C006148A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		F83BD16721E5426C006148A4 = {
 			isa = PBXGroup;
 			children = (
+				F834D94322024FCD00D65C06 /* Default-568h@2x.png */,
 				F83BD17221E5426C006148A4 /* Custom Controls */,
 				F83BD17121E5426C006148A4 /* Products */,
 			);
@@ -144,6 +147,7 @@
 				F834D92222014ED800D65C06 /* README-Progress.md in Resources */,
 				F8CFC9BC21EE9F630070B0FE /* README.md in Resources */,
 				F83BD17921E5426C006148A4 /* Main.storyboard in Resources */,
+				F834D94422024FCD00D65C06 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = "Custom Controls/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Custom Controls/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Y6994DAGM;
-				INFOPLIST_FILE = "Custom Controls/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Custom Controls/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
