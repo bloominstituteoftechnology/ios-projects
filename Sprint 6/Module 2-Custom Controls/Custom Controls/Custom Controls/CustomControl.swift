@@ -19,7 +19,7 @@ class CustomControl: UIControl {
     
     func setup() {
         
-        for something in 0 ... 5 {
+        for position in 0 ... 5 {
             // create label
             let star = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: componentDimension, height: componentDimension))
             
@@ -29,6 +29,8 @@ class CustomControl: UIControl {
             // store each label into a local array
             labelArray.append(star)
             
+            // add a tag to each star
+            star.tag = position
         }
     }
     
