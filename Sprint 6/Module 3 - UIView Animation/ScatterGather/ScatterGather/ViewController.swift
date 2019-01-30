@@ -94,7 +94,8 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        //stackView.spacing = 10.0
+        stackView.distribution = .fillProportionally
         
         stackView.addArrangedSubview(lLabel)
         stackView.addArrangedSubview(aLabel)
@@ -106,7 +107,7 @@ class ViewController: UIViewController {
         let logoView = UIImageView()
         logoView.image = UIImage(named: "Lambda_Logo_Full")
         logoView.contentMode = .scaleAspectFit
-        logoView.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
+        //logoView.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
         logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
 
@@ -115,7 +116,9 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             logoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            logoView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            logoView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             ])
     }
     
