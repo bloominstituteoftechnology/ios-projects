@@ -88,7 +88,7 @@ class CustomControl: UIControl {
         sendActions(for: [.touchCancel])
     }
     
-    // MARK: - Private Method
+    // MARK: - Private Methods
     
     private func updateValue(at touch: UITouch) {
         
