@@ -35,11 +35,7 @@ class CustomControl: UIControl {
             label.font = UIFont.boldSystemFont(ofSize: 32)
             label.text = "☃︎"
             label.textAlignment = .center
-            if component == 1 {
-                label.textColor = componentActiveColor
-            } else {
-                label.textColor = componentInactiveColor
-            }
+            label.textColor = componentInactiveColor
             
             x += componentDimension + 8
             
@@ -95,6 +91,20 @@ class CustomControl: UIControl {
     // MARK: - Private Method
     
     private func updateValue(at touch: UITouch) {
-
+        for label in labels {
+            let touchPoint = touch.location(in: self)
+            if label.frame.contains(touchPoint) {
+                value = label.tag
+            }
+        }
+        
+        for label in labels {
+            if label.tag <= value {
+                label.textColor = componentActiveColor
+            } else {
+                label.textColor = componentInactiveColor
+            }
+        }
     }
+    
 }

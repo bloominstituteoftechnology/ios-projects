@@ -20,7 +20,7 @@
                         <subviews>
                             <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4K-6c-UGQ" customClass="CustomControl" customModule="Custom_UIControl" customModuleProvider="target">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.92051905389999999" green="0.86463487149999996" blue="0.75684595109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.81903038350000001" green="0.89943224899999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="updateRating:" destination="BYZ-38-t0r" eventType="valueChanged" id="ITI-mg-IsX"/>
                                 </connections>
