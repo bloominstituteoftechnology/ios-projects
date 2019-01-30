@@ -47,8 +47,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lambdaImageView: UIImageView!
     
-    // Create Labels
-   
     
     var labelArray: [UILabel] = []
     
@@ -100,7 +98,7 @@ class ViewController: UIViewController {
             UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
                     letter.transform = CGAffineTransform(rotationAngle: CGFloat.pi/randRotation)
-                }) //of the 4 secs what percentage (realtive)
+                })
                 
                 UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
                     letter.center = CGPoint(x: randX, y: randY)
@@ -121,8 +119,10 @@ class ViewController: UIViewController {
     
         
         for letter in labelArray {
+            letter.textAlignment = .center
             letter.textColor = .black
             letter.backgroundColor = .clear
+           // print(letter.tag)
             
             UIView.animateKeyframes(withDuration: 3.0, delay: 0, options: [], animations: {
                 
