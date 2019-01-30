@@ -6,23 +6,34 @@ class ViewController: UIViewController {
     
     //MARK: - Properties
     var shouldScramble: Bool = false
-    var label: UILabel!
+    var labels: [UILabel] = []
+    let logoView = UIImageView()
+
+    
+    func scramble() {
+        shouldScramble = !shouldScramble
+    }
     
     @IBAction func toggle(_ sender: Any) {
-        
         if shouldScramble == true {
-            scatter()
+            for label in labels {
+                scatter(label)
+            }
+            fadeLogo()
         } else {
-            gather()
+            for label in labels {
+            gather(label)
+            }
+            fadeLogo()
         }
+        scramble()
+    }
+    
+    func scatter(_ label: UILabel) {
         
     }
     
-    func scatter() {
-        
-    }
-    
-    func gather() {
+    func gather(_ label: UILabel) {
         
     }
     
@@ -36,6 +47,7 @@ class ViewController: UIViewController {
         lLabel.textAlignment = .center
         lLabel.text = "L"
         self.view.addSubview(lLabel)
+        labels.append(lLabel)
         
         let aLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         aLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +55,7 @@ class ViewController: UIViewController {
         aLabel.textAlignment = .center
         aLabel.text = "A"
         self.view.addSubview(aLabel)
+        labels.append(aLabel)
         
         let mLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         mLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +63,7 @@ class ViewController: UIViewController {
         mLabel.textAlignment = .center
         mLabel.text = "M"
         self.view.addSubview(mLabel)
+        labels.append(mLabel)
         
         let bLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         bLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +71,7 @@ class ViewController: UIViewController {
         bLabel.textAlignment = .center
         bLabel.text = "B"
         self.view.addSubview(bLabel)
+        labels.append(bLabel)
         
         let dLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         dLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +79,7 @@ class ViewController: UIViewController {
         dLabel.textAlignment = .center
         dLabel.text = "D"
         self.view.addSubview(dLabel)
+        labels.append(dLabel)
         
         let lastALabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         lastALabel.translatesAutoresizingMaskIntoConstraints = false
@@ -71,6 +87,7 @@ class ViewController: UIViewController {
         lastALabel.textAlignment = .center
         lastALabel.text = "A"
         self.view.addSubview(lastALabel)
+        labels.append(lastALabel)
         
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -109,6 +126,19 @@ class ViewController: UIViewController {
         let blue:CGFloat = CGFloat(drand48())
         
         return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
+    }
+    
+    //fade logo
+    func fadeLogo() {
+        if logoView.alpha == 0.0 {
+            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseIn, animations: {
+                self.logoView.alpha = 1.0
+            })
+        } else {
+            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseOut, animations: {
+                self.logoView.alpha = 0.0
+            })
+        }
     }
 }
 
