@@ -77,6 +77,7 @@ class ViewController: UIViewController {
             labelArray.append(newLabel)
             newLabel.tag = Int(count)
             view.addSubview(newLabel)
+            
           
         }
     }
@@ -131,7 +132,7 @@ class ViewController: UIViewController {
                 })
                 
                 UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
-                    letter.center = CGPoint(x: CGFloat(letter.tag), y: 100.0)
+                    letter.frame = CGRect(x: letter.tag, y: 100, width: 80, height: 80)
                 })
                 
                 
