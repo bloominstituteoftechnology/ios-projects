@@ -20,20 +20,23 @@ class ViewController: UIViewController {
             for label in labels {
                 scatter(label)
             }
-            UIImageView.animate(withDuration: 2) {
-                self.logoView.alpha = 1.0
-            }
+//            UIImageView.animate(withDuration: 2) {
+//                self.logoView.alpha = 1.0
+//            }
         } else {
             for label in labels {
                 gather(label)
             }
-            UIImageView.animate(withDuration: 2) {
-                self.logoView.alpha = 0
-            }
+//            UIImageView.animate(withDuration: 2) {
+//                self.logoView.alpha = 0
+//            }
         }
     }
     
     func scatter(_ label: UILabel) {
+        UIImageView.animate(withDuration: 2) {
+            self.logoView.alpha = 1.0
+        }
         for label in labels {
             UIView.animate(withDuration: 3) {
                 label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 200)))
@@ -45,6 +48,9 @@ class ViewController: UIViewController {
     }
     
     func gather(_ label: UILabel) {
+        UIImageView.animate(withDuration: 2) {
+            self.logoView.alpha = 0
+        }
         for label in labels {
             UIView.animate(withDuration: 1.5) {
                 label.transform = .identity
