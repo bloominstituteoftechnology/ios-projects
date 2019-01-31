@@ -11,9 +11,9 @@ class TableViewController: UITableViewController {
 
         let friend1 = Friend(name: "Wonder Woman", friendImage: UIImage(named: "WonderWoman")!, info: "Amazonian masterful athlete, acrobat, fighter and strategist")
         
-        let friend2 = Friend(name: "Spider Woman", friendImage: UIImage(named: "SpiderWoman")!, info: "Superhuman strength, speed, reflexes, agility, endurance and durability")
+        let friend2 = Friend(name: "Black Widow", friendImage: UIImage(named: "BlackWidow")!, info: "Athlete, gymnast, acrobat, aerialist, and expert martial artist")
         
-        let friend3 = Friend(name: "Jean Grey", friendImage: UIImage(named: "JeanGray")!, info: "telepathic and telekinetic abilities")
+        let friend3 = Friend(name: "Jean Grey", friendImage: UIImage(named: "JeanGray")!, info: "Telepathic and telekinetic abilities")
         
         friends.append(friend1)
         friends.append(friend2)
