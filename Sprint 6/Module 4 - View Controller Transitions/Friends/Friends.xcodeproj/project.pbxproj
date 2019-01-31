@@ -11,6 +11,10 @@
 		39B55F602203A2A900664687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B55F5E2203A2A900664687 /* Main.storyboard */; };
 		39B55F622203A2AA00664687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B55F612203A2AA00664687 /* Assets.xcassets */; };
 		39B55F652203A2AA00664687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B55F632203A2AA00664687 /* LaunchScreen.storyboard */; };
+		39B55F6D2203A40500664687 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F6C2203A40500664687 /* Friend.swift */; };
+		39B55F6F2203A45100664687 /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F6E2203A45100664687 /* FriendController.swift */; };
+		39B55F712203AB0B00664687 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F702203AB0B00664687 /* FriendDetailViewController.swift */; };
+		39B55F732203AB2300664687 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F722203AB2300664687 /* FriendsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		39B55F612203A2AA00664687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B55F642203A2AA00664687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B55F662203A2AA00664687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B55F6C2203A40500664687 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		39B55F6E2203A45100664687 /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
+		39B55F702203AB0B00664687 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		39B55F722203AB2300664687 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +61,40 @@
 			isa = PBXGroup;
 			children = (
 				39B55F5A2203A2A900664687 /* AppDelegate.swift */,
+				39B55F752203AB4F00664687 /* Model */,
+				39B55F762203AB5900664687 /* Model Controller */,
+				39B55F742203AB3200664687 /* View Controllers */,
 				39B55F5E2203A2A900664687 /* Main.storyboard */,
 				39B55F612203A2AA00664687 /* Assets.xcassets */,
 				39B55F632203A2AA00664687 /* LaunchScreen.storyboard */,
 				39B55F662203A2AA00664687 /* Info.plist */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		39B55F742203AB3200664687 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39B55F722203AB2300664687 /* FriendsTableViewController.swift */,
+				39B55F702203AB0B00664687 /* FriendDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		39B55F752203AB4F00664687 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39B55F6C2203A40500664687 /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39B55F762203AB5900664687 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39B55F6E2203A45100664687 /* FriendController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B55F5B2203A2A900664687 /* AppDelegate.swift in Sources */,
+				39B55F732203AB2300664687 /* FriendsTableViewController.swift in Sources */,
+				39B55F6F2203A45100664687 /* FriendController.swift in Sources */,
+				39B55F712203AB0B00664687 /* FriendDetailViewController.swift in Sources */,
+				39B55F6D2203A40500664687 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
