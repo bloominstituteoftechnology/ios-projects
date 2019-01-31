@@ -87,7 +87,7 @@ var developer3 = Developer(name: "Developer 3", leftSpoon: spoon3, rightSpoon: s
 var developer4 = Developer(name: "Developer 4", leftSpoon: spoon4, rightSpoon: spoon3)
 var developerArray: [Developer] = [developer0, developer1, developer2, developer3, developer4]
 
-
+// Run Developers, run()
 DispatchQueue.concurrentPerform(iterations: 5) {devIndex in
     developerArray[devIndex].run()
 
