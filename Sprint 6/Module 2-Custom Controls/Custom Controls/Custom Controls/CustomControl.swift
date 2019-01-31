@@ -72,8 +72,15 @@ class CustomControl: UIControl {
     }
     
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        sendActions(for: [.touchDragInside, .touchDragOutside])
-        updateValue(at: <#T##UITouch#>)
+        let touchPoint = touch.location(in: self)
+        // Send .touchDragInside or .touchDragOutside
+        // Call updateValue() if inside
+        if bounds.contains(touchPoint) {
+            sendActions(for: .touchDragInside)
+            updateValue(at: touch)
+        } else {
+            sendActions(for: .touchDragOutside)
+        }
         return true
     }
     
@@ -94,18 +101,6 @@ class CustomControl: UIControl {
         
     }
     
-
-//    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-//        print("Continue tracking touch: \(touch.location(in: self))")
-//        let touchPoint = touch.location(in: self)
-//        if bounds.contains(touchPoint) {
-//            sendActions(for: [.touchDragInside, .valueChanged])
-//        } else {
-//            sendActions(for: [.touchDragOutside])
-//        }
-//        // Continues tracking
-//        return true
-//    }
 //
 //
 //    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
@@ -130,7 +125,7 @@ class CustomControl: UIControl {
 //        sendActions(for: [.touchCancel])
 //        super.cancelTracking(with: event)
 //    }
-//    
+//
 //    override func updateValue(at touch: UITouch) {
 //        for.loop.componentLabels {
 //        guard let touchLocation.labelFrame == true
