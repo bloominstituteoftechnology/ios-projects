@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let colors: [UIColor] = [.white, .red, .green, .orange, .yellow, .lightGray, .darkGray]
+    
     var shouldScramble : Bool = false
     var lambda : [UILabel] = []
     var imageLambda: UIImageView = UIImageView()
@@ -23,12 +25,12 @@ class ViewController: UIViewController {
             var perspective = CATransform3DIdentity
             perspective.m34 = -1/500
             transformLayer.transform = perspective
-//            transformLayer.position = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
             transformLayer.addSublayer(imageLambda.layer)
             view.layer.addSublayer(transformLayer)
             
-            UIView.animate(withDuration: 3) {
-                self.imageLambda.layer.transform = CATransform3DMakeRotation(-0.5, 1, 0, 0)
+            UIView.animate(withDuration: 2) {
+                self.imageLambda.layer.transform = CATransform3DMakeRotation(-0.80, 1, 0, 0)
+                self.imageLambda.alpha = 0
             }
             
             
@@ -36,9 +38,8 @@ class ViewController: UIViewController {
             for labels in lambda {
                 
                 UIView.animate(withDuration: 3.0, animations: {
-                    labels.textColor = UIColor.FlatColor.ColorHunt.DiscoBlue
-                    labels.backgroundColor = UIColor.FlatColor.Gray.AlmondFrost .withAlphaComponent(0.50)
-                    self.imageLambda.alpha = 0
+                    labels.textColor = self.colors.randomElement()
+                    labels.backgroundColor = self.colors.randomElement()
                     
                 }, completion: nil)
                 UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
