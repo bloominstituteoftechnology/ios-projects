@@ -10,10 +10,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let friend = friend else { return }
+        friendView.image = friend.friendImage
+        nameLabel.text = friend.name
+        infoLabel.text = friend.info
+        
+        navigationController?.title = friend.name
     }
+    
+    
 }
 
