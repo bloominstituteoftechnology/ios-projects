@@ -75,6 +75,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let font = UIFont(name: "Avenir-Black", size: 40)!
         
+        makeLabel(text: "L", font: font)
+        makeLabel(text: "A", font: font)
+        makeLabel(text: "M", font: font)
+        makeLabel(text: "B", font: font)
+        makeLabel(text: "A", font: font)
+        
+        /* Previous implementation to make Letter labels
+         
         let charL = UILabel()
         charL.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(charL)
@@ -116,7 +124,8 @@ class ViewController: UIViewController {
         charA2.text = "A"
         charA2.font = font
         lambda.append(charA2)
-        
+         
+        */
         
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -125,12 +134,17 @@ class ViewController: UIViewController {
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
         
-        stackView.addArrangedSubview(charL)
-        stackView.addArrangedSubview(charA)
-        stackView.addArrangedSubview(charM)
-        stackView.addArrangedSubview(charB)
-        stackView.addArrangedSubview(charD)
-        stackView.addArrangedSubview(charA2)
+        for labels in lambda {
+            stackView.addArrangedSubview(labels)
+        }
+        
+        //  Previous implementation of adding to stackview
+//        stackView.addArrangedSubview(charL)
+//        stackView.addArrangedSubview(charA)
+//        stackView.addArrangedSubview(charM)
+//        stackView.addArrangedSubview(charB)
+//        stackView.addArrangedSubview(charD)
+//        stackView.addArrangedSubview(charA2)
         
         
         
@@ -156,6 +170,15 @@ class ViewController: UIViewController {
             imageLambda.centerYAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.centerYAnchor, multiplier: 1),
             ])
         
+    }
+    
+    func makeLabel(text: String, font: UIFont){
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        label.text = text
+        label.font = font
+        lambda.append(label)
     }
 
     
