@@ -85,31 +85,35 @@ class Developer {
 
 var developers: [Developer] = []
 var spoons: [Spoon] = []
-for index in 1 ... 5 {
-    let developer = Developer()
-    let spoon = Spoon(index: index)
-    developers.append(developer)
-    spoons.append(spoon)
-    developers[index - 1].leftSpoon = spoons[index - 1]
-    developers[index - 1].identifier += "\(index)"
-}
 
-for index in 1 ... 5 {
-    if index == developers.count {
-        developers[index - 1].rightSpoon = spoons[0]
-    } else {
-        developers[index - 1].rightSpoon = spoons[(index) % developers.count]
+
+func createDeveloper(numberOfDevs: Int) {
+    for index in 1 ... numberOfDevs {
+        let developer = Developer()
+        let spoon = Spoon(index: index)
+        developers.append(developer)
+        spoons.append(spoon)
+        developers[index - 1].leftSpoon = spoons[index - 1]
+        developers[index - 1].identifier += "\(index)"
+    }
+    
+    for index in 1 ... numberOfDevs {
+        if index == developers.count {
+            developers[index - 1].rightSpoon = spoons[0]
+        } else {
+            developers[index - 1].rightSpoon = spoons[index]
+        }
     }
 }
 
-//for developer in developers {
-//    print (developer.identifier)
-//}
-//print(developers)
+createDeveloper(numberOfDevs: 5)
+for developer in developers {
+    print (developer.identifier)
+}
 
 
-
-// ??? Developer 5 Never gets called... ???//
+// ??? Developer5 never gets called. I guess I don't undestand
+// what I'm doing... Sad Panda... ???//
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
 }
