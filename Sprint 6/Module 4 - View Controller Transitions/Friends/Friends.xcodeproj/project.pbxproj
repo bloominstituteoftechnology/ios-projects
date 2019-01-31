@@ -15,6 +15,8 @@
 		39B55F6F2203A45100664687 /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F6E2203A45100664687 /* FriendController.swift */; };
 		39B55F712203AB0B00664687 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F702203AB0B00664687 /* FriendDetailViewController.swift */; };
 		39B55F732203AB2300664687 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F722203AB2300664687 /* FriendsTableViewController.swift */; };
+		39B55F782203B43200664687 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F772203B43200664687 /* NavigationControllerDelegate.swift */; };
+		39B55F7A2203B64400664687 /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B55F792203B64400664687 /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		39B55F6E2203A45100664687 /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		39B55F702203AB0B00664687 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		39B55F722203AB2300664687 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		39B55F772203B43200664687 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		39B55F792203B64400664687 /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				39B55F6E2203A45100664687 /* FriendController.swift */,
+				39B55F772203B43200664687 /* NavigationControllerDelegate.swift */,
+				39B55F792203B64400664687 /* ImageTransitionAnimator.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				39B55F732203AB2300664687 /* FriendsTableViewController.swift in Sources */,
 				39B55F6F2203A45100664687 /* FriendController.swift in Sources */,
 				39B55F712203AB0B00664687 /* FriendDetailViewController.swift in Sources */,
+				39B55F782203B43200664687 /* NavigationControllerDelegate.swift in Sources */,
+				39B55F7A2203B64400664687 /* ImageTransitionAnimator.swift in Sources */,
 				39B55F6D2203A40500664687 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

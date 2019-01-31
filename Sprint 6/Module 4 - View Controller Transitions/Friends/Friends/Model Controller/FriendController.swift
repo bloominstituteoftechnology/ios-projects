@@ -30,12 +30,12 @@ class FriendController {
                        "kairi",
                        "elsa",
                        "anna",
+                       "olaf",
                        "mike",
                        "sully",
                        "buzz",
                        "woody",
                        "aqua",
-                       "olaf",
                        "terra",
                        "ventus"]
 }
