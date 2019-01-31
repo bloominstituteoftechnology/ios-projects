@@ -79,6 +79,7 @@ class ViewController: UIViewController {
         makeLabel(text: "A", font: font)
         makeLabel(text: "M", font: font)
         makeLabel(text: "B", font: font)
+        makeLabel(text: "D", font: font)
         makeLabel(text: "A", font: font)
         
         /* Previous implementation to make Letter labels
