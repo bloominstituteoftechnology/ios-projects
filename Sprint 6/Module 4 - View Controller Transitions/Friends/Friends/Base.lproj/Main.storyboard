@@ -52,6 +52,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="friendView" destination="w9C-vu-6F0" id="Gl2-dJ-jYG"/>
+                                    <outlet property="nameLabel" destination="Emx-Ah-ZHU" id="y7J-0V-PZx"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="friendSegue" id="hsZ-Fz-XRx"/>
                                 </connections>
                             </tableViewCell>
@@ -65,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEt-5C-nsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583.20000000000005" y="97.601199400299862"/>
+            <point key="canvasLocation" x="-561" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KvS-Xi-z2a">
@@ -109,7 +111,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9at-DA-L6f">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9at-DA-L6f">
                                                 <rect key="frame" x="15.5" y="39" width="27" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -128,6 +130,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="friendView" destination="hRu-Yz-BIA" id="yu7-gC-3Y8"/>
+                        <outlet property="infoLabel" destination="9at-DA-L6f" id="vuF-lO-sX3"/>
+                        <outlet property="nameLabel" destination="BZa-iw-Zut" id="xKN-fT-0fV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
