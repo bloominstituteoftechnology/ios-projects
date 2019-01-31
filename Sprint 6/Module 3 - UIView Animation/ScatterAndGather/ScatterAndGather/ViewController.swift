@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let colors: [UIColor] = [.white, .red, .green, .orange, .yellow, .lightGray, .darkGray]
+    let colors: [UIColor] = [UIColor.FlatColor.ColorHunt.Cream, UIColor.FlatColor.Red.GeorgiaPeach, UIColor.FlatColor.Green.MountainMeadow, UIColor.FlatColor.ColorHunt.DiscoBlue, UIColor.FlatColor.Yellow.Energy, UIColor.FlatColor.ColorHunt.ClearBlue, UIColor.FlatColor.Gray.IronGray, UIColor.FlatColor.Gray.AlmondFrost, UIColor.FlatColor.Violet.Wisteria]
     
     var shouldScramble : Bool = false
     var lambda : [UILabel] = []
@@ -27,13 +27,12 @@ class ViewController: UIViewController {
             transformLayer.transform = perspective
             transformLayer.addSublayer(imageLambda.layer)
             view.layer.addSublayer(transformLayer)
-            
             UIView.animate(withDuration: 2) {
                 self.imageLambda.layer.transform = CATransform3DMakeRotation(-0.80, 1, 0, 0)
                 self.imageLambda.alpha = 0
             }
             
-            
+            //CGFloat.random(x),y).rotated
             
             for labels in lambda {
                 
@@ -44,13 +43,13 @@ class ViewController: UIViewController {
                 }, completion: nil)
                 UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
                     UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
-                        labels.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
-                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100))
+//
+                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: CGFloat.pi/4)
                     })
                     
                     UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
-                        labels.transform = CGAffineTransform(rotationAngle: CGFloat.pi/3)
-                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100))
+                        
+                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: -CGFloat.pi)
                         
                     })
                     
