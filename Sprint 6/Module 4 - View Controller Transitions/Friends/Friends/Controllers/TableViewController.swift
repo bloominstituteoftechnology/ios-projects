@@ -2,12 +2,14 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UINavigationControllerDelegate {
     
     var friends: [Friend] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navigationControllerDelegate = NavigationControllerDelegate()
 
         let friend1 = Friend(name: "Wonder Woman", friendImage: UIImage(named: "WonderWoman")!, info: "Amazonian masterful athlete, acrobat, fighter and strategist")
         
@@ -40,5 +42,7 @@ class TableViewController: UITableViewController {
         guard let destination = segue.destination as? DetailViewController else { return }
         
         destination.friend = friends[indexPath.row]
+
+        //Get the tapped row, and use it to give the navigation controller delegate the source table view cell
     }
 }
