@@ -15,12 +15,13 @@ class ViewController: UIViewController {
     
     @IBAction func toggle(_ sender: Any) {
         scramble()
+        
         if shouldScramble == true {
             for label in labels {
                 scatter(label)
             }
             UIImageView.animate(withDuration: 2) {
-                self.logoView.alpha = 1
+                self.logoView.alpha = 1.0
             }
         } else {
             for label in labels {
@@ -33,15 +34,12 @@ class ViewController: UIViewController {
     }
     
     func scatter(_ label: UILabel) {
-        
         for label in labels {
             UIView.animate(withDuration: 3) {
                 label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 200)))
                 label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4))).translatedBy(x: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 10, max: 40)))
-                //label.frame = rect
                 label.backgroundColor = self.getRandomColor()
                 label.textColor = self.getRandomColor()
-                
             }
         }
     }
@@ -58,7 +56,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //adding all my labels programatically
-        let lLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let lLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         lLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(lLabel)
         lLabel.textAlignment = .center
@@ -66,7 +64,7 @@ class ViewController: UIViewController {
         self.view.addSubview(lLabel)
         labels.append(lLabel)
         
-        let aLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let aLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         aLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(aLabel)
         aLabel.textAlignment = .center
@@ -74,7 +72,7 @@ class ViewController: UIViewController {
         self.view.addSubview(aLabel)
         labels.append(aLabel)
         
-        let mLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let mLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         mLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mLabel)
         mLabel.textAlignment = .center
@@ -82,7 +80,7 @@ class ViewController: UIViewController {
         self.view.addSubview(mLabel)
         labels.append(mLabel)
         
-        let bLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let bLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         bLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bLabel)
         bLabel.textAlignment = .center
@@ -90,7 +88,7 @@ class ViewController: UIViewController {
         self.view.addSubview(bLabel)
         labels.append(bLabel)
         
-        let dLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let dLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         dLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(dLabel)
         dLabel.textAlignment = .center
@@ -98,7 +96,7 @@ class ViewController: UIViewController {
         self.view.addSubview(dLabel)
         labels.append(dLabel)
         
-        let lastALabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let lastALabel = UILabel(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         lastALabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(lastALabel)
         lastALabel.textAlignment = .center
@@ -111,7 +109,8 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
+        //stackView.spacing = 10
+        stackView.distribution = .fillEqually
         
         stackView.addArrangedSubview(lLabel)
         stackView.addArrangedSubview(aLabel)
@@ -128,13 +127,13 @@ class ViewController: UIViewController {
         view.addSubview(logoView)
         
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             logoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            logoView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            logoView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            logoView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 70),
+            logoView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -70),
             ])
     }
     
