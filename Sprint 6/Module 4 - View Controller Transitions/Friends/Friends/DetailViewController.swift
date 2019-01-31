@@ -4,6 +4,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var friend: Friend?
+    
     @IBOutlet weak var friendView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
