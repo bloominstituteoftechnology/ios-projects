@@ -32,8 +32,6 @@ class ViewController: UIViewController {
                 self.imageLambda.alpha = 0
             }
             
-            //CGFloat.random(x),y).rotated
-            
             for labels in lambda {
                 
                 UIView.animate(withDuration: 3.0, animations: {
@@ -43,13 +41,13 @@ class ViewController: UIViewController {
                 }, completion: nil)
                 UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
                     UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
-//
-                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: CGFloat.pi/4)
+
+                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: CGFloat.pi/4).scaledBy(x: 0.5, y: 0.5)
                     })
                     
                     UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
                         
-                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: -CGFloat.pi)
+                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: -CGFloat.pi).scaledBy(x: 2, y: 2)
                         
                     })
                     
