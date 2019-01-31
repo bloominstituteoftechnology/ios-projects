@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         // labels
         for letter in lambda {
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            let label = UILabel()
             view.addSubview(label)
             label.text = String(letter)
             label.font = UIFont.boldSystemFont(ofSize: 60)
