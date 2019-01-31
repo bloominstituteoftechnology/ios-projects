@@ -28,7 +28,7 @@ class FriendTableViewController: UITableViewController {
 
         let friend = friendController.friends[indexPath.row]
         
-        cell.textLabel?.text = friend.name
+        cell.textLabel?.text = friend.name.capitalized
         cell.imageView?.image = friend.image
 
         return cell

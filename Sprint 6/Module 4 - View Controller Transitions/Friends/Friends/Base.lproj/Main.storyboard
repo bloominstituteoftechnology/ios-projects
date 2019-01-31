@@ -93,6 +93,11 @@
                         <viewLayoutGuide key="safeArea" id="wce-hM-YS1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Friend Name" id="jjo-cr-4qD"/>
+                    <connections>
+                        <outlet property="friendImage" destination="PIl-aj-Gmb" id="She-sf-EDC"/>
+                        <outlet property="friendInfo" destination="1bH-eR-1yO" id="4VI-g0-bQN"/>
+                        <outlet property="friendName" destination="gKX-nu-LGN" id="KQv-AG-uJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8U-67-IBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
