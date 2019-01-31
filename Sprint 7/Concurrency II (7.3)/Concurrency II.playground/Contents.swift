@@ -4,7 +4,7 @@ import UIKit
 class Spoon {
     
     var index: Int
-    var endTime = Date().timeIntervalSinceReferenceDate
+   
     //var elapsedTime
     
     init(index: Int) {
@@ -29,7 +29,7 @@ class Developer {
     
     var leftSpoon: Spoon
     var rightSpoon: Spoon
-    var dev: String
+    let dev: String
     
     
     init(leftSpoon: Spoon, rightSpoon: Spoon, dev: String) {
@@ -61,6 +61,8 @@ class Developer {
     }
     
     func eat() {
+       // let startTime = Date()
+        
         print("\(dev) is eating")
         usleep(useconds_t(Int.random(in: 10000...150_000)))
         
@@ -69,12 +71,23 @@ class Developer {
         
         leftSpoon.putDown()
         print("\(dev) put down left spoon")
+        
+//        let endTime = Date()
+//        let time = endTime.timeIntervalSinceReferenceDate -
+//        startTime.timeIntervalSinceReferenceDate
+//        print("\(dev) eat takes \(time) seconds")
     }
     
     func run() {
+        let startTime = Date()
         while true {
+            
         think()
         eat()
+            let endTime = Date()
+            let time = endTime.timeIntervalSinceReferenceDate -
+                startTime.timeIntervalSinceReferenceDate
+            print("\(dev) eating process takes \(time) seconds")
     }
   }
 }
@@ -92,6 +105,7 @@ let developer4 = Developer(leftSpoon: spoon4, rightSpoon: spoon5, dev: "dev4")
 let developer5 = Developer(leftSpoon: spoon5, rightSpoon: spoon1, dev: "dev5")
 
 let developers = [developer1, developer2, developer3, developer4, developer5]
+
 
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
