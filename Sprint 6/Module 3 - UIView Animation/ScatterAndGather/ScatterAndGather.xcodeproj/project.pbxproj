@@ -12,6 +12,8 @@
 		A2DA4B0F22024B3D009A5E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DA4B0D22024B3D009A5E2F /* Main.storyboard */; };
 		A2DA4B1122024B3E009A5E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DA4B1022024B3E009A5E2F /* Assets.xcassets */; };
 		A2DA4B1422024B3E009A5E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DA4B1222024B3E009A5E2F /* LaunchScreen.storyboard */; };
+		A2DA4B1C220261FF009A5E2F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B1B220261FF009A5E2F /* UIColor+Hex.swift */; };
+		A2DA4B1E22026215009A5E2F /* UIColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B1D22026215009A5E2F /* UIColor+FlatColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A2DA4B1022024B3E009A5E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2DA4B1322024B3E009A5E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DA4B1522024B3E009A5E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DA4B1B220261FF009A5E2F /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A2DA4B1D22026215009A5E2F /* UIColor+FlatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FlatColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				A2DA4B0922024B3D009A5E2F /* AppDelegate.swift */,
 				A2DA4B0B22024B3D009A5E2F /* ViewController.swift */,
+				A2DA4B1B220261FF009A5E2F /* UIColor+Hex.swift */,
+				A2DA4B1D22026215009A5E2F /* UIColor+FlatColors.swift */,
 				A2DA4B0D22024B3D009A5E2F /* Main.storyboard */,
 				A2DA4B1022024B3E009A5E2F /* Assets.xcassets */,
 				A2DA4B1222024B3E009A5E2F /* LaunchScreen.storyboard */,
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DA4B1E22026215009A5E2F /* UIColor+FlatColors.swift in Sources */,
+				A2DA4B1C220261FF009A5E2F /* UIColor+Hex.swift in Sources */,
 				A2DA4B0C22024B3D009A5E2F /* ViewController.swift in Sources */,
 				A2DA4B0A22024B3D009A5E2F /* AppDelegate.swift in Sources */,
 			);
