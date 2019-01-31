@@ -4,7 +4,6 @@ class CustomControl: UIControl {
     var value: Int = 1
     
     // private constants
-    
     private let componentDimension: CGFloat = 40
     private let componentCount = 5
     private let componentActiveColor = UIColor.black
@@ -37,6 +36,7 @@ class CustomControl: UIControl {
             
             // add a tag to each star
             star.tag = position
+            // print("Star tag \(star.tag)")
             
             // Set the font (bold system font, size 32.0)
             star.font = UIFont.boldSystemFont(ofSize: 32.0)
@@ -100,40 +100,21 @@ class CustomControl: UIControl {
     }
     
     func updateValue(at touch: UITouch) {
+        // Change colors of the stars
+        // Change the value of value
+        for star in labelArray {
+            let touchPoint = touch.location(in: star)
+            if bounds.contains(touchPoint) {
+                value = star.tag
+                // print(value)
+                star.textColor = componentActiveColor
+                sendActions(for: .valueChanged)
+            } else {
+                star.textColor = componentInactiveColor
+                sendActions(for: .valueChanged)
+            }
+        }
         
     }
-    
-//
-//
-//    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-//        // Make sure to call this (super.endTracking) no matter what happens, at the end of the execution of the function.
-//        defer {
-//            super.endTracking(touch, with: event)
-//        }
-//
-//        guard let touch = touch else {
-//            return
-//        }
-//
-//        let touchPoint = touch.location(in: self)
-//        if bounds.contains(touchPoint) {
-//            sendActions(for: [.touchUpInside, .valueChanged])
-//        } else {
-//            sendActions(for: [.touchUpOutside])
-//        }
-//    }
-//
-//    override func cancelTracking(with event: UIEvent?) {
-//        sendActions(for: [.touchCancel])
-//        super.cancelTracking(with: event)
-//    }
-//
-//    override func updateValue(at touch: UITouch) {
-//        for.loop.componentLabels {
-//        guard let touchLocation.labelFrame == true
-//            else { return }
-//        }
-//        touch.meets.label = controlValue.labelArray(tag.indexRow.path)
-//        sendAction(for: [valueChanged])
-//    }
+
 }
