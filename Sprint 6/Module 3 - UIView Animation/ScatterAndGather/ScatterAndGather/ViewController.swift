@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                 UIView.animateKeyframes(withDuration: 4.0, delay: 0, options: [], animations: {
                     UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
 
-                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: CGFloat.pi/4).scaledBy(x: 0.5, y: 0.5)
+                        labels.transform = CGAffineTransform(translationX: CGFloat.random(in: 0...(self.view.frame.width - labels.center.x) - 50), y: CGFloat.random(in: 0...self.view.bounds.maxY - 100)).rotated(by: CGFloat.pi/4).scaledBy(x: 0.1, y: 0.1)
                     })
                     
                     UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
