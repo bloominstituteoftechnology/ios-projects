@@ -11,9 +11,11 @@ import UIKit
 struct Friend {
     let name : String
     let image : UIImage
+    let detail : String
     
-    init(name : String, image : UIImage) {
+    init(name : String, image : UIImage, detail : String) {
         self.name = name
         self.image = image
+        self.detail = detail
     }
 }
