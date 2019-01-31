@@ -21,30 +21,31 @@ class Spoon {
 
 // Create a class called Developer.
 class Developer {
-    var identifier: String = "Developer"
+    var identifier: String
     
     // Each Developer should have a leftSpoon property and a rightSpoon property
-    var leftSpoon: Spoon?
-    var rightSpoon: Spoon?
+    var leftSpoon: Spoon
+    var rightSpoon: Spoon
     
-//    init(leftSpoon: Spoon, rightSpoon: Spoon){
-//        self.leftSpoon = leftSpoon
-//        self.rightSpoon = rightSpoon
-//    }
+    init(leftSpoon: Spoon, rightSpoon: Spoon, identifier: String){
+        self.leftSpoon = leftSpoon
+        self.rightSpoon = rightSpoon
+        self.identifier = identifier
+    }
 
     // It should also have think() , eat() , and run() methods.
     // think() should pick up both spoons before returning.
     func think(){
-        if leftSpoon!.index < rightSpoon!.index {
+        if leftSpoon.index < rightSpoon.index {
             print("\(self.identifier) is thinking.")
-            rightSpoon?.pickUp()
+            leftSpoon.pickUp()
             print("\(self.identifier) picked up right spoon.")
-            leftSpoon?.pickUp()
+            rightSpoon.pickUp()
             print("\(self.identifier) picked up left spoon.")
         } else {
-            rightSpoon?.pickUp()
+            rightSpoon.pickUp()
             print("\(self.identifier) picked up right spoon.")
-            leftSpoon?.pickUp()
+            leftSpoon.pickUp()
             print("\(self.identifier) picked up left spoon.")
         }
     }
@@ -62,13 +63,12 @@ class Developer {
         let elapsedTime = endTime.timeIntervalSinceReferenceDate -
             startTime.timeIntervalSinceReferenceDate
         print("\(self.identifier) ate for: \(elapsedTime)")
-        leftSpoon?.putDown()
+        leftSpoon.putDown()
         print("\(self.identifier) put down right spoon.")
-        rightSpoon?.putDown()
+        rightSpoon.putDown()
         print("\(self.identifier) put down left spoon.")
     }
     
-
     // Developer.run() should call think() then
     // eat() over and over again forever.
     func run() {
@@ -87,21 +87,45 @@ var developers: [Developer] = []
 var spoons: [Spoon] = []
 
 
+//func createDeveloper(numberOfDevs: Int) {
+//    for index in 1 ... numberOfDevs {
+//        let developer = Developer()
+//        let spoon = Spoon(index: index)
+//        developers.append(developer)
+//        spoons.append(spoon)
+//        developers[index - 1].leftSpoon = spoons[index - 1]
+//        developers[index - 1].identifier += "\(index)"
+//    }
+//
+//    // For the right spoon
+//    for index in 1 ... numberOfDevs {
+//        if index == developers.count {
+//            developers[index - 1].rightSpoon = spoons[0]
+//        } else {
+//            developers[index - 1].rightSpoon = spoons[index]
+//        }
+//    }
+//}
+
+
+// This function creates the Spoons and Developers...
 func createDeveloper(numberOfDevs: Int) {
     for index in 1 ... numberOfDevs {
-        let developer = Developer()
         let spoon = Spoon(index: index)
-        developers.append(developer)
         spoons.append(spoon)
-        developers[index - 1].leftSpoon = spoons[index - 1]
-        developers[index - 1].identifier += "\(index)"
     }
     
     for index in 1 ... numberOfDevs {
-        if index == developers.count {
-            developers[index - 1].rightSpoon = spoons[0]
+        if index == numberOfDevs {
+            let developer = Developer(leftSpoon: spoons[index - 1],
+                                      rightSpoon: spoons[0],
+                                      identifier: "Developer\(index)")
+            developers.append(developer)
         } else {
-            developers[index - 1].rightSpoon = spoons[index]
+            let developer = Developer(leftSpoon: spoons[index - 1],
+                                      rightSpoon: spoons[index],
+                                      identifier: "Developer\(index)")
+            developers.append(developer)
         }
     }
 }
@@ -110,10 +134,9 @@ createDeveloper(numberOfDevs: 5)
 for developer in developers {
     print (developer.identifier)
 }
+//print(developers[3].identifier)
 
 
-// ??? Developer5 never gets called. I guess I don't undestand
-// what I'm doing... Sad Panda... ???//
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
 }
