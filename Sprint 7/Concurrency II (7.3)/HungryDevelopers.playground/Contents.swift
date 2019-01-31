@@ -6,13 +6,10 @@ class Spoon {
     
     func pickUp(){
         lock.lock()
-        print("picked it up")
-        //lock.unlock()
     }
     
     func putDown(){
         lock.unlock()
-        print("put it down")
     }
 }
 
@@ -22,9 +19,12 @@ class Developer {
         self.leftSpoon = leftSpoon
         self.rightSpoon = rightSpoon
     }
+    
+    // You pick your leftSpoon up, you put your leftSpoon down...
     let leftSpoon: Spoon
     let rightSpoon: Spoon
     
+    // Put on your thinking caps!
     func think(){
         print("started thinking...")
         self.leftSpoon.pickUp()
@@ -36,9 +36,10 @@ class Developer {
         return
     }
     
+    // Nom-Nom-Nom
     func eat(){
         print("eating...")
-        usleep(useconds_t(Int.random(in: 1 ... 5000)))
+        usleep(useconds_t(Int.random(in: 1 ... 50_000)))
         self.leftSpoon.putDown()
         print("put down left spoon")
         self.rightSpoon.putDown()
@@ -46,6 +47,7 @@ class Developer {
         print("done eating.")
     }
     
+    // Eat, Think, Run - to infinity and beyond...
     func run(){
         let infinity = 0
         while infinity == 0 {
@@ -55,13 +57,14 @@ class Developer {
     }
 }
 
+// MARK: - Initialize Spoons
 var spoon0 = Spoon()
 var spoon1 = Spoon()
 var spoon2 = Spoon()
 var spoon3 = Spoon()
 var spoon4 = Spoon()
-//var spoonArray: [Spoon] = [spoon0, spoon1, spoon2, spoon3, spoon4]
 
+// MARK: - Initialize Developers, assign spoons, load Developers into an array
 var developer0 = Developer(leftSpoon: spoon0, rightSpoon: spoon4)
 var developer1 = Developer(leftSpoon: spoon1, rightSpoon: spoon0)
 var developer2 = Developer(leftSpoon: spoon2, rightSpoon: spoon1)
