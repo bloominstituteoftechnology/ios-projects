@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         // labels
         for letter in lambda {
-            let label = UILabel()
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             view.addSubview(label)
             label.text = String(letter)
             label.font = UIFont.boldSystemFont(ofSize: 60)
@@ -33,12 +33,10 @@ class ViewController: UIViewController {
         }
         
         // lambda logo imageView
-        let lambdaLogo = UIImageView()
         view.addSubview(lambdaLogo)
         lambdaLogo.translatesAutoresizingMaskIntoConstraints = false
         lambdaLogo.image = UIImage(named: "Lambda_Logo_Full")
         lambdaLogo.contentMode = .scaleAspectFit
-        
         
         // constraints to `stackview` and `imageview`
         NSLayoutConstraint.activate([
@@ -61,6 +59,40 @@ class ViewController: UIViewController {
     @IBAction func toggle(_ sender: Any) {
         shouldScramble.toggle()
         
+        if shouldScramble {
+            
+            UIImageView.animate(withDuration: 2) {
+                self.lambdaLogo.alpha = 0
+            }
+            
+            UILabel.animate(withDuration: 2) {
+                for label in self.labels {
+                    label.textColor = self.generateRandomColor()
+                    label.backgroundColor = self.generateRandomColor()
+                    
+                    let randomRotation = CGFloat.pi / CGFloat(Int.random(in: 1...4))
+                    let randomY = CGFloat(Int.random(in: 1...500))
+                    let randomX = CGFloat(Int.random(in: -100...100))
+                    
+                    label.transform = CGAffineTransform(translationX: 0, y: 0)
+                        .translatedBy(x: randomX, y: randomY)
+                        .rotated(by: randomRotation)
+                }
+            }
+        } else {
+            
+            UIImageView.animate(withDuration: 2) {
+                self.lambdaLogo.alpha = 1
+            }
+            
+            UILabel.animate(withDuration: 2) {
+                for label in self.labels {
+                    label.textColor = .black
+                    label.backgroundColor = .clear
+                    label.transform = .identity
+                }
+            }
+        }
     }
     
     // MARK: - Properties
@@ -68,6 +100,7 @@ class ViewController: UIViewController {
     var shouldScramble: Bool = false
     let lambda = "Lambda"
     var labels: [UILabel] = []
-
+    let lambdaLogo = UIImageView()
+    
 }
 
