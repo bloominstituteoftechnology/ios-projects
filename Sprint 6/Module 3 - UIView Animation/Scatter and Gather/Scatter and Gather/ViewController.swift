@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                     let randomY = CGFloat(Int.random(in: 1...500))
                     let randomX = CGFloat(Int.random(in: -80...80))
                     
-                    label.transform = CGAffineTransform(translationX: 0, y: 0)
+                    label.transform = CGAffineTransform.identity
                         .translatedBy(x: randomX, y: randomY)
                         .rotated(by: randomRotation)
                 }
