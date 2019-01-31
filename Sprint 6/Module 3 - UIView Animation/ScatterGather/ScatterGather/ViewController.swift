@@ -8,38 +8,55 @@ class ViewController: UIViewController {
     var shouldScramble: Bool = false
     var labels: [UILabel] = []
     let logoView = UIImageView()
-
     
     func scramble() {
         shouldScramble = !shouldScramble
     }
     
     @IBAction func toggle(_ sender: Any) {
+        scramble()
         if shouldScramble == true {
             for label in labels {
                 scatter(label)
             }
-            fadeLogo()
+            UIImageView.animate(withDuration: 2) {
+                self.logoView.alpha = 1
+            }
         } else {
             for label in labels {
-            gather(label)
+                gather(label)
             }
-            fadeLogo()
+            UIImageView.animate(withDuration: 2) {
+                self.logoView.alpha = 0
+            }
         }
-        scramble()
     }
     
     func scatter(_ label: UILabel) {
         
+        for label in labels {
+            UIView.animate(withDuration: 3) {
+                label.transform = CGAffineTransform(rotationAngle: CGFloat(self.randomInt(min: 1, max: 200)))
+                label.transform = CGAffineTransform(scaleX: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 1, max: 4))).translatedBy(x: CGFloat(self.randomInt(min: 1, max: 4)), y: CGFloat(self.randomInt(min: 10, max: 40)))
+                //label.frame = rect
+                label.backgroundColor = self.getRandomColor()
+                label.textColor = self.getRandomColor()
+                
+            }
+        }
     }
     
     func gather(_ label: UILabel) {
-        
+        for label in labels {
+            UIView.animate(withDuration: 1.5) {
+                label.transform = .identity
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //adding all my labels programatically
         let lLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         lLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -94,7 +111,6 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         
         stackView.axis = .horizontal
-        //stackView.spacing = 10.0
         stackView.distribution = .fillProportionally
         
         stackView.addArrangedSubview(lLabel)
@@ -110,10 +126,10 @@ class ViewController: UIViewController {
         //logoView.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
         logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
-
+        
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             logoView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             logoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
@@ -122,26 +138,17 @@ class ViewController: UIViewController {
             ])
     }
     
+    //random position
+    func randomInt(min: Int, max: Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    }
+    
     //get random colors
     func getRandomColor() -> UIColor {
         let red:CGFloat = CGFloat(drand48())
         let green:CGFloat = CGFloat(drand48())
         let blue:CGFloat = CGFloat(drand48())
-        
         return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
-    }
-    
-    //fade logo
-    func fadeLogo() {
-        if logoView.alpha == 0.0 {
-            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseIn, animations: {
-                self.logoView.alpha = 1.0
-            })
-        } else {
-            UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseOut, animations: {
-                self.logoView.alpha = 0.0
-            })
-        }
     }
 }
 
