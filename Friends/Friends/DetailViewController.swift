@@ -8,29 +8,22 @@
 
 import UIKit
 
-class DetailViewController: ContentProvidingVC, UIViewControllerTransitioningDelegate {
+class DetailViewController: UIViewController {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let friend = friend {
+            nameLabel.text = friend.name
+            profileImage.image = friend.profilePic
+            detailLabel.text = friend.details
+        }
         // Do any additional setup after loading the view.
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        <#code#>
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+    var friend: Friend?
     
     let animator = Animator()
     

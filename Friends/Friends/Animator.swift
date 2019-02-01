@@ -8,21 +8,16 @@
 
 import UIKit
 
-typealias ContentProvidingVC = ContentProviding & UIViewController
-typealias ContentProvidingTC = ContentProviding & UITableViewController
-
 class Animator: NSObject, UIViewControllerAnimatedTransitioning {
-    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        // What do you want the transition to look like?
+        guard let fromTC = transitionContext.viewController(forKey: .from) as? FriendsTableViewCell, let toVC = transitionContext.viewController(forKey: .to) as? DetailViewController,
+            let toView = transitionContext.view(forKey: .to) else { return }
         
-        guard let fromTC = transitionContext.viewController(forKey: .from) as? ContentProvidingTC, let toVC = transitionContext.viewController(forKey: .to) as? ContentProvidingVC,
-            let toView = transitionContext.view(forKey: .to) else { return } // this is the final look of the view controller we are going to
-        
+      
         // This is the view that holds the label that will be moved from one position to the other
         
         let containerView = transitionContext.containerView
@@ -100,9 +95,8 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
     
-    
-    /*var nameLabel: UILabel!
-    var profileImage: UIImage!*/
+    var nameLabel: UILabel!
+    var profileImage: UIImage!
     
     
 }

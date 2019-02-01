@@ -54,7 +54,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="3Lm-3i-iV7" id="LWk-N6-gIZ"/>
                                     <outlet property="profileImage" destination="FCM-NL-jK4" id="gmS-36-CGs"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="aA4-6l-nva"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="FriendDetail" id="aA4-6l-nva"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

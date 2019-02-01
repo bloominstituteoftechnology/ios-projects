@@ -16,7 +16,8 @@
 		BBC3FCF2220399860007CCCF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCF1220399860007CCCF /* DetailViewController.swift */; };
 		BBC3FCF622039E970007CCCF /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCF522039E970007CCCF /* NavigationControllerDelegate.swift */; };
 		BBC3FCF822039F560007CCCF /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCF722039F560007CCCF /* Animator.swift */; };
-		BBC3FCFA2203A0EF0007CCCF /* ContentProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCF92203A0EF0007CCCF /* ContentProviding.swift */; };
+		BBC3FCFC2203B2440007CCCF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCFB2203B2440007CCCF /* Friend.swift */; };
+		BBC3FCFE2203B2C50007CCCF /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3FCFD2203B2C50007CCCF /* FriendController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		BBC3FCF1220399860007CCCF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BBC3FCF522039E970007CCCF /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		BBC3FCF722039F560007CCCF /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		BBC3FCF92203A0EF0007CCCF /* ContentProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentProviding.swift; sourceTree = "<group>"; };
+		BBC3FCFB2203B2440007CCCF /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		BBC3FCFD2203B2C50007CCCF /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +69,10 @@
 				BBC3FCDB22038D630007CCCF /* AppDelegate.swift */,
 				BBC3FCDF22038D630007CCCF /* Main.storyboard */,
 				BBC3FCED220399620007CCCF /* FriendsTableViewController.swift */,
+				BBC3FCFB2203B2440007CCCF /* Friend.swift */,
+				BBC3FCFD2203B2C50007CCCF /* FriendController.swift */,
 				BBC3FCF522039E970007CCCF /* NavigationControllerDelegate.swift */,
 				BBC3FCF722039F560007CCCF /* Animator.swift */,
-				BBC3FCF92203A0EF0007CCCF /* ContentProviding.swift */,
 				BBC3FCEF220399710007CCCF /* FriendsTableViewCell.swift */,
 				BBC3FCF1220399860007CCCF /* DetailViewController.swift */,
 				BBC3FCE222038D650007CCCF /* Assets.xcassets */,
@@ -154,9 +157,10 @@
 				BBC3FCF622039E970007CCCF /* NavigationControllerDelegate.swift in Sources */,
 				BBC3FCDC22038D630007CCCF /* AppDelegate.swift in Sources */,
 				BBC3FCF2220399860007CCCF /* DetailViewController.swift in Sources */,
-				BBC3FCFA2203A0EF0007CCCF /* ContentProviding.swift in Sources */,
 				BBC3FCEE220399620007CCCF /* FriendsTableViewController.swift in Sources */,
+				BBC3FCFE2203B2C50007CCCF /* FriendController.swift in Sources */,
 				BBC3FCF0220399710007CCCF /* FriendsTableViewCell.swift in Sources */,
+				BBC3FCFC2203B2440007CCCF /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
