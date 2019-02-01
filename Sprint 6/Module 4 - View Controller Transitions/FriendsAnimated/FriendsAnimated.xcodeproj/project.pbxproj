@@ -16,6 +16,8 @@
 		A2DA4B8722039C76009A5E2F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B8622039C76009A5E2F /* Friend.swift */; };
 		A2DA4B8922039D4D009A5E2F /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B8822039D4D009A5E2F /* FriendController.swift */; };
 		A2DA4B8B2203AAF2009A5E2F /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B8A2203AAF2009A5E2F /* FriendDetailViewController.swift */; };
+		A2DA4B8D2203C26B009A5E2F /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B8C2203C26B009A5E2F /* NavigationControllerDelegate.swift */; };
+		A2DA4B8F2203C304009A5E2F /* ImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4B8E2203C304009A5E2F /* ImageTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A2DA4B8622039C76009A5E2F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		A2DA4B8822039D4D009A5E2F /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		A2DA4B8A2203AAF2009A5E2F /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		A2DA4B8C2203C26B009A5E2F /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		A2DA4B8E2203C304009A5E2F /* ImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				A2DA4B8822039D4D009A5E2F /* FriendController.swift */,
+				A2DA4B8C2203C26B009A5E2F /* NavigationControllerDelegate.swift */,
+				A2DA4B8E2203C304009A5E2F /* ImageTransitionAnimator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,10 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DA4B8922039D4D009A5E2F /* FriendController.swift in Sources */,
+				A2DA4B8F2203C304009A5E2F /* ImageTransitionAnimator.swift in Sources */,
 				A2DA4B6E22039504009A5E2F /* AppDelegate.swift in Sources */,
 				A2DA4B8B2203AAF2009A5E2F /* FriendDetailViewController.swift in Sources */,
 				A2DA4B80220396A3009A5E2F /* FriendsTableViewController.swift in Sources */,
 				A2DA4B8722039C76009A5E2F /* Friend.swift in Sources */,
+				A2DA4B8D2203C26B009A5E2F /* NavigationControllerDelegate.swift in Sources */,
 				A2DA4B8522039713009A5E2F /* FriendsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

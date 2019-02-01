@@ -13,8 +13,8 @@ class FriendController{
     var friends: [Friend] = []
     
     init() {
-        friends.append(makeFriend(name: "Mushroom Boy", image: UIImage(named: "MushroomBoy")!, detail: "Rare plant-based humanoid."))
-        friends.append(makeFriend(name: "Nebula", image: UIImage(named: "Nebula")!, detail: "Whirling space vortex!"))
+        friends.append(makeFriend(name: "Mushroom Psychic", image: UIImage(named: "MushroomBoy")!, detail: "Rare plant-based esper."))
+        friends.append(makeFriend(name: "Nebula Wizard", image: UIImage(named: "Nebula")!, detail: "Whirling space vortex with magic tricks!"))
     }
     
     func makeFriend(name: String, image: UIImage, detail: String) -> Friend{

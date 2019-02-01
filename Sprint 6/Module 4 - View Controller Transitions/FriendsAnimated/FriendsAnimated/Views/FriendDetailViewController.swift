@@ -15,6 +15,7 @@ class FriendDetailViewController: UIViewController {
     var friendController: FriendController?
     
     
+    
 
     @IBOutlet weak var detailTitle: UINavigationItem!
     
