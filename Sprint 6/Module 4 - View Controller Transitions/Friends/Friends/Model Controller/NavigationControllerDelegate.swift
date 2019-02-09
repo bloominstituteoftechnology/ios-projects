@@ -10,12 +10,24 @@ import UIKit
 
 class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard let toVC = toVC as? FriendDetailViewController else { return nil }
+        
+        toVC.loadViewIfNeeded()
+        
+        animator.sourceName = sourceCell.textLabel
+        animator.sourcePhoto = sourceCell.imageView
+        
+        animator.destinationName = toVC.friendName
+        animator.destinationPhoto = toVC.friendImage
+        
+        return animator
+    }
     
-//    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        //
-//    }
-    
-    // MARL: - Properties
+    // MARK: - Properties
     
     var sourceCell: UITableViewCell!
+    
+    let animator = ImageTransitionAnimator()
 }
