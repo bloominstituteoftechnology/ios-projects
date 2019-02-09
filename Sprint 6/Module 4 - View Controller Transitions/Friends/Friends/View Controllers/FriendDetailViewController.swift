@@ -9,7 +9,7 @@
 import UIKit
 
 class FriendDetailViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
@@ -24,7 +24,42 @@ class FriendDetailViewController: UIViewController {
         friendInfo.text = friend.info
     }
     
+    @IBAction func panBack(_ sender: UIPanGestureRecognizer) {
+        
+        switch sender.state {
+            
+        case .began:
+            
+            interactionController = UIPercentDrivenInteractiveTransition()
+            navigationController?.popViewController(animated: true)
+            
+        case .changed:
+            
+            let translation = sender.translation(in: view)
+            
+            let percentageComplete = abs(translation.x / view.bounds.width)
+            
+            interactionController?.update(percentageComplete)
+            
+        case .ended:
+            
+            let velocity = sender.velocity(in: view).x
+            
+            if velocity > 100 {
+                interactionController?.finish()
+            } else {
+                interactionController?.cancel()
+            }
+        default:
+            break
+        }
+    }
+    
     // MARK: - Propeties
+    
+    let animator = ImageTransitionAnimator()
+    
+    private var interactionController: UIPercentDrivenInteractiveTransition?
     
     var friendController: FriendController?
     var friend: Friend?

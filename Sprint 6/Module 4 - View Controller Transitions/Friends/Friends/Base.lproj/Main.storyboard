@@ -85,12 +85,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bJj-Uo-pKb" firstAttribute="leading" secondItem="wce-hM-YS1" secondAttribute="leading" constant="20" id="Igq-b6-Tyw"/>
                             <constraint firstItem="wce-hM-YS1" firstAttribute="trailing" secondItem="bJj-Uo-pKb" secondAttribute="trailing" constant="20" id="pQQ-6a-Awl"/>
                             <constraint firstItem="bJj-Uo-pKb" firstAttribute="top" secondItem="wce-hM-YS1" secondAttribute="top" constant="20" id="vQ0-PA-ngB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wce-hM-YS1"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PJg-Ah-oGv" appends="YES" id="IC1-zg-ra8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Friend Name" id="jjo-cr-4qD"/>
                     <connections>
@@ -100,6 +104,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8U-67-IBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="PJg-Ah-oGv">
+                    <connections>
+                        <action selector="panBack:" destination="b5n-Jy-n0Q" id="D0q-xo-y09"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1159" y="106"/>
         </scene>

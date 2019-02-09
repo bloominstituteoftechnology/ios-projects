@@ -12,7 +12,6 @@ class FriendTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.delegate = navigationControllerDelegate
     }
     

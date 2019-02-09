@@ -14,6 +14,7 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         
         guard let toVC = toVC as? FriendDetailViewController else { return nil }
         
+        // loads the view beforehand.
         toVC.loadViewIfNeeded()
         
         animator.sourceName = sourceCell.textLabel
@@ -24,6 +25,7 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         
         return animator
     }
+    
     
     // MARK: - Properties
     
