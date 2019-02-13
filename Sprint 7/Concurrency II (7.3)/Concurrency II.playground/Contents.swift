@@ -4,8 +4,7 @@ import UIKit
 class Spoon {
     
     var index: Int
-   
-    //var elapsedTime
+  
     
     init(index: Int) {
         self.index = index
@@ -20,7 +19,7 @@ class Spoon {
     func putDown() {
         lock.unlock()
     }
-   
+    
 }
 
 
@@ -40,28 +39,28 @@ class Developer {
     
     
     func think() {
-        print("\(dev) is think ")
-         if leftSpoon.index < rightSpoon.index {
-            print("\(dev) is think until the left spoon is available")
+        print("\(dev) is thinking ")
+        if leftSpoon.index < rightSpoon.index {
+            print("\(dev) is thinking until the left spoon is available")
             leftSpoon.pickUp()
             print("\(dev) pick up left spoon")
-            print("\(dev) is think until the right spoon is available")
+            print("\(dev) is thinking until the right spoon is available")
             rightSpoon.pickUp()
             print("\(dev) pick up right spoon")
             
-         } else {
-            print("\(dev) is think until the right spoon is available")
+        } else {
+            print("\(dev) is thinking until the right spoon is available")
             rightSpoon.pickUp()
             print("\(dev) pick up right spoon")
-            print("\(dev) is think until the left spoon is available")
+            print("\(dev) is thinking until the left spoon is available")
             leftSpoon.pickUp()
             print("\(dev) pick up left spoon")
-           
+            
         }
     }
     
     func eat() {
-       // let startTime = Date()
+        
         
         print("\(dev) is eating")
         usleep(useconds_t(Int.random(in: 10000...150_000)))
@@ -71,25 +70,20 @@ class Developer {
         
         leftSpoon.putDown()
         print("\(dev) put down left spoon")
-        
-//        let endTime = Date()
-//        let time = endTime.timeIntervalSinceReferenceDate -
-//        startTime.timeIntervalSinceReferenceDate
-//        print("\(dev) eat takes \(time) seconds")
     }
     
     func run() {
-        let startTime = Date()
+        
         while true {
-            
-        think()
-        eat()
+            let startTime = Date()
+            think()
+            eat()
             let endTime = Date()
             let time = endTime.timeIntervalSinceReferenceDate -
                 startTime.timeIntervalSinceReferenceDate
             print("\(dev) eating process takes \(time) seconds")
+        }
     }
-  }
 }
 
 let spoon1 = Spoon(index: 1)
