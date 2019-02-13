@@ -1,35 +1,28 @@
-//
-//  LoadingView.swift
-//  LoadingUI
-//
-//  Created by Andrew R Madsen on 9/18/18.
-//  Copyright © 2018 Lambda School. All rights reserved.
-//
 
 import UIKit
 
-class IndeterminateLoadingView: UIView, CAAnimationDelegate {
+public class IndeterminateLoadingView: UIView, CAAnimationDelegate {
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupShapeLayer()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setupShapeLayer()
     }
     
-    func startAnimating() {
+    public func startAnimating() {
         guard !isAnimating else { return }
         defer { isAnimating = true }
     
         startAnimation()
     }
     
-    func stopAnimating() {
+    public func stopAnimating() {
         guard isAnimating else { return }
         
         shouldStopAnimationOnNextCycle = true

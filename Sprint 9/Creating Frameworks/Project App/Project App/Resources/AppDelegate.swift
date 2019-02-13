@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Creating Frameworks - Loading UI
+//  Project App
 //
 //  Created by Audrey Welch on 2/13/19.
 //  Copyright © 2019 Audrey Welch. All rights reserved.
