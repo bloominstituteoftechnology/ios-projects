@@ -10,6 +10,7 @@
 		A52FC9B42214C2BE0073AF00 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FC9AA2214C2BD0073AF00 /* LoadingUI.framework */; };
 		A52FC9B92214C2BE0073AF00 /* LoadingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FC9B82214C2BE0073AF00 /* LoadingUITests.swift */; };
 		A52FC9BB2214C2BE0073AF00 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A52FC9AD2214C2BD0073AF00 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A52FCA3D2214D4300073AF00 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FCA3C2214D4300073AF00 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A52FC9B32214C2BE0073AF00 /* LoadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52FC9B82214C2BE0073AF00 /* LoadingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITests.swift; sourceTree = "<group>"; };
 		A52FC9BA2214C2BE0073AF00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52FCA3C2214D4300073AF00 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A52FC9AD2214C2BD0073AF00 /* LoadingUI.h */,
 				A52FC9AE2214C2BD0073AF00 /* Info.plist */,
+				A52FCA3C2214D4300073AF00 /* LoadingViewController.swift */,
 			);
 			path = LoadingUI;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					A52FC9A92214C2BD0073AF00 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					A52FC9B22214C2BE0073AF00 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52FCA3D2214D4300073AF00 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		A52FC9BF2214C2BE0073AF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sergey.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +373,7 @@
 		A52FC9C02214C2BE0073AF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +399,7 @@
 		A52FC9C22214C2BE0073AF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KF4QEGAU36;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;
@@ -409,6 +418,7 @@
 		A52FC9C32214C2BE0073AF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KF4QEGAU36;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;

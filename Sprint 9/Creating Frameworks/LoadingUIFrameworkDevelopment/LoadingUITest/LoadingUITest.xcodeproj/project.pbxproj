@@ -15,6 +15,8 @@
 		A52FCA172214C8680073AF00 /* LoadingUITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FCA162214C8680073AF00 /* LoadingUITestTests.swift */; };
 		A52FCA332214C9070073AF00 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52FCA302214C8FF0073AF00 /* LoadingUI.framework */; };
 		A52FCA342214C9070073AF00 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A52FCA302214C8FF0073AF00 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A52FCA392214D35F0073AF00 /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FCA382214D35F0073AF00 /* IndeterminateLoadingView.swift */; };
+		A52FCA3B2214D36D0073AF00 /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FCA3A2214D36D0073AF00 /* PolarPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		A52FCA162214C8680073AF00 /* LoadingUITestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITestTests.swift; sourceTree = "<group>"; };
 		A52FCA182214C8680073AF00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A52FCA2A2214C8FF0073AF00 /* LoadingUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingUI.xcodeproj; path = ../LoadingUI/LoadingUI.xcodeproj; sourceTree = "<group>"; };
+		A52FCA382214D35F0073AF00 /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndeterminateLoadingView.swift; sourceTree = "<group>"; };
+		A52FCA3A2214D36D0073AF00 /* PolarPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				A52FCA082214C8680073AF00 /* Assets.xcassets */,
 				A52FCA0A2214C8680073AF00 /* LaunchScreen.storyboard */,
 				A52FCA0D2214C8680073AF00 /* Info.plist */,
+				A52FCA3A2214D36D0073AF00 /* PolarPoint.swift */,
+				A52FCA382214D35F0073AF00 /* IndeterminateLoadingView.swift */,
 			);
 			path = LoadingUITest;
 			sourceTree = "<group>";
@@ -272,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52FCA042214C8670073AF00 /* ViewController.swift in Sources */,
+				A52FCA392214D35F0073AF00 /* IndeterminateLoadingView.swift in Sources */,
 				A52FCA022214C8670073AF00 /* AppDelegate.swift in Sources */,
+				A52FCA3B2214D36D0073AF00 /* PolarPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

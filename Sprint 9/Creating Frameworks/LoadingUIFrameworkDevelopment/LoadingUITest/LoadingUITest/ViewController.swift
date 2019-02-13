@@ -11,11 +11,21 @@ import LoadingUI
 
 class ViewController: UIViewController {
 
+    
+   @IBOutlet weak var button: UIButton!
+    let indeterminateLoadingView = IndeterminateLoadingView()
+    let loadingViewController = LoadingViewController()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
 
 }
+
+
+
 
