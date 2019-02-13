@@ -108,7 +108,7 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         removeStrokeAnimation.isRemovedOnCompletion = true
         removeStrokeAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
         
-        return [addStrokeAnimation, rotateWheelAnimation, strokeColorInAnimation, strokeColorOutAnimation, removeStrokeAnimation]
+        return [addStrokeAnimation, rotateWheelAnimation, removeStrokeAnimation]
     }
     
     // MARK: - CAAnimationDelegate
