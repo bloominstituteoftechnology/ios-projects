@@ -12,7 +12,23 @@
 		AB3A0EBD2214BAE100BE8432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3A0EBB2214BAE100BE8432 /* Main.storyboard */; };
 		AB3A0EBF2214BAE200BE8432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3A0EBE2214BAE200BE8432 /* Assets.xcassets */; };
 		AB3A0EC22214BAE200BE8432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3A0EC02214BAE200BE8432 /* LaunchScreen.storyboard */; };
+		AB3A0ED12214C6AB00BE8432 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3A0ED02214C6AB00BE8432 /* LoadingUI.framework */; };
+		AB3A0ED22214C6AB00BE8432 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB3A0ED02214C6AB00BE8432 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB3A0ED32214C6AB00BE8432 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB3A0ED22214C6AB00BE8432 /* LoadingUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AB3A0EB42214BAE100BE8432 /* LoadingUIDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingUIDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,7 @@
 		AB3A0EBE2214BAE200BE8432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3A0EC12214BAE200BE8432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB3A0EC32214BAE200BE8432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3A0ED02214C6AB00BE8432 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3A0ED12214C6AB00BE8432 /* LoadingUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 		AB3A0EAB2214BAE100BE8432 = {
 			isa = PBXGroup;
 			children = (
+				AB3A0ED02214C6AB00BE8432 /* LoadingUI.framework */,
 				AB3A0EB62214BAE100BE8432 /* LoadingUIDemoApp */,
 				AB3A0EB52214BAE100BE8432 /* Products */,
 			);
@@ -74,6 +93,7 @@
 				AB3A0EB02214BAE100BE8432 /* Sources */,
 				AB3A0EB12214BAE100BE8432 /* Frameworks */,
 				AB3A0EB22214BAE100BE8432 /* Resources */,
+				AB3A0ED32214C6AB00BE8432 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

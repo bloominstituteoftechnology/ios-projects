@@ -11,7 +11,7 @@
 		AB3A0EA02214BA8800BE8432 /* LoadingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A0E9F2214BA8800BE8432 /* LoadingUITests.swift */; };
 		AB3A0EA22214BA8800BE8432 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3A0E942214BA8800BE8432 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB3A0ECB2214BD0200BE8432 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A0EC92214BD0200BE8432 /* LoadingViewController.swift */; };
-		AB3A0ECC2214BD0200BE8432 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3A0ECA2214BD0200BE8432 /* LoadingViewController.xib */; };
+		AB3A0ECE2214BE5700BE8432 /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A0ECD2214BE5700BE8432 /* IndeterminateLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		AB3A0E9F2214BA8800BE8432 /* LoadingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITests.swift; sourceTree = "<group>"; };
 		AB3A0EA12214BA8800BE8432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3A0EC92214BD0200BE8432 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		AB3A0ECA2214BD0200BE8432 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		AB3A0ECD2214BE5700BE8432 /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndeterminateLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3A0E942214BA8800BE8432 /* LoadingUI.h */,
-				AB3A0EC92214BD0200BE8432 /* LoadingViewController.swift */,
-				AB3A0ECA2214BD0200BE8432 /* LoadingViewController.xib */,
+				AB3A0ECF2214BEB100BE8432 /* View Controllers */,
 				AB3A0E952214BA8800BE8432 /* Info.plist */,
 			);
 			path = LoadingUI;
@@ -90,6 +89,15 @@
 				AB3A0EA12214BA8800BE8432 /* Info.plist */,
 			);
 			path = LoadingUITests;
+			sourceTree = "<group>";
+		};
+		AB3A0ECF2214BEB100BE8432 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB3A0ECD2214BE5700BE8432 /* IndeterminateLoadingView.swift */,
+				AB3A0EC92214BD0200BE8432 /* LoadingViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3A0ECC2214BD0200BE8432 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3A0ECB2214BD0200BE8432 /* LoadingViewController.swift in Sources */,
+				AB3A0ECE2214BE5700BE8432 /* IndeterminateLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
