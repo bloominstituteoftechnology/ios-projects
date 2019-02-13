@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         loadingViewController.wheelColor = .red
         loadingViewController.wheelSize = wheelDiameter
         loadingViewController.wheelThickness = wheelWeight
-        loadingViewController.modalTransitionStyle = .crossDissolve
         return loadingViewController
     }()
     

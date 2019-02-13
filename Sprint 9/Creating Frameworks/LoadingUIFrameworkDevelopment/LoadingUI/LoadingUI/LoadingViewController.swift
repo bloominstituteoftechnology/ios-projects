@@ -12,10 +12,13 @@ public class LoadingViewController: UIViewController {
     
     // MARK: - Properties
     private var loadingView: IndeterminateLoadingView!
+    
     /// Sets the background color of LoadingViewController's view controller
     public var backgroundColor: UIColor = .white
+    
     /// Sets the main color used for the loading wheel
     public var wheelColor: UIColor = .black
+    
     /// Sets the size of the view used for the loading wheel
     public var wheelSize: CGFloat = 100 {
         didSet {
@@ -34,6 +37,16 @@ public class LoadingViewController: UIViewController {
                 wheelThickness = maxValue
             }
         }
+    }
+    
+    // MARK: - Initializers
+    public override init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.modalTransitionStyle = .crossDissolve
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("Not implemented.")
     }
     
     // MARK: - Lifecycle Methods
