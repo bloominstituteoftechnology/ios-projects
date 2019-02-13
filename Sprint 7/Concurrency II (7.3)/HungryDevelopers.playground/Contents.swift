@@ -21,7 +21,7 @@ class Developer {
     
     func think() {
         print("\(self.developer!) is thinking.")
-        if (self.developer?.count)! == 3 {
+        if (self.developer?.count)! == 5 {
             print("\(self.developer!) is trying to pick up the right spoon.")
             rightSpoon?.pickUp()
             print("\(self.developer!) picked up the right spoon.")
@@ -66,8 +66,6 @@ for _ in 1...5 {
     spoons.append(spoon)
 }
 
-
-
 developers[0].rightSpoon = spoons[0]
 developers[1].rightSpoon = spoons[1]
 developers[2].rightSpoon = spoons[2]
@@ -80,11 +78,11 @@ developers[2].leftSpoon = spoons[3]
 developers[3].leftSpoon = spoons[4]
 developers[4].leftSpoon = spoons[0]
 
-developers[0].developer = "100"
-developers[1].developer = "200"
-developers[2].developer = "3"
-developers[3].developer = "4"
-developers[4].developer = "5"
+developers[0].developer = "Jared"
+developers[1].developer = "Austin"
+developers[2].developer = "Rebecca"
+developers[3].developer = "Holly"
+developers[4].developer = "Chris"
 
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
