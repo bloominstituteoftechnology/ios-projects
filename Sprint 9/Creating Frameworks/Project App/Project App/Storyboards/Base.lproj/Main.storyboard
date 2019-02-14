@@ -46,20 +46,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Test Loading View Controller-->
         <scene sceneID="gJ3-K2-Tng">
             <objects>
-                <viewController id="2M8-fm-Uq5" sceneMemberID="viewController">
+                <viewController id="2M8-fm-Uq5" customClass="TestLoadingViewController" customModule="Project_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3gX-3V-3f0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.73982802579999996" blue="0.60699076590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-PW-Zgx" customClass="IndeterminateLoadingView" customModule="UILoading">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PGA-Eb-bjN"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingView" destination="mT7-PW-Zgx" id="BQP-U9-QR3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZi-Ro-bAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382" y="57"/>
+            <point key="canvasLocation" x="828" y="57"/>
         </scene>
     </scenes>
 </document>

@@ -18,5 +18,6 @@ class ViewController: UIViewController {
     @IBAction func beginAction(_ sender: Any) {
     }
     
+    var indeterminateLoadingView = IndeterminateLoadingView()
     
 }
