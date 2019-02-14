@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                 destinationVC.stopAnimation()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 11) {
                 self.dismiss(animated: true, completion: nil)
             }
         }
