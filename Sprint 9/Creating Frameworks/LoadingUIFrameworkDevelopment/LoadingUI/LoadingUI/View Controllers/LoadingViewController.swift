@@ -10,29 +10,29 @@ import UIKit
 
 open class LoadingViewController: UIViewController {
 
-    open override func viewWillAppear(_ animated: Bool) {
+    let IMAGE_SIZE: CGFloat = 100
+    let OFFSET: CGFloat = 0
+    
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
     
-    open override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
-        let loader = IndeterminateLoadingView()
-//        let loaderParentView = UIView()
-//        loaderParentView.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-//        loaderParentView.center = view.center
-//        loaderParentView.backgroundColor = .green
-//        loaderParentView.addSubview(loader)
-//        view.addSubview(loaderParentView)
+        let loader = IndeterminateLoadingView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
         self.view.addSubview(loader)
         
-        loader.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
+        //FIXME: - add constraints here
         loader.center = self.view.center
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        loader.widthAnchor.constraint(equalToConstant: IMAGE_SIZE).isActive = true
+        loader.heightAnchor.constraint(equalToConstant: IMAGE_SIZE).isActive = true
+        loader.centerXAnchor.constraint(lessThanOrEqualTo: self.view.centerXAnchor).isActive = true
+        loader.centerYAnchor.constraint(lessThanOrEqualTo: self.view.centerYAnchor, constant: OFFSET).isActive = true
 
-        print("loader: \(loader)")
         loader.startAnimating()
-        print("View did load: \(view!)")
         // Do any additional setup after loading the view.
     }
     

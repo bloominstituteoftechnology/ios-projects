@@ -49,7 +49,7 @@ internal class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         layer.addSublayer(shapeLayer)
         
         let radius = min(bounds.width, bounds.height) / 2.0 - thickness/2.0
-        let rect = CGRect(x: bounds.midX - radius/2.0, y: bounds.midY - radius/2.0, width: radius*10, height: radius*10)
+        let rect = CGRect(x: bounds.midX - radius/2.0, y: bounds.midY - radius/2.0, width: radius, height: radius)
         let path = UIBezierPath(ovalIn: rect)
         
         shapeLayer.path = path.cgPath
