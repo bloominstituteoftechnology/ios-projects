@@ -48,7 +48,7 @@ public class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         shapeLayer.path = path.cgPath
     }
     
-    private func startAnimation() {
+    public func startAnimation() {
         shouldStopAnimationOnNextCycle = false
         shapeLayer.strokeStart = 0.0
         shapeLayer.strokeEnd = 0.0
@@ -96,5 +96,5 @@ public class IndeterminateLoadingView: UIView, CAAnimationDelegate {
 
     private let shapeLayer = CAShapeLayer()
     private let duration = 1.0
-    private var shouldStopAnimationOnNextCycle = false
+    public var shouldStopAnimationOnNextCycle = false
 }

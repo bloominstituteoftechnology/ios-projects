@@ -59,17 +59,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-Ct-23z">
+                                <rect key="frame" x="321" y="36" width="30" height="30"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endAction:" destination="2M8-fm-Uq5" eventType="touchUpInside" id="KnM-23-H1U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kcv-Ct-23z" firstAttribute="top" secondItem="PGA-Eb-bjN" secondAttribute="top" constant="16" id="1Z4-Xx-7zn"/>
+                            <constraint firstItem="PGA-Eb-bjN" firstAttribute="trailing" secondItem="kcv-Ct-23z" secondAttribute="trailing" constant="24" id="knt-Eu-prG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PGA-Eb-bjN"/>
                     </view>
                     <connections>
+                        <outlet property="endOutlet" destination="kcv-Ct-23z" id="mNP-DW-B8b"/>
                         <outlet property="loadingView" destination="mT7-PW-Zgx" id="BQP-U9-QR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZi-Ro-bAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="57"/>
+            <point key="canvasLocation" x="1434" y="72"/>
         </scene>
     </scenes>
 </document>

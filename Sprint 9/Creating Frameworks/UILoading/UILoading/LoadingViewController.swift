@@ -8,7 +8,7 @@ public class LoadingViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-       indeterminateLoadingView.startAnimating()
+        indeterminateLoadingView.startAnimating()
         
     }
     
