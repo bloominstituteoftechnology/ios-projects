@@ -31,6 +31,9 @@ public class LoadingViewController: UIViewController {
     
     public func stopAnimation() {
         indeterminateLoadingView.stopAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.indeterminateLoadingView.isHidden = true
+        }
     }
 
     let indeterminateLoadingView = IndeterminateLoadingView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
