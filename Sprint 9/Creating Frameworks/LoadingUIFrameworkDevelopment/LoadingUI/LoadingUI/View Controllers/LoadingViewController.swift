@@ -19,20 +19,20 @@ open class LoadingViewController: UIViewController {
         super.viewDidLoad()
         
         let loader = IndeterminateLoadingView()
-        let loaderParentView = UIView()
-        loaderParentView.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-        loaderParentView.center = self.view.center
-        loaderParentView.backgroundColor = .green
-        loaderParentView.addSubview(loader)
-        self.view.addSubview(loaderParentView)
-        
+//        let loaderParentView = UIView()
+//        loaderParentView.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
+//        loaderParentView.center = view.center
+//        loaderParentView.backgroundColor = .green
+//        loaderParentView.addSubview(loader)
+//        view.addSubview(loaderParentView)
+        self.view.addSubview(loader)
         
         loader.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-//        loader.center = loaderParentView.center
+        loader.center = self.view.center
 
         print("loader: \(loader)")
         loader.startAnimating()
-        print("View did load: \(self.view!)")
+        print("View did load: \(view!)")
         // Do any additional setup after loading the view.
     }
     
@@ -46,5 +46,10 @@ open class LoadingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    @IBAction func dismissModal(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

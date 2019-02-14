@@ -53,7 +53,21 @@
                     <view key="view" contentMode="scaleToFill" id="v7L-ih-Tbj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-9H-Pkq">
+                                <rect key="frame" x="20" y="617" width="60" height="30"/>
+                                <state key="normal" title="DISMISS"/>
+                                <connections>
+                                    <action selector="dismissModal:" destination="16w-TR-rHY" eventType="touchUpInside" id="N4d-Mz-9Il"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rFx-Xk-sqm" firstAttribute="bottom" secondItem="5cB-9H-Pkq" secondAttribute="bottom" constant="20" id="JfY-Sh-grB"/>
+                            <constraint firstItem="5cB-9H-Pkq" firstAttribute="leading" secondItem="rFx-Xk-sqm" secondAttribute="leading" constant="20" id="soN-cX-BAL"/>
+                            <constraint firstItem="rFx-Xk-sqm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5cB-9H-Pkq" secondAttribute="trailing" symbolic="YES" id="tW0-Rb-cTx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rFx-Xk-sqm"/>
                     </view>
                 </viewController>
