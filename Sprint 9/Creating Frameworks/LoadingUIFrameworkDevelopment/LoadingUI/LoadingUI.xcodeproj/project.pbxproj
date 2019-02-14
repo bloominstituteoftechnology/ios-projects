@@ -10,6 +10,9 @@
 		2C8D29312214C451005C8D3D /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8D29272214C450005C8D3D /* LoadingUI.framework */; };
 		2C8D29362214C451005C8D3D /* LoadingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D29352214C451005C8D3D /* LoadingUITests.swift */; };
 		2C8D29382214C451005C8D3D /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8D292A2214C450005C8D3D /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C8D2981221557BE005C8D3D /* PolarPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D297F221557BD005C8D3D /* PolarPoint.swift */; };
+		2C8D2982221557BE005C8D3D /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D2980221557BE005C8D3D /* IndeterminateLoadingView.swift */; };
+		2C8D298E2215CF4B005C8D3D /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D298D2215CF4B005C8D3D /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		2C8D29302214C451005C8D3D /* LoadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8D29352214C451005C8D3D /* LoadingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITests.swift; sourceTree = "<group>"; };
 		2C8D29372214C451005C8D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8D297F221557BD005C8D3D /* PolarPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolarPoint.swift; path = ../../../PolarPoint.swift; sourceTree = "<group>"; };
+		2C8D2980221557BE005C8D3D /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndeterminateLoadingView.swift; path = ../../../IndeterminateLoadingView.swift; sourceTree = "<group>"; };
+		2C8D298D2215CF4B005C8D3D /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				2C8D292A2214C450005C8D3D /* LoadingUI.h */,
+				2C8D2980221557BE005C8D3D /* IndeterminateLoadingView.swift */,
+				2C8D298D2215CF4B005C8D3D /* LoadingViewController.swift */,
+				2C8D297F221557BD005C8D3D /* PolarPoint.swift */,
 				2C8D292B2214C450005C8D3D /* Info.plist */,
 			);
 			path = LoadingUI;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					2C8D29262214C450005C8D3D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					2C8D292F2214C451005C8D3D = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8D2981221557BE005C8D3D /* PolarPoint.swift in Sources */,
+				2C8D2982221557BE005C8D3D /* IndeterminateLoadingView.swift in Sources */,
+				2C8D298E2215CF4B005C8D3D /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		2C8D293C2214C451005C8D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GrumpyCaldwell.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		2C8D293D2214C451005C8D3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +405,7 @@
 		2C8D293F2214C451005C8D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +423,7 @@
 		2C8D29402214C451005C8D3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
