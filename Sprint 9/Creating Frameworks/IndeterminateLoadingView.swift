@@ -59,7 +59,7 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     // MARK: - Private
     
     private func setupShapeLayer() {
-        let thickness: CGFloat = 10.0
+        let thickness: CGFloat = 13.0
         
         shapeLayer.frame = layer.bounds
         shapeLayer.strokeColor = UIColor.black.cgColor
@@ -123,6 +123,6 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     private(set) var isAnimating = false
 
     private let shapeLayer = CAShapeLayer()
-    private let duration = 1.0
+    private let duration = 1.5
     private var shouldStopAnimationOnNextCycle = false
 }
