@@ -7,6 +7,8 @@
 //
 
 import UIKit
+// import LoadingUI in ViewController. Make sure the project builds.
+import LoadingUI
 
 class ViewController: UIViewController {
 
