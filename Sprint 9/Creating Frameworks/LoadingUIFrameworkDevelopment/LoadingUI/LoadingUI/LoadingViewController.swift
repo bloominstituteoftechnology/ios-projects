@@ -30,7 +30,7 @@ public class LoadingViewController: UIViewController {
     /// Sets the thickness of the loading wheel
     public var wheelThickness: CGFloat = 10.0 {
         didSet {
-            let maxValue = wheelSize/4 < 50 ? wheelSize/4 : 50
+            let maxValue = wheelSize/2 < 50 ? wheelSize/2 : 50
             if wheelThickness < 10 {
                 wheelThickness = 10
             } else if wheelThickness > maxValue {
@@ -73,7 +73,7 @@ public class LoadingViewController: UIViewController {
     // MARK: - Utility Methods
     private func setupView() {
         view.backgroundColor = backgroundColor
-        let frame = CGRect(x: view.bounds.midX - (wheelSize/2), y: view.bounds.midY - (wheelSize/2), width: wheelSize, height: wheelSize)
+        let frame = CGRect(x: view.bounds.midX - (wheelSize), y: view.bounds.midY - (wheelSize), width: wheelSize*2, height: wheelSize*2)
         loadingView = IndeterminateLoadingView(frame: frame, strokeColor: wheelColor, thickness: wheelThickness)
         view.addSubview(loadingView)
     }
