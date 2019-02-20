@@ -37,6 +37,7 @@ class Developer {
         
         leftSpoon.putDown()
         rightSpoon.putDown()
+        print("\(name) is DONE eating")
     }
     
     func run() {
@@ -51,11 +52,11 @@ let Spoon3 = Spoon()
 let Spoon4 = Spoon()
 let Spoon5 = Spoon()
 
-let Developer1 = Developer(leftSpoon: Spoon1, rightSpoon: Spoon2, name: "Developer1")
-let Developer2 = Developer(leftSpoon: Spoon2, rightSpoon: Spoon3, name: "Developer2")
-let Developer3 = Developer(leftSpoon: Spoon3, rightSpoon: Spoon4, name: "Developer3")
-let Developer4 = Developer(leftSpoon: Spoon4, rightSpoon: Spoon5, name: "Developer4")
-let Developer5 = Developer(leftSpoon: Spoon5, rightSpoon: Spoon1, name: "Developer5")
+let Developer1 = Developer(leftSpoon: Spoon1, rightSpoon: Spoon2, name: "#1")
+let Developer2 = Developer(leftSpoon: Spoon2, rightSpoon: Spoon3, name: "#2")
+let Developer3 = Developer(leftSpoon: Spoon3, rightSpoon: Spoon4, name: "#3")
+let Developer4 = Developer(leftSpoon: Spoon4, rightSpoon: Spoon5, name: "#4")
+let Developer5 = Developer(leftSpoon: Spoon5, rightSpoon: Spoon1, name: "#5")
 
 let developers = [Developer1, Developer2, Developer3, Developer4, Developer5]
 
