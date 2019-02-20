@@ -46,6 +46,7 @@ var aCountedSet = CountedSet<Arrow>()
 aCountedSet[.iron] // 0
 aCountedSet.insert(element: .iron)
 aCountedSet[.iron] // 1
+aCountedSet.count() // 1
 
 var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
 
@@ -54,3 +55,4 @@ myCountedSet.remove(element: .iron) // 3
 myCountedSet.remove(element: .iron) // 2
 myCountedSet.remove(element: .dwarvish) // 0
 myCountedSet.remove(element: .magic) // 0
+myCountedSet.count() // 3
