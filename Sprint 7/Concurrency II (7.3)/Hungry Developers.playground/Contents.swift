@@ -3,6 +3,11 @@ import UIKit
 class Spoon {
     
     let lock = NSLock()
+    let index: Int
+    
+    init(index: Int) {
+        self.index = index
+    }
     
     func pickUp() {
         lock.lock()
@@ -11,7 +16,6 @@ class Spoon {
     func putDown() {
         lock.unlock()
     }
-
 }
 
 class Developer {
@@ -25,15 +29,20 @@ class Developer {
     }
     
     func think() {
-        leftSpoon.pickUp()
-        rightSpoon.pickUp()
         
+        if leftSpoon.index < rightSpoon.index {
+            leftSpoon.pickUp()
+            rightSpoon.pickUp()
+        } else {
+            rightSpoon.pickUp()
+            leftSpoon.pickUp()
+        }
         return
     }
     
     func eat() {
         print("\(name) is currently eating")
-        sleep(2)
+        sleep(UInt32(Int.random(in: 0...2)))
         
         leftSpoon.putDown()
         rightSpoon.putDown()
@@ -41,16 +50,18 @@ class Developer {
     }
     
     func run() {
-        think()
-        eat()
+        while true {
+            think()
+            eat()
+        }
     }
 }
 
-let Spoon1 = Spoon()
-let Spoon2 = Spoon()
-let Spoon3 = Spoon()
-let Spoon4 = Spoon()
-let Spoon5 = Spoon()
+let Spoon1 = Spoon(index: 1)
+let Spoon2 = Spoon(index: 2)
+let Spoon3 = Spoon(index: 3)
+let Spoon4 = Spoon(index: 4)
+let Spoon5 = Spoon(index: 5)
 
 let Developer1 = Developer(leftSpoon: Spoon1, rightSpoon: Spoon2, name: "#1")
 let Developer2 = Developer(leftSpoon: Spoon2, rightSpoon: Spoon3, name: "#2")
