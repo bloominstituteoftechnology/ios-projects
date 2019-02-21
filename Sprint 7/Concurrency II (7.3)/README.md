@@ -15,7 +15,7 @@ Imagine a scenario where you have five hungry developers sitting around a round 
 
 ![Table](Table.png)
 
-Each developer is hungry, and trying to solve a difficult programming challenge. They alternately think and eat soup. However, a developer can only eat soup when the have both the spoon to their left and the spoon to their right.
+Each developer is hungry, and trying to solve a difficult programming challenge. They alternately think and eat soup. However, a developer can only eat soup when they have both the spoon to their left and the spoon to their right.
 
 After a developer finishes eating, they must put down both spoon, so that other developers can use them. A developer can take the spoon on their left or their right as soon as they're available, but they cannot start eating before they get both spoons.
 
@@ -38,7 +38,7 @@ This problem is trickier than it seems. However, you should start by writing a s
 
 ```
 DispatchQueue.concurrentPerform(iterations: 5) {
-	developers[$0].run()
+developers[$0].run()
 }
 ```
 
@@ -73,7 +73,7 @@ Implement this solution by:
 
 1. Add an `index` property to `Spoon`.
 2. Give each spoon an index from 1 to 5.
-3. Write `eat()` so that a developer will always pick up their lower-numbered spoon first. (The order in which they put them down doesn't matter.)
+3. Refactor `think()` function, so that a developer will always pick up their lower-numbered spoon first. (The order in which they put them down doesn't matter.)
 4. Test the app again. In theory, with this solution, the app can't deadlock. Run it until you're confident that that's true.
 
 ## Go Farther
