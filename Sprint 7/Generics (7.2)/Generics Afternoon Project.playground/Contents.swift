@@ -1,5 +1,5 @@
 import UIKit
 
-struct CountedSet<Generic> where Generic: Hashable {
+struct CountedSet<Element> where Element: Hashable {
     
 }
