@@ -52,33 +52,6 @@ struct CountedSet<Element: Hashable> {
             return false
         }
     }
-}
-
-// conform your set to ExpressibleByArrayLiteral so you can initialize a counted set using an array of same-type items.
-//got this example from documentation
-//extension OrderedSet: ExpressibleByArrayLiteral {
-//    init(arrayLiteral: Element...) {
-//        self.init()
-//        for element in arrayLiteral {
-//            self.append(element)
-//        }
-//    }
-//}
-
-extension CountedSet: ExpressibleByArrayLiteral {
-    init() {
-        self.init()
-        
-    }
+    
     
 }
-    
-    
-enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
-var aCountedSet = CountedSet<Arrow>()
-aCountedSet[.iron] // 0
-var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
-myCountedSet[.iron] // 4
-myCountedSet.remove(.iron) // 3
-myCountedSet.remove(.dwarvish) // 0
-myCountedSet.remove(.magic) // 0
