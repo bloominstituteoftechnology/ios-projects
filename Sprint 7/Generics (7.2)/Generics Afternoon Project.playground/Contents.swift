@@ -7,8 +7,13 @@ struct CountedSet<Element> where Element: Hashable {
     private(set) var storage: [Element: Int] = [:]
     
     // Insert element
+    mutating func insert(_ element: Element) {
+        guard let item = storage[element] else { return }
+        storage[element] = item + 1
+    }
     
     // Remove element
+    
     
     // Insert or Remove Element
     
