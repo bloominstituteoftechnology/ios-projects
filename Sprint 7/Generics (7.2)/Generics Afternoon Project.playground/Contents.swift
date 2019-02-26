@@ -1,6 +1,10 @@
 import UIKit
 
+// Create a generic CountedSet struct that is constrained to Hashable elements. A counted set is an unordered collection of unique elements that may appear more than once in the collection.
 struct CountedSet<Element> where Element: Hashable {
+    
+    // Use a private dictionary as your backing storage for set members and their counts.
+    private(set) var storage: [Element: Int] = [:]
     
     // Insert element
     
