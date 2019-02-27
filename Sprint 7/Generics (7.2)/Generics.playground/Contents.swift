@@ -2,10 +2,9 @@ import UIKit
 
 //Generics Challenge
 //A counted set is an unordered collection of unique elements that may appear more than once in the collection.
-
 // Create a generic CountedSet struct that is constrained to Hashable elements.
 struct CountedSet<Element: Hashable> {
-    
+
     // Use a private dictionary as your backing storage for set members and their counts.
     private var dictionary: [Element: Int] = [:]
     
@@ -39,7 +38,7 @@ struct CountedSet<Element: Hashable> {
         // Return 0 for any value not found
         return dictionary[element] ?? 0
     }
-
+    
 //    Add count, returning the number of unique elements in the counted set and isEmpty for when count is zero.
     func isEmpty() -> Bool {
         var count: Int {
@@ -53,7 +52,6 @@ struct CountedSet<Element: Hashable> {
         }
     }
 }
-
 // conform your set to ExpressibleByArrayLiteral so you can initialize a counted set using an array of same-type items.
 //got this example from documentation
 //extension OrderedSet: ExpressibleByArrayLiteral {
@@ -66,19 +64,22 @@ struct CountedSet<Element: Hashable> {
 //}
 
 extension CountedSet: ExpressibleByArrayLiteral {
-    init() {
+    typealias ArrayLiteralElement = <#type#>
+    
+    init(element: Element) {
         self.init()
-        
+        for element in dictionary {
+            self.append(element)
+        }
     }
-    
 }
-    
-    
+
+//var aCountedSet = CountedSet<Arrow>()
+//aCountedSet[.iron] // 0
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
-var aCountedSet = CountedSet<Arrow>()
-aCountedSet[.iron] // 0
 var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
+
 myCountedSet[.iron] // 4
-myCountedSet.remove(.iron) // 3
-myCountedSet.remove(.dwarvish) // 0
-myCountedSet.remove(.magic) // 0
+myCountedSet.remove(element: .iron) // 3
+myCountedSet.remove(element: .dwarvish) // 0
+myCountedSet.remove(element: .magic) // 0
