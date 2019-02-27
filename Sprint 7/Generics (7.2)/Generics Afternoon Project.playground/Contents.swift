@@ -13,7 +13,16 @@ struct CountedSet<Element> where Element: Hashable {
     }
     
     // Remove element
-    
+    mutating func remove(_ element: Element) -> Int {
+        
+        guard let item = storage[element] else { return 0 }
+        
+        if storage[element]! > 0 {
+            storage[element] = item - 1
+        }
+        
+        return storage[element]!
+    }
     
     // Insert or Remove Element
     
