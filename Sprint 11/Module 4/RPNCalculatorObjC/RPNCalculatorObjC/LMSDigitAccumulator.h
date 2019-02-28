@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSDigitAccumulator : NSObject
 
+@property (readonly) double value;
+
+- (void)addDigitWithNumericValue: (NSNumber *)number;
+- (void)addDecimalPoint;
+- (void)clear;
+
 @end
 
 NS_ASSUME_NONNULL_END

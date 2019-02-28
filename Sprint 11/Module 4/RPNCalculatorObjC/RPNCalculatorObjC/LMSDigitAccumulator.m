@@ -8,6 +8,40 @@
 
 #import "LMSDigitAccumulator.h"
 
+@interface LMSDigitAccumulator ()
+
+@property NSMutableArray *digits;
+
+@end
+
 @implementation LMSDigitAccumulator
+
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        _digits = [NSMutableArray arrayWithArray:@[]];
+    }
+    return self;
+}
+
+- (double)value {
+    NSString *numberAsString = [self.digits componentsJoinedByString:@""];
+    double number = numberAsString.doubleValue;
+    return number;
+}
+
+- (void)addDigitWithNumericValue: (NSNumber *)number {
+    NSNumber *digit = number;
+    NSString *string = digit.stringValue;
+    [self.digits addObject:string];
+}
+
+- (void)addDecimalPoint {
+    [self.digits addObject:@"."];
+}
+
+- (void)clear {
+    [self.digits removeAllObjects];
+}
 
 @end
