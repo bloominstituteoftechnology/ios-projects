@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  LMSCalculator.m
 //  RPNCalculatorObjC
 //
 //  Created by Lisa Sampson on 2/28/19.
 //  Copyright © 2019 Lisa M Sampson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LMSCalculator.h"
 
-@interface ViewController : UIViewController
-
+@implementation LMSCalculator
 
 @end
-

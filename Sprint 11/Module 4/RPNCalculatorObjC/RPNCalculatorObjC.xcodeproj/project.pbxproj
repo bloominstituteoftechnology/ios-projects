@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		FFB24C77222895330096E395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C76222895330096E395 /* AppDelegate.m */; };
-		FFB24C7A222895330096E395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C79222895330096E395 /* ViewController.m */; };
 		FFB24C7D222895330096E395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24C7B222895330096E395 /* Main.storyboard */; };
 		FFB24C7F222895350096E395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB24C7E222895350096E395 /* Assets.xcassets */; };
 		FFB24C82222895350096E395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24C80222895350096E395 /* LaunchScreen.storyboard */; };
 		FFB24C85222895350096E395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C84222895350096E395 /* main.m */; };
+		FFB24C92222898E20096E395 /* LMSCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C91222898E20096E395 /* LMSCalculatorViewController.m */; };
+		FFB24C96222899980096E395 /* LMSStack.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C95222899980096E395 /* LMSStack.m */; };
+		FFB24C99222899BD0096E395 /* LMSCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C98222899BD0096E395 /* LMSCalculator.m */; };
+		FFB24C9C222899D60096E395 /* LMSDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24C9B222899D60096E395 /* LMSDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB24C72222895330096E395 /* RPNCalculatorObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPNCalculatorObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB24C75222895330096E395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFB24C76222895330096E395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFB24C78222895330096E395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FFB24C79222895330096E395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFB24C7C222895330096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB24C7E222895350096E395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB24C81222895350096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB24C83222895350096E395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB24C84222895350096E395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFB24C90222898E20096E395 /* LMSCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSCalculatorViewController.h; sourceTree = "<group>"; };
+		FFB24C91222898E20096E395 /* LMSCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSCalculatorViewController.m; sourceTree = "<group>"; };
+		FFB24C94222899980096E395 /* LMSStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSStack.h; sourceTree = "<group>"; };
+		FFB24C95222899980096E395 /* LMSStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSStack.m; sourceTree = "<group>"; };
+		FFB24C97222899BD0096E395 /* LMSCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSCalculator.h; sourceTree = "<group>"; };
+		FFB24C98222899BD0096E395 /* LMSCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSCalculator.m; sourceTree = "<group>"; };
+		FFB24C9A222899D60096E395 /* LMSDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSDigitAccumulator.h; sourceTree = "<group>"; };
+		FFB24C9B222899D60096E395 /* LMSDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +67,55 @@
 		FFB24C74222895330096E395 /* RPNCalculatorObjC */ = {
 			isa = PBXGroup;
 			children = (
+				FFB24C93222899020096E395 /* Model/Medel Controller */,
+				FFB24C8F2228973A0096E395 /* View Controller */,
+				FFB24C8D222897110096E395 /* Storyboards */,
+				FFB24C8E2228972A0096E395 /* Resources */,
+			);
+			path = RPNCalculatorObjC;
+			sourceTree = "<group>";
+		};
+		FFB24C8D222897110096E395 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24C7B222895330096E395 /* Main.storyboard */,
+				FFB24C80222895350096E395 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFB24C8E2228972A0096E395 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FFB24C75222895330096E395 /* AppDelegate.h */,
 				FFB24C76222895330096E395 /* AppDelegate.m */,
-				FFB24C78222895330096E395 /* ViewController.h */,
-				FFB24C79222895330096E395 /* ViewController.m */,
-				FFB24C7B222895330096E395 /* Main.storyboard */,
 				FFB24C7E222895350096E395 /* Assets.xcassets */,
-				FFB24C80222895350096E395 /* LaunchScreen.storyboard */,
 				FFB24C83222895350096E395 /* Info.plist */,
 				FFB24C84222895350096E395 /* main.m */,
 			);
-			path = RPNCalculatorObjC;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFB24C8F2228973A0096E395 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24C90222898E20096E395 /* LMSCalculatorViewController.h */,
+				FFB24C91222898E20096E395 /* LMSCalculatorViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		FFB24C93222899020096E395 /* Model/Medel Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24C94222899980096E395 /* LMSStack.h */,
+				FFB24C95222899980096E395 /* LMSStack.m */,
+				FFB24C97222899BD0096E395 /* LMSCalculator.h */,
+				FFB24C98222899BD0096E395 /* LMSCalculator.m */,
+				FFB24C9A222899D60096E395 /* LMSDigitAccumulator.h */,
+				FFB24C9B222899D60096E395 /* LMSDigitAccumulator.m */,
+			);
+			name = "Model/Medel Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB24C7A222895330096E395 /* ViewController.m in Sources */,
+				FFB24C92222898E20096E395 /* LMSCalculatorViewController.m in Sources */,
+				FFB24C9C222899D60096E395 /* LMSDigitAccumulator.m in Sources */,
 				FFB24C85222895350096E395 /* main.m in Sources */,
 				FFB24C77222895330096E395 /* AppDelegate.m in Sources */,
+				FFB24C99222899BD0096E395 /* LMSCalculator.m in Sources */,
+				FFB24C96222899980096E395 /* LMSStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = RPNCalculatorObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RPNCalculatorObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = RPNCalculatorObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RPNCalculatorObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
