@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		A5CF19EE2228984300E39209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF19ED2228984300E39209 /* AppDelegate.m */; };
-		A5CF19F12228984300E39209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF19F02228984300E39209 /* ViewController.m */; };
 		A5CF19F42228984300E39209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF19F22228984300E39209 /* Main.storyboard */; };
 		A5CF19F62228984500E39209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF19F52228984500E39209 /* Assets.xcassets */; };
 		A5CF19F92228984500E39209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF19F72228984500E39209 /* LaunchScreen.storyboard */; };
 		A5CF19FC2228984500E39209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF19FB2228984500E39209 /* main.m */; };
+		A5CF1A0422289C8B00E39209 /* OSICalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5CF19E92228984300E39209 /* ObjcCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CF19EC2228984300E39209 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5CF19ED2228984300E39209 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5CF19EF2228984300E39209 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A5CF19F02228984300E39209 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A5CF19F32228984300E39209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5CF19F52228984500E39209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CF19F82228984500E39209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5CF19FA2228984500E39209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5CF19FB2228984500E39209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5CF1A0222289C8B00E39209 /* OSICalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSICalculatorViewController.h; sourceTree = "<group>"; };
+		A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSICalculatorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +60,23 @@
 			children = (
 				A5CF19EC2228984300E39209 /* AppDelegate.h */,
 				A5CF19ED2228984300E39209 /* AppDelegate.m */,
-				A5CF19EF2228984300E39209 /* ViewController.h */,
-				A5CF19F02228984300E39209 /* ViewController.m */,
 				A5CF19F22228984300E39209 /* Main.storyboard */,
 				A5CF19F52228984500E39209 /* Assets.xcassets */,
+				A5CF1A0522289CAB00E39209 /* ViewController */,
 				A5CF19F72228984500E39209 /* LaunchScreen.storyboard */,
 				A5CF19FA2228984500E39209 /* Info.plist */,
 				A5CF19FB2228984500E39209 /* main.m */,
 			);
 			path = ObjcCalc;
+			sourceTree = "<group>";
+		};
+		A5CF1A0522289CAB00E39209 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A0222289C8B00E39209 /* OSICalculatorViewController.h */,
+				A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +105,7 @@
 		A5CF19E12228984300E39209 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OSI;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Sergey Osipyan";
 				TargetAttributes = {
@@ -141,8 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CF19F12228984300E39209 /* ViewController.m in Sources */,
 				A5CF19FC2228984500E39209 /* main.m in Sources */,
+				A5CF1A0422289C8B00E39209 /* OSICalculatorViewController.m in Sources */,
 				A5CF19EE2228984300E39209 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

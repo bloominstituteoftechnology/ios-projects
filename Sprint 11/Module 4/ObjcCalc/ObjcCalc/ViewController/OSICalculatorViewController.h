@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OSICalculatorViewController.h
 //  ObjcCalc
 //
 //  Created by Sergey Osipyan on 2/28/19.
@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface OSICalculatorViewController : UIViewController
+
+
 
 
 @end
 
+NS_ASSUME_NONNULL_END
