@@ -9,37 +9,36 @@
 import UIKit
 
 class IndeterminateLoadingView: UIView, CAAnimationDelegate {
+    // MARK: - Properties
+    private(set) var isAnimating = false
+    private let shapeLayer = CAShapeLayer()
+    private let duration = 1.0
+    private var shouldStopAnimationOnNextCycle = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupShapeLayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         setupShapeLayer()
     }
     
     func startAnimating() {
         guard !isAnimating else { return }
         defer { isAnimating = true }
-    
         startAnimation()
     }
     
     func stopAnimating() {
         guard isAnimating else { return }
-        
         shouldStopAnimationOnNextCycle = true
     }
     
     // MARK: - Private
-    
     private func setupShapeLayer() {
         let thickness: CGFloat = 10.0
-        
         shapeLayer.frame = layer.bounds
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
@@ -47,11 +46,9 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         shapeLayer.strokeStart = 0.0
         shapeLayer.strokeEnd = 0.0
         layer.addSublayer(shapeLayer)
-        
         let radius = min(bounds.width, bounds.height) / 2.0 - thickness/2.0
         let rect = CGRect(x: bounds.midX - radius/2.0, y: bounds.midY - radius/2.0, width: radius, height: radius)
         let path = UIBezierPath(ovalIn: rect)
-        
         shapeLayer.path = path.cgPath
     }
     
@@ -74,21 +71,18 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     }
     
     // MARK: - CAAnimationDelegate
-    
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         guard !shouldStopAnimationOnNextCycle else {
             shouldStopAnimationOnNextCycle = false
             isAnimating = false
             return
         }
-        
         if let anim = anim as? CABasicAnimation, anim.keyPath == "strokeEnd" {
             shapeLayer.strokeStart = 0.0
             shapeLayer.strokeEnd = 1.0
             shapeLayer.removeAllAnimations()
             startAnimation(for: "strokeStart", timing: .easeOut)
         }
-        
         if let anim = anim as? CABasicAnimation, anim.keyPath == "strokeStart" {
             shapeLayer.strokeStart = 0.0
             shapeLayer.strokeEnd = 0.0
@@ -97,11 +91,5 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
         }
     }
     
-    // MARK: - Properties
-    
-    private(set) var isAnimating = false
 
-    private let shapeLayer = CAShapeLayer()
-    private let duration = 1.0
-    private var shouldStopAnimationOnNextCycle = false
 }

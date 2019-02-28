@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C6BE28022289FD800CE1C24 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BE27F22289FD800CE1C24 /* CalculatorViewController.m */; };
+		2C6BE2842228A3E400CE1C24 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BE2832228A3E400CE1C24 /* Calculator.m */; };
+		2CBDDAF12228857C0077AC73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDDAF02228857C0077AC73 /* AppDelegate.m */; };
+		2CBDDAF72228857C0077AC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CBDDAF52228857C0077AC73 /* Main.storyboard */; };
+		2CBDDAF92228858A0077AC73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CBDDAF82228858A0077AC73 /* Assets.xcassets */; };
+		2CBDDAFC2228858A0077AC73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CBDDAFA2228858A0077AC73 /* LaunchScreen.storyboard */; };
+		2CBDDAFF2228858A0077AC73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDDAFE2228858A0077AC73 /* main.m */; };
+		2CBDDB092228858B0077AC73 /* RPN_Calculator_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDDB082228858B0077AC73 /* RPN_Calculator_Objective_CTests.m */; };
+		2CBDDB142228858B0077AC73 /* RPN_Calculator_Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDDB132228858B0077AC73 /* RPN_Calculator_Objective_CUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CBDDB052228858B0077AC73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CBDDAE42228857B0077AC73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CBDDAEB2228857C0077AC73;
+			remoteInfo = "RPN Calculator Objective-C";
+		};
+		2CBDDB102228858B0077AC73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CBDDAE42228857B0077AC73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CBDDAEB2228857C0077AC73;
+			remoteInfo = "RPN Calculator Objective-C";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C6BE27E22289FD800CE1C24 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		2C6BE27F22289FD800CE1C24 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		2C6BE2822228A3E400CE1C24 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		2C6BE2832228A3E400CE1C24 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		2CBDDAEC2228857C0077AC73 /* RPN Calculator Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPN Calculator Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBDDAEF2228857C0077AC73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CBDDAF02228857C0077AC73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CBDDAF62228857C0077AC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CBDDAF82228858A0077AC73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CBDDAFB2228858A0077AC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CBDDAFD2228858A0077AC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CBDDAFE2228858A0077AC73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CBDDB042228858B0077AC73 /* RPN Calculator Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPN Calculator Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBDDB082228858B0077AC73 /* RPN_Calculator_Objective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPN_Calculator_Objective_CTests.m; sourceTree = "<group>"; };
+		2CBDDB0A2228858B0077AC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CBDDB0F2228858B0077AC73 /* RPN Calculator Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPN Calculator Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBDDB132228858B0077AC73 /* RPN_Calculator_Objective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPN_Calculator_Objective_CUITests.m; sourceTree = "<group>"; };
+		2CBDDB152228858B0077AC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CBDDAE92228857C0077AC73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB012228858B0077AC73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB0C2228858B0077AC73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C6BE2812228A3BA00CE1C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C6BE2822228A3E400CE1C24 /* Calculator.h */,
+				2C6BE2832228A3E400CE1C24 /* Calculator.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CBDDAE32228857B0077AC73 = {
+			isa = PBXGroup;
+			children = (
+				2CBDDAEE2228857C0077AC73 /* RPN Calculator Objective-C */,
+				2CBDDB072228858B0077AC73 /* RPN Calculator Objective-CTests */,
+				2CBDDB122228858B0077AC73 /* RPN Calculator Objective-CUITests */,
+				2CBDDAED2228857C0077AC73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CBDDAED2228857C0077AC73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDAEC2228857C0077AC73 /* RPN Calculator Objective-C.app */,
+				2CBDDB042228858B0077AC73 /* RPN Calculator Objective-CTests.xctest */,
+				2CBDDB0F2228858B0077AC73 /* RPN Calculator Objective-CUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CBDDAEE2228857C0077AC73 /* RPN Calculator Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDAFE2228858A0077AC73 /* main.m */,
+				2C6BE2812228A3BA00CE1C24 /* Model */,
+				2CBDDB21222885A50077AC73 /* Resources */,
+				2CBDDB22222885B00077AC73 /* View Controllers */,
+				2CBDDB23222885DB0077AC73 /* Views */,
+			);
+			path = "RPN Calculator Objective-C";
+			sourceTree = "<group>";
+		};
+		2CBDDB072228858B0077AC73 /* RPN Calculator Objective-CTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDB082228858B0077AC73 /* RPN_Calculator_Objective_CTests.m */,
+				2CBDDB0A2228858B0077AC73 /* Info.plist */,
+			);
+			path = "RPN Calculator Objective-CTests";
+			sourceTree = "<group>";
+		};
+		2CBDDB122228858B0077AC73 /* RPN Calculator Objective-CUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDB132228858B0077AC73 /* RPN_Calculator_Objective_CUITests.m */,
+				2CBDDB152228858B0077AC73 /* Info.plist */,
+			);
+			path = "RPN Calculator Objective-CUITests";
+			sourceTree = "<group>";
+		};
+		2CBDDB21222885A50077AC73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDAEF2228857C0077AC73 /* AppDelegate.h */,
+				2CBDDAF82228858A0077AC73 /* Assets.xcassets */,
+				2CBDDAFD2228858A0077AC73 /* Info.plist */,
+				2CBDDAF02228857C0077AC73 /* AppDelegate.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2CBDDB22222885B00077AC73 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C6BE27E22289FD800CE1C24 /* CalculatorViewController.h */,
+				2C6BE27F22289FD800CE1C24 /* CalculatorViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2CBDDB23222885DB0077AC73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDDAF52228857C0077AC73 /* Main.storyboard */,
+				2CBDDAFA2228858A0077AC73 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CBDDAEB2228857C0077AC73 /* RPN Calculator Objective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBDDB182228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-C" */;
+			buildPhases = (
+				2CBDDAE82228857C0077AC73 /* Sources */,
+				2CBDDAE92228857C0077AC73 /* Frameworks */,
+				2CBDDAEA2228857C0077AC73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RPN Calculator Objective-C";
+			productName = "RPN Calculator Objective-C";
+			productReference = 2CBDDAEC2228857C0077AC73 /* RPN Calculator Objective-C.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CBDDB032228858B0077AC73 /* RPN Calculator Objective-CTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBDDB1B2228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-CTests" */;
+			buildPhases = (
+				2CBDDB002228858B0077AC73 /* Sources */,
+				2CBDDB012228858B0077AC73 /* Frameworks */,
+				2CBDDB022228858B0077AC73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CBDDB062228858B0077AC73 /* PBXTargetDependency */,
+			);
+			name = "RPN Calculator Objective-CTests";
+			productName = "RPN Calculator Objective-CTests";
+			productReference = 2CBDDB042228858B0077AC73 /* RPN Calculator Objective-CTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CBDDB0E2228858B0077AC73 /* RPN Calculator Objective-CUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBDDB1E2228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-CUITests" */;
+			buildPhases = (
+				2CBDDB0B2228858B0077AC73 /* Sources */,
+				2CBDDB0C2228858B0077AC73 /* Frameworks */,
+				2CBDDB0D2228858B0077AC73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CBDDB112228858B0077AC73 /* PBXTargetDependency */,
+			);
+			name = "RPN Calculator Objective-CUITests";
+			productName = "RPN Calculator Objective-CUITests";
+			productReference = 2CBDDB0F2228858B0077AC73 /* RPN Calculator Objective-CUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CBDDAE42228857B0077AC73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ivan Caldwell";
+				TargetAttributes = {
+					2CBDDAEB2228857C0077AC73 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2CBDDB032228858B0077AC73 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2CBDDAEB2228857C0077AC73;
+					};
+					2CBDDB0E2228858B0077AC73 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2CBDDAEB2228857C0077AC73;
+					};
+				};
+			};
+			buildConfigurationList = 2CBDDAE72228857B0077AC73 /* Build configuration list for PBXProject "RPN Calculator Objective-C" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CBDDAE32228857B0077AC73;
+			productRefGroup = 2CBDDAED2228857C0077AC73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CBDDAEB2228857C0077AC73 /* RPN Calculator Objective-C */,
+				2CBDDB032228858B0077AC73 /* RPN Calculator Objective-CTests */,
+				2CBDDB0E2228858B0077AC73 /* RPN Calculator Objective-CUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CBDDAEA2228857C0077AC73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBDDAFC2228858A0077AC73 /* LaunchScreen.storyboard in Resources */,
+				2CBDDAF92228858A0077AC73 /* Assets.xcassets in Resources */,
+				2CBDDAF72228857C0077AC73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB022228858B0077AC73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB0D2228858B0077AC73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CBDDAE82228857C0077AC73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBDDAFF2228858A0077AC73 /* main.m in Sources */,
+				2C6BE2842228A3E400CE1C24 /* Calculator.m in Sources */,
+				2CBDDAF12228857C0077AC73 /* AppDelegate.m in Sources */,
+				2C6BE28022289FD800CE1C24 /* CalculatorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB002228858B0077AC73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBDDB092228858B0077AC73 /* RPN_Calculator_Objective_CTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CBDDB0B2228858B0077AC73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBDDB142228858B0077AC73 /* RPN_Calculator_Objective_CUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CBDDB062228858B0077AC73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CBDDAEB2228857C0077AC73 /* RPN Calculator Objective-C */;
+			targetProxy = 2CBDDB052228858B0077AC73 /* PBXContainerItemProxy */;
+		};
+		2CBDDB112228858B0077AC73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CBDDAEB2228857C0077AC73 /* RPN Calculator Objective-C */;
+			targetProxy = 2CBDDB102228858B0077AC73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CBDDAF52228857C0077AC73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CBDDAF62228857C0077AC73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CBDDAFA2228858A0077AC73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CBDDAFB2228858A0077AC73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CBDDB162228858B0077AC73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CBDDB172228858B0077AC73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CBDDB192228858B0077AC73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-C/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CBDDB1A2228858B0077AC73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-C/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2CBDDB1C2228858B0077AC73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-CTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPN Calculator Objective-C.app/RPN Calculator Objective-C";
+			};
+			name = Debug;
+		};
+		2CBDDB1D2228858B0077AC73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-CTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPN Calculator Objective-C.app/RPN Calculator Objective-C";
+			};
+			name = Release;
+		};
+		2CBDDB1F2228858B0077AC73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-CUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-CUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RPN Calculator Objective-C";
+			};
+			name = Debug;
+		};
+		2CBDDB202228858B0077AC73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RPN Calculator Objective-CUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "GrumpyCaldwell.RPN-Calculator-Objective-CUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RPN Calculator Objective-C";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CBDDAE72228857B0077AC73 /* Build configuration list for PBXProject "RPN Calculator Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBDDB162228858B0077AC73 /* Debug */,
+				2CBDDB172228858B0077AC73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CBDDB182228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBDDB192228858B0077AC73 /* Debug */,
+				2CBDDB1A2228858B0077AC73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CBDDB1B2228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-CTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBDDB1C2228858B0077AC73 /* Debug */,
+				2CBDDB1D2228858B0077AC73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CBDDB1E2228858B0077AC73 /* Build configuration list for PBXNativeTarget "RPN Calculator Objective-CUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBDDB1F2228858B0077AC73 /* Debug */,
+				2CBDDB202228858B0077AC73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CBDDAE42228857B0077AC73 /* Project object */;
+}

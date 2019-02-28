@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct PolarPoint {
+public struct PolarPoint {
     
     var radius: CGFloat
     var theta: CGFloat
     
-    init(radius: Int, theta: Int) {
+    public init(radius: Int, theta: Int) {
         self.radius = CGFloat(radius)
         self.theta = CGFloat(theta)
     }
     
-    init<T: BinaryFloatingPoint>(radius: T, theta: T) {
+    public init<T: BinaryFloatingPoint>(radius: T, theta: T) {
         self.radius = CGFloat(radius)
         self.theta = CGFloat(theta)
     }
     
-    init(point: CGPoint, centerPoint: CGPoint) {
+    public init(point: CGPoint, centerPoint: CGPoint) {
         let translatedPoint = CGPoint(x: point.x - centerPoint.x, y: point.y - centerPoint.y)
         let xDistance = abs(point.x - centerPoint.x)
         let yDistance = abs(point.y - centerPoint.y)
@@ -31,11 +31,11 @@ struct PolarPoint {
         self.theta = atan2(translatedPoint.y, translatedPoint.x)
     }
     
-    static func degreesToRadians<T: BinaryFloatingPoint>(_ degrees: T) -> T {
+    public static func degreesToRadians<T: BinaryFloatingPoint>(_ degrees: T) -> T {
         return degrees * T.pi / T(180.0)
     }
     
-    static func radiansToDegrees<T: BinaryFloatingPoint>(_ radians: T) -> T {
+    public static func radiansToDegrees<T: BinaryFloatingPoint>(_ radians: T) -> T {
         return radians * T(180.0) / T.pi
     }
 }
