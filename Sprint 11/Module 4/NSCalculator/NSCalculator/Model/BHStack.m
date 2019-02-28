@@ -26,15 +26,18 @@
 }
 
 -(void)push: (NSNumber *)number{
-    
+    [_values addObject: number];
 }
 
 -(NSNumber *)pop{
+    NSNumber *numberToReturn = [_values lastObject];
+    [_values removeLastObject];
+    return numberToReturn;
     
 }
 
 -(NSNumber *)peak{
-    
+    return [_values lastObject];
 }
 
 

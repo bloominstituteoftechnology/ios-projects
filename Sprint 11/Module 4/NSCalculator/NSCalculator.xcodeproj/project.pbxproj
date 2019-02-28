@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D19162AA22287E57005CE4FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162A922287E57005CE4FD /* AppDelegate.m */; };
-		D19162AD22287E57005CE4FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162AC22287E57005CE4FD /* ViewController.m */; };
 		D19162B022287E57005CE4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19162AE22287E57005CE4FD /* Main.storyboard */; };
 		D19162B222287E58005CE4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D19162B122287E58005CE4FD /* Assets.xcassets */; };
 		D19162B522287E58005CE4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19162B322287E58005CE4FD /* LaunchScreen.storyboard */; };
 		D19162B822287E58005CE4FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162B722287E58005CE4FD /* main.m */; };
 		D19162C0222882F0005CE4FD /* BHStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162BF222882F0005CE4FD /* BHStack.m */; };
+		D19162C422288838005CE4FD /* BHCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D19162C322288838005CE4FD /* BHCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D19162A522287E57005CE4FD /* NSCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19162A822287E57005CE4FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D19162A922287E57005CE4FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D19162AB22287E57005CE4FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D19162AC22287E57005CE4FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D19162AF22287E57005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D19162B122287E58005CE4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D19162B422287E58005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +27,8 @@
 		D19162B722287E58005CE4FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D19162BE222882F0005CE4FD /* BHStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHStack.h; sourceTree = "<group>"; };
 		D19162BF222882F0005CE4FD /* BHStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHStack.m; sourceTree = "<group>"; };
+		D19162C222288838005CE4FD /* BHCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHCalculator.h; sourceTree = "<group>"; };
+		D19162C322288838005CE4FD /* BHCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +61,35 @@
 		D19162A722287E57005CE4FD /* NSCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D19162C52228883C005CE4FD /* Model */,
 				D19162A822287E57005CE4FD /* AppDelegate.h */,
 				D19162A922287E57005CE4FD /* AppDelegate.m */,
-				D19162AB22287E57005CE4FD /* ViewController.h */,
-				D19162AC22287E57005CE4FD /* ViewController.m */,
+				D19162C12228880E005CE4FD /* ViewControllers */,
 				D19162AE22287E57005CE4FD /* Main.storyboard */,
 				D19162B122287E58005CE4FD /* Assets.xcassets */,
 				D19162B322287E58005CE4FD /* LaunchScreen.storyboard */,
 				D19162B622287E58005CE4FD /* Info.plist */,
 				D19162B722287E58005CE4FD /* main.m */,
+			);
+			path = NSCalculator;
+			sourceTree = "<group>";
+		};
+		D19162C12228880E005CE4FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D19162C52228883C005CE4FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D19162C222288838005CE4FD /* BHCalculator.h */,
+				D19162C322288838005CE4FD /* BHCalculator.m */,
 				D19162BE222882F0005CE4FD /* BHStack.h */,
 				D19162BF222882F0005CE4FD /* BHStack.m */,
 			);
-			path = NSCalculator;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19162C0222882F0005CE4FD /* BHStack.m in Sources */,
-				D19162AD22287E57005CE4FD /* ViewController.m in Sources */,
+				D19162C422288838005CE4FD /* BHCalculator.m in Sources */,
 				D19162B822287E58005CE4FD /* main.m in Sources */,
 				D19162AA22287E57005CE4FD /* AppDelegate.m in Sources */,
 			);
