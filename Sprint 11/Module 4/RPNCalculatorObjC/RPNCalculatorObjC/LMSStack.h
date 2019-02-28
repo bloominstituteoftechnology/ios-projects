@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSStack : NSObject
 
+- (instancetype)initWithArray: (NSArray *)array;
+
+- (void)push: (NSNumber *)value;
+- (NSNumber *)pop;
+- (NSNumber *)peek;
+
 @end
 
 NS_ASSUME_NONNULL_END
