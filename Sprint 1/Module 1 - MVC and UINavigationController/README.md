@@ -7,7 +7,6 @@ This project will help you practice the concepts learned in the first lesson of 
 - implement a segue between a table view cell and a detail view controller
 - use UINavigationController to display data hierarchically 
 - use the UINavigationItem API to customize navigation bar
-- missing value
 - understand and explain the purpose of the MVC design pattern
 - understand and explain the purpose of the model layer in MVC
 - understand and explain the purpose of the controller layer in MVC
@@ -21,8 +20,8 @@ This project will help you practice the concepts learned in the first lesson of 
 You will need just one model type in this project. Your model objects will represent items in a hobby collection.
 
 1. Create a Swift file using Xcode's File->New File menu option. Name the file "Item.swift".
-2. In the newly created file, define an `Item` struct with properties for `name`, `value`, and `location`. Use appropriate types for each of these properties.
-3. Make the `Item` struct `Equatable` so it can be compared.
+2. In the newly created file, define an `Item` class with properties for `name`, `value`, and `location`. Use appropriate types for each of these properties.
+3. Create an initializer for the `Item` class. It should take arguments for `name`, `value`, and `location`.
 
 #### Model Controller:
 
@@ -34,7 +33,7 @@ The model controller is a controller object that is specifically responsible for
 4. Add a method called `createNewItem()`. It should take arguments for each of the properties on `Item`.
 5. Implement `createNewItem()` so that it creates a new `Item` instance using in the passed in property values, appends it to the controller's `items` array property, then returns the newly created item.
 6. Add another method called `update(item:,...)`. It should take an `Item`, and new values for each of the properties on `Item`.
-7. Implement `update(item:...)` so that it first finds the index of the passed in item in `items`, changes its properties, removes the original item, then re-inserts the changed item at the same index in `items`.
+7. Implement `update(item:...)`. It will simply update the values of the passed-in `Item`'s properties.
 
 ## Part Two - Storyboards
 
