@@ -13,6 +13,9 @@
 		AB59BD4B22288F7700190925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB59BD4922288F7700190925 /* LaunchScreen.storyboard */; };
 		AB59BD4E22288F7700190925 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD4D22288F7700190925 /* main.m */; };
 		AB59BD562228924B00190925 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD552228924B00190925 /* CalculatorViewController.m */; };
+		AB59BD5A222893F600190925 /* JKStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD59222893F600190925 /* JKStack.m */; };
+		AB59BD5E2228942C00190925 /* JKCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD5D2228942C00190925 /* JKCalculator.m */; };
+		AB59BD632228953A00190925 /* JKDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BD622228953A00190925 /* JKDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		AB59BD4D22288F7700190925 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB59BD542228924B00190925 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		AB59BD552228924B00190925 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		AB59BD58222893F600190925 /* JKStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKStack.h; sourceTree = "<group>"; };
+		AB59BD59222893F600190925 /* JKStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKStack.m; sourceTree = "<group>"; };
+		AB59BD5C2228942C00190925 /* JKCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCalculator.h; sourceTree = "<group>"; };
+		AB59BD5D2228942C00190925 /* JKCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCalculator.m; sourceTree = "<group>"; };
+		AB59BD612228953A00190925 /* JKDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKDigitAccumulator.h; sourceTree = "<group>"; };
+		AB59BD622228953A00190925 /* JKDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,8 @@
 			children = (
 				AB59BD3E22288F7600190925 /* AppDelegate.h */,
 				AB59BD3F22288F7600190925 /* AppDelegate.m */,
+				AB59BD5F2228943C00190925 /* Model Controller */,
+				AB59BD5B222893FC00190925 /* Models */,
 				AB59BD572228925000190925 /* View Controller */,
 				AB59BD4422288F7600190925 /* Main.storyboard */,
 				AB59BD4722288F7700190925 /* Assets.xcassets */,
@@ -77,6 +88,42 @@
 				AB59BD552228924B00190925 /* CalculatorViewController.m */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		AB59BD5B222893FC00190925 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BD602228951700190925 /* JKStack */,
+				AB59BD642228953E00190925 /* JKDigitAccumulator */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB59BD5F2228943C00190925 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BD5C2228942C00190925 /* JKCalculator.h */,
+				AB59BD5D2228942C00190925 /* JKCalculator.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		AB59BD602228951700190925 /* JKStack */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BD58222893F600190925 /* JKStack.h */,
+				AB59BD59222893F600190925 /* JKStack.m */,
+			);
+			path = JKStack;
+			sourceTree = "<group>";
+		};
+		AB59BD642228953E00190925 /* JKDigitAccumulator */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BD612228953A00190925 /* JKDigitAccumulator.h */,
+				AB59BD622228953A00190925 /* JKDigitAccumulator.m */,
+			);
+			path = JKDigitAccumulator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB59BD5E2228942C00190925 /* JKCalculator.m in Sources */,
+				AB59BD632228953A00190925 /* JKDigitAccumulator.m in Sources */,
 				AB59BD4E22288F7700190925 /* main.m in Sources */,
 				AB59BD4022288F7600190925 /* AppDelegate.m in Sources */,
 				AB59BD562228924B00190925 /* CalculatorViewController.m in Sources */,
+				AB59BD5A222893F600190925 /* JKStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
