@@ -24,16 +24,36 @@
     [_stack pushValue:value];
 }
 
-- (void)applyOperator:(RPNOperator)operator {
-    
-}
-
 - (void)clear {
-    
+    [_stack emptyStack];
 }
 
 - (id)getTopValue {
     return [_stack peekValue];
+}
+
+- (void)applyOperator:(RPNOperator)operator {
+    
+    id rhs = [_stack popValue];
+    id lhs = [_stack popValue];
+    
+    id result;
+    switch (operator) {
+    
+    
+        case RPNOperatorAdd:
+            result = lhs + rhs;
+            break;
+        case RPNOperatorSubtract:
+            <#code#>
+            break;
+        case RPNOperatorMultiply:
+            <#code#>
+            break;
+        case RPNOperatorDivide:
+            <#code#>
+            break;
+    }
 }
 
 @end

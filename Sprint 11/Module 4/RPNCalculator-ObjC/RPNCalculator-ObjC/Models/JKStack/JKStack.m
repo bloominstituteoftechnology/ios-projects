@@ -47,4 +47,10 @@
     return nil;
 }
 
+- (void)emptyStack {
+    if (_values.count > 0) {
+        [_values removeAllObjects];
+    }
+}
+
 @end
