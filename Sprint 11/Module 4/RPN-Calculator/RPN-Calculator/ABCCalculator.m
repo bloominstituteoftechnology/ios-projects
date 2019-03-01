@@ -25,12 +25,16 @@
     switch (mathOperator) {
         case addNumber:
             result = lhs + rhs;
+            break;
         case subtractNumber:
             result = lhs - rhs;
+            break;
         case multiplyNumber:
             result = lhs * rhs;
+            break;
         case divideNumber:
             result = lhs / rhs;
+            break;
     }
     return @(result);
 }

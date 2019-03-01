@@ -17,7 +17,16 @@
 
 @implementation ABCDigitAccumulator
 
-- (void)AddDecimalPoint {
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _digits = [NSMutableArray new];
+    }
+    return self;
+}
+
+- (void)addDecimalPoint {
     [_digits addObject:@"."];
 }
 - (void)addDigitWithNumericValue: (NSInteger)number {
@@ -27,19 +36,18 @@
     [_digits removeAllObjects];
 }
 - (double)value {
-    NSMutableArray *stringArray;
+    NSMutableArray *stringArray = [NSMutableArray new];
     for (NSInteger index = 0; index < [_digits count]; index++) {
         if (![[_digits objectAtIndex:index]  isEqual: @"."]) {
-        NSString *stringifiedDigit = [[_digits objectAtIndex:index] string];
+            NSNumber *digit = [_digits objectAtIndex:index];
+        NSString *stringifiedDigit = [digit stringValue];
         [stringArray addObject:stringifiedDigit];
         }
         else {
             [stringArray addObject: @"."];
         }
     }
-    NSString *digitString = [stringArray componentsJoinedByString:@""];
-    
-    return [digitString doubleValue];
+    return [[stringArray componentsJoinedByString:@""] doubleValue];
     
 }
 

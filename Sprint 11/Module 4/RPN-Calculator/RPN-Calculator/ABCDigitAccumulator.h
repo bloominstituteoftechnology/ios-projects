@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //MARK: Methods
 - (void)addDigitWithNumericValue: (NSInteger)number;
-- (void)AddDecimalPoint;
+- (void)addDecimalPoint;
 - (void)clear;
 
 //MARK: Properties

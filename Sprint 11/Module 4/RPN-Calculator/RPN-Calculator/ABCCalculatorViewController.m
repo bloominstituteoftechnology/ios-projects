@@ -7,8 +7,13 @@
 //
 
 #import "ABCCalculatorViewController.h"
+#import "ABCCalculator.h"
+#import "ABCDigitAccumulator.h"
 
 @interface ABCCalculatorViewController ()
+
+@property ABCCalculator *calculator;
+@property ABCDigitAccumulator *digitAccumulator;
 
 @end
 
@@ -16,19 +21,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _calculator = [[ABCCalculator alloc] init];
+    _digitAccumulator = [[ABCDigitAccumulator alloc] init];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)numberButtonTapped:(id)sender {
+    NSInteger number = [sender tag];
+    [_digitAccumulator addDigitWithNumericValue:number];
 }
-*/
 
-- (IBAction)numberButtonWasTapped:(id)sender {
+- (IBAction)decimalButtonTapped:(id)sender {
+    [_digitAccumulator addDecimalPoint];
 }
+
+- (IBAction)divideButtonTapped:(id)sender {
+    [_calculator applyOperator:divideNumber];
+    [self returnButtonTapped:sender];
+
+}
+
+- (IBAction)multiplyButtonTapped:(id)sender {
+    [_calculator applyOperator:multiplyNumber];
+    [self returnButtonTapped:sender];
+
+}
+
+- (IBAction)subtractButtonTapped:(id)sender {
+    [_calculator applyOperator:subtractNumber];
+    [self returnButtonTapped:sender];
+
+}
+
+- (IBAction)addButtonTapped:(id)sender {
+    [_calculator applyOperator:addNumber];
+    [self returnButtonTapped:sender];
+
+}
+
+- (IBAction)returnButtonTapped:(id)sender {
+    double accumulatedValue = [_digitAccumulator value];
+    [_calculator pushNumber:accumulatedValue];
+    [_digitAccumulator clear];
+    NSNumber *value = [_calculator topValue];
+    if (value != nil) {
+        _numberTextField.text = [value stringValue];
+    } else {
+        _numberTextField.text = @"";
+    }
+}
+
+//MARK: Other Methods
+
 @end

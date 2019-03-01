@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABCCalculator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ABCCalculatorViewController : UIViewController
 
 //MARK: IBActions
-- (IBAction)numberButtonWasTapped:(id)sender;
+- (IBAction)numberButtonTapped:(id)sender;
+- (IBAction)decimalButtonTapped:(id)sender;
+- (IBAction)divideButtonTapped:(id)sender;
+- (IBAction)multiplyButtonTapped:(id)sender;
+- (IBAction)subtractButtonTapped:(id)sender;
+- (IBAction)addButtonTapped:(id)sender;
+- (IBAction)returnButtonTapped:(id)sender;
+
+//MARK: IBOutlets
+@property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 
 
 @end
