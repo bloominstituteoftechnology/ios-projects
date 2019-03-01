@@ -13,6 +13,9 @@
 		A5CF19F92228984500E39209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF19F72228984500E39209 /* LaunchScreen.storyboard */; };
 		A5CF19FC2228984500E39209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF19FB2228984500E39209 /* main.m */; };
 		A5CF1A0422289C8B00E39209 /* OSICalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */; };
+		A5CF1A082228A19F00E39209 /* OSIStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A072228A19F00E39209 /* OSIStack.m */; };
+		A5CF1A0C2228A1C800E39209 /* OSICalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A0B2228A1C800E39209 /* OSICalculator.m */; };
+		A5CF1A0F2228A1F500E39209 /* OSIDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF1A0E2228A1F500E39209 /* OSIDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		A5CF19FB2228984500E39209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5CF1A0222289C8B00E39209 /* OSICalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSICalculatorViewController.h; sourceTree = "<group>"; };
 		A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSICalculatorViewController.m; sourceTree = "<group>"; };
+		A5CF1A062228A19F00E39209 /* OSIStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIStack.h; sourceTree = "<group>"; };
+		A5CF1A072228A19F00E39209 /* OSIStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIStack.m; sourceTree = "<group>"; };
+		A5CF1A0A2228A1C800E39209 /* OSICalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSICalculator.h; sourceTree = "<group>"; };
+		A5CF1A0B2228A1C800E39209 /* OSICalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSICalculator.m; sourceTree = "<group>"; };
+		A5CF1A0D2228A1F500E39209 /* OSIDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIDigitAccumulator.h; sourceTree = "<group>"; };
+		A5CF1A0E2228A1F500E39209 /* OSIDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,8 @@
 				A5CF19ED2228984300E39209 /* AppDelegate.m */,
 				A5CF19F22228984300E39209 /* Main.storyboard */,
 				A5CF19F52228984500E39209 /* Assets.xcassets */,
+				A5CF1A092228A1A600E39209 /* Model */,
+				A5CF1A102228A22300E39209 /* Model Controller */,
 				A5CF1A0522289CAB00E39209 /* ViewController */,
 				A5CF19F72228984500E39209 /* LaunchScreen.storyboard */,
 				A5CF19FA2228984500E39209 /* Info.plist */,
@@ -77,6 +88,26 @@
 				A5CF1A0322289C8B00E39209 /* OSICalculatorViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A5CF1A092228A1A600E39209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A062228A19F00E39209 /* OSIStack.h */,
+				A5CF1A072228A19F00E39209 /* OSIStack.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5CF1A102228A22300E39209 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF1A0A2228A1C800E39209 /* OSICalculator.h */,
+				A5CF1A0B2228A1C800E39209 /* OSICalculator.m */,
+				A5CF1A0D2228A1F500E39209 /* OSIDigitAccumulator.h */,
+				A5CF1A0E2228A1F500E39209 /* OSIDigitAccumulator.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CF1A0F2228A1F500E39209 /* OSIDigitAccumulator.m in Sources */,
 				A5CF19FC2228984500E39209 /* main.m in Sources */,
+				A5CF1A0C2228A1C800E39209 /* OSICalculator.m in Sources */,
 				A5CF1A0422289C8B00E39209 /* OSICalculatorViewController.m in Sources */,
+				A5CF1A082228A19F00E39209 /* OSIStack.m in Sources */,
 				A5CF19EE2228984300E39209 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

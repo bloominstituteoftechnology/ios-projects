@@ -12,8 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSICalculatorViewController : UIViewController
 
+- (IBAction)numberButtonTapped:(id)sender;
+- (IBAction)returnButtonTaped:(id)sender;
+- (IBAction)addButtonTapped:(id)sender;
+- (IBAction)subtractButtonTapped:(id)sender;
+- (IBAction)multyplyButtonTapped:(id)sender;
+- (IBAction)divideButtonTapped:(id)sender;
+- (IBAction)decimalButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
-
+@property NSNumberFormatter *numberFormater;
 
 @end
 
