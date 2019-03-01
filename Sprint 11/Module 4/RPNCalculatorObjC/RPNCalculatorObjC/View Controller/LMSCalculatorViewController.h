@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LMSCalculatorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *calculatorTextField;
+
 @end
 
 NS_ASSUME_NONNULL_END

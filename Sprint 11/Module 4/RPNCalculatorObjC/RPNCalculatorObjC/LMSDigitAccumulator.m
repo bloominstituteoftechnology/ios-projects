@@ -30,8 +30,8 @@
     return number;
 }
 
-- (void)addDigitWithNumericValue: (NSNumber *)number {
-    NSNumber *digit = number;
+- (void)addDigitWithNumericValue: (NSInteger)number {
+    NSNumber *digit = [NSNumber numberWithInteger:number];
     NSString *string = digit.stringValue;
     [self.digits addObject:string];
 }

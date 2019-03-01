@@ -20,14 +20,14 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
+    if (self != nil) {
         _stack = [[LMSStack alloc] initWithArray:@[@0.0, @0.0]];
     }
     return self;
 }
 
-- (NSNumber *)topValue {
-    return [self.stack peek];
+- (double)topValue {
+    return [[self.stack peek] doubleValue];
 }
 
 - (void)pushNumber:(double)value {

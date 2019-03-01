@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, LMSCalculatorOperator) {
     LMSCalculatorOperatorDivide
 };
 
-@property (readonly) NSNumber *topValue;
+@property (readonly) double topValue;
 
 - (void)pushNumber:(double)value;
 - (void)applyCalculatorOperator:(LMSCalculatorOperator)calculatorOperator;

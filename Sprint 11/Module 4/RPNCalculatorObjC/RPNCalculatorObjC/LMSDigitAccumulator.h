@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) double value;
 
-- (void)addDigitWithNumericValue: (NSNumber *)number;
+- (void)addDigitWithNumericValue: (NSInteger)number;
 - (void)addDecimalPoint;
 - (void)clear;
 
