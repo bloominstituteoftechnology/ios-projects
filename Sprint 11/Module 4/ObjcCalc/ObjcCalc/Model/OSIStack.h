@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSIStack : NSObject
 
-- (void)push:(NSArray *)value;
-- (void)pop:(NSArray *)value;
-- (void)peek:(NSArray *)value;
+- (void)push:(NSNumber *)number;
+- (NSNumber *)pop;
+- (NSNumber *)peek;
 
 -(instancetype)initWithArray: (NSArray *)array;
 

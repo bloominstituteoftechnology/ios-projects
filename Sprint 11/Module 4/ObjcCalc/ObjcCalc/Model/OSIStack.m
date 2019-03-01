@@ -8,7 +8,7 @@
 
 #import "OSIStack.h"
 
-@interface OSIDocument : NSObject
+@interface OSIStack ()
 
 @property NSMutableArray *values;
 
@@ -16,25 +16,30 @@
 
 @implementation OSIStack
 
-
-
-- (void)pop:(NSNumber *)number {
-    [[number mutableCopy] values];
-}
-
-- (void)push:(NSArray *)value {
-    NSMutableArray *a = ;
-}
-
-- (void)peek:(NSArray *)value {
-    
-}
-
 - (instancetype)initWithArray:(NSArray *)array {
     
-    [[array mutableCopy] values];
-    
+    self = [super init];
+    if (self) {
+        _values = [array mutableCopy];
+    }
     return self;
 }
+
+- (void)push:(NSNumber *)number {
+    [_values addObject:number];
+}
+
+- (NSNumber *)pop {
+    NSNumber *returnLastNumber = [_values lastObject];
+    [_values removeLastObject];
+    return returnLastNumber;
+}
+
+- (NSNumber *)peek {
+    return [_values lastObject];
+}
+
+
+
 
 @end

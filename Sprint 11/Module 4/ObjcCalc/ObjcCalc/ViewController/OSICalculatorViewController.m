@@ -7,9 +7,12 @@
 //
 
 #import "OSICalculatorViewController.h"
+#import "OSICalculator.h"
+#import "OSIDigitAccumulator.h"
 
 @interface OSICalculatorViewController ()
-
+@property OSICalculator *osiCalculator;
+@property OSIDigitAccumulator *osiDigitAccumulator;
 @end
 
 @implementation OSICalculatorViewController
@@ -19,44 +22,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _osiCalculator = [[OSICalculator alloc] init];
+    _osiDigitAccumulator = [[OSIDigitAccumulator alloc] init];
+    _numberFormater = [[NSNumberFormatter alloc] init];
+    
+    _numberFormater.allowsFloats = YES;
+    _numberFormater.maximumIntegerDigits = 20;
+    _numberFormater.minimumFractionDigits = 0;
+    _numberFormater.maximumFractionDigits = 20;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateTextFieldWithValue: (double)value {
+    NSString *valueString = [self.numberFormater stringFromNumber:@(value)];
+    [_textField setText: valueString];
 }
-*/
 
 - (IBAction)numberButtonTapped:(id)sender {
-    
+    double number = [sender tag];
+    [_osiDigitAccumulator addDigitWithNumericValue:number];
+    [self updateTextFieldWithValue:_osiDigitAccumulator.value];
 }
 
 - (IBAction)returnButtonTaped:(id)sender {
     
+    double value = self.osiDigitAccumulator.value;
+    [_osiCalculator pushNumber:value];
+    [_osiDigitAccumulator clear];
+    [self updateTextFieldWithValue:_osiDigitAccumulator.value];
 }
 
 - (IBAction)addButtonTapped:(id)sender {
-    
+    [_osiCalculator applyOperator: OSICalcOperatorsAdd];
+    [self updateTextFieldWithValue:_osiCalculator.topValue];
 }
 
 - (IBAction)subtractButtonTapped:(id)sender {
-    
+    [_osiCalculator applyOperator:OSICalcOperatorsSubtract];
+    [self updateTextFieldWithValue:_osiCalculator.topValue];
 }
 
 - (IBAction)multyplyButtonTapped:(id)sender {
-    
+    [_osiCalculator applyOperator:OSICalcOperatorsMultiply];
+    [self updateTextFieldWithValue:_osiCalculator.topValue];
 }
 
 - (IBAction)divideButtonTapped:(id)sender {
-    
+    [_osiCalculator applyOperator:OSICalcOperatorsDivide];
+    [self updateTextFieldWithValue:_osiCalculator.topValue];
 }
 
 - (IBAction)decimalButtonTapped:(id)sender {
-    
+    [self.osiDigitAccumulator addDecimalPoint];
+    [self updateTextFieldWithValue:self.osiDigitAccumulator.value];
 }
 @end

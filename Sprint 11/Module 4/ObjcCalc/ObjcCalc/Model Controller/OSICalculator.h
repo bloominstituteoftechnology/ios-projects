@@ -8,21 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-
-
-
-
 NS_ASSUME_NONNULL_BEGIN
-
-typedef NS_ENUM(NSInteger, CalcOperators) {
-    
-    CalcOperatorsAdd,
-    CalcOperatorsSubtract,
-    CalcOperatorsMultiply,
-    CalcOperatorsDivide
+typedef NS_ENUM (NSInteger, OSICalcOperators) {
+    OSICalcOperatorsAdd,
+    OSICalcOperatorsSubtract,
+    OSICalcOperatorsMultiply,
+    OSICalcOperatorsDivide
 };
 
 @interface OSICalculator : NSObject
+
+@property (readonly) double topValue;
+
 
 - (void)pushNumber:(double)value;
 - (void)applyOperator:(NSInteger)operator;
