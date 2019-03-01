@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @interface JKStack : NSObject
 
+- (instancetype)initWithArray:(NSArray *)array;
+
+- (void)pushValue:(id)value;
+
+- (instancetype)popValue;
+
+- (instancetype)peekValue;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

@@ -7,7 +7,33 @@
 //
 
 #import "JKCalculator.h"
+#import "JKStack.h"
+#import "JKDigitAccumulator.h"
+
+@interface JKCalculator ()
+
+@property JKStack *stack;
+
+@end
 
 @implementation JKCalculator
+
+
+
+- (void)pushNumber:(id)value {
+    [_stack pushValue:value];
+}
+
+- (void)applyOperator:(RPNOperator)operator {
+    
+}
+
+- (void)clear {
+    
+}
+
+- (id)getTopValue {
+    return [_stack peekValue];
+}
 
 @end

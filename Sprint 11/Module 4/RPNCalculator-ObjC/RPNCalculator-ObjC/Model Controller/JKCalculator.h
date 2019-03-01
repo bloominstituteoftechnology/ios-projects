@@ -7,11 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JKStack.h"
+#import "JKDigitAccumulator.h"
 
-NS_ASSUME_NONNULL_BEGIN
+
+
+typedef NS_ENUM(NSUInteger, RPNOperator) {
+    RPNOperatorAdd,
+    RPNOperatorSubtract,
+    RPNOperatorMultiply,
+    RPNOperatorDivide
+};
 
 @interface JKCalculator : NSObject
 
+@property(nonatomic, readonly) id topValue;
+
+- (void)pushNumber:(id)value;
+
+- (void)applyOperator:(RPNOperator)operator;
+
+- (void)clear;
+
 @end
 
-NS_ASSUME_NONNULL_END
+
