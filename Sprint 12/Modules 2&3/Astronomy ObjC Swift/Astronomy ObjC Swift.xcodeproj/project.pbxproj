@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D13D3553222F217200664B67 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */; };
+		D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */; };
 		D1916396222DF268005CE4FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1916395222DF268005CE4FD /* AppDelegate.m */; };
-		D1916399222DF268005CE4FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1916398222DF268005CE4FD /* ViewController.m */; };
 		D191639C222DF268005CE4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D191639A222DF268005CE4FD /* Main.storyboard */; };
 		D191639E222DF26A005CE4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D191639D222DF26A005CE4FD /* Assets.xcassets */; };
 		D19163A1222DF26A005CE4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */; };
@@ -16,11 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D13D3551222F217100664B67 /* Astronomy ObjC Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy ObjC Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		D1916391222DF268005CE4FD /* Astronomy ObjC Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy ObjC Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1916394222DF268005CE4FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1916395222DF268005CE4FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D1916397222DF268005CE4FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D1916398222DF268005CE4FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D191639B222DF268005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D191639D222DF26A005CE4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D19163A0222DF26A005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D13D3547222F1F1600664B67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D191639A222DF268005CE4FD /* Main.storyboard */,
+				D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */,
+				D19163A2222DF26A005CE4FD /* Info.plist */,
+				D191639D222DF26A005CE4FD /* Assets.xcassets */,
+				D19163A3222DF26A005CE4FD /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D13D3548222F1F1A00664B67 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D13D3549222F1F1C00664B67 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		D13D354A222F1F2700664B67 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D13D354B222F1F2800664B67 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */,
+				D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D13D354C222F1F2A00664B67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D13D354D222F1F5F00664B67 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D1916394222DF268005CE4FD /* AppDelegate.h */,
+				D1916395222DF268005CE4FD /* AppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D13D3554222F217C00664B67 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				D13D3551222F217100664B67 /* Astronomy ObjC Swift-Bridging-Header.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
 		D1916388222DF268005CE4FD = {
 			isa = PBXGroup;
 			children = (
@@ -58,15 +126,14 @@
 		D1916393222DF268005CE4FD /* Astronomy ObjC Swift */ = {
 			isa = PBXGroup;
 			children = (
-				D1916394222DF268005CE4FD /* AppDelegate.h */,
-				D1916395222DF268005CE4FD /* AppDelegate.m */,
-				D1916397222DF268005CE4FD /* ViewController.h */,
-				D1916398222DF268005CE4FD /* ViewController.m */,
-				D191639A222DF268005CE4FD /* Main.storyboard */,
-				D191639D222DF26A005CE4FD /* Assets.xcassets */,
-				D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */,
-				D19163A2222DF26A005CE4FD /* Info.plist */,
-				D19163A3222DF26A005CE4FD /* main.m */,
+				D13D354D222F1F5F00664B67 /* Delegates */,
+				D13D354C222F1F2A00664B67 /* Views */,
+				D13D354B222F1F2800664B67 /* ViewControllers */,
+				D13D354A222F1F2700664B67 /* Networking */,
+				D13D3549222F1F1C00664B67 /* Operations */,
+				D13D3548222F1F1A00664B67 /* Utilities */,
+				D13D3554222F217C00664B67 /* Bridging */,
+				D13D3547222F1F1600664B67 /* Resources */,
 			);
 			path = "Astronomy ObjC Swift";
 			sourceTree = "<group>";
@@ -102,6 +169,7 @@
 				TargetAttributes = {
 					D1916390222DF268005CE4FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -141,8 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1916399222DF268005CE4FD /* ViewController.m in Sources */,
+				D13D3553222F217200664B67 /* PhotosCollectionViewController.swift in Sources */,
 				D19163A4222DF26A005CE4FD /* main.m in Sources */,
+				D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */,
 				D1916396222DF268005CE4FD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,15 +354,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5U94G8XN2;
-				INFOPLIST_FILE = "Astronomy ObjC Swift/Info.plist";
+				INFOPLIST_FILE = "Astronomy ObjC Swift/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mettabits.Astronomy-ObjC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC Swift/Bridging/Astronomy ObjC Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,15 +375,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5U94G8XN2;
-				INFOPLIST_FILE = "Astronomy ObjC Swift/Info.plist";
+				INFOPLIST_FILE = "Astronomy ObjC Swift/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mettabits.Astronomy-ObjC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC Swift/Bridging/Astronomy ObjC Swift-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
