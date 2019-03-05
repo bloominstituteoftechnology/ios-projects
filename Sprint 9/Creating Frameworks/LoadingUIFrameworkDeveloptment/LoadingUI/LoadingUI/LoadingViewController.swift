@@ -39,6 +39,7 @@ open class LoadingViewController: UIViewController {
         isSubviewOfSuperview = false
     }
 
+
     /*
     // MARK: - Navigation
 
