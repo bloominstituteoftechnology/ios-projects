@@ -11,12 +11,12 @@ import Foundation
 @objc
 class MarsPhotoReference: NSObject {
     override init() {
-        imgSrc = "Hellow, this is an initialized String."
+        img_src = "Hellow, this is an initialized String."
         super.init()
         
     }
 
     
     @objc
-    var imgSrc: String
+    var img_src: String
 }

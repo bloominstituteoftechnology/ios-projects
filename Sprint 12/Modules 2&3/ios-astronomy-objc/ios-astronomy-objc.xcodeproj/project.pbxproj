@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2567C5C222F203F0027E685 /* ABCPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2567C5B222F203F0027E685 /* ABCPhotoCollectionViewCell.m */; };
 		A25A4C41222DC199004C9241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C40222DC199004C9241 /* AppDelegate.m */; };
 		A25A4C47222DC199004C9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25A4C45222DC199004C9241 /* Main.storyboard */; };
 		A25A4C49222DC199004C9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25A4C48222DC199004C9241 /* Assets.xcassets */; };
@@ -14,12 +15,17 @@
 		A25A4C4F222DC199004C9241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C4E222DC199004C9241 /* main.m */; };
 		A25A4C56222DC1B0004C9241 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A25A4C55222DC1B0004C9241 /* README.md */; };
 		A25A4C5C222DCFD9004C9241 /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C5B222DCFD9004C9241 /* Cache.m */; };
-		A25A4C5F222DD1E1004C9241 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C5E222DD1E1004C9241 /* Results.m */; };
 		A25A4C65222DD635004C9241 /* NASAMarsPhotosNetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C64222DD635004C9241 /* NASAMarsPhotosNetworkingClient.m */; };
+		A27BCAC4222F2C5600830B4D /* NSString+SafeNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27BCAC3222F2C5600830B4D /* NSString+SafeNetworking.swift */; };
+		A27BCAC8222F348D00830B4D /* ABCSearchSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCAC7222F348D00830B4D /* ABCSearchSettingsViewController.m */; };
 		A2F0C8CE222DE9F10046DDFE /* MarsPhotoReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25A4C58222DC8C2004C9241 /* MarsPhotoReference.swift */; };
+		A2F0C8D8222F16A10046DDFE /* NASAMarsPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0C8D7222F16A10046DDFE /* NASAMarsPhotoCollectionViewController.swift */; };
+		A2F0C8DA222F16BA0046DDFE /* NASAMarsPhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0C8D9222F16BA0046DDFE /* NASAMarsPhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2567C5A222F203F0027E685 /* ABCPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		A2567C5B222F203F0027E685 /* ABCPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		A25A4C3C222DC199004C9241 /* ios-astronomy-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-astronomy-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25A4C3F222DC199004C9241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A25A4C40222DC199004C9241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,10 +39,13 @@
 		A25A4C58222DC8C2004C9241 /* MarsPhotoReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoReference.swift; sourceTree = "<group>"; };
 		A25A4C5A222DCFD9004C9241 /* Cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
 		A25A4C5B222DCFD9004C9241 /* Cache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
-		A25A4C5D222DD1E1004C9241 /* Results.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Results.h; sourceTree = "<group>"; };
-		A25A4C5E222DD1E1004C9241 /* Results.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
 		A25A4C63222DD635004C9241 /* NASAMarsPhotosNetworkingClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NASAMarsPhotosNetworkingClient.h; sourceTree = "<group>"; };
 		A25A4C64222DD635004C9241 /* NASAMarsPhotosNetworkingClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NASAMarsPhotosNetworkingClient.m; sourceTree = "<group>"; };
+		A27BCAC3222F2C5600830B4D /* NSString+SafeNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+SafeNetworking.swift"; sourceTree = "<group>"; };
+		A27BCAC6222F348D00830B4D /* ABCSearchSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCSearchSettingsViewController.h; sourceTree = "<group>"; };
+		A27BCAC7222F348D00830B4D /* ABCSearchSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCSearchSettingsViewController.m; sourceTree = "<group>"; };
+		A2F0C8D7222F16A10046DDFE /* NASAMarsPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAMarsPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		A2F0C8D9222F16BA0046DDFE /* NASAMarsPhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAMarsPhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2567C5D222F204A0027E685 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2567C5A222F203F0027E685 /* ABCPhotoCollectionViewCell.h */,
+				A2567C5B222F203F0027E685 /* ABCPhotoCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A25A4C33222DC199004C9241 = {
 			isa = PBXGroup;
 			children = (
@@ -69,13 +87,14 @@
 		A25A4C3E222DC199004C9241 /* ios-astronomy-objc */ = {
 			isa = PBXGroup;
 			children = (
-				A25A4C5D222DD1E1004C9241 /* Results.h */,
-				A25A4C5E222DD1E1004C9241 /* Results.m */,
 				A25A4C5A222DCFD9004C9241 /* Cache.h */,
 				A25A4C5B222DCFD9004C9241 /* Cache.m */,
 				A25A4C58222DC8C2004C9241 /* MarsPhotoReference.swift */,
 				A25A4C63222DD635004C9241 /* NASAMarsPhotosNetworkingClient.h */,
 				A25A4C64222DD635004C9241 /* NASAMarsPhotosNetworkingClient.m */,
+				A2567C5D222F204A0027E685 /* Views */,
+				A2F0C8DB222F16C70046DDFE /* View Controllers */,
+				A27BCAC5222F2C6400830B4D /* Swift Extensions */,
 				A25A4C3F222DC199004C9241 /* AppDelegate.h */,
 				A25A4C40222DC199004C9241 /* AppDelegate.m */,
 				A25A4C45222DC199004C9241 /* Main.storyboard */,
@@ -87,6 +106,25 @@
 				A25A4C57222DC8C2004C9241 /* ios-astronomy-objc-Bridging-Header.h */,
 			);
 			path = "ios-astronomy-objc";
+			sourceTree = "<group>";
+		};
+		A27BCAC5222F2C6400830B4D /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A27BCAC3222F2C5600830B4D /* NSString+SafeNetworking.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
+		A2F0C8DB222F16C70046DDFE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2F0C8D7222F16A10046DDFE /* NASAMarsPhotoCollectionViewController.swift */,
+				A2F0C8D9222F16BA0046DDFE /* NASAMarsPhotoDetailViewController.swift */,
+				A27BCAC6222F348D00830B4D /* ABCSearchSettingsViewController.h */,
+				A27BCAC7222F348D00830B4D /* ABCSearchSettingsViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,11 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25A4C5F222DD1E1004C9241 /* Results.m in Sources */,
 				A2F0C8CE222DE9F10046DDFE /* MarsPhotoReference.swift in Sources */,
 				A25A4C4F222DC199004C9241 /* main.m in Sources */,
 				A25A4C41222DC199004C9241 /* AppDelegate.m in Sources */,
+				A2F0C8DA222F16BA0046DDFE /* NASAMarsPhotoDetailViewController.swift in Sources */,
+				A2F0C8D8222F16A10046DDFE /* NASAMarsPhotoCollectionViewController.swift in Sources */,
+				A27BCAC8222F348D00830B4D /* ABCSearchSettingsViewController.m in Sources */,
 				A25A4C5C222DCFD9004C9241 /* Cache.m in Sources */,
+				A2567C5C222F203F0027E685 /* ABCPhotoCollectionViewCell.m in Sources */,
+				A27BCAC4222F2C5600830B4D /* NSString+SafeNetworking.swift in Sources */,
 				A25A4C65222DD635004C9241 /* NASAMarsPhotosNetworkingClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ios_astronomy_objc-Swift.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MarsPhotoReference;
+
 @interface NASAMarsPhotosNetworkingClient : NSObject
 
-- (void)fetchPhotosWithRover:(NSString *)rover withSol:(NSInteger)sol completion:(void (^)(NSError * _Nonnull))completionHandler;
+- (void)fetchPhotosWithRover:(NSString *)rover completion:(void (^)(NSError * nullable))completionHandler;
 
-@property NSArray *imageURLS;
+@property NSMutableArray<MarsPhotoReference *> *photoReferences;
+@property NSInteger sol;
+@property BOOL solChanged;
 
 
 @end

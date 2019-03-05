@@ -7,19 +7,32 @@
 //
 
 #import "NASAMarsPhotosNetworkingClient.h"
+#import "ios_astronomy_objc-Swift.h"
 
 @implementation NASAMarsPhotosNetworkingClient
 
-- (void)fetchPhotosWithRover:(NSString *)rover withSol:(NSInteger)sol completion:(void (^)(NSError * ))completionHandler {
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _photoReferences = [[NSMutableArray<MarsPhotoReference *> alloc]init];
+        _sol = 2;
+    }
+    return self;
+}
+
+- (void)fetchPhotosWithRover:(NSString *)rover completion:(void (^)(NSError * ))completionHandler {
     
-    NSURL *baseURL = [[NSURL alloc] initWithString:@"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos:"];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/"];
+    NSURL *baseURL = [url URLByAppendingPathComponent:@"photos"];
     
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithURL:baseURL resolvingAgainstBaseURL:NO];
-    NSString *solString = [[NSString alloc] initWithFormat:@"%lu", sol ];
+    NSString *solString = [[NSString alloc] initWithFormat:@"%lu", _sol ];
     urlComponents.queryItems = @[
-                                 [NSURLQueryItem queryItemWithName:@"sol" value: solString]
+                                 [NSURLQueryItem queryItemWithName:@"sol" value: solString],
+                                 [NSURLQueryItem queryItemWithName:@"api_key" value: @"5Hf9vF43KsheHcegx6M5NlCH2hF89JhsapeCoOnP"]
                                  ];
-    NSURL *requestURL = [urlComponents.URL URLByAppendingPathComponent:@"5Hf9vF43KsheHcegx6M5NlCH2hF89JhsapeCoOnP"];
+    NSURL *requestURL = urlComponents.URL;
     
     [[NSURLSession.sharedSession dataTaskWithURL:requestURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil) {
@@ -28,7 +41,18 @@
             return;
         }
         if (data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSArray *photos = json[@"photos"];
+            MarsPhotoReference *photoReference = [[MarsPhotoReference alloc] init];
+            for (NSDictionary *photoDictionary in photos) {
+                [photoDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+                    SEL selector = NSSelectorFromString(key);
+                    if ([photoReference respondsToSelector:selector]) {
+                        [photoReference setValue:value forKey:key];
+                    }
+                }];
+                [self->_photoReferences addObject:photoReference];
+            }
     
             completionHandler(nil);
             return;
