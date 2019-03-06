@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A27BCB1E2230654B00830B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB1D2230654B00830B4D /* AppDelegate.m */; };
+		A27BCB242230654B00830B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27BCB222230654B00830B4D /* Main.storyboard */; };
+		A27BCB262230654C00830B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27BCB252230654C00830B4D /* Assets.xcassets */; };
+		A27BCB292230654C00830B4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27BCB272230654C00830B4D /* LaunchScreen.storyboard */; };
+		A27BCB2C2230654C00830B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB2B2230654C00830B4D /* main.m */; };
+		A27BCB332230678100830B4D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A27BCB322230678100830B4D /* README.md */; };
+		A27BCB3622306A9E00830B4D /* ABCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB3522306A9E00830B4D /* ABCContact.m */; };
+		A27BCB3922306AAD00830B4D /* ABCContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB3822306AAD00830B4D /* ABCContactController.m */; };
+		A27BCB3C223073E700830B4D /* ABCContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB3B223073E700830B4D /* ABCContactsTableViewController.m */; };
+		A27BCB3F223076D300830B4D /* ABCContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27BCB3E223076D300830B4D /* ABCContactDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A27BCB192230654B00830B4D /* ContactsMRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsMRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27BCB1C2230654B00830B4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A27BCB1D2230654B00830B4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A27BCB232230654B00830B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A27BCB252230654C00830B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A27BCB282230654C00830B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A27BCB2A2230654C00830B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A27BCB2B2230654C00830B4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A27BCB322230678100830B4D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		A27BCB3422306A9E00830B4D /* ABCContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCContact.h; sourceTree = "<group>"; };
+		A27BCB3522306A9E00830B4D /* ABCContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCContact.m; sourceTree = "<group>"; };
+		A27BCB3722306AAD00830B4D /* ABCContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCContactController.h; sourceTree = "<group>"; };
+		A27BCB3822306AAD00830B4D /* ABCContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCContactController.m; sourceTree = "<group>"; };
+		A27BCB3A223073E700830B4D /* ABCContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCContactsTableViewController.h; sourceTree = "<group>"; };
+		A27BCB3B223073E700830B4D /* ABCContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCContactsTableViewController.m; sourceTree = "<group>"; };
+		A27BCB3D223076D300830B4D /* ABCContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCContactDetailViewController.h; sourceTree = "<group>"; };
+		A27BCB3E223076D300830B4D /* ABCContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCContactDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A27BCB162230654B00830B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A27BCB102230654B00830B4D = {
+			isa = PBXGroup;
+			children = (
+				A27BCB1B2230654B00830B4D /* ContactsMRC */,
+				A27BCB1A2230654B00830B4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A27BCB1A2230654B00830B4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A27BCB192230654B00830B4D /* ContactsMRC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A27BCB1B2230654B00830B4D /* ContactsMRC */ = {
+			isa = PBXGroup;
+			children = (
+				A27BCB3A223073E700830B4D /* ABCContactsTableViewController.h */,
+				A27BCB3B223073E700830B4D /* ABCContactsTableViewController.m */,
+				A27BCB3D223076D300830B4D /* ABCContactDetailViewController.h */,
+				A27BCB3E223076D300830B4D /* ABCContactDetailViewController.m */,
+				A27BCB3422306A9E00830B4D /* ABCContact.h */,
+				A27BCB3522306A9E00830B4D /* ABCContact.m */,
+				A27BCB3722306AAD00830B4D /* ABCContactController.h */,
+				A27BCB3822306AAD00830B4D /* ABCContactController.m */,
+				A27BCB1C2230654B00830B4D /* AppDelegate.h */,
+				A27BCB1D2230654B00830B4D /* AppDelegate.m */,
+				A27BCB222230654B00830B4D /* Main.storyboard */,
+				A27BCB322230678100830B4D /* README.md */,
+				A27BCB252230654C00830B4D /* Assets.xcassets */,
+				A27BCB272230654C00830B4D /* LaunchScreen.storyboard */,
+				A27BCB2A2230654C00830B4D /* Info.plist */,
+				A27BCB2B2230654C00830B4D /* main.m */,
+			);
+			path = ContactsMRC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A27BCB182230654B00830B4D /* ContactsMRC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A27BCB2F2230654C00830B4D /* Build configuration list for PBXNativeTarget "ContactsMRC" */;
+			buildPhases = (
+				A27BCB152230654B00830B4D /* Sources */,
+				A27BCB162230654B00830B4D /* Frameworks */,
+				A27BCB172230654B00830B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactsMRC;
+			productName = ContactsMRC;
+			productReference = A27BCB192230654B00830B4D /* ContactsMRC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A27BCB112230654B00830B4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Austin Cole";
+				TargetAttributes = {
+					A27BCB182230654B00830B4D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = A27BCB142230654B00830B4D /* Build configuration list for PBXProject "ContactsMRC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A27BCB102230654B00830B4D;
+			productRefGroup = A27BCB1A2230654B00830B4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A27BCB182230654B00830B4D /* ContactsMRC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A27BCB172230654B00830B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27BCB292230654C00830B4D /* LaunchScreen.storyboard in Resources */,
+				A27BCB262230654C00830B4D /* Assets.xcassets in Resources */,
+				A27BCB332230678100830B4D /* README.md in Resources */,
+				A27BCB242230654B00830B4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A27BCB152230654B00830B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27BCB3F223076D300830B4D /* ABCContactDetailViewController.m in Sources */,
+				A27BCB3922306AAD00830B4D /* ABCContactController.m in Sources */,
+				A27BCB3622306A9E00830B4D /* ABCContact.m in Sources */,
+				A27BCB2C2230654C00830B4D /* main.m in Sources */,
+				A27BCB1E2230654B00830B4D /* AppDelegate.m in Sources */,
+				A27BCB3C223073E700830B4D /* ABCContactsTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A27BCB222230654B00830B4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A27BCB232230654B00830B4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A27BCB272230654C00830B4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A27BCB282230654C00830B4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A27BCB2D2230654C00830B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A27BCB2E2230654C00830B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A27BCB302230654C00830B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactsMRC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinCole.ContactsMRC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A27BCB312230654C00830B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactsMRC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinCole.ContactsMRC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A27BCB142230654B00830B4D /* Build configuration list for PBXProject "ContactsMRC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27BCB2D2230654C00830B4D /* Debug */,
+				A27BCB2E2230654C00830B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A27BCB2F2230654C00830B4D /* Build configuration list for PBXNativeTarget "ContactsMRC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A27BCB302230654C00830B4D /* Debug */,
+				A27BCB312230654C00830B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A27BCB112230654B00830B4D /* Project object */;
+}
