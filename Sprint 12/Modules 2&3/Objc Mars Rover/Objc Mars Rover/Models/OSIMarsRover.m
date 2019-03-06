@@ -11,3 +11,10 @@
 @implementation OSIMarsRover
 
 @end
+
+
+@implementation OSIPhoto
+
+
+
+@end

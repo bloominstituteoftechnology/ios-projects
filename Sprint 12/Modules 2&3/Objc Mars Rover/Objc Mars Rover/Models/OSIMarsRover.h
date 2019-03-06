@@ -7,25 +7,48 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "Objc_Mars_Rover-Swift.h"
+
+
+
+@class OSIMarsRover;
+@class OSIPhoto;
+@class OSICamera;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface OSICamera : NSObject
+@property (nonatomic, readonly, copy) NSString *value;
++ (instancetype _Nullable)withValue:(NSString *)value;
++ (OSICamera *)chemcam;
++ (OSICamera *)fhaz;
++ (OSICamera *)mahli;
++ (OSICamera *)mardi;
++ (OSICamera *)mast;
++ (OSICamera *)navcam;
++ (OSICamera *)rhaz;
+@end
+
+
+
 @interface OSIMarsRover : NSObject
+@property (nonatomic, nullable, copy)   NSString *name;
+@property (nonatomic, nullable, copy)   NSString *landingDate;
+@property (nonatomic, nullable, copy)   NSString *launchDate;
+@property (nonatomic, nullable, copy)   NSString *status;
+@property (nonatomic, nullable, strong) NSNumber *maxSol;
+@property (nonatomic, nullable, copy)   NSString *maxDate;
+@property (nonatomic, nullable, strong) NSNumber *totalPhotos;
+@property (nonatomic, nullable, copy)   NSArray<OSIPhoto *> *photos;
+@end
 
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic) NSDate *launchDate;
-@property (nonatomic) NSData *landingDate;
-@property (nonatomic, copy) NSArray *status;
-@property (nonatomic) NSInteger maxSol;
-@property (nonatomic) NSData *maxDate;
-@property (nonatomic) NSInteger numberOfPhotos; //"totalPhotos"
-@property (nonatomic) NSArray *solDescriptions; //  "photos"@property
-
-@property (nonatomic, copy) NSString *active;
-@property (nonatomic, copy) NSString *complete;
-
-
+@interface OSIPhoto : NSObject
+@property (nonatomic, nullable, strong) NSNumber *sol;
+@property (nonatomic, nullable, copy)   NSString *earthDate;
+@property (nonatomic, nullable, strong) NSNumber *totalPhotos;
+@property (nonatomic, nullable, copy)   NSArray<OSICamera *> *cameras;
 @end
 
 NS_ASSUME_NONNULL_END
+

@@ -13,13 +13,14 @@
 		A52D26C4222DCC8D00038CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52D26C2222DCC8D00038CF5 /* LaunchScreen.storyboard */; };
 		A52D26C7222DCC8D00038CF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A52D26C6222DCC8D00038CF5 /* main.m */; };
 		A52D26CF222DCF7000038CF5 /* OSIMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A52D26CE222DCF7000038CF5 /* OSIMarsRoverClient.m */; };
-		A52D26D3222DD10F00038CF5 /* OSIMarsPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A52D26D2222DD10F00038CF5 /* OSIMarsPhoto.m */; };
 		A52D26D8222DD2DB00038CF5 /* OSIModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52D26D7222DD2DB00038CF5 /* OSIModelController.m */; };
 		A52D26DC222DD34D00038CF5 /* OSIMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = A52D26DB222DD34D00038CF5 /* OSIMarsRover.m */; };
-		A52D26DF222DD60100038CF5 /* SolDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D26DE222DD60100038CF5 /* SolDescription.swift */; };
 		A52D26E2222DD6B700038CF5 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D26E0222DD6B700038CF5 /* PhotoDetailViewController.swift */; };
 		A52D26E3222DD6B700038CF5 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D26E1222DD6B700038CF5 /* PhotosCollectionViewController.swift */; };
 		A52D26E5222DED6400038CF5 /* OSIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D26E4222DED6400038CF5 /* OSIViewController.swift */; };
+		A5B556E3222F465900EFBAC7 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B556E2222F465900EFBAC7 /* ImageCollectionViewCell.swift */; };
+		A5B556E6222F9BDB00EFBAC7 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B556E4222F9BDB00EFBAC7 /* MarsPhoto.swift */; };
+		A5B556E7222F9BDB00EFBAC7 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B556E5222F9BDB00EFBAC7 /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,17 +34,17 @@
 		A52D26C6222DCC8D00038CF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A52D26CD222DCF7000038CF5 /* OSIMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIMarsRoverClient.h; sourceTree = "<group>"; };
 		A52D26CE222DCF7000038CF5 /* OSIMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIMarsRoverClient.m; sourceTree = "<group>"; };
-		A52D26D1222DD10F00038CF5 /* OSIMarsPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIMarsPhoto.h; sourceTree = "<group>"; };
-		A52D26D2222DD10F00038CF5 /* OSIMarsPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIMarsPhoto.m; sourceTree = "<group>"; };
 		A52D26D6222DD2DB00038CF5 /* OSIModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIModelController.h; sourceTree = "<group>"; };
 		A52D26D7222DD2DB00038CF5 /* OSIModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIModelController.m; sourceTree = "<group>"; };
 		A52D26DA222DD34D00038CF5 /* OSIMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSIMarsRover.h; sourceTree = "<group>"; };
 		A52D26DB222DD34D00038CF5 /* OSIMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSIMarsRover.m; sourceTree = "<group>"; };
 		A52D26DD222DD60000038CF5 /* Objc Mars Rover-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc Mars Rover-Bridging-Header.h"; sourceTree = "<group>"; };
-		A52D26DE222DD60100038CF5 /* SolDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolDescription.swift; sourceTree = "<group>"; };
 		A52D26E0222DD6B700038CF5 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		A52D26E1222DD6B700038CF5 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		A52D26E4222DED6400038CF5 /* OSIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OSIViewController.swift; path = "Objc Mars Rover/View Controller/OSIViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A5B556E2222F465900EFBAC7 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5B556E4222F9BDB00EFBAC7 /* MarsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
+		A5B556E5222F9BDB00EFBAC7 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +105,10 @@
 		A52D26D4222DD11400038CF5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A52D26D1222DD10F00038CF5 /* OSIMarsPhoto.h */,
-				A52D26D2222DD10F00038CF5 /* OSIMarsPhoto.m */,
+				A5B556E4222F9BDB00EFBAC7 /* MarsPhoto.swift */,
+				A5B556E5222F9BDB00EFBAC7 /* Camera.swift */,
 				A52D26DA222DD34D00038CF5 /* OSIMarsRover.h */,
 				A52D26DB222DD34D00038CF5 /* OSIMarsRover.m */,
-				A52D26DE222DD60100038CF5 /* SolDescription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +116,7 @@
 		A52D26D5222DD12400038CF5 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A5B556E2222F465900EFBAC7 /* ImageCollectionViewCell.swift */,
 				A52D26E4222DED6400038CF5 /* OSIViewController.swift */,
 				A52D26E0222DD6B700038CF5 /* PhotoDetailViewController.swift */,
 				A52D26E1222DD6B700038CF5 /* PhotosCollectionViewController.swift */,
@@ -204,16 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52D26D3222DD10F00038CF5 /* OSIMarsPhoto.m in Sources */,
-				A52D26DF222DD60100038CF5 /* SolDescription.swift in Sources */,
+				A5B556E7222F9BDB00EFBAC7 /* Camera.swift in Sources */,
 				A52D26D8222DD2DB00038CF5 /* OSIModelController.m in Sources */,
 				A52D26E3222DD6B700038CF5 /* PhotosCollectionViewController.swift in Sources */,
 				A52D26DC222DD34D00038CF5 /* OSIMarsRover.m in Sources */,
 				A52D26C7222DCC8D00038CF5 /* main.m in Sources */,
 				A52D26E2222DD6B700038CF5 /* PhotoDetailViewController.swift in Sources */,
 				A52D26CF222DCF7000038CF5 /* OSIMarsRoverClient.m in Sources */,
+				A5B556E3222F465900EFBAC7 /* ImageCollectionViewCell.swift in Sources */,
 				A52D26E5222DED6400038CF5 /* OSIViewController.swift in Sources */,
 				A52D26B9222DCC8C00038CF5 /* AppDelegate.m in Sources */,
+				A5B556E6222F9BDB00EFBAC7 /* MarsPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

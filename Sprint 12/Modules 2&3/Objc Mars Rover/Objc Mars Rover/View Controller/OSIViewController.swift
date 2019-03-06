@@ -15,7 +15,14 @@ class OSIViewController: UIViewController {
 
        
       let oSIMarsRoverClient = OSIMarsRoverClient()
-        oSIMarsRoverClient.search(forPhotos: "curiosity", sol: 0)
+        
+        
+        oSIMarsRoverClient.search(forRover: "curiosity") { rover, error in
+            
+        
+        }
+       
+  //    oSIMarsRoverClient.search(forPhotos: "curiosity", sol: 1)
     }
     
 
