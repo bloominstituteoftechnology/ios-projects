@@ -46,14 +46,14 @@
 }
 
 - (IBAction)saveContact:(id)sender {
-    _contact.name = _nameTextField.text;
-    _contact.email = _emailTextField.text;
-    _contact.phoneNumber = _phoneNumberTextField.text;
+    NSString *name = _nameTextField.text;
+    NSString *email = _emailTextField.text;
+    NSString *phoneNumber = _phoneNumberTextField.text;
     
-    if ([_segueIdentifier isEqual: @"EditSegue"]) {
-        [_contactController updateContact:_contact];
+    if ([_segueIdentifier isEqualToString: @"EditContact"]) {
+        [_contactController updateContact:_contact withName:name email:email andPhoneNumber:phoneNumber];
     } else {
-        [_contactController createContact:_contact];
+        [_contactController createContactWithName:name email:email andPhoneNumber:phoneNumber];
     }
     
     [self.navigationController popViewControllerAnimated:YES];

@@ -10,7 +10,7 @@
 
 @implementation LMSContactController
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         _contacts = [[NSMutableArray<LMSContact *> alloc] init];
@@ -18,12 +18,18 @@
     return self;
 }
 
-- (void)createContact:(LMSContact *)contact {
+- (void)createContactWithName:(NSString *)name email:(NSString *)email andPhoneNumber:(NSString *)phoneNumber {
+    LMSContact *contact = [[LMSContact alloc] initWithName:name email:email andPhoneNumber:phoneNumber];
     [_contacts addObject:contact];
 }
 
-- (void)updateContact:(LMSContact *)contact {
-    
+- (void)updateContact:(LMSContact *)contact withName:(NSString *)name email:(NSString *)email andPhoneNumber:(NSString *)phoneNumber {
+    NSInteger index = [_contacts indexOfObject:contact];
+    [_contacts removeObjectAtIndex:index];
+    contact.name = name;
+    contact.email = email;
+    contact.phoneNumber = phoneNumber;
+    [_contacts insertObject:contact atIndex:index];
 }
 
 @end

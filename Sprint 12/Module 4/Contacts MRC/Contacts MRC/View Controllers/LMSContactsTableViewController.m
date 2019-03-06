@@ -22,7 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _contactController = [[LMSContactController alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
     
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

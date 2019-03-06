@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSMutableArray<LMSContact *> *contacts;
 
-- (void)createContact: (LMSContact *)contact;
-- (void)updateContact: (LMSContact *)contact;
+- (void)createContactWithName: (NSString *)name email: (NSString *)email andPhoneNumber: (NSString *)phoneNumber;
+- (void)updateContact: (LMSContact *)contact withName: (NSString *)name email: (NSString *)email andPhoneNumber: (NSString *)phoneNumber;
 
 @end
 
