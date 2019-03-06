@@ -8,24 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		FFB24D0C222DCED60096E395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D0B222DCED60096E395 /* AppDelegate.m */; };
-		FFB24D0F222DCED60096E395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D0E222DCED60096E395 /* ViewController.m */; };
 		FFB24D12222DCED60096E395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D10222DCED60096E395 /* Main.storyboard */; };
 		FFB24D14222DCED70096E395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D13222DCED70096E395 /* Assets.xcassets */; };
 		FFB24D17222DCED70096E395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D15222DCED70096E395 /* LaunchScreen.storyboard */; };
 		FFB24D1A222DCED70096E395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D19222DCED70096E395 /* main.m */; };
+		FFB24D28222DE0720096E395 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D27222DE0720096E395 /* PhotosCollectionViewController.swift */; };
+		FFB24D2A222DE0880096E395 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D29222DE0880096E395 /* PhotoDetailViewController.swift */; };
+		FFB24D2D222DEA020096E395 /* LMSImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D2C222DEA020096E395 /* LMSImageCollectionViewCell.m */; };
+		FFB24D36222F33E30096E395 /* LMSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D35222F33E30096E395 /* LMSCache.m */; };
+		FFB24D39222F34090096E395 /* LMSMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D38222F34090096E395 /* LMSMarsRoverClient.m */; };
+		FFB24D3C222F34850096E395 /* LMSFetchPhotoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D3B222F34850096E395 /* LMSFetchPhotoOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB24D07222DCED60096E395 /* Astronomy ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB24D0A222DCED60096E395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFB24D0B222DCED60096E395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFB24D0D222DCED60096E395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FFB24D0E222DCED60096E395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFB24D11222DCED60096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB24D13222DCED70096E395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB24D16222DCED70096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB24D18222DCED70096E395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB24D19222DCED70096E395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFB24D26222DE0720096E395 /* Astronomy ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		FFB24D27222DE0720096E395 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		FFB24D29222DE0880096E395 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		FFB24D2B222DEA020096E395 /* LMSImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSImageCollectionViewCell.h; sourceTree = "<group>"; };
+		FFB24D2C222DEA020096E395 /* LMSImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSImageCollectionViewCell.m; sourceTree = "<group>"; };
+		FFB24D34222F33E30096E395 /* LMSCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSCache.h; sourceTree = "<group>"; };
+		FFB24D35222F33E30096E395 /* LMSCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSCache.m; sourceTree = "<group>"; };
+		FFB24D37222F34090096E395 /* LMSMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSMarsRoverClient.h; sourceTree = "<group>"; };
+		FFB24D38222F34090096E395 /* LMSMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSMarsRoverClient.m; sourceTree = "<group>"; };
+		FFB24D3A222F34850096E395 /* LMSFetchPhotoOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSFetchPhotoOperation.h; sourceTree = "<group>"; };
+		FFB24D3B222F34850096E395 /* LMSFetchPhotoOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSFetchPhotoOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +72,74 @@
 		FFB24D09222DCED60096E395 /* Astronomy ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				FFB24D25222DD1B50096E395 /* Models */,
+				FFB24D24222DD1A90096E395 /* View Controllers */,
+				FFB24D23222DD19F0096E395 /* Views */,
+				FFB24D22222DD1970096E395 /* Networking */,
+				FFB24D21222DD1790096E395 /* Storyboards */,
+				FFB24D20222DD16E0096E395 /* Resources */,
+			);
+			path = "Astronomy ObjC";
+			sourceTree = "<group>";
+		};
+		FFB24D20222DD16E0096E395 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D26222DE0720096E395 /* Astronomy ObjC-Bridging-Header.h */,
 				FFB24D0A222DCED60096E395 /* AppDelegate.h */,
 				FFB24D0B222DCED60096E395 /* AppDelegate.m */,
-				FFB24D0D222DCED60096E395 /* ViewController.h */,
-				FFB24D0E222DCED60096E395 /* ViewController.m */,
-				FFB24D10222DCED60096E395 /* Main.storyboard */,
 				FFB24D13222DCED70096E395 /* Assets.xcassets */,
-				FFB24D15222DCED70096E395 /* LaunchScreen.storyboard */,
 				FFB24D18222DCED70096E395 /* Info.plist */,
 				FFB24D19222DCED70096E395 /* main.m */,
 			);
-			path = "Astronomy ObjC";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFB24D21222DD1790096E395 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D10222DCED60096E395 /* Main.storyboard */,
+				FFB24D15222DCED70096E395 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFB24D22222DD1970096E395 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D37222F34090096E395 /* LMSMarsRoverClient.h */,
+				FFB24D38222F34090096E395 /* LMSMarsRoverClient.m */,
+				FFB24D3A222F34850096E395 /* LMSFetchPhotoOperation.h */,
+				FFB24D3B222F34850096E395 /* LMSFetchPhotoOperation.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FFB24D23222DD19F0096E395 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D2B222DEA020096E395 /* LMSImageCollectionViewCell.h */,
+				FFB24D2C222DEA020096E395 /* LMSImageCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFB24D24222DD1A90096E395 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D27222DE0720096E395 /* PhotosCollectionViewController.swift */,
+				FFB24D29222DE0880096E395 /* PhotoDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFB24D25222DD1B50096E395 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D34222F33E30096E395 /* LMSCache.h */,
+				FFB24D35222F33E30096E395 /* LMSCache.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +173,7 @@
 				TargetAttributes = {
 					FFB24D06222DCED60096E395 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -141,9 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB24D0F222DCED60096E395 /* ViewController.m in Sources */,
+				FFB24D28222DE0720096E395 /* PhotosCollectionViewController.swift in Sources */,
 				FFB24D1A222DCED70096E395 /* main.m in Sources */,
+				FFB24D39222F34090096E395 /* LMSMarsRoverClient.m in Sources */,
+				FFB24D2A222DE0880096E395 /* PhotoDetailViewController.swift in Sources */,
+				FFB24D3C222F34850096E395 /* LMSFetchPhotoOperation.m in Sources */,
 				FFB24D0C222DCED60096E395 /* AppDelegate.m in Sources */,
+				FFB24D2D222DEA020096E395 /* LMSImageCollectionViewCell.m in Sources */,
+				FFB24D36222F33E30096E395 /* LMSCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +362,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Astronomy ObjC/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Astronomy ObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lisamsampson.Astronomy-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC/Resources/Astronomy ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,15 +383,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Astronomy ObjC/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Astronomy ObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lisamsampson.Astronomy-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC/Resources/Astronomy ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
