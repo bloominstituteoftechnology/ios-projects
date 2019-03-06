@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ABCContact : NSObject
 
-@property NSString *nickName;
-@property NSString *name;
-@property NSString *emailAddress;
-@property NSNumber *phoneNumber;
+@property(retain) NSString *nickName;
+@property(retain) NSString *name;
+@property(retain) NSString *emailAddress;
+@property(retain) NSNumber *phoneNumber;
 
-- (instancetype)initWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(nullable NSString *)nickName withEmailAddress:(nullable NSString *)email;
+
 
 @end
 

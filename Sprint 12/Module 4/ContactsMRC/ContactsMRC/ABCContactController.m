@@ -18,11 +18,10 @@
     }
     return self;
 }
-
 - (void)createContactWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(NSString *)nickName withEmailAddress:(NSString *)email {
-    ABCContact *contact = [[ABCContact alloc] initWithName:name withPhoneNumber:phone withNickName:nickName withEmailAddress:email];
+    ABCContact *contact = [self makeAndReturnContactWithName:name withPhoneNumber:phone withNickName:nickName withEmailAddress:email];
     [_contactsArray addObject:contact];
-    [contact autorelease];
+    
 }
 - (void)editContact:(ABCContact *)contact withName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(NSString *)nickName withEmailAddress:(NSString *)email{
     NSInteger index = [_contactsArray indexOfObject:contact];
@@ -33,6 +32,15 @@
     contact.emailAddress = email;
     [_contactsArray insertObject:contact atIndex:index];
     
+}
+- (ABCContact *)makeAndReturnContactWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(nullable NSString *)nickName withEmailAddress:(nullable NSString *)email {
+    ABCContact *newContact = [[ABCContact alloc] init];
+    newContact.name = name;
+    newContact.nickName = nickName;
+    newContact.phoneNumber = phone;
+    newContact.emailAddress = email;
+    [newContact autorelease];
+    return newContact;
 }
 
 - (void)dealloc

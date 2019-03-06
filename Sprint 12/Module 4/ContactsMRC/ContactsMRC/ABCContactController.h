@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(retain) NSMutableArray *contactsArray;
 
+- (ABCContact *)makeAndReturnContactWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(nullable NSString *)nickName withEmailAddress:(nullable NSString *)email;
+
 - (void)createContactWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(nullable NSString *)nickName withEmailAddress:(nullable NSString *)email;
 
 - (void)editContact:(ABCContact *)contact withName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(NSString *)nickName withEmailAddress:(NSString *)email;

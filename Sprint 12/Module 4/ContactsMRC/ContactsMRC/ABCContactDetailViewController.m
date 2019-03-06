@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (_contact != nil) {
+        [[self navigationItem] setTitle: _contact.name];
+        _nicknameTextField.text = _contact.nickName;
+        _realNameTextField.text = _contact.name;
+        _emailAddressTextField.text = _contact.emailAddress;
+        _phoneNumberTextField.text = [_contact.phoneNumber stringValue];
+    }
 }
 
 /*
@@ -40,25 +46,20 @@
 }
 - (IBAction)saveContactButtonTapped:(id)sender {
     NSString *nickname = _nicknameTextField.text;
-    NSString *name = _nicknameTextField.text;
-    NSString *emailAddress = _nicknameTextField.text;
-    NSNumber *phoneNumber = @([_nicknameTextField.text integerValue]);
-    if (_contact != nil) {
+    NSString *name = _realNameTextField.text;
+    NSString *emailAddress = _emailAddressTextField.text;
+    NSNumber *phoneNumber = @([_phoneNumberTextField.text integerValue]);
+    if (_contact == nil) {
         if (name.length == 0 || phoneNumber == nil) {
             return;
         }
         [_contactController createContactWithName:name withPhoneNumber:phoneNumber withNickName:nickname withEmailAddress:emailAddress];
     } else {
-        if (_contact != nil) {
-            if (name.length == 0 || phoneNumber == nil) {
-                return;
-            }
-            [_contactController editContact:_contact withName:name withPhoneNumber:phoneNumber withNickName:nickname withEmailAddress:emailAddress];
+        if (name.length == 0 || phoneNumber == nil) {
+            return;
         }
+        [_contactController editContact:_contact withName:name withPhoneNumber:phoneNumber withNickName:nickname withEmailAddress:emailAddress];
     }
-    [nickname release];
-    [name release];
-    [emailAddress release];
-    [phoneNumber release];
+    [self.navigationController popToViewController:self.navigationController.viewControllers[0] animated: true];
 }
 @end

@@ -10,15 +10,13 @@
 
 @implementation ABCContact
 
-- (instancetype)initWithName:(NSString *)name withPhoneNumber:(NSNumber *)phone withNickName:(NSString *)nickName withEmailAddress:(NSString *)email {
-    self = [super init];
-    if (self != nil) {
-        _name = name;
-        _nickName = nickName;
-        _emailAddress = email;
-        _phoneNumber = phone;
-    }
-    return self;
+- (void)dealloc
+{
+    [_name release];
+    [_nickName release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    [super dealloc];
 }
 
 @end

@@ -25,6 +25,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 
 #pragma mark - Table view data source
 
@@ -40,7 +44,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [[_contactController.contactsArray objectAtIndex:indexPath.row] name];
+    cell.textLabel.text = [[_contactController.contactsArray objectAtIndex:indexPath.row] nickName];
 
     return cell;
 }
