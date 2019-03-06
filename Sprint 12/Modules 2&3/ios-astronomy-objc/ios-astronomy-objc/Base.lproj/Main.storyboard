@@ -55,6 +55,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="marsPhotoImageView" destination="nJc-4s-8eW" id="fe6-4C-rqa"/>
+                                    <segue destination="wDg-wf-2BC" kind="show" identifier="DetailSegue" id="Kau-a4-WEx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -66,7 +67,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Q0k-Lm-oQN">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="D33-ET-uDZ">
                             <connections>
-                                <segue destination="W5k-Us-zpW" kind="show" id="GUc-dF-sCz"/>
+                                <segue destination="W5k-Us-zpW" kind="show" identifier="SettingsSegue" id="GUc-dF-sCz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,7 +120,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0N-pF-Aqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="-17"/>
+            <point key="canvasLocation" x="1249" y="-170"/>
+        </scene>
+        <!--Mars Photo Detail View Controller-->
+        <scene sceneID="YyX-Ch-2QN">
+            <objects>
+                <viewController id="wDg-wf-2BC" customClass="NASAMarsPhotoDetailViewController" customModule="ios_astronomy_objc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eAy-MC-Pd3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-d8-Nx8">
+                                <rect key="frame" x="16" y="106" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Ota-c7-dXd"/>
+                                    <constraint firstAttribute="height" constant="343" id="n8z-Mr-iGI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n4i-d8-Nx8" firstAttribute="leading" secondItem="eAy-MC-Pd3" secondAttribute="leadingMargin" id="UuN-fp-7r9"/>
+                            <constraint firstItem="n4i-d8-Nx8" firstAttribute="top" secondItem="YL7-eJ-gax" secondAttribute="top" constant="42" id="p4B-O7-xmP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YL7-eJ-gax"/>
+                    </view>
+                    <connections>
+                        <outlet property="marsPhotoImageView" destination="n4i-d8-Nx8" id="od6-iZ-a2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWk-by-Hyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="584.25787106446785"/>
         </scene>
     </scenes>
 </document>

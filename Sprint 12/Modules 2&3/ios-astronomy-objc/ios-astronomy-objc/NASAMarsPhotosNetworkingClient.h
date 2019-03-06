@@ -6,7 +6,7 @@
 //  Copyright © 2019 Austin Cole. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,11 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NASAMarsPhotosNetworkingClient : NSObject
 
 - (void)fetchPhotosWithRover:(NSString *)rover completion:(void (^)(NSError * nullable))completionHandler;
+- (UIImage *)getImageWithString:(NSString *)string;
 
 @property NSMutableArray<MarsPhotoReference *> *photoReferences;
 @property NSInteger sol;
 @property BOOL solChanged;
-
 
 @end
 

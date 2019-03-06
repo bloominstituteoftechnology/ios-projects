@@ -39,8 +39,21 @@ class NASAMarsPhotoCollectionViewController: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ABCSearchSettingsViewController
-        destination.networkingController = self.networkingController!
+        if segue.identifier == "SettingsSegue" {
+            let destination = segue.destination as! ABCSearchSettingsViewController
+            destination.networkingController = self.networkingController!
+        } else {
+            let indexPath = collectionView.indexPathsForSelectedItems?.first
+            let secureURL = URL(string: (networkingController?.photoReferences[(indexPath?.row)!] as! MarsPhotoReference).img_src.secureURLString())
+//            do {
+//                data = try Data(contentsOf: secureURL!)
+//            } catch {
+//                print(error)
+            let data = try! Data(contentsOf: secureURL!)
+            let destination = segue.destination as! NASAMarsPhotoDetailViewController
+            destination.data = data
+//                }
+        }
         
     }
 
@@ -113,5 +126,6 @@ class NASAMarsPhotoCollectionViewController: UICollectionViewController {
     }
     */
 
+    
 
 }
