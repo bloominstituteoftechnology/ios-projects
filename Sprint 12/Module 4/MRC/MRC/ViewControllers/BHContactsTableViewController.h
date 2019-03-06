@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ContactsTableViewController.h
 //  MRC
 //
 //  Created by Benjamin Hakes on 3/6/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface BHContactsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
