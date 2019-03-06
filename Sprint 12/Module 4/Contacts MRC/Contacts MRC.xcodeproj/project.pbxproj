@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		FFB24D70223073180096E395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D6F223073180096E395 /* AppDelegate.m */; };
-		FFB24D73223073180096E395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D72223073180096E395 /* ViewController.m */; };
 		FFB24D76223073180096E395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D74223073180096E395 /* Main.storyboard */; };
 		FFB24D78223073190096E395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D77223073190096E395 /* Assets.xcassets */; };
 		FFB24D7B223073190096E395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB24D79223073190096E395 /* LaunchScreen.storyboard */; };
 		FFB24D7E223073190096E395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D7D223073190096E395 /* main.m */; };
+		FFB24D8B223076550096E395 /* LMSContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D8A223076550096E395 /* LMSContactsTableViewController.m */; };
+		FFB24D8E2230766E0096E395 /* LMSContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D8D2230766E0096E395 /* LMSContactViewController.m */; };
+		FFB24D912230770D0096E395 /* LMSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D902230770D0096E395 /* LMSContact.m */; };
+		FFB24D94223077210096E395 /* LMSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB24D93223077210096E395 /* LMSContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB24D6B223073180096E395 /* Contacts MRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts MRC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB24D6E223073180096E395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFB24D6F223073180096E395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFB24D71223073180096E395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FFB24D72223073180096E395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFB24D75223073180096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB24D77223073190096E395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB24D7A223073190096E395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB24D7C223073190096E395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB24D7D223073190096E395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFB24D89223076550096E395 /* LMSContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSContactsTableViewController.h; sourceTree = "<group>"; };
+		FFB24D8A223076550096E395 /* LMSContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSContactsTableViewController.m; sourceTree = "<group>"; };
+		FFB24D8C2230766E0096E395 /* LMSContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSContactViewController.h; sourceTree = "<group>"; };
+		FFB24D8D2230766E0096E395 /* LMSContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSContactViewController.m; sourceTree = "<group>"; };
+		FFB24D8F2230770D0096E395 /* LMSContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSContact.h; sourceTree = "<group>"; };
+		FFB24D902230770D0096E395 /* LMSContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSContact.m; sourceTree = "<group>"; };
+		FFB24D92223077210096E395 /* LMSContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSContactController.h; sourceTree = "<group>"; };
+		FFB24D93223077210096E395 /* LMSContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +67,63 @@
 		FFB24D6D223073180096E395 /* Contacts MRC */ = {
 			isa = PBXGroup;
 			children = (
+				FFB24D882230762C0096E395 /* Model */,
+				FFB24D87223076220096E395 /* Model Controller */,
+				FFB24D86223076100096E395 /* View Controllers */,
+				FFB24D842230739A0096E395 /* Storyboards */,
+				FFB24D85223073A80096E395 /* Resources */,
+			);
+			path = "Contacts MRC";
+			sourceTree = "<group>";
+		};
+		FFB24D842230739A0096E395 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D74223073180096E395 /* Main.storyboard */,
+				FFB24D79223073190096E395 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFB24D85223073A80096E395 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FFB24D6E223073180096E395 /* AppDelegate.h */,
 				FFB24D6F223073180096E395 /* AppDelegate.m */,
-				FFB24D71223073180096E395 /* ViewController.h */,
-				FFB24D72223073180096E395 /* ViewController.m */,
-				FFB24D74223073180096E395 /* Main.storyboard */,
 				FFB24D77223073190096E395 /* Assets.xcassets */,
-				FFB24D79223073190096E395 /* LaunchScreen.storyboard */,
 				FFB24D7C223073190096E395 /* Info.plist */,
 				FFB24D7D223073190096E395 /* main.m */,
 			);
-			path = "Contacts MRC";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFB24D86223076100096E395 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D89223076550096E395 /* LMSContactsTableViewController.h */,
+				FFB24D8A223076550096E395 /* LMSContactsTableViewController.m */,
+				FFB24D8C2230766E0096E395 /* LMSContactViewController.h */,
+				FFB24D8D2230766E0096E395 /* LMSContactViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFB24D87223076220096E395 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D92223077210096E395 /* LMSContactController.h */,
+				FFB24D93223077210096E395 /* LMSContactController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FFB24D882230762C0096E395 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFB24D8F2230770D0096E395 /* LMSContact.h */,
+				FFB24D902230770D0096E395 /* LMSContact.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB24D73223073180096E395 /* ViewController.m in Sources */,
+				FFB24D8E2230766E0096E395 /* LMSContactViewController.m in Sources */,
+				FFB24D94223077210096E395 /* LMSContactController.m in Sources */,
 				FFB24D7E223073190096E395 /* main.m in Sources */,
+				FFB24D8B223076550096E395 /* LMSContactsTableViewController.m in Sources */,
 				FFB24D70223073180096E395 /* AppDelegate.m in Sources */,
+				FFB24D912230770D0096E395 /* LMSContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +236,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -237,7 +295,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -285,9 +343,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Contacts MRC/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Contacts MRC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +361,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LA5UAXN45;
-				INFOPLIST_FILE = "Contacts MRC/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Contacts MRC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

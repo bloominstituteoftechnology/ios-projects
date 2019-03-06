@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LMSContactsTableViewController.h
 //  Contacts MRC
 //
 //  Created by Lisa Sampson on 3/6/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface LMSContactsTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
