@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D13D3553222F217200664B67 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */; };
 		D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */; };
+		D13D3558222F274A00664B67 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */; };
+		D13D355A222F281C00664B67 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */; };
+		D13D355E222F2CE300664B67 /* BHMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */; };
+		D13D3561222F2D1500664B67 /* BHMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3560222F2D1500664B67 /* BHMarsRover.m */; };
+		D13D3564222F315F00664B67 /* BHMarsPhotoReference.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */; };
+		D13D3567222F497300664B67 /* BHSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3566222F497300664B67 /* BHSolDescription.m */; };
 		D1916396222DF268005CE4FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1916395222DF268005CE4FD /* AppDelegate.m */; };
 		D191639C222DF268005CE4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D191639A222DF268005CE4FD /* Main.storyboard */; };
 		D191639E222DF26A005CE4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D191639D222DF26A005CE4FD /* Assets.xcassets */; };
@@ -18,8 +23,17 @@
 
 /* Begin PBXFileReference section */
 		D13D3551222F217100664B67 /* Astronomy ObjC Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy ObjC Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D13D355C222F2CE300664B67 /* BHMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsRoverClient.h; sourceTree = "<group>"; };
+		D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsRoverClient.m; sourceTree = "<group>"; };
+		D13D355F222F2D1500664B67 /* BHMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsRover.h; sourceTree = "<group>"; };
+		D13D3560222F2D1500664B67 /* BHMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsRover.m; sourceTree = "<group>"; };
+		D13D3562222F315F00664B67 /* BHMarsPhotoReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsPhotoReference.h; sourceTree = "<group>"; };
+		D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsPhotoReference.m; sourceTree = "<group>"; };
+		D13D3565222F497300664B67 /* BHSolDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSolDescription.h; sourceTree = "<group>"; };
+		D13D3566222F497300664B67 /* BHSolDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSolDescription.m; sourceTree = "<group>"; };
 		D1916391222DF268005CE4FD /* Astronomy ObjC Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy ObjC Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1916394222DF268005CE4FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1916395222DF268005CE4FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +84,8 @@
 		D13D354A222F1F2700664B67 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D13D355C222F2CE300664B67 /* BHMarsRoverClient.h */,
+				D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -77,8 +93,8 @@
 		D13D354B222F1F2800664B67 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D13D3552222F217200664B67 /* PhotosCollectionViewController.swift */,
 				D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */,
+				D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -86,6 +102,7 @@
 		D13D354C222F1F2A00664B67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +124,19 @@
 			path = Bridging;
 			sourceTree = "<group>";
 		};
+		D13D355B222F2B7600664B67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D13D355F222F2D1500664B67 /* BHMarsRover.h */,
+				D13D3560222F2D1500664B67 /* BHMarsRover.m */,
+				D13D3562222F315F00664B67 /* BHMarsPhotoReference.h */,
+				D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */,
+				D13D3565222F497300664B67 /* BHSolDescription.h */,
+				D13D3566222F497300664B67 /* BHSolDescription.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D1916388222DF268005CE4FD = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +156,7 @@
 		D1916393222DF268005CE4FD /* Astronomy ObjC Swift */ = {
 			isa = PBXGroup;
 			children = (
+				D13D355B222F2B7600664B67 /* Model */,
 				D13D354D222F1F5F00664B67 /* Delegates */,
 				D13D354C222F1F2A00664B67 /* Views */,
 				D13D354B222F1F2800664B67 /* ViewControllers */,
@@ -209,10 +240,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13D3553222F217200664B67 /* PhotosCollectionViewController.swift in Sources */,
+				D13D355E222F2CE300664B67 /* BHMarsRoverClient.m in Sources */,
 				D19163A4222DF26A005CE4FD /* main.m in Sources */,
+				D13D355A222F281C00664B67 /* ImageCollectionViewCell.swift in Sources */,
+				D13D3564222F315F00664B67 /* BHMarsPhotoReference.m in Sources */,
+				D13D3561222F2D1500664B67 /* BHMarsRover.m in Sources */,
 				D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */,
+				D13D3567222F497300664B67 /* BHSolDescription.m in Sources */,
 				D1916396222DF268005CE4FD /* AppDelegate.m in Sources */,
+				D13D3558222F274A00664B67 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
