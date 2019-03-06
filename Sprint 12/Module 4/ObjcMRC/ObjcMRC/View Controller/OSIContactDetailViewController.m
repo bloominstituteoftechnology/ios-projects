@@ -1,0 +1,79 @@
+
+#import "OSIContactDetailViewController.h"
+#import "OSIContactController.h"
+#import "OSIContact.h"
+
+@interface OSIContactDetailViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (retain, nonatomic) IBOutlet UITextField *emailAddressTextFiled;
+@property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextFiled;
+@property (weak, nonatomic) IBOutlet UITextView *textBodyTextView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *contactNavigationItem;
+- (IBAction)saveButton:(id)sender;
+
+
+@end
+
+@implementation OSIContactDetailViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateViews];
+    
+   
+}
+
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self updateViews];
+//}
+
+- (void)saveButton:(id)sender {
+    if (!self.conatct) {
+    NSString *firstName = self.firstNameTextField.text;
+        NSString *lastName = self.lastNameTextField.text;
+    NSString *emailAddress = self.emailAddressTextFiled.text;
+    NSString *phoneNumber = self.phoneNumberTextFiled.text;
+    
+        [_osiContactController createContact:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
+    } else {
+        
+        NSString *firstName = self.firstNameTextField.text;
+        NSString *lastName = self.lastNameTextField.text;
+        NSString *emailAddress = self.emailAddressTextFiled.text;
+        NSString *phoneNumber = self.phoneNumberTextFiled.text;
+        
+        [_osiContactController updateContact:_conatct firstName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+
+- (void)updateViews {
+    if (self.isViewLoaded == NO) { return ;}
+
+    if (self.conatct == nil) {
+        self.title = @"Add New Contact";
+        
+        
+        self.firstNameTextField.text = @"";
+        self.textBodyTextView.text = @"";
+        self.lastNameTextField.text = @"";
+        self.emailAddressTextFiled.text = @"";
+        self.phoneNumberTextFiled.text = @"";
+    } else {
+        
+        self.firstNameTextField.text = _conatct.firstName;
+        self.textBodyTextView.text = @"";
+        self.lastNameTextField.text = _conatct.lastName;
+        self.emailAddressTextFiled.text = _conatct.emailAddress;
+        self.phoneNumberTextFiled.text = _conatct.phoneNumber;
+    }
+}
+
+
+@end
