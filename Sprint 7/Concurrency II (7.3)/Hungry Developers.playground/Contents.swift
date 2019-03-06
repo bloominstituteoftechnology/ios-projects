@@ -30,19 +30,19 @@ class Developer {
     
     func think() {
         
-        if leftSpoon.index < rightSpoon.index {
+        if  leftSpoon.index < rightSpoon.index {
             leftSpoon.pickUp()
             rightSpoon.pickUp()
         } else {
             rightSpoon.pickUp()
             leftSpoon.pickUp()
         }
-        return
+        
     }
     
     func eat() {
         print("\(name) is currently eating")
-        sleep(UInt32(Int.random(in: 0...2)))
+        usleep(UInt32(Int.random(in: 0...3000)))
         
         leftSpoon.putDown()
         rightSpoon.putDown()
@@ -50,7 +50,8 @@ class Developer {
     }
     
     func run() {
-        while true {
+        for _ in 1...500 {
+        //while true {
             think()
             eat()
         }
@@ -74,4 +75,3 @@ let developers = [Developer1, Developer2, Developer3, Developer4, Developer5]
 DispatchQueue.concurrentPerform(iterations: 5) {
     developers[$0].run()
 }
-
