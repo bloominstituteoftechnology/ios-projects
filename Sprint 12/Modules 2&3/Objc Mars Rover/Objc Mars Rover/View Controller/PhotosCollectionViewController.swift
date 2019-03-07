@@ -10,6 +10,7 @@ import UIKit
 
 class PhotosCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet var collection: UICollectionView!
     let osiMarsRoverClient = OSIMarsRoverClient()
     
     override func viewDidLoad() {
@@ -20,6 +21,9 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
                 return
             }
             self.roverInfo = rover
+            DispatchQueue.main.async {
+                self.collection.reloadData()
+            }
             
         }
         
@@ -35,6 +39,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         guard let index = solDescriptions.index(of: solDescription) else { return }
         guard index > 0 else { return }
         self.solDescription = solDescriptions[index-1]
+        
     }
     
     @IBAction func goToNextSol(_ sender: Any?) {
@@ -43,6 +48,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         guard let index = solDescriptions.index(of: solDescription) else { return }
         guard index < solDescriptions.count - 1 else { return }
         self.solDescription = solDescriptions[index+1]
+       
     }
     
     // UICollectionViewDataSource/Delegate
@@ -58,17 +64,20 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionViewCell else { return ImageCollectionViewCell() }
-       // let photoRef = photoReferences[indexPath.row]
-       // cell.imageView.image = UIImage(named: photoRef.imgSrc!)
-     //   loadImage(forCell: cell, forItemAt: indexPath)
+        let photoRef = photoReferences[indexPath.row]
+        
+        let imageData = try? Data(contentsOf: photoRef.imageURL)
+        cell.imageView.image = UIImage(data: imageData!)
+        cell.photoLabel.text = roverInfo?.name
+       // loadImage(forCell: cell, forItemAt: indexPath)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if photoReferences.count > 0 {
-        //    let photoRef = photoReferences[indexPath.item]
-            //operations[photoRef.id]?.cancel()
+           // let photoRef = photoReferences[indexPath.item]
+          //  operations[photoRef.id]?.cancel()
         } else {
             for (_, operation) in operations {
                 operation.cancel()
@@ -76,22 +85,22 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        var totalUsableWidth = collectionView.frame.width
-        let inset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
-        totalUsableWidth -= inset.left + inset.right
-        
-        let minWidth: CGFloat = 150.0
-        let numberOfItemsInOneRow = Int(totalUsableWidth / minWidth)
-        totalUsableWidth -= CGFloat(numberOfItemsInOneRow - 1) * flowLayout.minimumInteritemSpacing
-        let width = totalUsableWidth / CGFloat(numberOfItemsInOneRow)
-        return CGSize(width: width, height: width)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+//        var totalUsableWidth = collectionView.frame.width
+//        let inset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
+//        totalUsableWidth -= inset.left + inset.right
+//
+//        let minWidth: CGFloat = 150.0
+//        let numberOfItemsInOneRow = Int(totalUsableWidth / minWidth)
+//        totalUsableWidth -= CGFloat(numberOfItemsInOneRow - 1) * flowLayout.minimumInteritemSpacing
+//        let width = totalUsableWidth / CGFloat(numberOfItemsInOneRow)
+//        return CGSize(width: width, height: width)
+//    }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 10.0, bottom: 0, right: 10.0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 10.0, bottom: 0, right: 10.0)
+//    }
     
     // MARK: - Navigation
     
@@ -131,9 +140,16 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         navigationItem.titleView = stackView
     }
     
+    @IBAction func refresh(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.collection.reloadData()
+        }
+        
+    }
     private func updateViews() {
         guard isViewLoaded else { return }
         solLabel.text = "Sol \(solDescription?.sol ?? 0)"
+        
     }
     
 //    private func loadImage(forCell cell: ImageCollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -193,18 +209,18 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         }
     }
     
-    private var solDescription: OSIPhoto? {
+    private var solDescription: OSIPhoto1? {
         didSet {
             if let rover = roverInfo,
                 let sol = solDescription?.sol {
-                photoReferences = []
+               // photoReferences = []
                 osiMarsRoverClient.fetchPhotosFrome(rover, onSol: Int32(truncating: sol)) {photoRef, error in
                     
                     if let error = error {
                         NSLog("Error fetching info for curiosity: \(error)")
                         return
                     }
-                 // self.photoReferences = photoRef.photos ?? []
+                    self.photoReferences = photoRef
                     
                 }
                 
@@ -217,7 +233,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         }
     
     
-    private var photoReferences = [OSIPhoto]() {
+    private var photoReferences = [OSIMarsRoverPhoto]() {
         didSet {
            // cache.clear()
             DispatchQueue.main.async { self.collectionView?.reloadData() }

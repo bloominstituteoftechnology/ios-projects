@@ -11,15 +11,16 @@ import Foundation
 class MarsPhotoReference: NSObject {
     let id: Int
     let sol: Int
-    let camera: Camera
+    //let camera: Camera
     let earthDate: Date
     
     let imageURL: URL
     
-    init(id: Int, sol: Int, camera: Camera, earthDate: Date, imageURL: URL) {
+ @objc
+    init(id: Int, sol: Int, earthDate: Date, imageURL: URL) {
         self.id = id
         self.sol = sol
-        self.camera = camera
+       // self.camera = camera
         self.earthDate = earthDate
         self.imageURL = imageURL
     }

@@ -8,9 +8,17 @@
 
 import Foundation
 
-struct Camera: Codable, Equatable {
+class Camera: NSObject {
     let id: Int
     let name: String
     let roverId: Int
     let fullName: String
+    
+    @objc
+    init(id: Int, roverId: Int, name: String, fullName: String) {
+        self.id = id
+        self.roverId = roverId
+        self.name = name
+        self.fullName = fullName
+    }
 }

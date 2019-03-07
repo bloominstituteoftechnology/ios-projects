@@ -13,7 +13,7 @@
 @end
 
 
-@implementation OSIPhoto
+@implementation OSIPhoto1
 
 
 

@@ -19,32 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m6r-Kh-tW9">
-                            <size key="itemSize" width="65" height="62"/>
+                            <size key="itemSize" width="122" height="116"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="fc7-wf-C7a" customClass="ImageCollectionViewCell" customModule="Objc_Mars_Rover" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="65" height="62"/>
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="65" height="62"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-M4-321">
-                                            <rect key="frame" x="0.0" y="0.0" width="65" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sc-3h-nMe">
+                                            <rect key="frame" x="20" y="0.0" width="82" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="0lk-UY-nTn"/>
                                     <constraint firstAttribute="bottom" secondItem="kJX-M4-321" secondAttribute="bottom" id="0xX-CB-dnW"/>
+                                    <constraint firstItem="7sc-3h-nMe" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="4Ol-3J-Vcy"/>
                                     <constraint firstItem="kJX-M4-321" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="FR7-HS-12K"/>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" id="Jr7-j0-h2A"/>
+                                    <constraint firstItem="7sc-3h-nMe" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" constant="20" id="QU2-fD-0gU"/>
                                     <constraint firstAttribute="trailing" secondItem="kJX-M4-321" secondAttribute="trailing" id="YmH-NS-mRE"/>
+                                    <constraint firstAttribute="trailing" secondItem="7sc-3h-nMe" secondAttribute="trailing" constant="20" id="eGc-my-lHH"/>
                                     <constraint firstItem="kJX-M4-321" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" id="fLu-Se-zX7"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJX-M4-321" secondAttribute="trailing" id="hFH-gi-sON"/>
+                                    <constraint firstAttribute="bottom" secondItem="kJX-M4-321" secondAttribute="bottom" id="ygE-9U-Khv"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="kJX-M4-321" id="iRS-tb-iC3"/>
+                                    <outlet property="photoLabel" destination="7sc-3h-nMe" id="buj-JW-7bV"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="4we-wc-IHW"/>
                                 </connections>
                             </collectionViewCell>
@@ -54,7 +68,16 @@
                             <outlet property="delegate" destination="RRO-xq-fnv" id="Bgl-we-J5d"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Xtz-pv-WOa"/>
+                    <navigationItem key="navigationItem" id="Xtz-pv-WOa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Kj7-l2-Jfu">
+                            <connections>
+                                <action selector="refresh:" destination="RRO-xq-fnv" id="tdi-rO-3Pi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collection" destination="lHy-Iv-SOd" id="kAC-3J-HCo"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIA-Cu-H9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

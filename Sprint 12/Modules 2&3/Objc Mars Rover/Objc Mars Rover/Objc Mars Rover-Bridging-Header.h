@@ -4,4 +4,4 @@
 
 #import "OSIMarsRoverClient.h"
 #import "OSIMarsRover.h"
-
+#import "OSIMarsRoverPhoto.h"

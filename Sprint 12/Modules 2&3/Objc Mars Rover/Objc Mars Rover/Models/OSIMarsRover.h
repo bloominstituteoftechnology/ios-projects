@@ -12,7 +12,7 @@
 
 
 @class OSIMarsRover;
-@class OSIPhoto;
+@class OSIPhoto1;
 @class OSICamera;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -39,11 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, strong) NSNumber *maxSol;
 @property (nonatomic, nullable, copy)   NSString *maxDate;
 @property (nonatomic, nullable, strong) NSNumber *totalPhotos;
-@property (nonatomic, nullable, copy)   NSArray<OSIPhoto *> *photos;
+@property (nonatomic, nullable, copy)   NSArray<OSIPhoto1 *> *photos;
 @end
 
 
-@interface OSIPhoto : NSObject
+@interface OSIPhoto1 : NSObject
 @property (nonatomic, nullable, strong) NSNumber *sol;
 @property (nonatomic, nullable, copy)   NSString *earthDate;
 @property (nonatomic, nullable, strong) NSNumber *totalPhotos;

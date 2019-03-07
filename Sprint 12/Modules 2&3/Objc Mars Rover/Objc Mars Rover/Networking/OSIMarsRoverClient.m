@@ -9,6 +9,7 @@
 #import "OSIMarsRoverClient.h"
 #import "OSIMarsRover.h"
 #import "Objc_Mars_Rover-Swift.h"
+#import "OSIMarsRoverPhoto.h"
 // apiKey: A5GInzhik79kruLeQ4FYlN02lBcTmwnTnV5pHIKi
 //  baseURL = URL(string: "https://api.nasa.gov/mars-photos/api/v1")!
 
@@ -22,7 +23,7 @@ static NSString * const apiKey = @"A5GInzhik79kruLeQ4FYlN02lBcTmwnTnV5pHIKi";
 - (instancetype)init {
     self = [super init];
     if (self != nil) {
-        _savedPhotos = [NSMutableArray array];
+        _savedPhotos = [NSMutableArray<MarsPhotoReference *> array];
     }
     return self;
 }
@@ -91,7 +92,7 @@ static NSString * const apiKey = @"A5GInzhik79kruLeQ4FYlN02lBcTmwnTnV5pHIKi";
           NSMutableArray *photos = [NSMutableArray array];
           
           for (NSDictionary *phot in photoDict) {
-              OSIPhoto *photo = [[OSIPhoto alloc] init];
+              OSIPhoto1 *photo = [[OSIPhoto1 alloc] init];
               
               photo.sol = [phot valueForKey:@"sol"];
               photo.totalPhotos = [phot valueForKey:@"total_photos"];
@@ -108,7 +109,7 @@ static NSString * const apiKey = @"A5GInzhik79kruLeQ4FYlN02lBcTmwnTnV5pHIKi";
 }
 
 
-- (void)fetchPhotosFrome:(OSIMarsRover *)rover onSol:(int )sol completion:(void (^)(NSDictionary *dict, NSError * _Nullable))completion {
+- (void)fetchPhotosFrome:(OSIMarsRover *)rover onSol:(int )sol completion:(void (^)(NSArray<OSIMarsRoverPhoto *> *dict, NSError * _Nullable))completion {
     
     NSURL *url = [NSURL URLWithString:baseURL];
     
@@ -142,16 +143,19 @@ static NSString * const apiKey = @"A5GInzhik79kruLeQ4FYlN02lBcTmwnTnV5pHIKi";
               return;
           }
           NSDictionary *photoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-          if (![photoJSON isKindOfClass:[NSDictionary class]]) {
-              NSLog(@"JSON error, not dictinary");
-              completion(nil, error);
-              
-              return;
+          
+          NSArray *photos = photoJSON[@"photos"];
+          NSMutableArray *references = [[NSMutableArray alloc] init];
+          
+          for (NSDictionary *photo in photos) {
+              OSIMarsRoverPhoto *reference = [[OSIMarsRoverPhoto alloc] initWithDictionary: photo];
+              [references addObject: reference];
           }
           
-          
+          completion([references copy], nil);
+      
       }]resume];
-      }
+     }
       
       @end
       
