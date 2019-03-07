@@ -32,7 +32,7 @@
         _name = name;
         _email = email;
         _phoneNumber = phoneNumber;
-        _uuid = uuid;
+        _uuid = [[NSUUID UUID] UUIDString];
     }
     [_name retain];
     [_email retain];

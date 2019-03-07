@@ -173,7 +173,7 @@ static BHContactsController *shared = nil;
         
         BHContact *newContact = [[BHContact alloc] initWithName:[thisObject objectForKey:@"name"] email:[thisObject objectForKey:@"email"] phoneNumber:[thisObject objectForKey:@"phoneNumber"] uuid:[thisObject objectForKey:@"uuid"]];
         [newArray addObject:newContact];
-//        [newContact release];
+        [newContact release];
 //        [newContact dealloc];
     }
     
