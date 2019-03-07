@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eCx-sv-n4K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos Collection View Controller-->
+        <scene sceneID="wdm-Fb-wXx">
+            <objects>
+                <collectionViewController id="RRO-xq-fnv" customClass="PhotosCollectionViewController" customModule="Objc_Mars_Rover" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lHy-Iv-SOd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m6r-Kh-tW9">
+                            <size key="itemSize" width="122" height="116"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="fc7-wf-C7a" customClass="ImageCollectionViewCell" customModule="Objc_Mars_Rover" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-M4-321">
+                                            <rect key="frame" x="0.0" y="0.0" width="122" height="116"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sc-3h-nMe">
+                                            <rect key="frame" x="20" y="0.0" width="82" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="0lk-UY-nTn"/>
+                                    <constraint firstAttribute="bottom" secondItem="kJX-M4-321" secondAttribute="bottom" id="0xX-CB-dnW"/>
+                                    <constraint firstItem="7sc-3h-nMe" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="4Ol-3J-Vcy"/>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="top" secondItem="fc7-wf-C7a" secondAttribute="top" id="FR7-HS-12K"/>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" id="Jr7-j0-h2A"/>
+                                    <constraint firstItem="7sc-3h-nMe" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" constant="20" id="QU2-fD-0gU"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJX-M4-321" secondAttribute="trailing" id="YmH-NS-mRE"/>
+                                    <constraint firstAttribute="trailing" secondItem="7sc-3h-nMe" secondAttribute="trailing" constant="20" id="eGc-my-lHH"/>
+                                    <constraint firstItem="kJX-M4-321" firstAttribute="leading" secondItem="fc7-wf-C7a" secondAttribute="leading" id="fLu-Se-zX7"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJX-M4-321" secondAttribute="trailing" id="hFH-gi-sON"/>
+                                    <constraint firstAttribute="bottom" secondItem="kJX-M4-321" secondAttribute="bottom" id="ygE-9U-Khv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="kJX-M4-321" id="iRS-tb-iC3"/>
+                                    <outlet property="photoLabel" destination="7sc-3h-nMe" id="buj-JW-7bV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="4we-wc-IHW"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="RRO-xq-fnv" id="11s-vG-CHV"/>
+                            <outlet property="delegate" destination="RRO-xq-fnv" id="Bgl-we-J5d"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Xtz-pv-WOa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Kj7-l2-Jfu">
+                            <connections>
+                                <action selector="refresh:" destination="RRO-xq-fnv" id="tdi-rO-3Pi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collection" destination="lHy-Iv-SOd" id="kAC-3J-HCo"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIA-Cu-H9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397.60000000000002" y="132.68365817091455"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="OSIViewController" customModule="Objc_Mars_Rover" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Bx-0O-Oe9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eCx-sv-n4K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Dz-rf-dtk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RRO-xq-fnv" kind="relationship" relationship="rootViewController" id="gwh-YR-Mtu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTZ-GY-Gb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543.20000000000005" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
