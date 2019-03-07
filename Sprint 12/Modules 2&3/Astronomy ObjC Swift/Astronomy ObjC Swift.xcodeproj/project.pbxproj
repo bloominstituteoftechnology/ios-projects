@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */; };
+		D13D3558222F274A00664B67 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */; };
+		D13D355A222F281C00664B67 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */; };
+		D13D355E222F2CE300664B67 /* BHMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */; };
+		D13D3561222F2D1500664B67 /* BHMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3560222F2D1500664B67 /* BHMarsRover.m */; };
+		D13D3564222F315F00664B67 /* BHMarsPhotoReference.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */; };
+		D13D3567222F497300664B67 /* BHSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D3566222F497300664B67 /* BHSolDescription.m */; };
+		D1916396222DF268005CE4FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1916395222DF268005CE4FD /* AppDelegate.m */; };
+		D191639C222DF268005CE4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D191639A222DF268005CE4FD /* Main.storyboard */; };
+		D191639E222DF26A005CE4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D191639D222DF26A005CE4FD /* Assets.xcassets */; };
+		D19163A1222DF26A005CE4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */; };
+		D19163A4222DF26A005CE4FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D19163A3222DF26A005CE4FD /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D13D3551222F217100664B67 /* Astronomy ObjC Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy ObjC Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D13D355C222F2CE300664B67 /* BHMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsRoverClient.h; sourceTree = "<group>"; };
+		D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsRoverClient.m; sourceTree = "<group>"; };
+		D13D355F222F2D1500664B67 /* BHMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsRover.h; sourceTree = "<group>"; };
+		D13D3560222F2D1500664B67 /* BHMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsRover.m; sourceTree = "<group>"; };
+		D13D3562222F315F00664B67 /* BHMarsPhotoReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHMarsPhotoReference.h; sourceTree = "<group>"; };
+		D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHMarsPhotoReference.m; sourceTree = "<group>"; };
+		D13D3565222F497300664B67 /* BHSolDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHSolDescription.h; sourceTree = "<group>"; };
+		D13D3566222F497300664B67 /* BHSolDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHSolDescription.m; sourceTree = "<group>"; };
+		D1916391222DF268005CE4FD /* Astronomy ObjC Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy ObjC Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1916394222DF268005CE4FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D1916395222DF268005CE4FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D191639B222DF268005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D191639D222DF26A005CE4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D19163A0222DF26A005CE4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D19163A2222DF26A005CE4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D19163A3222DF26A005CE4FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D191638E222DF268005CE4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D13D3547222F1F1600664B67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D191639A222DF268005CE4FD /* Main.storyboard */,
+				D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */,
+				D19163A2222DF26A005CE4FD /* Info.plist */,
+				D191639D222DF26A005CE4FD /* Assets.xcassets */,
+				D19163A3222DF26A005CE4FD /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D13D3548222F1F1A00664B67 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D13D3549222F1F1C00664B67 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		D13D354A222F1F2700664B67 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D13D355C222F2CE300664B67 /* BHMarsRoverClient.h */,
+				D13D355D222F2CE300664B67 /* BHMarsRoverClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D13D354B222F1F2800664B67 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D13D3555222F23CB00664B67 /* PhotoDetailViewController.swift */,
+				D13D3557222F274A00664B67 /* PhotosCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D13D354C222F1F2A00664B67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D13D3559222F281C00664B67 /* ImageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D13D354D222F1F5F00664B67 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D1916394222DF268005CE4FD /* AppDelegate.h */,
+				D1916395222DF268005CE4FD /* AppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D13D3554222F217C00664B67 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				D13D3551222F217100664B67 /* Astronomy ObjC Swift-Bridging-Header.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		D13D355B222F2B7600664B67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D13D355F222F2D1500664B67 /* BHMarsRover.h */,
+				D13D3560222F2D1500664B67 /* BHMarsRover.m */,
+				D13D3562222F315F00664B67 /* BHMarsPhotoReference.h */,
+				D13D3563222F315F00664B67 /* BHMarsPhotoReference.m */,
+				D13D3565222F497300664B67 /* BHSolDescription.h */,
+				D13D3566222F497300664B67 /* BHSolDescription.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1916388222DF268005CE4FD = {
+			isa = PBXGroup;
+			children = (
+				D1916393222DF268005CE4FD /* Astronomy ObjC Swift */,
+				D1916392222DF268005CE4FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1916392222DF268005CE4FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1916391222DF268005CE4FD /* Astronomy ObjC Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1916393222DF268005CE4FD /* Astronomy ObjC Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D13D355B222F2B7600664B67 /* Model */,
+				D13D354D222F1F5F00664B67 /* Delegates */,
+				D13D354C222F1F2A00664B67 /* Views */,
+				D13D354B222F1F2800664B67 /* ViewControllers */,
+				D13D354A222F1F2700664B67 /* Networking */,
+				D13D3549222F1F1C00664B67 /* Operations */,
+				D13D3548222F1F1A00664B67 /* Utilities */,
+				D13D3554222F217C00664B67 /* Bridging */,
+				D13D3547222F1F1600664B67 /* Resources */,
+			);
+			path = "Astronomy ObjC Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1916390222DF268005CE4FD /* Astronomy ObjC Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D19163A7222DF26A005CE4FD /* Build configuration list for PBXNativeTarget "Astronomy ObjC Swift" */;
+			buildPhases = (
+				D191638D222DF268005CE4FD /* Sources */,
+				D191638E222DF268005CE4FD /* Frameworks */,
+				D191638F222DF268005CE4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Astronomy ObjC Swift";
+			productName = "Astronomy ObjC Swift";
+			productReference = D1916391222DF268005CE4FD /* Astronomy ObjC Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1916389222DF268005CE4FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Benjamin Hakes";
+				TargetAttributes = {
+					D1916390222DF268005CE4FD = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = D191638C222DF268005CE4FD /* Build configuration list for PBXProject "Astronomy ObjC Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1916388222DF268005CE4FD;
+			productRefGroup = D1916392222DF268005CE4FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1916390222DF268005CE4FD /* Astronomy ObjC Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D191638F222DF268005CE4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D19163A1222DF26A005CE4FD /* LaunchScreen.storyboard in Resources */,
+				D191639E222DF26A005CE4FD /* Assets.xcassets in Resources */,
+				D191639C222DF268005CE4FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D191638D222DF268005CE4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13D355E222F2CE300664B67 /* BHMarsRoverClient.m in Sources */,
+				D19163A4222DF26A005CE4FD /* main.m in Sources */,
+				D13D355A222F281C00664B67 /* ImageCollectionViewCell.swift in Sources */,
+				D13D3564222F315F00664B67 /* BHMarsPhotoReference.m in Sources */,
+				D13D3561222F2D1500664B67 /* BHMarsRover.m in Sources */,
+				D13D3556222F23CB00664B67 /* PhotoDetailViewController.swift in Sources */,
+				D13D3567222F497300664B67 /* BHSolDescription.m in Sources */,
+				D1916396222DF268005CE4FD /* AppDelegate.m in Sources */,
+				D13D3558222F274A00664B67 /* PhotosCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D191639A222DF268005CE4FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D191639B222DF268005CE4FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D191639F222DF26A005CE4FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D19163A0222DF26A005CE4FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D19163A5222DF26A005CE4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D19163A6222DF26A005CE4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D19163A8222DF26A005CE4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S5U94G8XN2;
+				INFOPLIST_FILE = "Astronomy ObjC Swift/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mettabits.Astronomy-ObjC-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC Swift/Bridging/Astronomy ObjC Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D19163A9222DF26A005CE4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S5U94G8XN2;
+				INFOPLIST_FILE = "Astronomy ObjC Swift/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mettabits.Astronomy-ObjC-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy ObjC Swift/Bridging/Astronomy ObjC Swift-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D191638C222DF268005CE4FD /* Build configuration list for PBXProject "Astronomy ObjC Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D19163A5222DF26A005CE4FD /* Debug */,
+				D19163A6222DF26A005CE4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D19163A7222DF26A005CE4FD /* Build configuration list for PBXNativeTarget "Astronomy ObjC Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D19163A8222DF26A005CE4FD /* Debug */,
+				D19163A9222DF26A005CE4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1916389222DF268005CE4FD /* Project object */;
+}

@@ -102,6 +102,6 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     private(set) var isAnimating = false
 
     private let shapeLayer = CAShapeLayer()
-    private let duration = 1.0
+    private let duration = 5.0
     private var shouldStopAnimationOnNextCycle = false
 }
