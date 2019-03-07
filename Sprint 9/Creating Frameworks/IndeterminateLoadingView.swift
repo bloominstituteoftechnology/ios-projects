@@ -8,6 +8,27 @@
 
 import UIKit
 
+#if !swift(>=4.2)
+
+struct CAMediaTimingFunctionName: RawRepresentable {
+    let rawValue: String
+    
+    init?(rawValue: String) {
+        self.rawValue = rawValue
+    }
+    
+    static let easeIn = CAMediaTimingFunctionName(rawValue: kCAMediaTimingFunctionEaseIn)!
+    static let easeOut = CAMediaTimingFunctionName(rawValue: kCAMediaTimingFunctionEaseOut)!
+}
+
+extension CAMediaTimingFunction {
+    convenience init(name: CAMediaTimingFunctionName) {
+        self.init(name: name.rawValue)
+    }
+}
+
+#endif
+
 class IndeterminateLoadingView: UIView, CAAnimationDelegate {
 
     override init(frame: CGRect) {
@@ -38,7 +59,7 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     // MARK: - Private
     
     private func setupShapeLayer() {
-        let thickness: CGFloat = 10.0
+        let thickness: CGFloat = 13.0
         
         shapeLayer.frame = layer.bounds
         shapeLayer.strokeColor = UIColor.black.cgColor
@@ -102,6 +123,6 @@ class IndeterminateLoadingView: UIView, CAAnimationDelegate {
     private(set) var isAnimating = false
 
     private let shapeLayer = CAShapeLayer()
-    private let duration = 1.0
+    private let duration = 1.5
     private var shouldStopAnimationOnNextCycle = false
 }
