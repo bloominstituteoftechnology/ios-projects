@@ -24,6 +24,13 @@
     _shared = [BHContactsController shared];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+    
+}
+
 #pragma mark - Table view data source
 
 
@@ -53,21 +60,22 @@
     // Pass the selected object to the new view controller.
     BHDetailedViewController *destVC = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    BHContact *contact = _shared.contacts[indexPath.row];
     
-    destVC.contact = contact;
+    destVC.contactsController = _shared;
     
     if([segue.identifier  isEqual: @"AddNewContactSegue"]){
         // do something
-        
+        destVC.contact = [[BHContact alloc] init];
+        [destVC.contact autorelease];
         [destVC setIsUpdatingView: NO];
         
     } else if ([segue.identifier  isEqual: @"ViewExistingContactSegue"]){
         // do something else
+        BHContact *contact = _shared.contacts[indexPath.row];
+        destVC.contact = contact;
         destVC.isUpdatingView = @YES;
         
     }
-    
     
 }
 

@@ -17,16 +17,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSMutableArray<BHContact *> *contacts;
 
-@property NSFileManager *fileManager;
+@property (nonatomic, retain) NSFileManager *fileManager;
 
 // create
--(void)createSong: (BHContact *)contact;
+-(void)createContact: (BHContact *)contact;
 
 // update
--(void)updateSong: (BHContact *)updatedContact;
+-(void)updateContact: (BHContact *)updatedContact;
 
 // delete
--(void)deleteSong: (BHContact *)contactToDelete;
+-(void)deleteContact: (BHContact *)contactToDelete;
 
 @end
 

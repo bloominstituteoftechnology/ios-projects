@@ -10,17 +10,39 @@
 
 @implementation BHContact
 
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _uuid = [[NSUUID UUID] UUIDString];
+        _email = @"";
+        _name = @"";
+        _phoneNumber = @"";
+    }
+    return self;
+}
+
 - (instancetype)initWithName: (NSString *)name
                    email:(NSString *)email
-                      phoneNumber:(NSString *)phoneNumber{
+                      phoneNumber:(NSString *)phoneNumber
+                        uuid:(NSString *)uuid{
     
     self = [super init];
     if (self){
         _name = name;
         _email = email;
         _phoneNumber = phoneNumber;
+        _uuid = uuid;
     }
     return self;
+}
+
+- (void)dealloc {
+    [_name release];
+    [_email release];
+    [_phoneNumber release];
+    [_uuid release];
+    [super dealloc];
 }
 
 

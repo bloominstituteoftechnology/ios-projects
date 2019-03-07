@@ -14,11 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName: (NSString *)name
                        email:(NSString *)email
-                 phoneNumber:(NSString *)phoneNumber;
+                 phoneNumber:(NSString *)phoneNumber
+                        uuid:(NSString *)uuid;
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSString *phoneNumber;
+@property (retain, nonatomic) NSString *name;
+@property (retain, nonatomic) NSString *email;
+@property (retain, nonatomic) NSString *phoneNumber;
+@property (retain, nonatomic) NSString *uuid;
 
 @end
 

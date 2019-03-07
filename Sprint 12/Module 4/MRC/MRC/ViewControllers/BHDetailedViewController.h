@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BHDetailedViewController : UIViewController
 
-@property (nonatomic, retain) BHContact *contact;
-@property (nonatomic, retain) BHContactsController *contactsController;
+@property (retain, nullable) BHContact *contact;
+@property (retain) BHContactsController *contactsController;
 @property (nonatomic) BOOL isUpdatingView;
 @property (retain, nonatomic) IBOutlet UITextField *nameTextField;
 @property (retain, nonatomic) IBOutlet UITextField *emailTextField;

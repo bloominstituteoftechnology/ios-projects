@@ -22,8 +22,9 @@ static BHContactsController *shared = nil;
 #pragma mark Singleton Methods
 + (id)shared {
     @synchronized(self) {
-        if(shared == nil)
+        if(shared == nil){
             shared = [[super allocWithZone:NULL] init];
+        }
     }
     return shared;
 }
@@ -45,15 +46,11 @@ static BHContactsController *shared = nil;
 - (id)autorelease {
     return self;
 }
-- (id)init {
-    if (self = [super init]) {
-        contacts = [[NSMutableArray<BHContact *> alloc] init];
-    }
-    return self;
-}
+
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
     [contacts release];
+    [_fileManager release];
     [super dealloc];
 }
 
@@ -63,6 +60,7 @@ static BHContactsController *shared = nil;
         
         // file manager setup
         _fileManager = [[NSFileManager alloc] init];
+        [_fileManager autorelease];
         _fileManager = [NSFileManager defaultManager];
         NSURL *documentsDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
         [_fileManager contentsOfDirectoryAtURL:documentsDirectoryURL includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
@@ -78,8 +76,9 @@ static BHContactsController *shared = nil;
 }
 
 // create
--(void)createContact: (BHContact *)song{
-    [contacts addObject:song];
+-(void)createContact: (BHContact *)contact{
+    NSLog(contacts);
+    [contacts addObject:contact];
     
     [self saveContactsToDisk];
 }
@@ -91,7 +90,7 @@ static BHContactsController *shared = nil;
     for (int q = 0; q < j; q++)
     {
         BHContact *thisObject = [contacts objectAtIndex:q];
-        BOOL shouldUpdateThisObject = ([updatedContact UUID] == [thisObject UUID]);
+        BOOL shouldUpdateThisObject = ([updatedContact uuid] == [thisObject uuid]);
         if (shouldUpdateThisObject){
             [contacts removeObjectAtIndex:q];
             [contacts insertObject:updatedContact atIndex:q];
@@ -132,10 +131,12 @@ static BHContactsController *shared = nil;
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:topLevelArray options:NSJSONWritingPrettyPrinted error:nil];
+    [topLevelArray release];
     
     if (![data writeToURL:url atomically:YES]) {
         NSLog(@"Failed to writeToURL:'%@'", url);
     }
+    
     
 }
 
@@ -148,21 +149,31 @@ static BHContactsController *shared = nil;
     NSURL *url = [documentsDirectoryURL URLByAppendingPathComponent:@"Contacts.data" isDirectory:NO];
     
     NSData* data = [NSData dataWithContentsOfURL:url];
+    NSMutableArray *objects;
     
-    NSMutableArray *objects = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    @try {
+        objects = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    } @catch (NSException* error) {
+        NSLog(@"Error Decoding Data: %@", error);
+        NSMutableArray *newArray = [[NSMutableArray<BHContact *> alloc] init];
+        [newArray autorelease];
+        return newArray;
+    }
     
     NSUInteger j = [objects count];
     
     NSMutableArray *newArray = [[NSMutableArray<BHContact *> alloc] init];
+    [newArray autorelease];
+    
     
     for (int q = 0; q < j; q++)
     {
         
         NSDictionary *thisObject = [objects objectAtIndex:q];
         
-        BHContact *newContact = [[BHContact alloc] initWithName:[thisObject objectForKey:@"name"] email:[thisObject objectForKey:@"email"] phoneNumber:[thisObject objectForKey:@"phoneNumber"]]];
-        
+        BHContact *newContact = [[BHContact alloc] initWithName:[thisObject objectForKey:@"name"] email:[thisObject objectForKey:@"email"] phoneNumber:[thisObject objectForKey:@"phoneNumber"] uuid:[thisObject objectForKey:@"uuid"]];
         [newArray addObject:newContact];
+        [newContact release];
     }
     
     return newArray;
@@ -171,5 +182,3 @@ static BHContactsController *shared = nil;
 
 
 @end
-
-: artist:[thisObject objectForKey:@"artist"] lyrics:[thisObject objectForKey:@"lyrics"] uuid:[thisObject objectForKey:@"uuid"]] rating:[thisObject objectForKey:@"rating"

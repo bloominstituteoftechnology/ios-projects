@@ -7,6 +7,8 @@
 //
 
 #import "BHDetailedViewController.h"
+#import "BHContactsController.h"
+#import "BHContact.h"
 
 @interface BHDetailedViewController ()
 
@@ -18,8 +20,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _contact = [[BHContact alloc] init];
-        _contactsController = [[BHContactsController alloc] init];
+        
     }
     return self;
 }
@@ -28,8 +29,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        _contact = [[BHContact alloc] init];
-        _contactsController = [[BHContactsController alloc] init];
+        
     }
     return self;
 }
@@ -43,7 +43,6 @@
 }
 
 -(void)updateViews{
-    
     _nameTextField.text = [_contact name];
     _emailTextField.text = [_contact email];
     _phoneNumberTextField.text = [_contact phoneNumber];
@@ -54,6 +53,8 @@
     [_nameTextField release];
     [_emailTextField release];
     [_phoneNumberTextField release];
+    [_contact release];
+    [_contactsController release];
     [super dealloc];
 }
 - (IBAction)saveButtonClicked:(id)sender {
@@ -63,7 +64,8 @@
     _contact.phoneNumber = [_phoneNumberTextField text];
     
     if (_isUpdatingView) {
-        [_contactsController updateContact:_contact];
+        [_contactsController
+         updateContact:_contact];
     } else {
         [_contactsController createContact:_contact];
     }

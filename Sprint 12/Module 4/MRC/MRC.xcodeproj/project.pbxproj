@@ -16,6 +16,7 @@
 		D13D35B9223063A600664B67 /* BHContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D35B8223063A600664B67 /* BHContactsTableViewController.m */; };
 		D13D35BC2230643D00664B67 /* BHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D35BB2230643D00664B67 /* BHContact.m */; };
 		D13D35BF2230651700664B67 /* BHContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D35BE2230651700664B67 /* BHContactsController.m */; };
+		D13D35C222307B7F00664B67 /* BHContact+NSJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D13D35C122307B7F00664B67 /* BHContact+NSJSONSerializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		D13D35BB2230643D00664B67 /* BHContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHContact.m; sourceTree = "<group>"; };
 		D13D35BD2230651700664B67 /* BHContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BHContactsController.h; sourceTree = "<group>"; };
 		D13D35BE2230651700664B67 /* BHContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BHContactsController.m; sourceTree = "<group>"; };
+		D13D35C022307B7F00664B67 /* BHContact+NSJSONSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BHContact+NSJSONSerializer.h"; sourceTree = "<group>"; };
+		D13D35C122307B7F00664B67 /* BHContact+NSJSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BHContact+NSJSONSerializer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				D13D35BB2230643D00664B67 /* BHContact.m */,
 				D13D35BD2230651700664B67 /* BHContactsController.h */,
 				D13D35BE2230651700664B67 /* BHContactsController.m */,
+				D13D35C022307B7F00664B67 /* BHContact+NSJSONSerializer.h */,
+				D13D35C122307B7F00664B67 /* BHContact+NSJSONSerializer.m */,
 				D13D35B5223062EF00664B67 /* ViewControllers */,
 				D13D35B6223062FC00664B67 /* Resources */,
 				D13D35AB22305F4300664B67 /* main.m */,
@@ -174,6 +179,7 @@
 			files = (
 				D13D35BF2230651700664B67 /* BHContactsController.m in Sources */,
 				D13D35AC22305F4300664B67 /* main.m in Sources */,
+				D13D35C222307B7F00664B67 /* BHContact+NSJSONSerializer.m in Sources */,
 				D13D35B4223062D500664B67 /* BHDetailedViewController.m in Sources */,
 				D13D35BC2230643D00664B67 /* BHContact.m in Sources */,
 				D13D35B9223063A600664B67 /* BHContactsTableViewController.m in Sources */,
