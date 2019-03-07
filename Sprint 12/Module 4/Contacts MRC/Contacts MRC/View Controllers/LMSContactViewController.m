@@ -40,9 +40,12 @@
 }
 
 - (void)updateViews {
-    _nameTextField.text = _contact.name;
-    _emailTextField.text = _contact.email;
-    _phoneNumberTextField.text = _contact.phoneNumber;
+    if (self.contact) {
+        self.title = self.contact.name;
+    self.nameTextField.text = self.contact.name;
+    self.emailTextField.text = self.contact.email;
+    self.phoneNumberTextField.text = self.contact.phoneNumber;
+    }
 }
 
 - (IBAction)saveContact:(id)sender {

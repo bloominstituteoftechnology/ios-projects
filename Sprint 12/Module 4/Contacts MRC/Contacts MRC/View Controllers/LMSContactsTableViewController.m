@@ -65,7 +65,7 @@
     destinationVC.contactController = _contactController;
     destinationVC.segueIdentifier = segue.identifier;
     
-    if ([segue.identifier isEqualToString:@"EditSegue"]) {
+    if ([segue.identifier isEqualToString:@"EditContact"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         LMSContact *contact = _contactController.contacts[indexPath.row];
         destinationVC.contact = contact;
