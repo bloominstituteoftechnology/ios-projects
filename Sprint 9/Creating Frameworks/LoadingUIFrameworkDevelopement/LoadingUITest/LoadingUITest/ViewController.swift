@@ -11,11 +11,16 @@ import LoadingUI
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func activateLoading(_ sender: Any) {
+        
+        let loadingViewController = LoadingViewController()
+        
+        present(loadingViewController, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            loadingViewController.stopAnimation()
+        }
     }
-
-
+    
 }
 

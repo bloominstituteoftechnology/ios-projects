@@ -14,6 +14,7 @@
 		397AA4EA223087C20043D906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397AA4E8223087C20043D906 /* LaunchScreen.storyboard */; };
 		39D57EEB22308AA6008B9070 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397AA52B22308A560043D906 /* LoadingUI.framework */; };
 		39D57EEC22308AA6008B9070 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 397AA52B22308A560043D906 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39D57EF522308E87008B9070 /* LoadingUI.gif in Resources */ = {isa = PBXBuildFile; fileRef = 39D57EF222308E86008B9070 /* LoadingUI.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		397AA4E9223087C20043D906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		397AA4EB223087C20043D906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		397AA52622308A560043D906 /* LoadingUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingUI.xcodeproj; path = ../../../LoadingUI/LoadingUI.xcodeproj; sourceTree = "<group>"; };
+		39D57EF222308E86008B9070 /* LoadingUI.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LoadingUI.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				397AA4E6223087C20043D906 /* Assets.xcassets */,
 				397AA4E8223087C20043D906 /* LaunchScreen.storyboard */,
 				397AA4EB223087C20043D906 /* Info.plist */,
+				39D57EF222308E86008B9070 /* LoadingUI.gif */,
 				397AA4F82230881C0043D906 /* Frameworks */,
 			);
 			path = LoadingUITest;
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				397AA4EA223087C20043D906 /* LaunchScreen.storyboard in Resources */,
+				39D57EF522308E87008B9070 /* LoadingUI.gif in Resources */,
 				397AA4E7223087C20043D906 /* Assets.xcassets in Resources */,
 				397AA4E5223087C10043D906 /* Main.storyboard in Resources */,
 			);

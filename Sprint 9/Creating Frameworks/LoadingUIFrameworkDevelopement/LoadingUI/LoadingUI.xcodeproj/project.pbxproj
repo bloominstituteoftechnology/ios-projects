@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		397AA52022308A430043D906 /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 397AA51E22308A430043D906 /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39D57EF822309A95008B9070 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D57EF722309A95008B9070 /* LoadingViewController.swift */; };
+		39D57EFA22309AC4008B9070 /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D57EF922309AC4008B9070 /* IndeterminateLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		397AA51B22308A430043D906 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		397AA51E22308A430043D906 /* LoadingUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingUI.h; sourceTree = "<group>"; };
 		397AA51F22308A430043D906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D57EF722309A95008B9070 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		39D57EF922309AC4008B9070 /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndeterminateLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				397AA51E22308A430043D906 /* LoadingUI.h */,
 				397AA51F22308A430043D906 /* Info.plist */,
+				39D57EF922309AC4008B9070 /* IndeterminateLoadingView.swift */,
+				39D57EF722309A95008B9070 /* LoadingViewController.swift */,
 			);
 			path = LoadingUI;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					397AA51A22308A430043D906 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D57EF822309A95008B9070 /* LoadingViewController.swift in Sources */,
+				39D57EFA22309AC4008B9070 /* IndeterminateLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		397AA52422308A430043D906 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mosesrobinson.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +297,7 @@
 		397AA52522308A430043D906 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
