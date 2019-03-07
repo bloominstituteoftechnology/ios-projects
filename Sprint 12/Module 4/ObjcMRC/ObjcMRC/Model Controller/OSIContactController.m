@@ -17,6 +17,8 @@
     self = [super init];
     if (self) {
         _contacts = [[NSMutableArray alloc] init];
+        
+     //   [_contacts autorelease];
     }
     return self;
 }
@@ -25,6 +27,7 @@
     
     OSIContact *contact = [[OSIContact alloc] initWithName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
     [[self contacts] addObject:contact];
+   // [contact release];
 }
 
 -(void)updateContact:(OSIContact *)conatct firstName:(NSString*)firstName lastName:(NSString*)lastname emailAddress:(NSString*)emailAddress phoneNumber:(NSString *)phoneNumber {

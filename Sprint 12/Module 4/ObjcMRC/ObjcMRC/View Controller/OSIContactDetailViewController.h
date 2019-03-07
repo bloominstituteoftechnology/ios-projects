@@ -14,8 +14,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OSIContactDetailViewController : UIViewController
-@property (nonatomic, nullable) OSIContact *conatct;
-@property OSIContactController *osiContactController;
+@property (retain, nullable) OSIContact *conatct;
+@property (retain) OSIContactController *osiContactController;
 @end
 
 NS_ASSUME_NONNULL_END

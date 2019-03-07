@@ -18,8 +18,9 @@
         _lastName = lastName;
         _emailAddress = emailAddress;
         _phoneNumber = phoneNumber;
+        
     }
-    
+    [self autorelease];
     return self;
 }
 
