@@ -43,7 +43,7 @@
         NSString *emailAddress = self.emailAddressTextFiled.text;
         NSString *phoneNumber = self.phoneNumberTextFiled.text;
         
-        [_osiContactController updateContact:_conatct firstName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
+        [_osiContactController updateContact:self.conatct firstName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
         
     }
     [self.navigationController popViewControllerAnimated:YES];
@@ -79,6 +79,7 @@
     [_phoneNumberTextFiled release];
     [_conatct release];
     [_osiContactController release];
+    [_textBodyTextView release];
     [super dealloc];
 }
 

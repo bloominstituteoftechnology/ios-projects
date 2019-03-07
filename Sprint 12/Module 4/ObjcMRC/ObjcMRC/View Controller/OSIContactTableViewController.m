@@ -109,7 +109,7 @@ static NSString * const reuseIdentifier = @"contactCell";
 
 - (void)dealloc
 {
-    //[_osiContactController release];
+    [_osiContactController release];
     [super dealloc];
 }
 

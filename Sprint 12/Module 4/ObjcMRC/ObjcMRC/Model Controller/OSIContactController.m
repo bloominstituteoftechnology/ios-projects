@@ -27,7 +27,7 @@
     
     OSIContact *contact = [[OSIContact alloc] initWithName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
     [[self contacts] addObject:contact];
-   // [contact release];
+    [contact release];
 }
 
 -(void)updateContact:(OSIContact *)conatct firstName:(NSString*)firstName lastName:(NSString*)lastname emailAddress:(NSString*)emailAddress phoneNumber:(NSString *)phoneNumber {
@@ -41,7 +41,7 @@
 
 - (void)dealloc
 {
-    [_contacts dealloc];
+    [_contacts release];
     [super dealloc];
 }
 
