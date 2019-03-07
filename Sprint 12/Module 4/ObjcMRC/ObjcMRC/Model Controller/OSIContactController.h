@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OSIContactController : NSObject
 
-@property (readonly) NSMutableArray *contacts;
+@property (retain) NSMutableArray *contacts;
 
 
 -(void)createContact:(NSString*)firstName lastName:(NSString*)lastname emailAddress:(NSString*)emailAddress phoneNumber:(NSString *)phoneNumber;

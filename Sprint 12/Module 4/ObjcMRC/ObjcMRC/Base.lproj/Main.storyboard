@@ -132,7 +132,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="contactNavigationItem" destination="6P3-rL-6Ky" id="9ZB-2f-FK5"/>
                         <outlet property="emailAddressTextFiled" destination="Tjh-jX-x4m" id="LiV-Uy-1cY"/>
                         <outlet property="firstNameTextField" destination="tnr-QD-fcW" id="qS0-nJ-Cxk"/>
                         <outlet property="lastNameTextField" destination="JEl-p8-lrR" id="ssD-WT-nSb"/>

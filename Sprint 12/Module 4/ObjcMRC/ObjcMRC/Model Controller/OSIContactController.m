@@ -39,7 +39,11 @@
     
 }
 
-
+- (void)dealloc
+{
+    [_contacts dealloc];
+    [super dealloc];
+}
 
 
 @end

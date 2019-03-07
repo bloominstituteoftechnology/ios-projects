@@ -11,7 +11,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *emailAddressTextFiled;
 @property (retain, nonatomic) IBOutlet UITextField *phoneNumberTextFiled;
 @property (retain, nonatomic) IBOutlet UITextView *textBodyTextView;
-@property (retain, nonatomic) IBOutlet UINavigationItem *contactNavigationItem;
+
 - (IBAction)saveButton:(id)sender;
 
 
@@ -28,14 +28,13 @@
 
 
 - (void)saveButton:(id)sender {
-    if (!self.conatct) {
-    NSString *firstName = self.firstNameTextField.text;
+    if (!self.conatct && (self.firstNameTextField.text.length > 0)) {
+        NSString *firstName = self.firstNameTextField.text;
         NSString *lastName = self.lastNameTextField.text;
-    NSString *emailAddress = self.emailAddressTextFiled.text;
-    NSString *phoneNumber = self.phoneNumberTextFiled.text;
-    
-        [_osiContactController createContact:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
+        NSString *emailAddress = self.emailAddressTextFiled.text;
+        NSString *phoneNumber = self.phoneNumberTextFiled.text;
         
+        [_osiContactController createContact:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
         
     } else {
         
@@ -45,6 +44,7 @@
         NSString *phoneNumber = self.phoneNumberTextFiled.text;
         
         [_osiContactController updateContact:_conatct firstName:firstName lastName:lastName emailAddress:emailAddress phoneNumber:phoneNumber];
+        
     }
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -56,7 +56,6 @@
 
     if (self.conatct == nil) {
         self.title = @"Add New Contact";
-        
         
         self.firstNameTextField.text = @"";
         self.textBodyTextView.text = @"";
@@ -73,10 +72,15 @@
     }
 }
 
-//- (void)dealloc {
-//    [_conatct autorelease];
-//    [super dealloc];
-//}
+- (void)dealloc {
+    [_firstNameTextField release];
+    [_lastNameTextField release];
+    [_emailAddressTextFiled release];
+    [_phoneNumberTextFiled release];
+    [_conatct release];
+    [_osiContactController release];
+    [super dealloc];
+}
 
 
 @end

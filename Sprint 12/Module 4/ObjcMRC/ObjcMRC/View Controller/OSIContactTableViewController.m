@@ -13,7 +13,7 @@
 
 @interface OSIContactTableViewController ()
 - (IBAction)addButton:(id)sender;
-@property OSIContactController *osiContactController;
+@property (retain) OSIContactController *osiContactController;
 @end
 
 @implementation OSIContactTableViewController
@@ -23,6 +23,7 @@
     self = [super initWithNibName: nibNameOrNil bundle: nibBundleOrNil];
     if (self) {
         _osiContactController = [[OSIContactController alloc] init];
+        //[_osiContactController autorelease];
     }
     return self;
 }
@@ -31,6 +32,7 @@
     self = [super initWithCoder: aDecoder];
     if (self) {
         _osiContactController = [[OSIContactController alloc] init];
+       // [_osiContactController autorelease];
     }
     return self;
 }
@@ -105,5 +107,10 @@ static NSString * const reuseIdentifier = @"contactCell";
     }
 }
 
+- (void)dealloc
+{
+    //[_osiContactController release];
+    [super dealloc];
+}
 
 @end

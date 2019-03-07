@@ -20,8 +20,14 @@
         _phoneNumber = phoneNumber;
         
     }
-    [self autorelease];
     return self;
 }
 
+-(void)dealloc{
+    [_firstName release];
+    [_lastName release];
+    [_emailAddress release];
+    [_phoneNumber release];
+    [super dealloc];
+}
 @end
