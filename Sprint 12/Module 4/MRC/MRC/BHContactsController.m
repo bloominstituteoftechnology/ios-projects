@@ -23,14 +23,12 @@ static BHContactsController *shared = nil;
 + (id)shared {
     @synchronized(self) {
         if(shared == nil){
-            shared = [[super allocWithZone:NULL] init];
+            shared = [[super alloc] init];
         }
     }
     return shared;
 }
-+ (id)allocWithZone:(NSZone *)zone {
-    return [[self shared] retain];
-}
+
 - (id)copyWithZone:(NSZone *)zone {
     return self;
 }
@@ -67,8 +65,10 @@ static BHContactsController *shared = nil;
         
         if (![self getContactsFromDisk]) {
             contacts = [[NSMutableArray<BHContact *> alloc] init];
+            [contacts retain];
         } else {
             contacts = [self getContactsFromDisk];
+            [contacts retain];
         }
         
     }
@@ -77,9 +77,8 @@ static BHContactsController *shared = nil;
 
 // create
 -(void)createContact: (BHContact *)contact{
-    NSLog(contacts);
-    [contacts addObject:contact];
     
+    [contacts addObject:contact];
     [self saveContactsToDisk];
 }
 
@@ -92,6 +91,7 @@ static BHContactsController *shared = nil;
         BHContact *thisObject = [contacts objectAtIndex:q];
         BOOL shouldUpdateThisObject = ([updatedContact uuid] == [thisObject uuid]);
         if (shouldUpdateThisObject){
+            
             [contacts removeObjectAtIndex:q];
             [contacts insertObject:updatedContact atIndex:q];
             break;
@@ -173,7 +173,8 @@ static BHContactsController *shared = nil;
         
         BHContact *newContact = [[BHContact alloc] initWithName:[thisObject objectForKey:@"name"] email:[thisObject objectForKey:@"email"] phoneNumber:[thisObject objectForKey:@"phoneNumber"] uuid:[thisObject objectForKey:@"uuid"]];
         [newArray addObject:newContact];
-        [newContact release];
+//        [newContact release];
+//        [newContact dealloc];
     }
     
     return newArray;

@@ -34,6 +34,10 @@
         _phoneNumber = phoneNumber;
         _uuid = uuid;
     }
+    [_name retain];
+    [_email retain];
+    [_phoneNumber retain];
+    [_uuid retain];
     return self;
 }
 

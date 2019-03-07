@@ -68,6 +68,7 @@
         destVC.contact = [[BHContact alloc] init];
         [destVC.contact autorelease];
         [destVC setIsUpdatingView: NO];
+        [destVC retain];
         
     } else if ([segue.identifier  isEqual: @"ViewExistingContactSegue"]){
         // do something else
