@@ -8,24 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		AB59BE2C222DAEB200190925 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE2B222DAEB200190925 /* AppDelegate.m */; };
-		AB59BE2F222DAEB200190925 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE2E222DAEB200190925 /* ViewController.m */; };
 		AB59BE32222DAEB200190925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB59BE30222DAEB200190925 /* Main.storyboard */; };
 		AB59BE34222DAEB400190925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB59BE33222DAEB400190925 /* Assets.xcassets */; };
 		AB59BE37222DAEB400190925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB59BE35222DAEB400190925 /* LaunchScreen.storyboard */; };
 		AB59BE3A222DAEB400190925 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE39222DAEB400190925 /* main.m */; };
+		AB59BE46222DE08900190925 /* JKMarsPhotoReference.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE45222DE08900190925 /* JKMarsPhotoReference.m */; };
+		AB59BE4B222DE0C400190925 /* JKMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE4A222DE0C400190925 /* JKMarsRover.m */; };
+		AB59BE4F222DE0E600190925 /* JKSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE4E222DE0E600190925 /* JKSolDescription.m */; };
+		AB59BE53222DE16A00190925 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE52222DE16A00190925 /* Camera.swift */; };
+		AB59BE58222DE8DA00190925 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE57222DE8DA00190925 /* PhotoDetailViewController.swift */; };
+		AB59BE5A222DE94500190925 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE59222DE94500190925 /* PhotosCollectionViewController.swift */; };
+		AB59BE5C222DE99A00190925 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59BE5B222DE99A00190925 /* ImageCollectionViewCell.swift */; };
+		AB7D91D92237167E00A8FEF8 /* JKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D91D82237167E00A8FEF8 /* JKCache.m */; };
+		AB7D91DD223716E100A8FEF8 /* JKMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D91DC223716E100A8FEF8 /* JKMarsRoverClient.m */; };
+		AB7D91E12237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D91E02237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB59BE27222DAEB200190925 /* Astronomy-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB59BE2A222DAEB200190925 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB59BE2B222DAEB200190925 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB59BE2D222DAEB200190925 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AB59BE2E222DAEB200190925 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB59BE31222DAEB200190925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB59BE33222DAEB400190925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB59BE36222DAEB400190925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB59BE38222DAEB400190925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB59BE39222DAEB400190925 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB59BE44222DE08900190925 /* JKMarsPhotoReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKMarsPhotoReference.h; sourceTree = "<group>"; };
+		AB59BE45222DE08900190925 /* JKMarsPhotoReference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKMarsPhotoReference.m; sourceTree = "<group>"; };
+		AB59BE49222DE0C400190925 /* JKMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKMarsRover.h; sourceTree = "<group>"; };
+		AB59BE4A222DE0C400190925 /* JKMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKMarsRover.m; sourceTree = "<group>"; };
+		AB59BE4D222DE0E600190925 /* JKSolDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSolDescription.h; sourceTree = "<group>"; };
+		AB59BE4E222DE0E600190925 /* JKSolDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSolDescription.m; sourceTree = "<group>"; };
+		AB59BE51222DE16A00190925 /* Astronomy-ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy-ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB59BE52222DE16A00190925 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = "Astronomy-ObjC/Models/Camera.swift/Camera.swift"; sourceTree = SOURCE_ROOT; };
+		AB59BE57222DE8DA00190925 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		AB59BE59222DE94500190925 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		AB59BE5B222DE99A00190925 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB7D91D72237167E00A8FEF8 /* JKCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCache.h; sourceTree = "<group>"; };
+		AB7D91D82237167E00A8FEF8 /* JKCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCache.m; sourceTree = "<group>"; };
+		AB7D91DB223716E100A8FEF8 /* JKMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKMarsRoverClient.h; sourceTree = "<group>"; };
+		AB7D91DC223716E100A8FEF8 /* JKMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKMarsRoverClient.m; sourceTree = "<group>"; };
+		AB7D91DF2237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JKNetworkDataLoader.h"; sourceTree = "<group>"; };
+		AB7D91E02237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+JKNetworkDataLoader.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +84,10 @@
 			children = (
 				AB59BE2A222DAEB200190925 /* AppDelegate.h */,
 				AB59BE2B222DAEB200190925 /* AppDelegate.m */,
-				AB59BE2D222DAEB200190925 /* ViewController.h */,
-				AB59BE2E222DAEB200190925 /* ViewController.m */,
+				AB7D91E322371E0C00A8FEF8 /* Networking */,
+				AB59BE56222DE89A00190925 /* View Controllers */,
+				AB59BE55222DE88E00190925 /* Views */,
+				AB59BE48222DE0A500190925 /* Models */,
 				AB59BE30222DAEB200190925 /* Main.storyboard */,
 				AB59BE33222DAEB400190925 /* Assets.xcassets */,
 				AB59BE35222DAEB400190925 /* LaunchScreen.storyboard */,
@@ -69,6 +95,92 @@
 				AB59BE39222DAEB400190925 /* main.m */,
 			);
 			path = "Astronomy-ObjC";
+			sourceTree = "<group>";
+		};
+		AB59BE47222DE09000190925 /* JKMarsPhotoReference */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE44222DE08900190925 /* JKMarsPhotoReference.h */,
+				AB59BE45222DE08900190925 /* JKMarsPhotoReference.m */,
+			);
+			path = JKMarsPhotoReference;
+			sourceTree = "<group>";
+		};
+		AB59BE48222DE0A500190925 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D91DA2237169700A8FEF8 /* Cache */,
+				AB59BE54222DE18D00190925 /* Camera.swift */,
+				AB59BE47222DE09000190925 /* JKMarsPhotoReference */,
+				AB59BE4C222DE0C900190925 /* JKMarsRover */,
+				AB59BE50222DE0EC00190925 /* JKSolDescription */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB59BE4C222DE0C900190925 /* JKMarsRover */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE49222DE0C400190925 /* JKMarsRover.h */,
+				AB59BE4A222DE0C400190925 /* JKMarsRover.m */,
+			);
+			path = JKMarsRover;
+			sourceTree = "<group>";
+		};
+		AB59BE50222DE0EC00190925 /* JKSolDescription */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE4D222DE0E600190925 /* JKSolDescription.h */,
+				AB59BE4E222DE0E600190925 /* JKSolDescription.m */,
+			);
+			path = JKSolDescription;
+			sourceTree = "<group>";
+		};
+		AB59BE54222DE18D00190925 /* Camera.swift */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE52222DE16A00190925 /* Camera.swift */,
+				AB59BE51222DE16A00190925 /* Astronomy-ObjC-Bridging-Header.h */,
+			);
+			path = Camera.swift;
+			sourceTree = "<group>";
+		};
+		AB59BE55222DE88E00190925 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE5B222DE99A00190925 /* ImageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB59BE56222DE89A00190925 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB59BE57222DE8DA00190925 /* PhotoDetailViewController.swift */,
+				AB59BE59222DE94500190925 /* PhotosCollectionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB7D91DA2237169700A8FEF8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D91D72237167E00A8FEF8 /* JKCache.h */,
+				AB7D91D82237167E00A8FEF8 /* JKCache.m */,
+			);
+			name = Cache;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AB7D91E322371E0C00A8FEF8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D91DB223716E100A8FEF8 /* JKMarsRoverClient.h */,
+				AB7D91DC223716E100A8FEF8 /* JKMarsRoverClient.m */,
+				AB7D91DF2237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.h */,
+				AB7D91E02237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +214,7 @@
 				TargetAttributes = {
 					AB59BE26222DAEB200190925 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -141,9 +254,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB59BE2F222DAEB200190925 /* ViewController.m in Sources */,
+				AB7D91E12237189300A8FEF8 /* NSURLSession+JKNetworkDataLoader.m in Sources */,
+				AB59BE4F222DE0E600190925 /* JKSolDescription.m in Sources */,
 				AB59BE3A222DAEB400190925 /* main.m in Sources */,
 				AB59BE2C222DAEB200190925 /* AppDelegate.m in Sources */,
+				AB59BE4B222DE0C400190925 /* JKMarsRover.m in Sources */,
+				AB59BE46222DE08900190925 /* JKMarsPhotoReference.m in Sources */,
+				AB59BE53222DE16A00190925 /* Camera.swift in Sources */,
+				AB59BE5C222DE99A00190925 /* ImageCollectionViewCell.swift in Sources */,
+				AB7D91D92237167E00A8FEF8 /* JKCache.m in Sources */,
+				AB59BE5A222DE94500190925 /* PhotosCollectionViewController.swift in Sources */,
+				AB7D91DD223716E100A8FEF8 /* JKMarsRoverClient.m in Sources */,
+				AB59BE58222DE8DA00190925 /* PhotoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +407,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HSRQC9N69B;
 				INFOPLIST_FILE = "Astronomy-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +418,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jkaunert.Astronomy-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy-ObjC/Models/Camera.swift/Astronomy-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,7 +429,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HSRQC9N69B;
 				INFOPLIST_FILE = "Astronomy-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +440,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jkaunert.Astronomy-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy-ObjC/Models/Camera.swift/Astronomy-ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
