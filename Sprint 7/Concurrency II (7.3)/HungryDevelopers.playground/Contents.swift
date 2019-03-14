@@ -50,8 +50,12 @@ class Developer {
     
     func eat() {
         //shoud pause for random amount of time before putting both spoons down usleep()
-        usleep(1000)
+        usleep(2000)
         print("\(devNumber) is eating")
+        rightSpoon.putDown()
+        print("\(devNumber) put down right spoon")
+        leftSpoon.putDown()
+        print("\(devNumber) put down left spoon")
     }
     
     func run() {
