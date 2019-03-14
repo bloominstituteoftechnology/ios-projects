@@ -1,0 +1,11 @@
+framework module FlareSwift {
+  umbrella header "FlareSwift.h"
+
+  export *
+  module * { export * }
+}
+
+module FlareSwift.Swift {
+    header "FlareSwift-Swift.h"
+    requires objc
+}

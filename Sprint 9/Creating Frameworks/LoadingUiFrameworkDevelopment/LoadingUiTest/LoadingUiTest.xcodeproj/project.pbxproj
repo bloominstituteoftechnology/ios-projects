@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A2AD36EF223A4C58001FCEA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD36EE223A4C58001FCEA2 /* AppDelegate.swift */; };
-		A2AD36F1223A4C58001FCEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD36F0223A4C58001FCEA2 /* ViewController.swift */; };
 		A2AD36F4223A4C58001FCEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F2223A4C58001FCEA2 /* Main.storyboard */; };
 		A2AD36F6223A4C59001FCEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */; };
 		A2AD36F9223A4C59001FCEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F7223A4C59001FCEA2 /* LaunchScreen.storyboard */; };
 		A2AD3707223A4E9F001FCEA2 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */; };
 		A2AD3708223A4E9F001FCEA2 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2AD3711223A67B9001FCEA2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD3710223A67B9001FCEA2 /* TestViewController.swift */; };
+		A2AD3714223A70D1001FCEA2 /* FlareSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3712223A70C2001FCEA2 /* FlareSwift.framework */; };
+		A2AD3715223A70D1001FCEA2 /* FlareSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3712223A70C2001FCEA2 /* FlareSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A2AD3708223A4E9F001FCEA2 /* LoadingUI.framework in Embed Frameworks */,
+				A2AD3715223A70D1001FCEA2 /* FlareSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,12 +53,13 @@
 /* Begin PBXFileReference section */
 		A2AD36EB223A4C58001FCEA2 /* LoadingUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AD36EE223A4C58001FCEA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2AD36F0223A4C58001FCEA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2AD36F3223A4C58001FCEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AD36F8223A4C59001FCEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2AD36FA223A4C59001FCEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingUI.xcodeproj; path = ../../../LoadingUI/LoadingUI.xcodeproj; sourceTree = "<group>"; };
+		A2AD3710223A67B9001FCEA2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		A2AD3712223A70C2001FCEA2 /* FlareSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FlareSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AD3714223A70D1001FCEA2 /* FlareSwift.framework in Frameworks */,
 				A2AD3707223A4E9F001FCEA2 /* LoadingUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				A2AD36EE223A4C58001FCEA2 /* AppDelegate.swift */,
-				A2AD36F0223A4C58001FCEA2 /* ViewController.swift */,
 				A2AD36F2223A4C58001FCEA2 /* Main.storyboard */,
+				A2AD3710223A67B9001FCEA2 /* TestViewController.swift */,
 				A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */,
 				A2AD36F7223A4C59001FCEA2 /* LaunchScreen.storyboard */,
 				A2AD36FA223A4C59001FCEA2 /* Info.plist */,
@@ -103,6 +108,7 @@
 		A2AD3700223A4E0A001FCEA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2AD3712223A70C2001FCEA2 /* FlareSwift.framework */,
 				A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */,
 			);
 			path = Frameworks;
@@ -205,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AD36F1223A4C58001FCEA2 /* ViewController.swift in Sources */,
+				A2AD3711223A67B9001FCEA2 /* TestViewController.swift in Sources */,
 				A2AD36EF223A4C58001FCEA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +368,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HEVSJ2C5DD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoadingUiTest/Frameworks",
+				);
 				INFOPLIST_FILE = LoadingUiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +390,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HEVSJ2C5DD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoadingUiTest/Frameworks",
+				);
 				INFOPLIST_FILE = LoadingUiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
