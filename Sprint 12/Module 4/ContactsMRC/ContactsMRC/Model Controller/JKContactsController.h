@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "JKContact.h"
 
 @interface JKContactsController : NSObject
 
+@property (nonatomic, readonly, strong, nonnull) NSMutableArray<JKContact *> *savedContacts;
+
+- (instancetype)init;
+
+- (void)saveContactWithName:(NSString *)name
+                      email:(NSString *)phone
+                      email:(NSString *)email;
+
 @end
 
-NS_ASSUME_NONNULL_END

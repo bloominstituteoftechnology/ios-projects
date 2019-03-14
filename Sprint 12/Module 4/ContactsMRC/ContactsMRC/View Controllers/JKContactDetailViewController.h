@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKContactsController.h"
+#import "JKContactsTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JKContactDetailViewController : UIViewController
+@interface JKContactDetailViewController : UIViewController 
+
+@property (nonatomic, nullable, strong) JKContact *contact;
+@property (nonatomic, nullable, strong) JKContactsController *contactController;
 
 @end
 

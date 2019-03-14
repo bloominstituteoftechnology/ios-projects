@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKContactDetailViewController.h"
+#import "JKContactsController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

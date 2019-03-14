@@ -8,7 +8,18 @@
 
 #import "JKContactDetailViewController.h"
 
-@interface JKContactDetailViewController ()
+
+@interface JKContactDetailViewController ()<UITextFieldDelegate>
+
+
+@property (retain, nonatomic) IBOutlet UITextField *contactNameTextField;
+
+@property (retain, nonatomic) IBOutlet UITextField *contactPhoneTextField;
+
+@property (retain, nonatomic) IBOutlet UITextField *contactEmailTextField;
+
+@property (nonatomic, readonly, nonnull) NSMutableArray<JKContact *> *savedContacts;
+
 
 @end
 
@@ -16,17 +27,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    @autoreleasepool {
+        _savedContacts = [[NSMutableArray alloc] init];
+
+    }
+
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (IBAction)saveContact:(id)sender {
+    @autoreleasepool {
+         _contact = [[JKContact alloc] initWithName:_contactNameTextField.text email:_contactEmailTextField.text phone:_contactPhoneTextField.text];
+    }
+   
+    [_savedContacts addObject:_contact];
+    NSLog(@"%@", [_savedContacts firstObject]);
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
-*/
 
+
+- (void)dealloc {
+    [_contactNameTextField release];
+    [_contactPhoneTextField release];
+    [_contactEmailTextField release];
+    [_contact release];
+    [super dealloc];
+}
 @end
