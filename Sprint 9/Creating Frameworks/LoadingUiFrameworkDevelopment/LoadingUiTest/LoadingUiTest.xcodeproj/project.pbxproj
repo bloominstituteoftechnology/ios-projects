@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,40 @@
 		A2AD36F4223A4C58001FCEA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F2223A4C58001FCEA2 /* Main.storyboard */; };
 		A2AD36F6223A4C59001FCEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */; };
 		A2AD36F9223A4C59001FCEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AD36F7223A4C59001FCEA2 /* LaunchScreen.storyboard */; };
+		A2AD3707223A4E9F001FCEA2 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */; };
+		A2AD3708223A4E9F001FCEA2 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2AD3705223A4E5A001FCEA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A2AD36D6223A49C9001FCEA2;
+			remoteInfo = LoadingUI;
+		};
+		A2AD3709223A4E9F001FCEA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A2AD36D5223A49C9001FCEA2;
+			remoteInfo = LoadingUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2AD370B223A4E9F001FCEA2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2AD3708223A4E9F001FCEA2 /* LoadingUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A2AD36EB223A4C58001FCEA2 /* LoadingUiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingUiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +55,7 @@
 		A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AD36F8223A4C59001FCEA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2AD36FA223A4C59001FCEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LoadingUI.xcodeproj; path = ../../../LoadingUI/LoadingUI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AD3707223A4E9F001FCEA2 /* LoadingUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +95,25 @@
 				A2AD36F5223A4C59001FCEA2 /* Assets.xcassets */,
 				A2AD36F7223A4C59001FCEA2 /* LaunchScreen.storyboard */,
 				A2AD36FA223A4C59001FCEA2 /* Info.plist */,
+				A2AD3700223A4E0A001FCEA2 /* Frameworks */,
 			);
 			path = LoadingUiTest;
+			sourceTree = "<group>";
+		};
+		A2AD3700223A4E0A001FCEA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2AD3702223A4E5A001FCEA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +126,12 @@
 				A2AD36E7223A4C58001FCEA2 /* Sources */,
 				A2AD36E8223A4C58001FCEA2 /* Frameworks */,
 				A2AD36E9223A4C58001FCEA2 /* Resources */,
+				A2AD370B223A4E9F001FCEA2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A2AD370A223A4E9F001FCEA2 /* PBXTargetDependency */,
 			);
 			name = LoadingUiTest;
 			productName = LoadingUiTest;
@@ -100,7 +154,7 @@
 				};
 			};
 			buildConfigurationList = A2AD36E6223A4C58001FCEA2 /* Build configuration list for PBXProject "LoadingUiTest" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -110,12 +164,28 @@
 			mainGroup = A2AD36E2223A4C58001FCEA2;
 			productRefGroup = A2AD36EC223A4C58001FCEA2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A2AD3702223A4E5A001FCEA2 /* Products */;
+					ProjectRef = A2AD3701223A4E5A001FCEA2 /* LoadingUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A2AD36EA223A4C58001FCEA2 /* LoadingUiTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A2AD3706223A4E5A001FCEA2 /* LoadingUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LoadingUI.framework;
+			remoteRef = A2AD3705223A4E5A001FCEA2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A2AD36E9223A4C58001FCEA2 /* Resources */ = {
@@ -141,6 +211,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2AD370A223A4E9F001FCEA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoadingUI;
+			targetProxy = A2AD3709223A4E9F001FCEA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A2AD36F2223A4C58001FCEA2 /* Main.storyboard */ = {
