@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39AD65C2224D68AC0051CA15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65C1224D68AC0051CA15 /* AppDelegate.m */; };
+		39AD65C8224D68AC0051CA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AD65C6224D68AC0051CA15 /* Main.storyboard */; };
+		39AD65CA224D68AE0051CA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AD65C9224D68AE0051CA15 /* Assets.xcassets */; };
+		39AD65CD224D68AE0051CA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AD65CB224D68AE0051CA15 /* LaunchScreen.storyboard */; };
+		39AD65D0224D68AE0051CA15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65CF224D68AE0051CA15 /* main.m */; };
+		39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39AD65BD224D68AC0051CA15 /* RPN Calculator Obj-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPN Calculator Obj-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39AD65C0224D68AC0051CA15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		39AD65C1224D68AC0051CA15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		39AD65C7224D68AC0051CA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39AD65C9224D68AE0051CA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39AD65CC224D68AE0051CA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		39AD65CE224D68AE0051CA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39AD65CF224D68AE0051CA15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39AD65D9224D69540051CA15 /* MJRCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRCalculatorViewController.h; sourceTree = "<group>"; };
+		39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRCalculatorViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39AD65BA224D68AC0051CA15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39AD65B4224D68AC0051CA15 = {
+			isa = PBXGroup;
+			children = (
+				39AD65BF224D68AC0051CA15 /* RPN Calculator Obj-C */,
+				39AD65BE224D68AC0051CA15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39AD65BE224D68AC0051CA15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39AD65BD224D68AC0051CA15 /* RPN Calculator Obj-C.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39AD65BF224D68AC0051CA15 /* RPN Calculator Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				39AD65D7224D69060051CA15 /* Storyboards */,
+				39AD65D8224D69140051CA15 /* View Controllers */,
+				39AD65D6224D68D70051CA15 /* Resources */,
+				39AD65CE224D68AE0051CA15 /* Info.plist */,
+			);
+			path = "RPN Calculator Obj-C";
+			sourceTree = "<group>";
+		};
+		39AD65D6224D68D70051CA15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39AD65C0224D68AC0051CA15 /* AppDelegate.h */,
+				39AD65C1224D68AC0051CA15 /* AppDelegate.m */,
+				39AD65C9224D68AE0051CA15 /* Assets.xcassets */,
+				39AD65CF224D68AE0051CA15 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		39AD65D7224D69060051CA15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				39AD65C6224D68AC0051CA15 /* Main.storyboard */,
+				39AD65CB224D68AE0051CA15 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39AD65D8224D69140051CA15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39AD65D9224D69540051CA15 /* MJRCalculatorViewController.h */,
+				39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39AD65BC224D68AC0051CA15 /* RPN Calculator Obj-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39AD65D3224D68AE0051CA15 /* Build configuration list for PBXNativeTarget "RPN Calculator Obj-C" */;
+			buildPhases = (
+				39AD65B9224D68AC0051CA15 /* Sources */,
+				39AD65BA224D68AC0051CA15 /* Frameworks */,
+				39AD65BB224D68AC0051CA15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RPN Calculator Obj-C";
+			productName = "RPN Calculator Obj-C";
+			productReference = 39AD65BD224D68AC0051CA15 /* RPN Calculator Obj-C.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39AD65B5224D68AC0051CA15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MJR;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Moses Robinson";
+				TargetAttributes = {
+					39AD65BC224D68AC0051CA15 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 39AD65B8224D68AC0051CA15 /* Build configuration list for PBXProject "RPN Calculator Obj-C" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39AD65B4224D68AC0051CA15;
+			productRefGroup = 39AD65BE224D68AC0051CA15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39AD65BC224D68AC0051CA15 /* RPN Calculator Obj-C */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39AD65BB224D68AC0051CA15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AD65CD224D68AE0051CA15 /* LaunchScreen.storyboard in Resources */,
+				39AD65CA224D68AE0051CA15 /* Assets.xcassets in Resources */,
+				39AD65C8224D68AC0051CA15 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39AD65B9224D68AC0051CA15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */,
+				39AD65D0224D68AE0051CA15 /* main.m in Sources */,
+				39AD65C2224D68AC0051CA15 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39AD65C6224D68AC0051CA15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39AD65C7224D68AC0051CA15 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		39AD65CB224D68AE0051CA15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39AD65CC224D68AE0051CA15 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39AD65D1224D68AE0051CA15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39AD65D2224D68AE0051CA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39AD65D4224D68AE0051CA15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZRKC88876;
+				INFOPLIST_FILE = "RPN Calculator Obj-C/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosesrobinson.RPN-Calculator-Obj-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		39AD65D5224D68AE0051CA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZRKC88876;
+				INFOPLIST_FILE = "RPN Calculator Obj-C/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mosesrobinson.RPN-Calculator-Obj-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39AD65B8224D68AC0051CA15 /* Build configuration list for PBXProject "RPN Calculator Obj-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39AD65D1224D68AE0051CA15 /* Debug */,
+				39AD65D2224D68AE0051CA15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39AD65D3224D68AE0051CA15 /* Build configuration list for PBXNativeTarget "RPN Calculator Obj-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39AD65D4224D68AE0051CA15 /* Debug */,
+				39AD65D5224D68AE0051CA15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39AD65B5224D68AC0051CA15 /* Project object */;
+}
