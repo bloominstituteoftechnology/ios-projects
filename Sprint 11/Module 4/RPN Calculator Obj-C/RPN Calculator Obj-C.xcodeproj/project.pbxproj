@@ -14,6 +14,7 @@
 		39AD65D0224D68AE0051CA15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65CF224D68AE0051CA15 /* main.m */; };
 		39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */; };
 		39AD65DF224D84C50051CA15 /* MJRStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65DE224D84C50051CA15 /* MJRStack.m */; };
+		39AD65E2224D88B80051CA15 /* MJRCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65E1224D88B80051CA15 /* MJRCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRCalculatorViewController.m; sourceTree = "<group>"; };
 		39AD65DD224D84C50051CA15 /* MJRStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRStack.h; sourceTree = "<group>"; };
 		39AD65DE224D84C50051CA15 /* MJRStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRStack.m; sourceTree = "<group>"; };
+		39AD65E0224D88B80051CA15 /* MJRCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRCalculator.h; sourceTree = "<group>"; };
+		39AD65E1224D88B80051CA15 /* MJRCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				39AD65DD224D84C50051CA15 /* MJRStack.h */,
 				39AD65DE224D84C50051CA15 /* MJRStack.m */,
+				39AD65E0224D88B80051CA15 /* MJRCalculator.h */,
+				39AD65E1224D88B80051CA15 /* MJRCalculator.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			files = (
 				39AD65DF224D84C50051CA15 /* MJRStack.m in Sources */,
 				39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */,
+				39AD65E2224D88B80051CA15 /* MJRCalculator.m in Sources */,
 				39AD65D0224D68AE0051CA15 /* main.m in Sources */,
 				39AD65C2224D68AC0051CA15 /* AppDelegate.m in Sources */,
 			);
