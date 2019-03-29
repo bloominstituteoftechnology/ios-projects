@@ -15,6 +15,7 @@
 		39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65DA224D69540051CA15 /* MJRCalculatorViewController.m */; };
 		39AD65DF224D84C50051CA15 /* MJRStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65DE224D84C50051CA15 /* MJRStack.m */; };
 		39AD65E2224D88B80051CA15 /* MJRCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65E1224D88B80051CA15 /* MJRCalculator.m */; };
+		39AD65E5224DDA390051CA15 /* MJRDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD65E4224DDA390051CA15 /* MJRDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		39AD65DE224D84C50051CA15 /* MJRStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRStack.m; sourceTree = "<group>"; };
 		39AD65E0224D88B80051CA15 /* MJRCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRCalculator.h; sourceTree = "<group>"; };
 		39AD65E1224D88B80051CA15 /* MJRCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRCalculator.m; sourceTree = "<group>"; };
+		39AD65E3224DDA390051CA15 /* MJRDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRDigitAccumulator.h; sourceTree = "<group>"; };
+		39AD65E4224DDA390051CA15 /* MJRDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,8 @@
 		39AD65BF224D68AC0051CA15 /* RPN Calculator Obj-C */ = {
 			isa = PBXGroup;
 			children = (
-				39AD65DC224D84A70051CA15 /* Model */,
 				39AD65D7224D69060051CA15 /* Storyboards */,
+				39AD65DC224D84A70051CA15 /* Model */,
 				39AD65D8224D69140051CA15 /* View Controllers */,
 				39AD65D6224D68D70051CA15 /* Resources */,
 				39AD65CE224D68AE0051CA15 /* Info.plist */,
@@ -109,6 +112,8 @@
 				39AD65DE224D84C50051CA15 /* MJRStack.m */,
 				39AD65E0224D88B80051CA15 /* MJRCalculator.h */,
 				39AD65E1224D88B80051CA15 /* MJRCalculator.m */,
+				39AD65E3224DDA390051CA15 /* MJRDigitAccumulator.h */,
+				39AD65E4224DDA390051CA15 /* MJRDigitAccumulator.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			files = (
 				39AD65DF224D84C50051CA15 /* MJRStack.m in Sources */,
 				39AD65DB224D69540051CA15 /* MJRCalculatorViewController.m in Sources */,
+				39AD65E5224DDA390051CA15 /* MJRDigitAccumulator.m in Sources */,
 				39AD65E2224D88B80051CA15 /* MJRCalculator.m in Sources */,
 				39AD65D0224D68AE0051CA15 /* main.m in Sources */,
 				39AD65C2224D68AC0051CA15 /* AppDelegate.m in Sources */,
