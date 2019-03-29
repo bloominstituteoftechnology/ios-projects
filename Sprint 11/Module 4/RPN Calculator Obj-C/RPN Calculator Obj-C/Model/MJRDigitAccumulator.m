@@ -30,7 +30,8 @@
     if (value < 0 || value > 9) { return; }
     
     NSNumber *digit = [NSNumber numberWithInteger:value];
-    [self.digits addObject:digit];
+    NSString *digitString = [NSString stringWithFormat:@"%@",digit];
+    [self.digits addObject:digitString];
 }
 
 - (void)addDecimalPoint
