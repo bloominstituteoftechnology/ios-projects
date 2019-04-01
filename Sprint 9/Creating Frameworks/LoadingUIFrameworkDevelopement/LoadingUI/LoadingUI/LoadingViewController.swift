@@ -21,7 +21,7 @@ public class LoadingViewController: UIViewController {
     
     private func createView() {
         
-        let frame = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 60, height: 60)
+        let frame = CGRect(x: view.bounds.midX - 60/2, y: view.bounds.midY - 60/2, width: 60, height: 60)
         
         indeterminateLoadingView = IndeterminateLoadingView(frame: frame)
         
