@@ -12,6 +12,7 @@
 		39A9793D2252DB5B00F694E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39A9793C2252DB5B00F694E1 /* Assets.xcassets */; };
 		39A979402252DB5B00F694E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A9793E2252DB5B00F694E1 /* LaunchScreen.storyboard */; };
 		39A979432252DB5B00F694E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A979422252DB5B00F694E1 /* main.m */; };
+		39A9795122533C5F00F694E1 /* MarPhotoReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A9795022533C5E00F694E1 /* MarPhotoReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		39A9793F2252DB5B00F694E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39A979412252DB5B00F694E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39A979422252DB5B00F694E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39A9794F22533C5E00F694E1 /* Astronomy - ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy - ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		39A9795022533C5E00F694E1 /* MarPhotoReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarPhotoReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +58,10 @@
 		39A979322252DB5900F694E1 /* Astronomy - ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				39A9794B22533B2900F694E1 /* Model */,
 				39A9794E22533B4E00F694E1 /* Views */,
 				39A9794D22533B4000F694E1 /* View Controllers */,
 				39A9794C22533B3400F694E1 /* Networking */,
-				39A9794B22533B2900F694E1 /* Model */,
 				39A9794A2252DC3B00F694E1 /* Storyboards */,
 				39A979492252DC2700F694E1 /* Resources */,
 			);
@@ -89,6 +92,8 @@
 		39A9794B22533B2900F694E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39A9795022533C5E00F694E1 /* MarPhotoReference.swift */,
+				39A9794F22533C5E00F694E1 /* Astronomy - ObjC-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				TargetAttributes = {
 					39A9792F2252DB5900F694E1 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -185,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A9795122533C5F00F694E1 /* MarPhotoReference.swift in Sources */,
 				39A979432252DB5B00F694E1 /* main.m in Sources */,
 				39A979352252DB5900F694E1 /* AppDelegate.m in Sources */,
 			);
@@ -328,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZRKC88876;
 				INFOPLIST_FILE = "$(SRCROOT)/Astronomy - ObjC/Resources/Info.plist";
@@ -337,6 +345,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mosesrobinson.Astronomy---ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy - ObjC/Model/Astronomy - ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -345,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZRKC88876;
 				INFOPLIST_FILE = "$(SRCROOT)/Astronomy - ObjC/Resources/Info.plist";
@@ -354,6 +366,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mosesrobinson.Astronomy---ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astronomy - ObjC/Model/Astronomy - ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

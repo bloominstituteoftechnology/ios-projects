@@ -54,7 +54,20 @@
                     <view key="view" contentMode="scaleToFill" id="bFl-7K-3du">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-eJ-cow">
+                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wdS-eJ-cow" secondAttribute="height" multiplier="1:1" id="m43-XE-hvA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wdS-eJ-cow" firstAttribute="leading" secondItem="FLg-57-sZ0" secondAttribute="leading" constant="20" id="dej-YV-HhD"/>
+                            <constraint firstItem="FLg-57-sZ0" firstAttribute="trailing" secondItem="wdS-eJ-cow" secondAttribute="trailing" constant="20" id="fe8-AN-yK3"/>
+                            <constraint firstItem="wdS-eJ-cow" firstAttribute="top" secondItem="FLg-57-sZ0" secondAttribute="top" constant="20" id="jb3-xQ-wYw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FLg-57-sZ0"/>
                     </view>
                 </viewController>
