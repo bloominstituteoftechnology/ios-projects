@@ -13,6 +13,8 @@
 		39A979402252DB5B00F694E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A9793E2252DB5B00F694E1 /* LaunchScreen.storyboard */; };
 		39A979432252DB5B00F694E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A979422252DB5B00F694E1 /* main.m */; };
 		39A9795122533C5F00F694E1 /* MarPhotoReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A9795022533C5E00F694E1 /* MarPhotoReference.swift */; };
+		39A9795422533D5900F694E1 /* MJRIMageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9795322533D5900F694E1 /* MJRIMageCollectionViewCell.m */; };
+		39A9795722533D7000F694E1 /* MJRPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9795622533D7000F694E1 /* MJRPhotosCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		39A979422252DB5B00F694E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39A9794F22533C5E00F694E1 /* Astronomy - ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy - ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		39A9795022533C5E00F694E1 /* MarPhotoReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarPhotoReference.swift; sourceTree = "<group>"; };
+		39A9795222533D5900F694E1 /* MJRIMageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRIMageCollectionViewCell.h; sourceTree = "<group>"; };
+		39A9795322533D5900F694E1 /* MJRIMageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRIMageCollectionViewCell.m; sourceTree = "<group>"; };
+		39A9795522533D7000F694E1 /* MJRPhotosCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		39A9795622533D7000F694E1 /* MJRPhotosCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRPhotosCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		39A9794D22533B4000F694E1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				39A9795522533D7000F694E1 /* MJRPhotosCollectionViewController.h */,
+				39A9795622533D7000F694E1 /* MJRPhotosCollectionViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +123,8 @@
 		39A9794E22533B4E00F694E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				39A9795222533D5900F694E1 /* MJRIMageCollectionViewCell.h */,
+				39A9795322533D5900F694E1 /* MJRIMageCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,8 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A9795722533D7000F694E1 /* MJRPhotosCollectionViewController.m in Sources */,
 				39A9795122533C5F00F694E1 /* MarPhotoReference.swift in Sources */,
 				39A979432252DB5B00F694E1 /* main.m in Sources */,
+				39A9795422533D5900F694E1 /* MJRIMageCollectionViewCell.m in Sources */,
 				39A979352252DB5900F694E1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
