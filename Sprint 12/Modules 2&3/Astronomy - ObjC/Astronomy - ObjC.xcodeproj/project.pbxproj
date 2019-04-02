@@ -55,6 +55,10 @@
 		39A979322252DB5900F694E1 /* Astronomy - ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				39A9794E22533B4E00F694E1 /* Views */,
+				39A9794D22533B4000F694E1 /* View Controllers */,
+				39A9794C22533B3400F694E1 /* Networking */,
+				39A9794B22533B2900F694E1 /* Model */,
 				39A9794A2252DC3B00F694E1 /* Storyboards */,
 				39A979492252DC2700F694E1 /* Resources */,
 			);
@@ -80,6 +84,34 @@
 				39A9793E2252DB5B00F694E1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39A9794B22533B2900F694E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39A9794C22533B3400F694E1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		39A9794D22533B4000F694E1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		39A9794E22533B4E00F694E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
