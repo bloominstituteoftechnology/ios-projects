@@ -15,6 +15,7 @@
 		4857664C2239D53600C828C5 /* LoadingUITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857664B2239D53600C828C5 /* LoadingUITestTests.swift */; };
 		485766572239D76100C828C5 /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485766562239D76100C828C5 /* LoadingUI.framework */; };
 		485766582239D76100C828C5 /* LoadingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485766562239D76100C828C5 /* LoadingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4857665B2239DB5500C828C5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4857665A2239DB5500C828C5 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4857664B2239D53600C828C5 /* LoadingUITestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITestTests.swift; sourceTree = "<group>"; };
 		4857664D2239D53600C828C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		485766562239D76100C828C5 /* LoadingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoadingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4857665A2239DB5500C828C5 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				485766362239D53400C828C5 /* AppDelegate.swift */,
 				485766382239D53400C828C5 /* ViewController.swift */,
+				4857665A2239DB5500C828C5 /* LoadingViewController.swift */,
 				4857663A2239D53400C828C5 /* Main.storyboard */,
 				4857663D2239D53600C828C5 /* Assets.xcassets */,
 				4857663F2239D53600C828C5 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			files = (
 				485766392239D53400C828C5 /* ViewController.swift in Sources */,
 				485766372239D53400C828C5 /* AppDelegate.swift in Sources */,
+				4857665B2239DB5500C828C5 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
