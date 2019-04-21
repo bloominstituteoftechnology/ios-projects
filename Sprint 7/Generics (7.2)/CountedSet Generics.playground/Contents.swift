@@ -24,6 +24,7 @@ struct CountedSet<Element: Hashable> {
                 return 0
             }
         }
+        return count
     }
     
     subscript(_ member: Element) -> Int{
