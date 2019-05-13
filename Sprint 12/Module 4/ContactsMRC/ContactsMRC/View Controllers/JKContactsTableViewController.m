@@ -9,9 +9,11 @@
 #import "JKContactsTableViewController.h"
 
 
-@interface JKContactsTableViewController () 
+@interface JKContactsTableViewController () {
+    JKContactsController *sharedController;
+}
 
-@property (nonatomic, retain, nonnull) JKContactsController *contactController;
+//@property (nonatomic, retain, nonnull) JKContactsController *sharedController;
 
 
 @end
@@ -21,13 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    @autoreleasepool {
-    _contactController = [[JKContactsController alloc] init];
-    }
+//    JKContactsController *sharedController = [JKContactsController sharedController];
+//    @autoreleasepool {
+//    _contactController = [[JKContactsController alloc] init];
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [super viewWillAppear:YES];
      [[self tableView] reloadData];
 }
 
@@ -36,7 +39,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.contactController.savedContacts.count;
+    return sharedController.savedContacts.count;
 }
 
 
@@ -44,7 +47,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    JKContact *contact = [self.contactController.savedContacts objectAtIndex:indexPath.row];
+    JKContact *contact = [sharedController.savedContacts objectAtIndex:indexPath.row];
     cell.textLabel.text = contact.name;
     return cell;
 }
@@ -56,13 +59,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"AddContactView"]) {
         JKContactDetailViewController *destinationVC = [segue destinationViewController];
-        destinationVC.contactController = self.contactController;
+        //destinationVC.sharedController = sharedController;
     }else if ([segue.identifier isEqual:@"ContactDetailView"]) {
         JKContactDetailViewController *destinationVC = [segue destinationViewController];
-        destinationVC.contactController = self.contactController;
+        //destinationVC.sharedController = sharedController;
         NSIndexPath *selectedRow = self.tableView.indexPathForSelectedRow;
         NSInteger row = selectedRow.row;
-        JKContact *contact = [self.contactController.savedContacts objectAtIndex:row];
+        JKContact *contact = [sharedController.savedContacts objectAtIndex:row];
         destinationVC.contact = contact;
     }
 }

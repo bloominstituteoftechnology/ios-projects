@@ -8,27 +8,45 @@
 
 #import "JKContactsController.h"
 
-@implementation JKContactsController {
-    NSMutableArray *_savedContacts;
+@implementation JKContactsController
+
++ (id)sharedController {
+    static JKContactsController *sharedController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedController = [[self alloc] init];
+    });
+    return sharedController;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self != nil){
-        @autoreleasepool {
-            _savedContacts = [[NSMutableArray array] retain];
-        }
-        
-        
+- (id)init {
+    if (self = [super init]) {
+        _savedContacts = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (void)saveContactWithName:(NSString *)name email:(NSString *)phone email:(NSString *)email {
-    JKContact *contact = [[JKContact alloc]initWithName:name email:email phone:phone];
-    [_savedContacts addObject:contact];
+- (void)dealloc {
+    
 }
+
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self != nil){
+//        @autoreleasepool {
+//            _savedContacts = [[NSMutableArray array] retain];
+//        }
+//
+//
+//    }
+//    return self;
+//}
+
+//- (void)saveContactWithName:(NSString *)name email:(NSString *)phone email:(NSString *)email {
+//    JKContact *contact = [[JKContact alloc]initWithName:name email:email phone:phone];
+//    [_savedContacts addObject:contact];
+//}
 
 
 

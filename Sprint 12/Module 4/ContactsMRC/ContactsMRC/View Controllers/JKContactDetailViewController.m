@@ -18,7 +18,7 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *contactEmailTextField;
 
-@property (nonatomic, readonly, nonnull) NSMutableArray<JKContact *> *savedContacts;
+//@property (nonatomic, readonly, nonnull) NSMutableArray<JKContact *> *savedContacts;
 
 
 @end
@@ -27,10 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    @autoreleasepool {
-        _savedContacts = [[NSMutableArray alloc] init];
-
-    }
+//    @autoreleasepool {
+//        sharedController.savedContacts = [[NSMutableArray alloc] init];
+//
+//    }
 
     
 }
@@ -42,8 +42,8 @@
          _contact = [[JKContact alloc] initWithName:_contactNameTextField.text email:_contactEmailTextField.text phone:_contactPhoneTextField.text];
     }
    
-    [_savedContacts addObject:_contact];
-    NSLog(@"%@", [_savedContacts firstObject]);
+    [sharedController.savedContacts addObject:_contact];
+    NSLog(@"%@", [sharedController.savedContacts firstObject]);
     [self.navigationController popViewControllerAnimated:YES];
     
 }

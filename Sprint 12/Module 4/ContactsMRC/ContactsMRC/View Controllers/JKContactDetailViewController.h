@@ -12,10 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JKContactDetailViewController : UIViewController 
+@interface JKContactDetailViewController : UIViewController {
+    JKContactsController *sharedController;
+}
 
 @property (nonatomic, nullable, strong) JKContact *contact;
-@property (nonatomic, nullable, strong) JKContactsController *contactController;
+//@property (nonatomic, nullable, strong) JKContactsController *contactController;
 
 @end
 

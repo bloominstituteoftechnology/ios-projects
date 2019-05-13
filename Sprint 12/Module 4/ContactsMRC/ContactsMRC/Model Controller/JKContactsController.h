@@ -9,15 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "JKContact.h"
 
-@interface JKContactsController : NSObject
+@interface JKContactsController : NSObject {
+    NSMutableArray *_savedContacts;
+}
 
-@property (nonatomic, readonly, strong, nonnull) NSMutableArray<JKContact *> *savedContacts;
+@property (nonatomic, readonly, retain, nonnull) NSMutableArray<JKContact *> *savedContacts;
 
-- (instancetype)init;
++ (id)sharedController;
 
-- (void)saveContactWithName:(NSString *)name
-                      email:(NSString *)phone
-                      email:(NSString *)email;
+//- (void)saveContactWithName:(NSString *)name
+//                      email:(NSString *)phone
+//                      email:(NSString *)email;
 
 @end
 
