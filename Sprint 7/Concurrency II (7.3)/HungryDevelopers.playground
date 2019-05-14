@@ -1,0 +1,108 @@
+import Cocoa
+
+var str = "Hello, Jerrick"
+print(str)
+
+/*
+ To recap the algorithm you're writing here, each developer will:
+ 
+ think until the left spoon is available; when it is, pick it up;
+ think until the right spoon is available; when it is, pick it up;
+ when both spoons are held, eat for a fixed amount of time;
+ then, put the right spoon down;
+ then, put the left spoon down;
+ repeat from the beginning.
+ 
+ */
+
+class Spoon {
+    
+    var index: Int = 0
+    var inHand: Bool = false
+    var lock = NSLock()
+    
+    
+    init(_ index: Int) {
+        self.index = index
+    }
+    
+
+    func pickUp(){
+        inHand = true
+        lock.lock()
+    }
+    
+    func putDown(){
+        inHand = false
+        lock.unlock()
+    }
+    
+}
+
+//Initialize 5 spoons from 1 - 5
+let spoon1 = Spoon(1)
+let spoon2 = Spoon(2)
+let spoon3 = Spoon(3)
+let spoon4 = Spoon(4)
+let spoon5 = Spoon(5)
+
+let spoons: [Spoon] = [spoon1, spoon2, spoon3, spoon4, spoon5]
+
+class Developer {
+    
+    var rightSpoon: Spoon
+    var leftSpoon: Spoon
+    var number: Int = 0
+    
+    init(_ number: Int, rightSpoon: Spoon, leftSpoon: Spoon) {
+        self.number = number
+        self.rightSpoon = rightSpoon
+        self.leftSpoon = leftSpoon
+    }
+    
+    func think() {
+        // return both spoons
+        if leftSpoon.index < rightSpoon.index {
+            leftSpoon.pickUp()
+            rightSpoon.pickUp()
+        } else {
+            rightSpoon.pickUp()
+            leftSpoon.pickUp()
+        }
+        print("Developer \(number) is trying to solve fuzzy match")
+    }
+    
+    func eat() {
+        // pause for a random amount of time before putting both spoons down.
+        usleep(UInt32.random(in: 1...1000))
+        rightSpoon.putDown()
+        usleep(UInt32.random(in: 1...1000))
+        leftSpoon.putDown()
+        print("Developer \(number) is chowing down")
+    }
+    
+    func run() {
+        for _ in 1...40000 {
+            think()
+            eat()
+        }
+    }
+}
+
+
+
+//Initialize 5 developers who share 5 spoons.
+let developer1 = Developer(1, rightSpoon: spoon2, leftSpoon: spoon1)
+let developer2 = Developer(2, rightSpoon: spoon3, leftSpoon: spoon2)
+let developer3 = Developer(3, rightSpoon: spoon4, leftSpoon: spoon3)
+let developer4 = Developer(4, rightSpoon: spoon5, leftSpoon: spoon4)
+let developer5 = Developer(5, rightSpoon: spoon1, leftSpoon: spoon5)
+
+let developers: [Developer] = [developer1, developer2, developer3, developer4, developer5]
+
+
+//run concurrent perform task.
+// anything above 5 iterations causes error ?? is that because there are only 5 developmers
+DispatchQueue.concurrentPerform(iterations: 5) {
+    developers[$0].run()
+}
