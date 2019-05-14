@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8m-YX-jVm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lkr-8v-v3k">
+            <objects>
+                <navigationController id="O8m-YX-jVm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JHj-Th-N1L">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f5d-gw-F6L" kind="relationship" relationship="rootViewController" id="OV4-os-9LV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JB1-qG-buG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="500"/>
+        </scene>
+        <!--User Rating: 1 star-->
+        <scene sceneID="vSy-pb-HXP">
+            <objects>
+                <viewController id="f5d-gw-F6L" customClass="ViewController" customModule="UserStarRating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37O-tu-ycg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-Q7-zXq" customClass="CustomControl" customModule="UserStarRating" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.16862745100000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="f5d-gw-F6L" eventType="valueChanged" id="a2S-5j-gcs"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yfe-Q7-zXq" firstAttribute="centerX" secondItem="37O-tu-ycg" secondAttribute="centerX" id="8nj-28-xKD"/>
+                            <constraint firstItem="Yfe-Q7-zXq" firstAttribute="centerY" secondItem="37O-tu-ycg" secondAttribute="centerY" id="j61-0q-MsW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FEg-qr-Q5I"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Rating: 1 star" id="Nkv-jx-nlC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ij-ue-XuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="500"/>
+        </scene>
+    </scenes>
+</document>
