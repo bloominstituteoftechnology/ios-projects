@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadinationAnimatorView" customModule="LoadinationIndicator" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="o9h-sz-4GS"/>
+                <outlet property="statusBottomAnchor" destination="YxV-lK-fjE" id="x3I-dM-rsf"/>
+                <outlet property="statusLabel" destination="GCH-rq-1fz" id="zg1-De-7JU"/>
+                <outlet property="statusTopAnchor" destination="m5U-wB-K2j" id="3wS-Bn-Uuf"/>
+                <outletCollection property="animatedViews" destination="m3h-HC-g9u" collectionClass="NSMutableArray" id="dMd-Uh-8hY"/>
+                <outletCollection property="animatedViews" destination="wuE-Ye-AM3" collectionClass="NSMutableArray" id="XXX-ke-qYt"/>
+                <outletCollection property="animatedViews" destination="oIV-5c-r27" collectionClass="NSMutableArray" id="B9y-zh-qE1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="415"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Ig8-RR-4tf">
+                    <rect key="frame" x="130" y="197.5" width="130" height="20"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-HC-g9u">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="GLF-1B-hxI"/>
+                                <constraint firstAttribute="height" constant="20" id="L9Z-of-XEI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuE-Ye-AM3">
+                            <rect key="frame" x="55" y="0.0" width="20" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="XNh-fF-mq9"/>
+                                <constraint firstAttribute="height" constant="20" id="qZ7-hH-rz5"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIV-5c-r27">
+                            <rect key="frame" x="110" y="0.0" width="20" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="YX9-pz-rvQ"/>
+                                <constraint firstAttribute="height" constant="20" id="eD8-7H-DnV"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Bgx-fk-7yA"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Progress..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCH-rq-1fz">
+                    <rect key="frame" x="145" y="145" width="100" height="20.5"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.72205105633802813" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ig8-RR-4tf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LKC-2Q-k5w"/>
+                <constraint firstItem="Ig8-RR-4tf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ute-GO-ix9"/>
+                <constraint firstItem="GCH-rq-1fz" firstAttribute="top" secondItem="Ig8-RR-4tf" secondAttribute="bottom" constant="32" id="YxV-lK-fjE"/>
+                <constraint firstItem="GCH-rq-1fz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z7w-hT-rgn"/>
+                <constraint firstItem="Ig8-RR-4tf" firstAttribute="top" secondItem="GCH-rq-1fz" secondAttribute="bottom" constant="32" id="m5U-wB-K2j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="YxV-lK-fjE"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="114.49275362318842" y="-8.3705357142857135"/>
+        </view>
+    </objects>
+</document>
