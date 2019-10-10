@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  REPCalculatorViewController.h
 //  ObjC RPN Calc
 //
 //  Created by Michael Redig on 10/10/19.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface REPCalculatorViewController : UIViewController
 
 
 @end
