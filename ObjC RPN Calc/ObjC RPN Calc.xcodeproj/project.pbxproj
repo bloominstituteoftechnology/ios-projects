@@ -61,19 +61,27 @@
 		33AB7044234FDA8000110464 /* ObjC RPN Calc */ = {
 			isa = PBXGroup;
 			children = (
+				33AB704B234FDA8000110464 /* ViewController.h */,
+				33AB704C234FDA8000110464 /* ViewController.m */,
+				33AB705E234FDAA100110464 /* Misc */,
+			);
+			path = "ObjC RPN Calc";
+			sourceTree = "<group>";
+		};
+		33AB705E234FDAA100110464 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
 				33AB7045234FDA8000110464 /* AppDelegate.h */,
 				33AB7046234FDA8000110464 /* AppDelegate.m */,
 				33AB7048234FDA8000110464 /* SceneDelegate.h */,
 				33AB7049234FDA8000110464 /* SceneDelegate.m */,
-				33AB704B234FDA8000110464 /* ViewController.h */,
-				33AB704C234FDA8000110464 /* ViewController.m */,
 				33AB704E234FDA8000110464 /* Main.storyboard */,
 				33AB7051234FDA8100110464 /* Assets.xcassets */,
 				33AB7053234FDA8100110464 /* LaunchScreen.storyboard */,
 				33AB7056234FDA8100110464 /* Info.plist */,
 				33AB7057234FDA8100110464 /* main.m */,
 			);
-			path = "ObjC RPN Calc";
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
-				INFOPLIST_FILE = "ObjC RPN Calc/Info.plist";
+				INFOPLIST_FILE = "ObjC RPN Calc/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
-				INFOPLIST_FILE = "ObjC RPN Calc/Info.plist";
+				INFOPLIST_FILE = "ObjC RPN Calc/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
