@@ -10,7 +10,7 @@
 
 @interface REPStack : NSObject
 
-@property NSUInteger stackCount;
+@property (readonly) NSUInteger stackCount;
 
 - (instancetype)initWithValues:(NSArray*)values;
 

@@ -16,6 +16,10 @@
 
 @implementation REPStack
 
+- (NSUInteger)stackCount {
+	return self.values.count;
+}
+
 - (instancetype)init {
 	if (self = [super init]) {
 		_values = [NSMutableArray array];
