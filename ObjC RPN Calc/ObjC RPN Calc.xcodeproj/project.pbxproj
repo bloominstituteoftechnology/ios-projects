@@ -14,6 +14,7 @@
 		33AB7052234FDA8100110464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AB7051234FDA8100110464 /* Assets.xcassets */; };
 		33AB7055234FDA8100110464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AB7053234FDA8100110464 /* LaunchScreen.storyboard */; };
 		33AB7058234FDA8100110464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7057234FDA8100110464 /* main.m */; };
+		33AB7061234FDF8700110464 /* REPStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7060234FDF8700110464 /* REPStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		33AB7054234FDA8100110464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33AB7056234FDA8100110464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AB7057234FDA8100110464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33AB705F234FDF8700110464 /* REPStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPStack.h; sourceTree = "<group>"; };
+		33AB7060234FDF8700110464 /* REPStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 			children = (
 				33AB704B234FDA8000110464 /* REPCalculatorViewController.h */,
 				33AB704C234FDA8000110464 /* REPCalculatorViewController.m */,
+				33AB705F234FDF8700110464 /* REPStack.h */,
+				33AB7060234FDF8700110464 /* REPStack.m */,
 				33AB705E234FDAA100110464 /* Misc */,
 			);
 			path = "ObjC RPN Calc";
@@ -110,6 +115,7 @@
 		33AB703A234FDA8000110464 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = REP;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Red_Egg Productions";
 				TargetAttributes = {
@@ -157,6 +163,7 @@
 				33AB704D234FDA8000110464 /* REPCalculatorViewController.m in Sources */,
 				33AB7047234FDA8000110464 /* AppDelegate.m in Sources */,
 				33AB7058234FDA8100110464 /* main.m in Sources */,
+				33AB7061234FDF8700110464 /* REPStack.m in Sources */,
 				33AB704A234FDA8000110464 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
