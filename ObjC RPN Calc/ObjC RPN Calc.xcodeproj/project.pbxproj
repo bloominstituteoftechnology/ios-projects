@@ -16,6 +16,7 @@
 		33AB7058234FDA8100110464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7057234FDA8100110464 /* main.m */; };
 		33AB7061234FDF8700110464 /* REPStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7060234FDF8700110464 /* REPStack.m */; };
 		33AB7064234FE25C00110464 /* REPCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7063234FE25C00110464 /* REPCalculator.m */; };
+		33AB7067234FE61E00110464 /* REPDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7066234FE61E00110464 /* REPDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		33AB7060234FDF8700110464 /* REPStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPStack.m; sourceTree = "<group>"; };
 		33AB7062234FE25C00110464 /* REPCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPCalculator.h; sourceTree = "<group>"; };
 		33AB7063234FE25C00110464 /* REPCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPCalculator.m; sourceTree = "<group>"; };
+		33AB7065234FE61E00110464 /* REPDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPDigitAccumulator.h; sourceTree = "<group>"; };
+		33AB7066234FE61E00110464 /* REPDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				33AB7060234FDF8700110464 /* REPStack.m */,
 				33AB7062234FE25C00110464 /* REPCalculator.h */,
 				33AB7063234FE25C00110464 /* REPCalculator.m */,
+				33AB7065234FE61E00110464 /* REPDigitAccumulator.h */,
+				33AB7066234FE61E00110464 /* REPDigitAccumulator.m */,
 				33AB705E234FDAA100110464 /* Misc */,
 			);
 			path = "ObjC RPN Calc";
@@ -165,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AB7067234FE61E00110464 /* REPDigitAccumulator.m in Sources */,
 				33AB704D234FDA8000110464 /* REPCalculatorViewController.m in Sources */,
 				33AB7047234FDA8000110464 /* AppDelegate.m in Sources */,
 				33AB7058234FDA8100110464 /* main.m in Sources */,
