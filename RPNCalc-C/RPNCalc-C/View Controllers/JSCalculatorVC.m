@@ -7,10 +7,16 @@
 //
 
 #import "JSCalculatorVC.h"
+#import "JSCalculator.h"
+#import "JSDigitAccumulator.h"
 
 @interface JSCalculatorVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (nonatomic) NSNumberFormatter *numberFormatter;
+@property JSCalculator *calculator;
+@property JSDigitAccumulator * digitAccumulator;
 
 - (IBAction)numberButtonTapped:(UIButton *)sender;
 - (IBAction)clearButtonPressed:(UIButton *)sender;
@@ -21,132 +27,93 @@
 - (IBAction)subtractButtonTapped:(UIButton *)sender;
 - (IBAction)returnButtonTapped:(UIButton *)sender;
 
+- (void)addNumber;
+- (void)updateCalculator;
+- (void)updateAccumulator;
 
 @end
 
 @implementation JSCalculatorVC
-/*
- //MARK: - IBOutlets
- 
- @IBOutlet weak var textField: UITextField!
- 
- //MARK: - Properties
- 
- private let numberFormatter: NumberFormatter = {
-	 let formatter = NumberFormatter()
-	 formatter.maximumIntegerDigits = 20
-	 formatter.minimumFractionDigits = 0
-	 formatter.maximumFractionDigits = 20    // don't round!
-	 //        formatter.alwaysShowsDecimalSeparator
-	 formatter.numberStyle = NumberFormatter.Style.decimal
-	 return formatter
- }()
- 
- private var calculator = Calculator() {
-	 didSet {
-		 guard let value = calculator.topValue else { return }
-		 
-		 textField.text = numberFormatter.string(from: value as NSNumber)
-		 updateViews()
-	 }
- }
- 
- private var digitAccumulator = DigitAccumulator() {
-	 didSet {
-		 // Don't format, we want to show keys as typed (0.002)
-		 // Otherwise decimal doesn't display properly
-		 textField.text = digitAccumulator.stringValue
-		 updateViews()
-	 }
- }
- 
- //MARK: - Life Cycle
- 
- override func viewDidLoad() {
-	 super.viewDidLoad()
-	 
-	 
- }
- 
- //MARK: - IBActions
- 
- @IBAction func clearButtonPressed(_ sender: Any) {
-	 calculator.clear()
-	 digitAccumulator.clear()
- }
- 
- @IBAction func divideButtonTapped(_ sender: Any) {
-	 addNumber()
-	 calculator.push(operator: .divide)
- }
- 
- @IBAction func multiplyButtonTapped(_ sender: Any) {
-	 addNumber()
-	 calculator.push(operator: .multiply)
- }
- 
- @IBAction func plusButtonTapped(_ sender: Any) {
-	 addNumber()
-	 calculator.push(operator: .add)
- }
- 
- @IBAction func subtractButtonTapped(_ sender: Any) {
-	 addNumber()
-	 calculator.push(operator: .subtract)
- }
- 
- @IBAction func numberButtonTapped(_ sender: UIButton) {
-	 try? digitAccumulator.add(.number(sender.tag))
- }
- 
- @IBAction func decimalButtonTapped(_ sender: Any) {
-	 try? digitAccumulator.add(.decimalPoint)
- }
- 
- @IBAction func returnButtonTapped(_ sender: Any) {
-	 addNumber()
- }
- 
- //MARK: - Helpers
- 
- func updateViews() {
-	 
- }
- 
- func addNumber() {
-	 // TODO: Test nil condition for accumulator
-	 guard let value = digitAccumulator.value else { return }
-	 
-	 calculator.push(number: value)
-	 
-	 digitAccumulator.clear()
-	 textField.text = numberFormatter.string(from: value as NSNumber) // Reset the text to give feedback of what was entered (with decimal)
-	 print(calculator)
- }
- */
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	self = [super initWithCoder:coder];
+	if (self) {
+		_digitAccumulator = [[JSDigitAccumulator alloc] init];
+		_calculator = [[JSCalculator alloc] init];
+	}
+	return self;
+}
 
 - (IBAction)numberButtonTapped:(UIButton *)sender {
-	
+	[self.digitAccumulator addDigitWithNumericValue:sender.tag];
+	[self updateAccumulator];
 }
+
 - (IBAction)clearButtonPressed:(UIButton *)sender {
-	
+	[self.calculator clear];
+	[self.digitAccumulator clear];
+	self.textField.text = @"";
 }
+
 - (IBAction)divideButtonTapped:(UIButton *)sender {
-	
+	[self addNumber];
+	[self.calculator applyOperator:divide];
+	[self updateCalculator];
 }
+
 - (IBAction)returnButtonTapped:(UIButton *)sender {
-	
+	[self addNumber];
+	[self updateCalculator];
 }
+
 - (IBAction)plusButtonTapped:(UIButton *)sender {
-	
+	[self addNumber];
+	[self.calculator applyOperator:add];
+	[self updateCalculator];
 }
+
 - (IBAction)subtractButtonTapped:(UIButton *)sender {
-	
+	[self addNumber];
+	[self.calculator applyOperator:subtract];
+	[self updateCalculator];
 }
+
 - (IBAction)multiplyButtonTapped:(UIButton *)sender {
-	
+	[self addNumber];
+	[self.calculator applyOperator:multiply];
+	[self updateCalculator];
 }
+
 - (IBAction)decimalButtonTapped:(UIButton *)sender {
-	
+	[self.digitAccumulator addDecimalPoint];
+	[self updateAccumulator];
 }
+
+- (NSNumberFormatter *)numberFormatter {
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	formatter.maximumIntegerDigits = 20;
+	formatter.minimumFractionDigits = 0;
+	formatter.maximumFractionDigits = 20;
+	[formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+	return formatter;
+}
+
+- (void)addNumber {
+	double value = self.digitAccumulator.value;
+	if (value) {
+		[self.calculator pushNumber:value];
+		self.textField.text = self.digitAccumulator.stringValue;
+		[self.digitAccumulator clear];
+	}
+}
+
+- (void)updateCalculator {
+	NSNumber *value = [NSNumber numberWithInt:self.calculator.topValue];
+	self.textField.text = [self.numberFormatter stringFromNumber:value];
+}
+
+- (void)updateAccumulator {
+	self.textField.text = self.digitAccumulator.stringValue;
+}
+
 @end
