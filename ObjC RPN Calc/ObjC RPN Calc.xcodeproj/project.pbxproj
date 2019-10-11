@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33AB7047234FDA8000110464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7046234FDA8000110464 /* AppDelegate.m */; };
+		33AB704A234FDA8000110464 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7049234FDA8000110464 /* SceneDelegate.m */; };
+		33AB704D234FDA8000110464 /* REPCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB704C234FDA8000110464 /* REPCalculatorViewController.m */; };
+		33AB7050234FDA8000110464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AB704E234FDA8000110464 /* Main.storyboard */; };
+		33AB7052234FDA8100110464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AB7051234FDA8100110464 /* Assets.xcassets */; };
+		33AB7055234FDA8100110464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AB7053234FDA8100110464 /* LaunchScreen.storyboard */; };
+		33AB7058234FDA8100110464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7057234FDA8100110464 /* main.m */; };
+		33AB7061234FDF8700110464 /* REPStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7060234FDF8700110464 /* REPStack.m */; };
+		33AB7064234FE25C00110464 /* REPCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7063234FE25C00110464 /* REPCalculator.m */; };
+		33AB7067234FE61E00110464 /* REPDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AB7066234FE61E00110464 /* REPDigitAccumulator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33AB7042234FDA8000110464 /* ObjC RPN Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjC RPN Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AB7045234FDA8000110464 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33AB7046234FDA8000110464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33AB7048234FDA8000110464 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		33AB7049234FDA8000110464 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		33AB704B234FDA8000110464 /* REPCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPCalculatorViewController.h; sourceTree = "<group>"; };
+		33AB704C234FDA8000110464 /* REPCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPCalculatorViewController.m; sourceTree = "<group>"; };
+		33AB704F234FDA8000110464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33AB7051234FDA8100110464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33AB7054234FDA8100110464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33AB7056234FDA8100110464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AB7057234FDA8100110464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33AB705F234FDF8700110464 /* REPStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPStack.h; sourceTree = "<group>"; };
+		33AB7060234FDF8700110464 /* REPStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPStack.m; sourceTree = "<group>"; };
+		33AB7062234FE25C00110464 /* REPCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPCalculator.h; sourceTree = "<group>"; };
+		33AB7063234FE25C00110464 /* REPCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPCalculator.m; sourceTree = "<group>"; };
+		33AB7065234FE61E00110464 /* REPDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPDigitAccumulator.h; sourceTree = "<group>"; };
+		33AB7066234FE61E00110464 /* REPDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPDigitAccumulator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33AB703F234FDA8000110464 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33AB7039234FDA8000110464 = {
+			isa = PBXGroup;
+			children = (
+				33AB7044234FDA8000110464 /* ObjC RPN Calc */,
+				33AB7043234FDA8000110464 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33AB7043234FDA8000110464 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33AB7042234FDA8000110464 /* ObjC RPN Calc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33AB7044234FDA8000110464 /* ObjC RPN Calc */ = {
+			isa = PBXGroup;
+			children = (
+				33AB704B234FDA8000110464 /* REPCalculatorViewController.h */,
+				33AB704C234FDA8000110464 /* REPCalculatorViewController.m */,
+				33AB705F234FDF8700110464 /* REPStack.h */,
+				33AB7060234FDF8700110464 /* REPStack.m */,
+				33AB7062234FE25C00110464 /* REPCalculator.h */,
+				33AB7063234FE25C00110464 /* REPCalculator.m */,
+				33AB7065234FE61E00110464 /* REPDigitAccumulator.h */,
+				33AB7066234FE61E00110464 /* REPDigitAccumulator.m */,
+				33AB705E234FDAA100110464 /* Misc */,
+			);
+			path = "ObjC RPN Calc";
+			sourceTree = "<group>";
+		};
+		33AB705E234FDAA100110464 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				33AB7045234FDA8000110464 /* AppDelegate.h */,
+				33AB7046234FDA8000110464 /* AppDelegate.m */,
+				33AB7048234FDA8000110464 /* SceneDelegate.h */,
+				33AB7049234FDA8000110464 /* SceneDelegate.m */,
+				33AB704E234FDA8000110464 /* Main.storyboard */,
+				33AB7051234FDA8100110464 /* Assets.xcassets */,
+				33AB7053234FDA8100110464 /* LaunchScreen.storyboard */,
+				33AB7056234FDA8100110464 /* Info.plist */,
+				33AB7057234FDA8100110464 /* main.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33AB7041234FDA8000110464 /* ObjC RPN Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33AB705B234FDA8100110464 /* Build configuration list for PBXNativeTarget "ObjC RPN Calc" */;
+			buildPhases = (
+				33AB703E234FDA8000110464 /* Sources */,
+				33AB703F234FDA8000110464 /* Frameworks */,
+				33AB7040234FDA8000110464 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ObjC RPN Calc";
+			productName = "ObjC RPN Calc";
+			productReference = 33AB7042234FDA8000110464 /* ObjC RPN Calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33AB703A234FDA8000110464 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = REP;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Red_Egg Productions";
+				TargetAttributes = {
+					33AB7041234FDA8000110464 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 33AB703D234FDA8000110464 /* Build configuration list for PBXProject "ObjC RPN Calc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33AB7039234FDA8000110464;
+			productRefGroup = 33AB7043234FDA8000110464 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33AB7041234FDA8000110464 /* ObjC RPN Calc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33AB7040234FDA8000110464 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AB7055234FDA8100110464 /* LaunchScreen.storyboard in Resources */,
+				33AB7052234FDA8100110464 /* Assets.xcassets in Resources */,
+				33AB7050234FDA8000110464 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33AB703E234FDA8000110464 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AB7067234FE61E00110464 /* REPDigitAccumulator.m in Sources */,
+				33AB704D234FDA8000110464 /* REPCalculatorViewController.m in Sources */,
+				33AB7047234FDA8000110464 /* AppDelegate.m in Sources */,
+				33AB7058234FDA8100110464 /* main.m in Sources */,
+				33AB7064234FE25C00110464 /* REPCalculator.m in Sources */,
+				33AB7061234FDF8700110464 /* REPStack.m in Sources */,
+				33AB704A234FDA8000110464 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		33AB704E234FDA8000110464 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33AB704F234FDA8000110464 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33AB7053234FDA8100110464 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33AB7054234FDA8100110464 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33AB7059234FDA8100110464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		33AB705A234FDA8100110464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33AB705C234FDA8100110464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "ObjC RPN Calc/Misc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.ObjC-RPN-Calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33AB705D234FDA8100110464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = "ObjC RPN Calc/Misc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.redeggproductions.ObjC-RPN-Calc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33AB703D234FDA8000110464 /* Build configuration list for PBXProject "ObjC RPN Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AB7059234FDA8100110464 /* Debug */,
+				33AB705A234FDA8100110464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33AB705B234FDA8100110464 /* Build configuration list for PBXNativeTarget "ObjC RPN Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AB705C234FDA8100110464 /* Debug */,
+				33AB705D234FDA8100110464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33AB703A234FDA8000110464 /* Project object */;
+}
