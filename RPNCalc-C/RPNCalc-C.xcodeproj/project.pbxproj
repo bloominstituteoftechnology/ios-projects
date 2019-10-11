@@ -16,6 +16,7 @@
 		B5F34724234FD24E00FCD842 /* JSCalculatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F34723234FD24E00FCD842 /* JSCalculatorVC.m */; };
 		B5F34727234FD2D300FCD842 /* JSStack.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F34726234FD2D300FCD842 /* JSStack.m */; };
 		B5F3472A234FDE3200FCD842 /* JSCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F34729234FDE3200FCD842 /* JSCalculator.m */; };
+		B5F3472D234FF96100FCD842 /* JSDigitAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3472C234FF96000FCD842 /* JSDigitAccumulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		B5F34726234FD2D300FCD842 /* JSStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSStack.m; sourceTree = "<group>"; };
 		B5F34728234FDE3200FCD842 /* JSCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSCalculator.h; sourceTree = "<group>"; };
 		B5F34729234FDE3200FCD842 /* JSCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCalculator.m; sourceTree = "<group>"; };
+		B5F3472B234FF96000FCD842 /* JSDigitAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDigitAccumulator.h; sourceTree = "<group>"; };
+		B5F3472C234FF96000FCD842 /* JSDigitAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDigitAccumulator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				B5F34726234FD2D300FCD842 /* JSStack.m */,
 				B5F34728234FDE3200FCD842 /* JSCalculator.h */,
 				B5F34729234FDE3200FCD842 /* JSCalculator.m */,
+				B5F3472B234FF96000FCD842 /* JSDigitAccumulator.h */,
+				B5F3472C234FF96000FCD842 /* JSDigitAccumulator.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				B5F34705234FC69E00FCD842 /* SceneDelegate.m in Sources */,
 				B5F34727234FD2D300FCD842 /* JSStack.m in Sources */,
 				B5F34724234FD24E00FCD842 /* JSCalculatorVC.m in Sources */,
+				B5F3472D234FF96100FCD842 /* JSDigitAccumulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
