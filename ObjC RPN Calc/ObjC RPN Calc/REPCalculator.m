@@ -17,6 +17,10 @@
 
 @implementation REPCalculator
 
+- (NSNumber *)topValue {
+	return self.stack.peekValue;
+}
+
 - (instancetype)init {
 	if (self = [super init]) {
 		_stack = [[REPStack alloc] init];

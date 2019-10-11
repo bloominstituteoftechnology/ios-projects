@@ -52,8 +52,10 @@
 	NSString* viewedText = @"";
 	if (self.digitAccumulator.stringValue.length > 0) {
 		viewedText = self.digitAccumulator.stringValue;
+		self.textField.textColor = [UIColor redColor];
 	} else if ([self.calculator topValue]) {
 		viewedText = self.calculator.topValue.stringValue;
+		self.textField.textColor = [UIColor blackColor];
 	}
 	self.textField.text = viewedText;
 }
@@ -99,7 +101,7 @@
 
 - (IBAction)divideButtonPressed:(UIButton *)sender {
 	[self addNumberToStack];
-	[self.calculator applyOperator:multiply];
+	[self.calculator applyOperator:divide];
 	[self updateViews];
 }
 
